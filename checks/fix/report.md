@@ -2,16 +2,16 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-844 clips done, 989 tries.
+1044 clips done, 1218 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 734 | 28 |
-| letters | 44 | 0 |
-| hyphen | 28 | 1 |
+| english | 907 | 33 |
+| letters | 58 | 0 |
+| hyphen | 36 | 1 |
 | cut | 6 | 1 |
 | extra | 2 | 0 |
-| **all** | 814 | 30 |
+| **all** | 1009 | 35 |
 
 ## Replaced (first 60)
 
@@ -112,3 +112,8 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | blow | english | blow | b l ̴ o ʊ w | 0.25 → 0.25 |
 | refrigerator | english | refrigerator | ɹ ɛ f ɹ ɪ d ʒ ɜ ˞ e ɪ t ɜ ˞ | 0.31 → 0.23 |
 | separate | english | separate | s ɛ p ɹ ə t | 0.38 → 0.38 |
+| merced | english | merced | m ɜ ˞ s ɛ d | 0.40 → 0.60 |
+| heterosexual | english | heterosexual | h ɛ t ɜ ˞ o ʊ s ɛ k ʃ u ə l ̴ | 0.27 → 0.20 |
+| isthmus | english | isthmus | ɪ θ s m ɪ s | 0.40 → 0.40 |
+| ishmael | english | ishmael | e ʃ m e j ɛ l | 0.60 → 0.80 |
+| catheter | english | catheter | k æ θ ə d ɜ ˞ | 0.29 → 0.29 |
