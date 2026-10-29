@@ -7,8 +7,8 @@
 
 Besides the list it reads origin.tsv (what the dictionary says about each word's origin, from scripts/make_origin.py),
 the English word list /usr/share/dict/words, CMUdict (`pip install cmudict`), word frequencies (`pip install wordfreq`,
-for rule 8) and, when the list has English readings, the list as it was before English readings existed (git history,
-commit 685c194).  Without CMUdict the English readings already in the list are kept or taken back, and none are added;
+for rule 8) and, when the list has English readings, the list as it was before English readings existed (git history:
+wordlist_all.tsv in commit 685c194, and the rebuilt list next/wordlist.tsv in 822ac2e).  Without CMUdict the English readings already in the list are kept or taken back, and none are added;
 without wordfreq the same holds for hyphenated forms.  Running it again changes nothing.  What it does, in order:
 
  dictionary readings (ipa_source = dictionary)
@@ -16,13 +16,14 @@ without wordfreq the same holds for hyphenated forms.  Running it again changes 
    2. readings that hold several words ("/ˈɡeŋ ɡeŋ/", garbled reduplications) are rebuilt: by rule for Tagalog spellings,
       from CMUdict for English words, letter by letter for consonant-only abbreviations;
    3. notation brought to the documented style: no syllable dots, no length marks, no tie bars, glide y -> j, ʎ -> lj,
-      r -> ɾ;
+      r -> ɾ; a phonetic reading in square brackets loses its diacritics and lax vowels ([d͡ʒɐnˈɲwaː.ɾɪ] -> dʒanˈjwaɾi);
    4. the stress mark is moved to the start of its syllable when the dictionary's dot had left it after a consonant
       (ʔib.ˈaŋ -> ʔiˈbaŋ); after a hyphen the glottal stop is written (paɡ.ˈaral -> paɡˈʔaɾal);
    4b. two vowels in a row get their glottal stop (kahalataan -> kahalataʔan); a final grave or circumflex accent gets
       its glottal stop (badò -> ˈbadoʔ); readings that lost vowels or read consonant+y as consonant+i (akyat -> ki-at)
-      are replaced by the rule reading;
-   5. if the stress still is not on the vowel the accent mark of the spelling names, the rule reading replaces it;
+      are replaced by the rule reading (a silent final e is not a lost vowel: grace /ˈɡɾejs/, prince, i-sháre);
+   5. if the stress still is not on the vowel the accent mark of the spelling names, the rule reading replaces it (in a
+      hyphenated form secondary stress on the marked vowel counts: kasû-kasuan /kaˌsuʔkaˈsuʔan/);
    6. English words (below) get their CMUdict reading.
  generated readings (rule / spelled)
    7. English words get their CMUdict reading; the others are regenerated with the current rule.
@@ -30,6 +31,9 @@ without wordfreq the same holds for hyphenated forms.  Running it again changes 
  street), CMUdict has the spelling, and either
    - origin.tsv says English, not Spanish or native, and not respelled from another English word (bi from bee), at any
      length (affixes only when they also look English, as below); or
+   - the word is spelled the way only English spells (th, sh, ph, ck, oo, ee, ea, ou, ow, -tion, a final consonant + y),
+     is in the English word list and is not a word of Filipino text: origin.tsv merges homographs, so its Spanish or
+     native flag does not decide (book, compound, typhoon, industry; noon "back then" stays Tagalog); or
    - no origin information, or only a language other than English, Spanish and Tagalog (chef and boutique: French),
      not given as a variant spelling of another word, and it looks English: a letter or digraph Tagalog does not use,
      six letters or more or a doubled consonant (rule readings), spelling leftovers such as th, ea or ou in the reading
@@ -65,6 +69,7 @@ except ImportError:
     zipf_frequency = None
 
 OLD_LIST = "685c194c74c6b51bc24ee55fd40c8c00974f715d"         # wordlist_all.tsv before English readings (same file as 7095dd0^)
+REBUILT_LIST = "822ac2e28208300f5bad877ecde60c1aee924c00:next/wordlist.tsv"   # the rebuilt list before English readings
 WORD_LIST = "/usr/share/dict/words"
 ORIGIN, WORDS = {}, set()          # plain spelling -> origin flags (origin.tsv); English word list
 DECIDING = {"en", "es", "native", "respelled"}   # flags that settle English or not; `other` alone (chef: French) does not
@@ -190,6 +195,16 @@ def is_name(r):
     return bool(NAME_SENSE.search(r[5])) or r[0][:1].isupper()      # names keep their dictionary / rule reading
 
 
+EN_ONLY_SPELLING = re.compile(r"th|sh|ph|ck|wh|gh|oo|ee|ea|ou|ow|tions?$|[^aeiouy]y$")   # spellings Tagalog and Spanish don't use
+
+
+def english_spelled(p):
+    """a single word spelled the way only English spells (book, typhoon, industry, satisfaction) that is in the English
+    word list and not a word of Filipino text (noon "back then"): English whatever the dictionary's homographs say"""
+    return (bool(EN_ONLY_SPELLING.search(p)) and "-" not in p and p in WORDS
+            and not (zipf_frequency and zipf_frequency(p, "fil") >= 3.0 and zipf_frequency(p, "fil") >= zipf_frequency(p, "en") + 0.5))
+
+
 def english_ok(r, looks):
     """may the row have an English reading (when CMUdict has the spelling)?  looks: it looks English (see _fix).
     A hyphenated form that passes is checked again by rule 8 (fix)."""
@@ -198,6 +213,8 @@ def english_ok(r, looks):
         return False
     o = ORIGIN.get(p)
     if o and o & DECIDING:                           # the dictionary says whether the word comes from English
+        if english_spelled(p) and not ALT_SENSE.search(r[5]):     # its records merge homographs: book (en + native)
+            return True
         return "en" in o and not o & {"es", "native", "respelled"} and (looks or not (form.startswith("-") or form.endswith("-")))
     if not looks or ALT_SENSE.search(r[5]):          # no origin, or another language only
         return False
@@ -242,7 +259,7 @@ def why_not_english(r):
 TL_PREFIX = frozenset("""a i ma na ka pa ni mag nag pag ipa ipag maka naka paka makapag nakapag makipag nakipag pakikipag
     pinag ipinag pina ipina mapag napag mang nang pang sang may di de tag taga tig magka nagka pagka magpa nagpa pagpa
     magsi nagsi pinaka ika balik kay mala ala alas""".split())
-TL_SUFFIX = frozenset("a o an it ok ay il en ang ing ong as om oy al aw ag at ad ib ip ub ul us ot ap ab ak am og op or et".split())
+TL_SUFFIX = frozenset("a o an it ok ay il en ang ing ong as om oy al aw ag at ad ib ip ub ul us ot ap ab ak am og op or et os".split())
 EN_DIGRAPH = re.compile(r"th|sh|ch|ph|ck|wh|gh|oo|ee|ea|ou|ow")
 
 
@@ -267,6 +284,8 @@ def hyphen_reading(form):
     parts = [plain(p) for p in form.split("-") if p]
     if parts[0] in TL_PREFIX:
         stem = parts[1:]
+        if stem == [parts[-1]] and parts[-1] in TL_SUFFIX:   # pang-al, tig-an: a Tagalog suffix, not English al, an
+            return "tagalog"
         if all(p not in TAGALOG_PLAIN and (len(p) == 1 or english_word(p) or (cmu_word(p) and FOREIGN_LETTERS.search(p))
                                             or 3.0 <= zipf_frequency(p, "en") >= zipf_frequency(p, "fil"))
                for p in stem) and cmu_ipa("-".join(stem)):
@@ -304,6 +323,17 @@ def move_stress(body, form):
     return body[:j] + "".join(units[:-k]) + "ˈ" + "".join(units[-k:]) + body[i + 1:]
 
 
+BROAD = {"ɐ": "a", "ə": "a", "ɪ": "i", "ɛ": "e", "ʊ": "u", "ɔ": "o", "ɲ": "nj"}
+
+
+def broad(body):
+    """a phonetic reading in square brackets ([d͡ʒɐnˈɲwaː.ɾɪ]) -> the broad style (dʒanˈjwaɾi): no diacritics, the five
+    vowels, nj for ɲ"""
+    body = "".join(c for c in unicodedata.normalize("NFD", body.strip("[]")) if unicodedata.category(c) != "Mn" or c == "͡")
+    body = re.sub(r"n([ˈˌ]?)ɲ", r"n\1j", body)            # n + ɲ is n + the glide
+    return unicodedata.normalize("NFC", "".join(BROAD.get(c, c) for c in body))
+
+
 def normalise(body):
     body = body.replace("͡", "").replace("ː", "").replace("·", "").replace("ʎ", "lj")
     out = []
@@ -323,9 +353,12 @@ def hiatus(body):
 
 def broken(form, body):
     """a reading that cannot be right for a Tagalog spelling: fewer vowels than the spelling has vowel groups (lost vowels),
-    or more vowels than letters because a consonant + y was read as consonant + i (akyat -> ki-at)"""
+    or more vowels than letters because a consonant + y was read as consonant + i (akyat -> ki-at).  A silent final e
+    after a consonant is not a lost vowel (grace /ˈɡɾejs/, prince, hope, Hillside, i-sháre)."""
     n = nvow(body.replace("ʔ", ""))
-    if n < len(re.findall(r"[aeiouáéíóúàèìòùâêîôû]+", form.lower())):
+    groups = len(re.findall(r"[aeiouáéíóúàèìòùâêîôû]+", form.lower()))
+    silent = len(re.findall(r"(?<=[^aeiouáéíóúàèìòùâêîôû\W])e(?=$|-)", form.lower())) if body.rstrip("ʔ")[-1:] not in VOW else 0
+    if n < groups - silent:
         return True
     return n > len(form_vowels(form)) and bool(re.search(r"[bdfghklmnprstvwz]y[aeiouáéíóúàèìòùâêîôû]", form.lower()))
 
@@ -343,7 +376,10 @@ def stress_ok(form, body):
     for k, c in enumerate(chars):
         if c in ACCENTED:
             ok.add(max(0, n - 2) if (c in "àèìòù" and k == n - 1) else k)
-    return stress_index(body) in ok
+    if stress_index(body) in ok:
+        return True
+    secondary = {sum(1 for c in body[:i] if c in VOW) for i, c in enumerate(body) if c == "ˌ"}
+    return "-" in form and bool(secondary & ok)        # kasû-kasuan /kaˌsuʔkaˈsuʔan/: the marked part has secondary stress
 
 
 def _fix(r, allow_english=True):
@@ -367,6 +403,8 @@ def _fix(r, allow_english=True):
             else:
                 new, nsrc, why = M.spelled(form), "spelled", "multi-word reading spelled by letters"
         else:
+            if body.startswith("[") and body.endswith("]"):
+                body, why = broad(body), "phonetic reading made broad"
             body = normalise(body)
             if "." in body:
                 body = body.replace(".", "")
@@ -453,12 +491,22 @@ def load_inputs(origin="origin.tsv"):
 
 
 def old_list():
-    """form -> row of wordlist_all.tsv before English readings existed"""
-    try:
-        txt = subprocess.run(["git", "show", OLD_LIST + ":wordlist_all.tsv"], capture_output=True, check=True).stdout.decode("utf-8")
-    except (OSError, subprocess.CalledProcessError) as e:
-        sys.exit(f"needs the git history to recheck the English readings (git show {OLD_LIST[:7]}:wordlist_all.tsv): {e}")
-    return {r[0]: r for r in (ln.split("\t") for ln in txt.split("\n")[1:] if ln)}
+    """form -> rows it had before English readings existed: in the rebuilt list (next/wordlist.tsv as committed) and in
+    wordlist_all.tsv before the first English readings.  pick() takes the one that is the same reading."""
+    old = {}
+    for spec in (REBUILT_LIST, OLD_LIST + ":wordlist_all.tsv"):
+        try:
+            txt = subprocess.run(["git", "show", spec], capture_output=True, check=True).stdout.decode("utf-8")
+        except (OSError, subprocess.CalledProcessError) as e:
+            sys.exit(f"needs the git history to recheck the English readings (git show {spec[:7]}{spec[40:]}): {e}")
+        for r in (ln.split("\t") for ln in txt.split("\n")[1:] if ln):
+            old.setdefault(r[0], []).append(r)
+    return old
+
+
+def pick(r, rows):
+    """the earlier row of the same reading: same stress source and sense, else the first (the rebuilt list's)"""
+    return next((o for o in rows if o[2] == r[2] and o[5] == r[5]), rows[0]) if rows else None
 
 
 def run(rows):
@@ -477,7 +525,7 @@ def run(rows):
             r = list(r)
             first = r[3]
             if r[6] == "english":                        # recheck from the reading it had before English readings
-                o = old.get(r[0])
+                o = pick(r, old.get(r[0]))
                 start = r[:3] + [o[3]] + r[4:6] + [o[6]] if o else r[:3] + [M.ipa(r[0]) or M.spelled(r[0])] + r[4:6] + ["rule"]
                 s, why = settle(start)
                 if s[6] == "english":
