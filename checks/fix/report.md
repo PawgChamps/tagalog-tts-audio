@@ -2,16 +2,16 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-3244 clips done, 3885 tries.
+3444 clips done, 4128 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 2126 | 83 |
-| hyphen | 816 | 27 |
-| cut | 70 | 25 |
+| english | 2174 | 86 |
+| hyphen | 953 | 29 |
+| cut | 78 | 27 |
 | letters | 95 | 0 |
 | extra | 2 | 0 |
-| **all** | 3109 | 135 |
+| **all** | 3302 | 142 |
 
 ## Replaced (first 60)
 
@@ -217,3 +217,10 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | sumaldáksaldak | cut | sumaldáksaldak | s u m æ l d ɑ q | 0.57 → 0.43 |
 | súson-suson | hyphen | súson suson | s u s o n | 0.50 → 0.50 |
 | táha-táha | hyphen | táha táha | t a x a | 0.50 → 0.50 |
+| tánggal-tanggal | hyphen | tánggal tanggal | t ə ŋ g a l | 0.50 → 0.50 |
+| tao-trap | hyphen | tao trap | t ɑ p | 0.71 → 0.57 |
+| tedted | cut | tedted | t ɛ d | 0.67 → 0.50 |
+| touche | english | touche | t u ʃ e ɪ | 0.67 → 0.67 |
+| triage | english | triage | t ɹ i ɑ ʒ | 0.67 → 0.50 |
+| tuwalyalita | cut | tuwalyalita | t u a l i ə | 0.45 → 0.45 |
+| voyeur | english | voyeur | v ɔ j e ˞ | 0.50 → 0.50 |
