@@ -2,16 +2,16 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-1444 clips done, 1687 tries.
+1644 clips done, 1921 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 1240 | 48 |
-| hyphen | 75 | 1 |
-| letters | 70 | 0 |
+| english | 1408 | 56 |
+| hyphen | 91 | 1 |
+| letters | 78 | 0 |
 | cut | 6 | 2 |
 | extra | 2 | 0 |
-| **all** | 1393 | 51 |
+| **all** | 1585 | 59 |
 
 ## Replaced (first 60)
 
@@ -133,3 +133,11 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | cursor | english | cursor | k ɜ ˞ s ɜ ˞ | 0.33 → 0.33 |
 | vie | english | vie | v i | 0.67 → 0.33 |
 | teleprompter | english | teleprompter | t ɛ l ̴ e ɪ p ɹ ɑ m p t ɜ ˞ | 0.25 → 0.25 |
+| progenitor | english | progenitor | p ɹ o ʊ d ʒ ɛ n ə t ɜ ˞ | 0.27 → 0.18 |
+| cavan | english | cavan | k æ v ə n | 0.33 → 0.33 |
+| bolognese | english | bolognese | b o ʊ l ̴ ɪ n j e z | 0.58 → 0.50 |
+| bicarbonate | english | bicarbonate | b a ɪ k ɑ ɹ b ə n e ɪ t | 0.27 → 0.18 |
+| cation | english | cation | k e ɪ ʃ ə n | 0.57 → 0.57 |
+| empiricism | english | empiricism | ɪ m p ɪ ɹ i ɪ s ɪ z ə m | 0.36 → 0.27 |
+| catsup | english | catsup | k æ t s ə p | 0.80 → 0.60 |
+| spurious | english | spurious | s p ɪ ɹ i ə s | 0.25 → 0.25 |
