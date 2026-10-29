@@ -2,16 +2,16 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-1044 clips done, 1218 tries.
+1244 clips done, 1444 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 907 | 33 |
-| letters | 58 | 0 |
-| hyphen | 36 | 1 |
-| cut | 6 | 1 |
+| english | 1074 | 38 |
+| letters | 62 | 0 |
+| hyphen | 59 | 1 |
+| cut | 6 | 2 |
 | extra | 2 | 0 |
-| **all** | 1009 | 35 |
+| **all** | 1203 | 41 |
 
 ## Replaced (first 60)
 
@@ -117,3 +117,9 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | isthmus | english | isthmus | ɪ θ s m ɪ s | 0.40 → 0.40 |
 | ishmael | english | ishmael | e ʃ m e j ɛ l | 0.60 → 0.80 |
 | catheter | english | catheter | k æ θ ə d ɜ ˞ | 0.29 → 0.29 |
+| transcription | english | transcription | d ʒ a s o n | 0.83 → 0.75 |
+| context | english | context | k ɑ n s ɔ ɹ t | 0.62 → 0.50 |
+| mace | english | mace | m a s | 0.75 → 0.50 |
+| adjourn | english | adjourn | e ɪ d ʒ ɜ ˞ n | 0.80 → 0.60 |
+| knesset | english | knesset | k n ɛ s ɪ t | 0.40 → 0.40 |
+| gg | cut | G G | d ʒ i d ʒ i | 1.00 → 0.67 |
