@@ -99,13 +99,11 @@ def load_zipa():
     src = os.environ.get("ZIPA_SRC", "zipa")
     sys.path.insert(0, os.path.join(src, "inference"))
     from utils import ctc_greedy_decode, get_fbank_extractor, load_tokens
-    repo = os.environ.get("ZIPA_REPO", "anyspeech/zipa-large-crctc-500k")
-    d = snapshot_download(repo, allow_patterns=["*fp32*", "*.txt"])
-    onnx = sorted(glob.glob(f"{d}/**/*.onnx", recursive=True))
-    toks = sorted(glob.glob(f"{d}/**/tokens.txt", recursive=True)) or [os.path.join(src, "ipa_simplified", "tokens.txt")]
-    print("zipa:", repo, [os.path.relpath(p, d) for p in onnx], os.path.relpath(toks[0], d if toks[0].startswith(d) else src), flush=True)
-    sess = ort.InferenceSession(onnx[0], providers=["CPUExecutionProvider"])
-    ext, vocab = get_fbank_extractor(), load_tokens(toks[0])
+    repo = os.environ.get("ZIPA_REPO", "anyspeech/zipa-large-crctc-ns-800k")      # fp32 model.onnx + tokens.txt at the root
+    d = snapshot_download(repo, allow_patterns=["model.onnx", "tokens.txt"])
+    print("zipa:", repo, sorted(os.listdir(d)), flush=True)
+    sess = ort.InferenceSession(os.path.join(d, "model.onnx"), providers=["CPUExecutionProvider"])
+    ext, vocab = get_fbank_extractor(), load_tokens(os.path.join(d, "tokens.txt"))
 
     def run(wav):
         f = ext.extract_batch([torch.from_numpy(wav).float().unsqueeze(0)], sampling_rate=SR)[0].unsqueeze(0)

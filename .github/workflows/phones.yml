@@ -43,7 +43,7 @@ jobs:
           pip install -q numpy==1.26.4
           pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
           case "${{ matrix.model }}" in
-            xeus)  pip install -q transformers huggingface_hub safetensors soundfile pyyaml typeguard ;;
+            xeus)  pip install -q "transformers<5" huggingface_hub safetensors soundfile pyyaml typeguard ;;   # its remote code predates transformers 5
             w2v2)  sudo apt-get install -y -q espeak-ng >/dev/null; pip install -q transformers phonemizer ;;
             powsm) pip install -q espnet espnet_model_zoo ;;
             zipa)  pip install -q onnxruntime soundfile librosa lhotse huggingface_hub
@@ -76,8 +76,8 @@ jobs:
         with: { pattern: "phones-*", path: out, merge-multiple: true }
       - name: Score and commit
         run: |
-          python3 scripts/score_phones.py "${{ inputs.list }}" out checks
-          mkdir -p checks/phones_raw && cp out/*.tsv checks/phones_raw/ 2>/dev/null || true
+          mkdir -p checks/phones_raw && cp out/*.tsv checks/phones_raw/ 2>/dev/null || true   # outputs of earlier runs stay
+          python3 scripts/score_phones.py "${{ inputs.list }}" checks/phones_raw checks
           git config user.name "phones-bot"; git config user.email "phones-bot@users.noreply.github.com"
           git add checks
           git diff --cached --quiet || { git commit -qm "checks: phone recognition of ${{ inputs.list }} (${{ inputs.models }})"; git pull -q --rebase; git push -q; }
