@@ -2,16 +2,16 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-1844 clips done, 2158 tries.
+2044 clips done, 2408 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 1515 | 57 |
-| hyphen | 172 | 3 |
-| letters | 81 | 0 |
-| cut | 11 | 3 |
+| english | 1549 | 63 |
+| hyphen | 315 | 6 |
+| letters | 83 | 0 |
+| cut | 20 | 6 |
 | extra | 2 | 0 |
-| **all** | 1781 | 63 |
+| **all** | 1969 | 75 |
 
 ## Replaced (first 60)
 
@@ -145,3 +145,15 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | angkátangkáyan | cut | angkátangkáyan | ə ŋ k a t | 0.58 → 0.58 |
 | áni-ani | hyphen | áni ani | a n i | 0.50 → 0.50 |
 | asa-asa | hyphen | asa asa | ə s a | 0.50 → 0.50 |
+| bahaw-bahaw | hyphen | bahaw bahaw | b ə a b ə a w | 0.60 → 0.30 |
+| bald-bala | hyphen | bald bala | b ɔ l d | 0.62 → 0.50 |
+| basar-basar | hyphen | basar basar | v a s a r a b | 0.50 → 0.50 |
+| básugbásog | cut | básugbásog | b a s o g | 0.50 → 0.50 |
+| bronchial | english | bronchial | b r ɔ ŋ k i l | 0.38 → 0.50 |
+| búhosutang | cut | búhosutang | b u h o s | 0.44 → 0.44 |
+| buladbukad | cut | buladbukad | b u l a d | 0.50 → 0.50 |
+| bumpers | english | bumpers | b u m p e r s | 0.29 → 0.29 |
+| caban | english | caban | k æ b ə n | 0.33 → 0.33 |
+| cadena-de-amor | english | cadena de amor | k ə d i n ə ə v e ɪ m ɔ ɹ | 0.25 → 0.42 |
+| calan | english | calan | k æ l ̴ ə n | 0.33 → 0.33 |
+| chalcedony | english | chalcedony | k æ l ̴ s ɛ d ə n i | 0.40 → 0.40 |

@@ -2158,3 +2158,253 @@ atheism	english	-	atheism	en-US	e θ i ɪ z ə m	0.57	0.43	kept
 angkátangkáyan	cut	-	angkátangkáyan	fil-PH	ə ŋ k a t	0.58	0.58	kept
 áni-ani	hyphen	-	áni ani	fil-PH	a n i	0.50	0.50	kept
 asa-asa	hyphen	-	asa asa	fil-PH	ə s a	0.50	0.50	kept
+ating-atin	hyphen	1	ating atin	fil-PH	a t i ŋ a t i n	0.50	0.00	replaced
+ato-ato	hyphen	1	ato ato	fil-PH	a t o a t o	0.50	0.00	replaced
+atom-atom	hyphen	1	atom atom	fil-PH	ə t o m ə t o m	0.50	0.00	replaced
+atonal	english	1	atonal	fil-PH	e ɪ t o ʊ n ə l ̴	0.38	0.00	replaced
+autocratic	english	1	autocratic	fil-PH	ɔ t ə k ɹ æ t ɪ k	0.44	0.00	replaced
+automaton	english	1	automaton	fil-PH	ɔ t ɑ m ə t ə n	0.50	0.00	replaced
+awan-awan	hyphen	1	awan awan	fil-PH	a w ə n a w ə n	0.50	0.00	replaced
+áwang-awang	hyphen	1	áwang awang	fil-PH	a w ɑ ŋ a w ɑ ŋ	0.50	0.00	replaced
+áwi-awi	hyphen	1	áwi awi	fil-PH	ɑ w i a w i	0.50	0.00	replaced
+awi-awit	hyphen	1	awi awit	fil-PH	ə w i a w i t	0.43	0.00	replaced
+ay-ak	hyphen	1	ay ak	fil-PH	ɑ ɪ ɑ q k o	0.50	0.75	rejected
+ayad-ayad	hyphen	1	ayad ayad	fil-PH	a j a d a j a d	0.50	0.00	replaced
+ayaw-ayaw	hyphen	1	ayaw ayaw	fil-PH	ə j a w ə j a w	0.50	0.00	replaced
+ayo-ayo	hyphen	1	ayo ayo	fil-PH	ə j ɔ a j a	0.50	0.17	replaced
+áyon-ayon	hyphen	1	áyon ayon	fil-PH	a j ɔ n a j ɔ n	0.50	0.00	replaced
+ayun-ayon	hyphen	1	ayun ayon	fil-PH	a j ɔ n a j o n	0.50	0.12	replaced
+baboy-baboy	hyphen	1	baboy baboy	fil-PH	b a b o j b a b o j	0.50	0.00	replaced
+bága-bága	hyphen	1	bága bága	fil-PH	b a g a b a g a	0.50	0.00	replaced
+bagol-bagol	hyphen	1	bagol bagol	fil-PH	b a g o l b a g o l	0.60	0.00	replaced
+bahaw-bahaw	hyphen	1	bahaw bahaw	fil-PH	b ə a b ə a w	0.60	0.30	rejected
+bahay-katayaii	hyphen	1	bahay katayaii	fil-PH	v a a j k ə t ə j a j	0.69	0.31	replaced
+bahin-bahin	hyphen	1	bahin bahin	fil-PH	b a h i n b a h i n	0.50	0.00	replaced
+baho-opos	hyphen	1	baho opos	fil-PH	b a o o p o s	0.50	0.12	replaced
+baín-baín	hyphen	1	baín baín	fil-PH	b a i n b a i n	0.50	0.00	replaced
+bain-bain	hyphen	1	bain bain	fil-PH	b ɛ n b ɛ j n	0.62	0.25	replaced
+bajac-bajac	hyphen	1	bajac bajac	fil-PH	b ɑ h ɑ q b ɑ h ɑ q	0.70	0.20	replaced
+baka-baka	hyphen	1	baka baka	fil-PH	b æ q ɑ b æ ʁ d ɑ q q ɑ	0.50	0.50	rejected
+baká-baká	hyphen	1	baká baká	fil-PH	b ɑ q ɑ b ɑ q ɑ	0.50	0.00	replaced
+bákang-bakang	hyphen	1	bákang bakang	fil-PH	b ɑ q ɑ ŋ b ɑ q ɑ ŋ	0.50	0.00	replaced
+bakang-dumalaga	hyphen	1	bakang dumalaga	fil-PH	b a q a ŋ d u m a l a g a	0.62	0.00	replaced
+bâkaw-benge	hyphen	1	bâkaw benge	fil-PH	b ɑ q ɑ u b e ŋ e	0.44	0.11	replaced
+bakawang-lalaki	hyphen	1	bakawang lalaki	fil-PH	b a q a w a ŋ l a l a ː q i	0.46	0.00	replaced
+baki-baki	hyphen	1	baki baki	fil-PH	b ə k i b ə k i	0.50	0.00	replaced
+bakid-bakid	hyphen	1	bakid bakid	fil-PH	b a k i d b a k i d	0.50	0.00	replaced
+bakís-bakísan	hyphen	1	bakís bakísan	fil-PH	b a k i s b a k i s a n	0.42	0.00	replaced
+báklad-pangwawa	hyphen	1	báklad pangwawa	fil-PH	b a k l ̴ a d p a ŋ w a w a a	0.62	0.08	replaced
+bâko-bako	hyphen	1	bâko bako	fil-PH	b a q o b a q o	0.50	0.00	replaced
+bakong-bakong	hyphen	1	bakong bakong	fil-PH	b a ː k o ŋ b a ː k o ŋ	0.60	0.00	replaced
+bála-balà	hyphen	1	bála balà	fil-PH	b a l a b a l a	0.50	0.00	replaced
+balak-balak	hyphen	1	balak balak	fil-PH	b ɑ l ̴ ɑ q b ɑ l ̴ ɑ q	0.60	0.00	replaced
+balang-amas	hyphen	1	balang amas	fil-PH	b a l a n a m a s	0.44	0.11	replaced
+balang-balang	hyphen	1	balang balang	fil-PH	b a l a ŋ b a l a ŋ	0.60	0.00	replaced
+balaw-balaw	hyphen	1	balaw balaw	fil-PH	b a l a w b a l a w	0.60	0.00	replaced
+balbas-bakiro	hyphen	1	balbas bakiro	fil-PH	b a l b a s b a k i r o	0.50	0.00	replaced
+bald-bala	hyphen	1	bald bala	fil-PH	b ɔ l d	0.62	0.50	rejected
+bále-bale	hyphen	1	bále bale	fil-PH	b a l e b a l e	0.62	0.00	replaced
+bálik-balik	hyphen	1	bálik balik	fil-PH	b a l ̴ i k b a l ̴ i k	0.50	0.00	replaced
+bálik-bálik	hyphen	1	bálik bálik	fil-PH	b a l i b a l i k	0.50	0.10	replaced
+balis-balis	hyphen	1	balis balis	fil-PH	v a l i s v a	0.50	0.50	rejected
+balok-balok	hyphen	1	balok balok	fil-PH	b ɑ l ̴ u q b ɑ l ̴ u q	0.60	0.20	replaced
+bálok-bálok	hyphen	1	bálok bálok	fil-PH	b a l ̴ o k b a l ̴ o q	0.60	0.00	replaced
+balong-balong	hyphen	1	balong balong	fil-PH	b a l o n b a l o n	0.60	0.20	replaced
+balot-balot	hyphen	1	balot balot	fil-PH	v a l ɔ t b ə l ɔ t	0.50	0.10	replaced
+balu-balu	hyphen	1	balu balu	fil-PH	b a l u b a l u	0.62	0.00	replaced
+baluk-baluk	hyphen	1	baluk baluk	fil-PH	b a l u p u k b a l u p u k	0.60	0.40	replaced
+bálun-balon	hyphen	1	bálun balon	fil-PH	b a l o n b a l o n	0.50	0.10	replaced
+bâna-bana	hyphen	1	bâna bana	fil-PH	v a n a b a n ə	0.50	0.12	replaced
+bana-bana	hyphen	1	bana bana	fil-PH	b a n ə b a n ə	0.50	0.00	replaced
+bandying-bandying	hyphen	1	bandying bandying	fil-PH	b a n d i i n b a n d i i n	0.64	0.29	replaced
+banga-banga	hyphen	1	banga banga	fil-PH	b a ŋ g a b a ŋ g a	0.50	0.25	replaced
+bangan-bangan	hyphen	1	bangan bangan	fil-PH	b a ŋ g a n b a ŋ g a n	0.50	0.20	replaced
+bangí-bangí	hyphen	1	bangí bangí	fil-PH	b a ŋ i b a ŋ ŋ i	0.50	0.12	replaced
+bangi-bangi	hyphen	1	bangi bangi	fil-PH	b a ŋ i b a ŋ i	0.50	0.00	replaced
+banginbangin	cut	1	banginbangin	fil-PH	b a ŋ i n	0.50	0.50	rejected
+bángking-bangking	hyphen	1	bángking bangking	fil-PH	b a ŋ k k i ŋ b a ŋ k i ŋ k	0.50	0.17	replaced
+banking-banking	hyphen	1	banking banking	fil-PH	b a ŋ k i n g b a ŋ k i ŋ g	0.42	0.25	replaced
+banknote	english	1	banknote	fil-PH	b æ ŋ k n o ʊ t	0.38	0.00	replaced
+bann	english	1	bann	fil-PH	b æ n	1.00	0.00	replaced
+bantalbantal	cut	1	bantalbantal	fil-PH	v e n t a l	0.67	0.67	rejected
+bao-bao	hyphen	1	bao bao	fil-PH	v a ɔ b a ɔ	0.67	0.17	replaced
+bara-barag	hyphen	1	bara barag	fil-PH	b a r a b a r a g	0.56	0.00	replaced
+baras-baras	hyphen	1	baras baras	fil-PH	b a r a s b a r a s	0.50	0.00	replaced
+bari-bari	hyphen	1	bari bari	fil-PH	b a r i b a r i	0.62	0.00	replaced
+barium	english	1	barium	fil-PH	b ɛ ɹ i ə m	0.50	0.00	replaced
+baro-kabok	hyphen	1	baro kabok	fil-PH	b a r o k a b o k	0.44	0.00	replaced
+baryu-baryo	hyphen	1	baryu baryo	fil-PH	b ɑ r j u b ɑ r j o	0.50	0.00	replaced
+basag-ulero	hyphen	1	basag ulero	fil-PH	b a s a g u l e r o	0.50	0.00	replaced
+basar-basar	hyphen	1	basar basar	fil-PH	v a s a r a b	0.50	0.50	rejected
+básong-basong	hyphen	1	básong basong	fil-PH	b a s o n b a s o ŋ	0.60	0.10	replaced
+básugbásog	cut	1	básugbásog	fil-PH	b a s o g	0.50	0.50	rejected
+bauble	english	1	bauble	fil-PH	b ɑ b ə l ̴	0.60	0.20	replaced
+bawasang-parusa	hyphen	1	bawasang parusa	fil-PH	b a w a s a ŋ p a r u s a	0.46	0.00	replaced
+bawaybaway	cut	1	bawaybaway	fil-PH	v a ə w a j	0.50	0.50	rejected
+bay-on	english	1	bay on	fil-PH	b e ɪ ɔ n	0.60	0.20	replaced
+bâya-baya	hyphen	1	bâya baya	fil-PH	b a j a b a	0.50	0.25	replaced
+bâyad-hila	hyphen	1	bâyad hila	fil-PH	b a j a d h i l a	0.44	0.00	replaced
+bâyad-hipa	hyphen	1	bâyad hipa	fil-PH	b a j a d h i p ə	0.44	0.00	replaced
+bayog-bayok	hyphen	1	bayog bayok	fil-PH	b a j ɔ g b a j ɔ k	0.50	0.00	replaced
+báyok-bayok	hyphen	1	báyok bayok	fil-PH	b ɑ j u q b ɑ j u q	0.50	0.20	replaced
+báyok-báyok	hyphen	1	báyok báyok	fil-PH	b a j o k b a ː j o k	0.50	0.00	replaced
+báyonet	cut	1	báyonet	fil-PH	b a j u n ɛ t	0.43	0.14	replaced
+baytang-baytang	hyphen	1	baytang baytang	fil-PH	b ɑ ɪ t ɑ ŋ b ɑ ɪ t ɑ ŋ	0.58	0.17	replaced
+bhb	letters	1	bi eych bi	fil-PH	b i a t ʃ b i	0.86	0.29	replaced
+bî-al	hyphen	1	bî al	fil-PH	b i a l	0.50	0.00	replaced
+bîbig-kataba	hyphen	1	bîbig kataba	fil-PH	b i b i g k a t a b a	0.55	0.00	replaced
+bida-bida	hyphen	1	bida bida	fil-PH	b i d a b i d a	0.50	0.00	replaced
+bígay-dapat	hyphen	1	bígay dapat	fil-PH	b i g a j d a p a t	0.50	0.00	replaced
+bígay-hilig	hyphen	1	bígay hilig	fil-PH	b i g a j h i l i g	0.50	0.00	replaced
+bígay-tulot	hyphen	1	bígay tulot	fil-PH	b i g a j t u l ɔ t	0.50	0.00	replaced
+bigdy-ginhawa	hyphen	1	bigdy ginhawa	fil-PH	b i g d i g i n h a w a	0.42	0.08	replaced
+biglabigla	cut	1	biglabigla	fil-PH	b i g l a	0.50	0.50	rejected
+bila-bila	hyphen	1	bila bila	fil-PH	v i l a v i l a	0.50	0.25	replaced
+biling-biling	hyphen	1	biling biling	fil-PH	b i ʎ i ŋ b i l i ŋ	0.50	0.10	replaced
+bilong-bilong	hyphen	1	bilong bilong	fil-PH	b i l ̴ o ŋ b i l o ŋ	0.50	0.00	replaced
+bílong-bílong	hyphen	1	bílong bílong	fil-PH	b i l ʊ ŋ b i l ʊ ŋ	0.50	0.20	replaced
+binocular	english	1	binocular	fil-PH	b ə n ɑ k j ə l ̴ ɜ ˞	0.50	0.10	replaced
+binoculars	english	1	binoculars	fil-PH	b ə n ɑ k j ə l ̴ ɜ ˞ z	0.55	0.09	replaced
+bisa-nipay	hyphen	1	bisa nipay	fil-PH	b i s a n i p a i	0.56	0.11	replaced
+bítak-bitak	hyphen	1	bítak bitak	fil-PH	b i t ɑ k b i t a k	0.50	0.00	replaced
+bitay-bitay	hyphen	1	bitay bitay	fil-PH	b i t a j b i t a j	0.50	0.00	replaced
+bíyanang-babae	hyphen	1	bíyanang babae	fil-PH	b i a n a ŋ b a b a e	0.42	0.08	replaced
+bkt	letters	1	bi key ti	fil-PH	b i k i t i	0.86	0.14	replaced
+blinder	english	1	blinder	fil-PH	b l ̴ a ɪ n d ɜ ˞	0.25	0.12	replaced
+blowgun	english	1	blowgun	fil-PH	b l o w g ə n	0.29	0.14	replaced
+bobbin	english	1	bobbin	fil-PH	p a b e n	0.80	0.40	replaced
+bóga-boga	hyphen	1	bóga boga	fil-PH	b o g a	0.50	0.50	rejected
+bóka-boka	hyphen	1	bóka boka	fil-PH	b o k a	0.50	0.50	rejected
+boko-boko	hyphen	1	boko boko	fil-PH	b o k o b o k o	0.50	0.00	replaced
+bóko-bóko	hyphen	1	bóko bóko	fil-PH	b o k o b o k o	0.62	0.00	replaced
+bollard	english	1	bollard	fil-PH	b ɔ l ̴ ɜ ˞ d	0.33	0.33	rejected
+bolo-bolo	hyphen	1	bolo bolo	fil-PH	b o l ̴ o b o l ̴ o	0.50	0.00	replaced
+bongga-bongga	hyphen	1	bongga bongga	fil-PH	b o n g a b o ŋ g a	0.60	0.10	replaced
+bóray-bóray	hyphen	1	bóray bóray	fil-PH	b o r a j b o r a j	0.50	0.00	replaced
+bóray-boray	hyphen	1	bóray boray	fil-PH	b o r ɑ j ɪ b o r ɑ j ɪ	0.50	0.20	replaced
+boselbosel	cut	1	boselbosel	fil-PH	b o s ɛ l	0.60	0.50	rejected
+bota-bota	hyphen	1	bota bota	fil-PH	b ɔ t a	0.50	0.50	rejected
+boti-botig	hyphen	1	boti botig	fil-PH	b o t i b o t i g	0.56	0.00	replaced
+botong-botong	hyphen	1	botong botong	fil-PH	b o t o ŋ b o t o ŋ	0.50	0.00	replaced
+bow-legged	english	1	bow legged	fil-PH	b o ʊ l ̴ ɛ g ə d	0.50	0.12	replaced
+boyboy	cut	1	boyboy	fil-PH	b ɔ j	0.50	0.50	rejected
+bronchial	english	1	bronchial	fil-PH	b r ɔ ŋ k i l	0.38	0.50	rejected
+bugay-bugay	hyphen	1	bugay bugay	fil-PH	b u g a j b u g a ɪ	0.50	0.10	replaced
+bugnit-bugnit	hyphen	1	bugnit bugnit	fil-PH	b u g n i t b u g n i t	0.50	0.00	replaced
+bugnitbugnít	cut	1	bugnitbugnít	fil-PH	b u g n i t b u g n i t	0.67	0.00	replaced
+búhosutang	cut	1	búhosutang	fil-PH	b u h o s	0.44	0.44	rejected
+buka-buka	hyphen	1	buka buka	fil-PH	b u k a b u k a	0.50	0.00	replaced
+bukas-bukas	hyphen	1	bukas bukas	fil-PH	b u q ɑ s b u q ɑ s	0.50	0.00	replaced
+búkay-bukay	hyphen	1	búkay bukay	fil-PH	b u q ɑ ɪ b u q ɑ ɪ	0.50	0.20	replaced
+bukay-pato	hyphen	1	bukay pato	fil-PH	b u k a i p a t o	0.56	0.11	replaced
+búklig-buklig	hyphen	1	búklig buklig	fil-PH	b u k l i g b u k l i g	0.50	0.00	replaced
+buko-buko	hyphen	1	buko buko	fil-PH	b u q o b u q o	0.50	0.00	replaced
+bûla-bula	hyphen	1	bûla bula	fil-PH	b u l a b u l a	0.50	0.00	replaced
+buladbukad	cut	1	buladbukad	fil-PH	b o l a d	0.50	0.60	rejected
+bulak-bulak	hyphen	1	bulak bulak	fil-PH	b u l ̴ ɑ q b u l ̴ ɑ q	0.50	0.00	replaced
+bulan-bulan	hyphen	1	bulan bulan	fil-PH	b u l a n b u l a n	0.50	0.00	replaced
+bulik-bulik	hyphen	1	bulik bulik	fil-PH	b u l i k b u l i k	0.50	0.00	replaced
+bulong-ayta	hyphen	1	bulong ayta	fil-PH	b u l o n a i t a	0.56	0.22	replaced
+búmantu-bantulot	hyphen	1	búmantu bantulot	fil-PH	b u m a n t u b a n t u l ɔ t	0.53	0.00	replaced
+búmigat-bigat	hyphen	1	búmigat bigat	fil-PH	b u m i g a t b i g a t	0.42	0.00	replaced
+bumitin-bitin	hyphen	1	bumitin bitin	fil-PH	b u m i t i n b i t i n	0.42	0.00	replaced
+bumpers	english	1	bumpers	fil-PH	b u m p e r s	0.29	0.29	rejected
+búmuntut-buntot	hyphen	1	búmuntut buntot	fil-PH	b u m u n t o t b u n t o t	0.43	0.07	replaced
+bunga-bunga	hyphen	1	bunga bunga	fil-PH	b u ŋ a b u ŋ a	0.50	0.00	replaced
+bunga-sa-palas	hyphen	1	bunga sa palas	fil-PH	b u ŋ a s a p a l a s	0.73	0.00	replaced
+bungkag-lalaw	hyphen	1	bungkag lalaw	fil-PH	b u k a g l a w a w	0.45	0.18	replaced
+búntis-na-buntis	hyphen	1	búntis na buntis	fil-PH	b u n t i s n a b u n t i s	0.57	0.00	replaced
+bunton-bunton	hyphen	1	bunton bunton	fil-PH	b u n t o n b u n t o n	0.50	0.00	replaced
+búntu-bunto	hyphen	1	búntu bunto	fil-PH	b u n t u b u n t u	0.50	0.10	replaced
+búntun-bunton	hyphen	1	búntun bunton	fil-PH	b u n t o n b u n t o n	0.50	0.08	replaced
+burik-burik	hyphen	1	burik burik	fil-PH	b u r i k b u r i k	0.50	0.00	replaced
+burol-burol	hyphen	1	burol burol	fil-PH	b u r o l b u r o l	0.60	0.00	replaced
+busog-sorlan	hyphen	1	busog sorlan	fil-PH	b u s ɔ g s ɔ r l a n	0.55	0.00	replaced
+busong-busong	hyphen	1	busong busong	fil-PH	b u s ɔ ̃ b u s ɔ ̃	0.60	0.20	replaced
+búta-buta	hyphen	1	búta buta	fil-PH	b u t ɑ b u t a	0.50	0.00	replaced
+butang-butang	hyphen	1	butang butang	fil-PH	b u t a ŋ b u t a ŋ	0.50	0.00	replaced
+buto-butonesan	hyphen	1	buto butonesan	fil-PH	b u t o b u t o n e s a n	0.46	0.00	replaced
+butol-butol	hyphen	1	butol butol	fil-PH	b u t o l b u t ɔ l	0.50	0.00	replaced
+butong-butong	hyphen	1	butong butong	fil-PH	b u t o ŋ b u t o ŋ	0.50	0.00	replaced
+buttercup	english	1	buttercup	fil-PH	b ə t ɜ ˞ k ə p	0.25	0.12	replaced
+bûtu-butu	hyphen	1	bûtu butu	fil-PH	b u t o b u t o	0.75	0.25	replaced
+búu-buò	hyphen	1	búu buò	fil-PH	b u u b u o	0.67	0.00	replaced
+buwa-bud	hyphen	1	buwa bud	fil-PH	b w j b u d	0.57	0.29	replaced
+buwanbuwan	cut	1	buwanbuwan	fil-PH	b o a n b o a n	0.60	0.40	replaced
+buyan-buyan	hyphen	1	buyan buyan	fil-PH	b u j ɑ n b u j ɑ n	0.50	0.00	replaced
+bwan-bwan	hyphen	1	bwan bwan	fil-PH	b u a n b u a n	0.50	0.25	replaced
+caban	english	1	caban	fil-PH	k æ b ə n	0.33	0.33	rejected
+cablegram	english	1	cablegram	fil-PH	k e ɪ b ə l ̴ g ɹ æ m	0.50	0.00	replaced
+cadena-de-amor	english	1	cadena de amor	fil-PH	k ə d i n ə ə v e ɪ m ɔ ɹ	0.25	0.42	rejected
+cadence	english	1	cadence	fil-PH	k e ɪ d ə n s	0.43	0.00	replaced
+cadmium	english	1	cadmium	fil-PH	k æ d m i ə m	0.43	0.00	replaced
+calan	english	1	calan	fil-PH	k æ l ̴ ə n	0.33	0.33	rejected
+calculation	english	1	calculation	fil-PH	k æ l ̴ k j ə l ̴ e ɪ ʃ ə n	0.42	0.00	replaced
+cannibalism	english	1	cannibalism	fil-PH	k æ n ə b ə l ̴ ɪ z ə m	0.36	0.00	replaced
+cantaloupe	english	1	cantaloupe	fil-PH	k æ n t ə l ̴ o ʊ p	0.33	0.00	replaced
+capitalism	english	1	capitalism	fil-PH	k æ p ɪ t ə l ̴ ɪ z ə m	0.27	0.00	replaced
+carborundum	english	1	carborundum	fil-PH	k ɑ ɹ b ɜ ɹ ˞ ə n d ə m	0.36	0.00	replaced
+casserole	english	1	casserole	fil-PH	k æ s ɜ ˞ o ʊ l ̴	0.25	0.12	replaced
+castille	english	1	castille	fil-PH	k æ s t i l ̴	0.50	0.00	replaced
+castrate	english	1	castrate	fil-PH	k æ s t ɹ e ɪ t	0.38	0.00	replaced
+catacomb	english	1	catacomb	fil-PH	k æ t ə k o ʊ m	0.38	0.00	replaced
+cataract	english	1	cataract	fil-PH	k æ t ɜ ˞ æ k t	0.25	0.12	replaced
+cauterization	english	1	cauterization	fil-PH	k w ɔ t ɜ ˞ ə z e ɪ ʃ ə n	0.58	0.25	replaced
+cavalry	english	1	cavalry	fil-PH	k æ v ə l ̴ ɹ i	0.71	0.00	replaced
+cenozoic	english	1	cenozoic	fil-PH	s ɛ n ə z o ʊ ɪ k	0.56	0.11	replaced
+centigrade	english	1	centigrade	fil-PH	s ɛ n t ə g ɹ e ɪ d	0.50	0.00	replaced
+chack-chack	hyphen	1	chack chack	fil-PH	t ʃ a k t ʃ a k	0.62	0.25	replaced
+chalcedony	english	1	chalcedony	fil-PH	k æ l ̴ s ɛ d ə n i	0.40	0.40	rejected
+châpi-chapi	hyphen	1	châpi chapi	fil-PH	t ʃ ɑ p i t ʃ ɑ p i	0.50	0.00	replaced
+characterization	english	1	characterization	fil-PH	k ɛ ɹ ə k t ɜ ˞ ə z e ɪ ʃ ə n	0.40	0.13	replaced
+chonkee-chonkee	hyphen	1	chonkee chonkee	fil-PH	t ʃ ɔ ŋ k i t ʃ ɔ ŋ k i	0.50	0.00	replaced
+ay-ak	hyphen	2	ay-ak	fil-PH	a j ə k u	0.50	0.25	replaced
+bahaw-bahaw	hyphen	2	bahaw-bahaw	fil-PH	b a a w	0.60	0.60	rejected
+baka-baka	hyphen	2	baka-baka	fil-PH	b a q a	0.50	0.50	rejected
+bald-bala	hyphen	2	bald bala	en-US	b ɔ l ̴ d	0.62	0.50	rejected
+balis-balis	hyphen	2	balis-balis	fil-PH	b a l i s b a l ̴ i s	0.50	0.00	replaced
+banginbangin	cut	2	bangin bangin	fil-PH	b a ŋ i n b a ŋ i n	0.50	0.00	replaced
+bantalbantal	cut	2	bantal bantal	fil-PH	v e n t a l v e n t a l	0.67	0.33	replaced
+basar-basar	hyphen	2	basar-basar	fil-PH	b ə s a r	0.50	0.50	rejected
+básugbásog	cut	2	básugbásog	fil-PH	b a s o g	0.50	0.50	rejected
+bawaybaway	cut	2	baway baway	fil-PH	v a w a j v a w a j	0.50	0.20	replaced
+biglabigla	cut	2	bigla bigla	fil-PH	b i g l a b i g l a	0.50	0.00	replaced
+bóga-boga	hyphen	2	bóga-boga	fil-PH	b o g a	0.50	0.50	rejected
+bóka-boka	hyphen	2	bóka-boka	fil-PH	b o q ɑ	0.50	0.50	rejected
+bollard	english	2	bollard	en-US	b ɑ l ̴ ɜ ˞ d	0.33	0.17	replaced
+boselbosel	cut	2	bosel bosel	fil-PH	b o s ɛ l b o s ɛ l	0.60	0.00	replaced
+bota-bota	hyphen	2	bota-bota	fil-PH	b o t a	0.50	0.50	rejected
+boyboy	cut	2	boy boy	fil-PH	b o ɪ b o ɪ j	0.50	0.33	replaced
+bronchial	english	2	bronchial	en-US	b r ɔ ŋ k i l	0.38	0.50	rejected
+búhosutang	cut	2	búhosutang	fil-PH	b u h o s	0.44	0.44	rejected
+buladbukad	cut	2	buladbukad	fil-PH	b u l a d	0.50	0.50	rejected
+bumpers	english	2	bumpers	en-US	b u m p ɜ ˞ z	0.29	0.29	rejected
+caban	english	2	caban	en-US	k æ b ə n	0.33	0.33	rejected
+cadena-de-amor	english	2	cadena de amor	en-US	k ə d e n ə ə v e ɪ m ɔ ɹ	0.25	0.50	rejected
+calan	english	2	calan	en-US	k æ l ̴ ə n	0.33	0.33	rejected
+chalcedony	english	2	chalcedony	en-US	k æ l ̴ s ɛ d ə n i	0.40	0.40	rejected
+bahaw-bahaw	hyphen	3	bahawbahaw	fil-PH	d a a w	0.60	0.70	rejected
+baka-baka	hyphen	3	bakabaka	fil-PH	b ɑ q ɑ b ɑ q ɑ	0.50	0.00	replaced
+bald-bala	hyphen	3	bald bala	en-US	b ɔ l ̴ d	0.62	0.50	rejected
+basar-basar	hyphen	3	basarbasar	fil-PH	b ə s a r	0.50	0.50	rejected
+bóga-boga	hyphen	3	bógaboga	fil-PH	b u g a b u g a	0.50	0.25	replaced
+bóka-boka	hyphen	3	bókaboka	fil-PH	b o q ɑ b o q ɑ	0.50	0.00	replaced
+bota-bota	hyphen	3	botabota	fil-PH	b o t a b o t a	0.50	0.00	replaced
+bronchial	english	3	bronchial	en-US	b r ɔ ŋ k i o l	0.38	0.50	rejected
+bumpers	english	3	bumpers	en-US	b u m p e r s	0.29	0.29	rejected
+caban	english	3	caban	en-US	k æ b ə n	0.33	0.33	rejected
+cadena-de-amor	english	3	cadena de amor	en-US	k ə d e n ə ə v e ɪ m ɔ ɹ	0.25	0.50	rejected
+calan	english	3	calan	en-US	k æ l ̴ ə n	0.33	0.33	rejected
+chalcedony	english	3	chalcedony	en-US	k æ l ̴ s ɛ d ə n i	0.40	0.40	rejected
+bahaw-bahaw	hyphen	-	bahaw bahaw	fil-PH	b ə a b ə a w	0.60	0.30	kept
+bald-bala	hyphen	-	bald bala	fil-PH	b ɔ l d	0.62	0.50	kept
+basar-basar	hyphen	-	basar basar	fil-PH	v a s a r a b	0.50	0.50	kept
+básugbásog	cut	-	básugbásog	fil-PH	b a s o g	0.50	0.50	kept
+bronchial	english	-	bronchial	fil-PH	b r ɔ ŋ k i l	0.38	0.50	kept
+búhosutang	cut	-	búhosutang	fil-PH	b u h o s	0.44	0.44	kept
+buladbukad	cut	-	buladbukad	fil-PH	b u l a d	0.50	0.50	kept
+bumpers	english	-	bumpers	fil-PH	b u m p e r s	0.29	0.29	kept
+caban	english	-	caban	fil-PH	k æ b ə n	0.33	0.33	kept
+cadena-de-amor	english	-	cadena de amor	fil-PH	k ə d i n ə ə v e ɪ m ɔ ɹ	0.25	0.42	kept
+calan	english	-	calan	fil-PH	k æ l ̴ ə n	0.33	0.33	kept
+chalcedony	english	-	chalcedony	fil-PH	k æ l ̴ s ɛ d ə n i	0.40	0.40	kept
