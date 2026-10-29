@@ -10,8 +10,8 @@ import unicodedata
 
 ACUTE = dict(zip("áéíóú", "aeiou")); GRAVE = dict(zip("àèìòù", "aeiou")); CIRC = dict(zip("âêîôû", "aeiou"))
 VOWELS = set("aeiou")
-UNITS = ["ng", "ts"]                            # digraphs read as one consonant (ny, sy, dy, ly are n+j, s+j... as in the dictionary)
-MAP = {"ng": "ŋ", "ts": "tʃ", "sy": "ʃ", "dy": "dʒ", "ny": "ɲ", "g": "ɡ", "y": "j", "r": "ɾ", "c": "k", "q": "k", "ñ": "ɲ",
+UNITS = ["ng", "ts", "ch", "sh"]                            # digraphs read as one consonant (ny, sy, dy, ly are n+j, s+j... as in the dictionary)
+MAP = {"ng": "ŋ", "ts": "tʃ", "ch": "tʃ", "sh": "ʃ", "sy": "ʃ", "dy": "dʒ", "ny": "ɲ", "g": "ɡ", "y": "j", "r": "ɾ", "c": "k", "q": "k", "ñ": "ɲ",
        "j": "dʒ", "x": "ks", "'": "", "’": ""}
 ONSET_CLUSTERS = {a + b for a in "bkdgpstfv" for b in "lr"}
 
@@ -28,6 +28,8 @@ def tokens(word):
             out.append(("V", ch, None)); i += 1
         elif ch in "-‧·":
             out.append(("-", "", None)); i += 1
+        elif ch == "c" and w[i + 1:i + 2] in ("e", "i", "y", "é", "í", "è", "ì", "ê", "î"):
+            out.append(("C", "s", None)); i += 1            # soft c (cebo, cielo)
         elif w[i:i + 2] in UNITS:
             out.append(("C", w[i:i + 2], None)); i += 2
         elif ch.isalpha() or ch in "'’":
