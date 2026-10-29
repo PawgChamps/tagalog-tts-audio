@@ -2,16 +2,16 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-2444 clips done, 2886 tries.
+2644 clips done, 3133 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 1788 | 69 |
-| hyphen | 443 | 13 |
-| letters | 85 | 0 |
-| cut | 35 | 9 |
+| english | 1815 | 72 |
+| hyphen | 584 | 16 |
+| letters | 89 | 0 |
+| cut | 55 | 11 |
 | extra | 2 | 0 |
-| **all** | 2353 | 91 |
+| **all** | 2545 | 99 |
 
 ## Replaced (first 60)
 
@@ -173,3 +173,11 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | ib-ib | hyphen | ib ib | i b | 0.50 → 0.50 |
 | igat-igat | hyphen | igat igat | i g a t | 0.50 → 0.50 |
 | indeterminate | english | indeterminate | ɪ n d ɪ t ɜ ˞ m ə n e ɪ t | 0.33 → 0.25 |
+| ire-ref | hyphen | ire ref | a ɪ ɜ r | 0.50 → 0.50 |
+| iyonout | cut | iyonout | i j o n | 0.43 → 0.43 |
+| k-dye | hyphen | kdye | k a d i e | 0.75 → 0.50 |
+| kaxnote | cut | kaxnote | k æ s a | 0.50 → 0.62 |
+| legerdemain | english | legerdemain | l ̴ ɛ d ʒ ɜ ˞ d o ʊ m e ɪ n | 0.36 → 0.27 |
+| ligaw-insfk | hyphen | ligawinsfk | l i g a w i n | 0.50 → 0.30 |
+| liquidator | english | liquidator | l ̴ ɪ k w ə d e ɪ t ɜ ˞ | 0.27 → 0.18 |
+| lobotomy | english | lobotomy | l ̴ ə b ɑ t ə m i | 0.27 → 0.55 |
