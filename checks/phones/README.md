@@ -39,12 +39,12 @@ vowels → a e i o u); a clip counts at most 100 % wrong. Full numbers in `sampl
 | **ZIPA** large CR-CTC NS (`anyspeech/zipa-large-crctc-ns-800k`, ONNX) | **11.7 %** | **55 %** | **0.17** | best and fastest: the one to run on all clips |
 | PhoneticXEUS (`changelinglab/PhoneticXeus`) | 12.5 % | 49 % | 1.04 | the only one that writes some glottal stops (7 of 73 final ʔ) |
 | wav2vec2 espeak (`facebook/wav2vec2-lv-60-espeak-cv-ft`) | 13.4 % | 49 % | 0.54 | espeak phone set with tone digits |
-| POWSM (`espnet/powsm`) | see `sample/report.md` | | | no Tagalog language token; run with `<unk>` |
+| POWSM (`espnet/powsm`) | 12.4 % | 50 % | 7.14 | as good as PhoneticXEUS but 40 times slower than ZIPA; no Tagalog language token (`<unk>`) |
 
 None of them hears stress, and final glottal stops almost never, so the check says nothing about accent marks or
 final ʔ.
 
-## What the sample found
+## What the sample found (300 clips)
 
 - **The TTS read its instruction aloud**: the `input` clip is the whole prompt ("read aloud clearly in a neutral
   tone…"), not the word. `extra_speech.tsv` lists every such clip.
@@ -54,3 +54,18 @@ final ʔ.
 - **English loanwords spoken the Tagalog or Spanish way**: `technology` → *teknolohia*, `radiation` → *radiashon*,
   `solitary` → *solitario*, `newton` → *niwton*. Where the IPA column has an English reading, it does not match the
   clip.
+
+## All 151,262 clips with ZIPA (29/10/2026, 10 jobs, 40 minutes)
+
+Phone error without ʔ 9.6 %, 54 % of the clips exact (`wordlist_all/report.md`). Lists in `wordlist_all/`:
+
+- `truncated.tsv`: clips heard much shorter than the word (under 60 % of its phones, words of 6+ phones).
+  **1,013 of the 14,794 hyphenated forms (6.8 %)** against 132 of the 136,467 others (0.1 %): the TTS often stops
+  at the hyphen. These are the clips to re-synthesize first (the hyphen written as a space, or the halves joined).
+- `extra_speech.tsv`: 5 clips. `input` has the instruction read aloud; `ofw`, `ocw` and `ywca` are spelled-out
+  letters (fine); `tumoy` has extra speech.
+- `english_vs_tagalog.tsv`: the 10,646 English-tagged rows whose reading the IPA fix of 29/10 changed, with the
+  phone error of the clip against the English and against the old Tagalog reading: 4,415 clips sound English,
+  2,992 sound Tagalog (the IPA column now disagrees with the clip), 3,239 are not clearly either.
+- `disagree.tsv`: 8,380 clips whose phones differ from the IPA by 40 % or more: wrong IPA, wrong audio, or both.
+  The `spelled` rows (50 % error) are mostly abbreviations whose IPA is not the spoken letters.
