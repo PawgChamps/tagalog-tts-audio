@@ -148,7 +148,11 @@ def main():
             if not os.path.exists(r["file"]):
                 if "--fetch-raw" not in sys.argv:
                     continue
-                fetch(r["file"])
+                try:
+                    fetch(r["file"])
+                except RuntimeError:                # no such clip (the voice refused the word): note it, go on
+                    fh.write(f"{r['form']}\t{model}\tERROR missing clip\t0\n")
+                    continue
             t = time.time()
             try:
                 ph = run(decode(r["file"]))
