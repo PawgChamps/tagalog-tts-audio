@@ -159,15 +159,6 @@ EN_DIGRAPH = re.compile(r"th|sh|ch|ph|ck|wh|gh|oo|ee|ea|ou|ow")
 TAGALOG_PLAIN = set()                              # plain spellings the list reads the Tagalog way (filled by main)
 
 
-def part_english(p):
-    """one part of a hyphenated form that would be read the English way on its own: a letter (t-shirt), or a word
-    CMUdict knows with a foreign letter or digraph, six letters or more, or a doubled consonant"""
-    p = plain(p)
-    if len(p) == 1:
-        return True
-    return bool(cmu_word(p)) and bool(FOREIGN_LETTERS.search(p) or len(p) >= 6 or re.search(r"([^aeiou])\1", p))
-
-
 def filipino_word(p):
     """a word of three letters or more that is clearly more frequent in Filipino text than in English text"""
     f, e = zipf_frequency(p, "fil"), zipf_frequency(p, "en")

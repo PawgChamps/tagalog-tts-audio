@@ -69,3 +69,5 @@ Phone error without ʔ 9.6 %, 54 % of the clips exact (`wordlist_all/report.md`)
   2,992 sound Tagalog (the IPA column now disagrees with the clip), 3,239 are not clearly either.
 - `disagree.tsv`: 8,380 clips whose phones differ from the IPA by 40 % or more: wrong IPA, wrong audio, or both.
   The `spelled` rows (50 % error) are mostly abbreviations whose IPA is not the spoken letters.
+
+The clips to re-synthesize from these lists, and the results of doing so, are in `checks/fix/` (see its README).
