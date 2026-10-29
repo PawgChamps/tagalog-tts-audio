@@ -1921,3 +1921,240 @@ cation	english	-	cation	fil-PH	k e ɪ ʃ ə n	0.57	0.57	kept
 empiricism	english	-	empiricism	fil-PH	ɪ m p ɪ ɹ i ɪ s ɪ z ə m	0.36	0.27	kept
 catsup	english	-	catsup	fil-PH	k æ t s ə p	0.80	0.60	kept
 spurious	english	-	spurious	fil-PH	s p ɪ ɹ i ə s	0.25	0.25	kept
+prognosis	english	1	prognosis	fil-PH	p ɹ ɑ g n o ʊ s ə s	0.30	0.00	replaced
+stalemate	english	1	stalemate	fil-PH	s t e ɪ l ̴ m e ɪ t	0.56	0.00	replaced
+e-vat	hyphen	1	e vat	fil-PH	i v ɔ t	1.00	0.25	replaced
+assessor	english	1	assessor	fil-PH	ə s ɛ s ɜ ˞	0.50	0.17	replaced
+continuation	english	1	continuation	fil-PH	k ə n t ɪ n j u e ɪ ʃ ə n	0.46	0.00	replaced
+delegate	english	1	delegate	fil-PH	d ɛ l ̴ ə g e ɪ t	0.50	0.00	replaced
+equator	english	1	equator	fil-PH	ɪ k w e ɪ t ɜ ˞	0.75	0.12	replaced
+îika-ika	hyphen	1	îika ika	fil-PH	i k a i k a	0.57	0.14	replaced
+killjoy	english	1	killjoy	fil-PH	k ɪ l ̴ d ʒ ɔ ɪ	0.50	0.00	replaced
+junket	english	1	junket	fil-PH	d ʒ u n k ɛ t	0.50	0.50	rejected
+prophet	english	1	prophet	fil-PH	p ɹ ɑ f ɪ t	0.67	0.17	replaced
+mobilization	english	1	mobilization	fil-PH	m o ʊ b ə l ̴ ɪ z e ɪ ʃ ə n	0.54	0.08	replaced
+recollection	english	1	recollection	fil-PH	ɹ ɛ k ə l ̴ ɛ k ʃ ə n	0.40	0.00	replaced
+decorator	english	1	decorator	fil-PH	d ɛ k ɜ ˞ e ɪ t ɜ ˞	0.40	0.20	replaced
+exterior	english	1	exterior	fil-PH	ɪ k s t ɪ ɹ i ɜ ˞	0.33	0.11	replaced
+molasses	english	1	molasses	fil-PH	m ə l ̴ æ s ə s	0.43	0.14	replaced
+permission	english	1	permission	fil-PH	p ɜ ˞ m ɪ ʃ ə n	0.38	0.12	replaced
+vindication	english	1	vindication	fil-PH	v ɪ n d ə k e ɪ ʃ ə n	0.45	0.00	replaced
+luminary	english	1	luminary	fil-PH	l ̴ u m ə n ɛ ɹ i	0.25	0.00	replaced
+pontiff	english	1	pontiff	fil-PH	p ɑ n t ɪ f	0.33	0.17	replaced
+mánang-mana	hyphen	1	mánang mana	fil-PH	m a n a ŋ m a n ə	0.44	0.00	replaced
+matron	english	1	matron	fil-PH	m a ɪ t r o n	0.43	0.29	replaced
+distraction	english	1	distraction	fil-PH	d ɪ s t ɹ æ k ʃ ə n	0.30	0.00	replaced
+implication	english	1	implication	fil-PH	ɪ m p l ̴ ə k e ɪ ʃ ə n	0.36	0.00	replaced
+obscene	english	1	obscene	fil-PH	ə b s i n	0.60	0.00	replaced
+vacate	english	1	vacate	fil-PH	v e k a t	0.57	0.43	rejected
+foreplay	english	1	foreplay	fil-PH	f ɔ ɹ p l ̴ e ɪ	0.29	0.00	replaced
+gunrunner	english	1	gunrunner	fil-PH	g ə n ɹ ə n ɜ ˞	0.38	0.12	replaced
+litigation	english	1	litigation	fil-PH	l ̴ ɪ t ə g e ɪ ʃ ə n	0.40	0.00	replaced
+geodetic	english	1	geodetic	fil-PH	d ʒ i o d ɛ t ɪ k	0.25	0.12	replaced
+jailbreak	english	1	jailbreak	fil-PH	d ʒ e ɪ l ̴ b r e ɪ k	0.56	0.00	replaced
+babylon	english	1	babylon	fil-PH	b æ b ə l ̴ ɑ n	0.29	0.00	replaced
+lector	english	1	lector	fil-PH	l ̴ ɛ k t ɜ ˞	0.33	0.17	replaced
+pl	letters	1	pi el	fil-PH	p i i	1.00	0.50	rejected
+proverbs	english	1	proverbs	fil-PH	p ɹ ɑ v ɜ ˞ b z	0.25	0.12	replaced
+quicken	english	1	quicken	fil-PH	k w ɪ k ə n	0.33	0.00	replaced
+designation	english	1	designation	fil-PH	d ɛ z ɪ g n e ɪ ʃ ə n	0.45	0.09	replaced
+excursion	english	1	excursion	fil-PH	ɪ k s k ɜ ˞ ʒ ə n	0.33	0.11	replaced
+fridge	english	1	fridge	fil-PH	f ɹ ɪ d ʒ	0.75	0.00	replaced
+fructose	english	1	fructose	fil-PH	f ɹ ə k t o ʊ s	0.25	0.00	replaced
+gynecologist	english	1	gynecologist	fil-PH	g a ɪ n ə k ɑ l ̴ ə d ʒ ɪ s t	0.46	0.08	replaced
+hula-hula	hyphen	1	hula hula	fil-PH	h u l a h u l l a	0.50	0.12	replaced
+insult	english	1	insult	fil-PH	ɪ n s ɔ l ̴ t	0.33	0.17	replaced
+occupant	english	1	occupant	fil-PH	ɑ k j ə p ə n t	0.50	0.00	replaced
+pátak-patak	hyphen	1	pátak patak	fil-PH	p a ː t a k	0.60	0.50	rejected
+rerouting	english	1	rerouting	fil-PH	ɹ i ɹ a ʊ t ɪ ŋ	0.57	0.14	replaced
+sulphate	english	1	sulphate	fil-PH	s ə l ̴ f e ɪ t	0.57	0.00	replaced
+tuba-tuba	hyphen	1	tuba tuba	fil-PH	t u b a t u b a	0.50	0.00	replaced
+valuables	english	1	valuables	fil-PH	v æ l ̴ j ə b ə l ̴ z	0.33	0.00	replaced
+atheism	english	1	atheism	fil-PH	e ɪ θ i ɪ z ə m	0.57	0.57	rejected
+espionage	english	1	espionage	fil-PH	ɛ s p i ɛ n a ʒ	0.38	0.25	replaced
+observant	english	1	observant	fil-PH	ə b z ɜ ˞ v ə n t	0.44	0.11	replaced
+consult	english	1	consult	fil-PH	k ə n s ə l ̴ t	0.43	0.00	replaced
+illustrator	english	1	illustrator	fil-PH	ɪ l ̴ ə s t ɹ e ɪ t ɜ ˞	0.45	0.09	replaced
+linoleum	english	1	linoleum	fil-PH	l ̴ ɛ n o ʊ l ̴ i ə m	0.44	0.11	replaced
+courageous	english	1	courageous	fil-PH	k ɜ ˞ e ɪ d ʒ ə s	0.62	0.12	replaced
+indelible	english	1	indelible	fil-PH	ɪ n d ɛ l ̴ ə b ə l ̴	0.33	0.11	replaced
+confessional	english	1	confessional	fil-PH	k ə n f ɛ ʃ ə n ə l ̴	0.50	0.00	replaced
+lr	letters	1	el ar	fil-PH	ɛ l a r	0.50	0.00	replaced
+pudong	english	1	pudong	fil-PH	p u d ɔ ŋ	0.33	0.17	replaced
+tn	letters	1	ti en	fil-PH	t i ɛ n	0.50	0.00	replaced
+airconditioner	english	1	airconditioner	fil-PH	ɛ ɹ k ə n d ɪ ʃ ə n ɜ ˞	0.50	0.08	replaced
+dúrug-durog	hyphen	1	dúrug durog	fil-PH	d u r u g d u r o g	0.50	0.00	replaced
+inhuman	english	1	inhuman	fil-PH	ɪ n h j u m a n	0.25	0.00	replaced
+intermission	english	1	intermission	fil-PH	ɪ n t ɜ ˞ m ɪ ʃ ə n	0.40	0.10	replaced
+miscarriage	english	1	miscarriage	fil-PH	m ɪ s k ɛ ɹ ɪ d ʒ	0.38	0.12	replaced
+obligatory	english	1	obligatory	fil-PH	ə b l ̴ ɪ g ə t ɔ ɹ i	0.30	0.00	replaced
+ovulation	english	1	ovulation	fil-PH	ɑ v j ə l ̴ e ɪ ʃ ə n	0.55	0.18	replaced
+oxidation	english	1	oxidation	fil-PH	ɑ k s ə d e ɪ ʃ ə n	0.50	0.00	replaced
+sálit-salit	hyphen	1	sálit salit	fil-PH	s a l i t s ə l i t	0.60	0.00	replaced
+soloist	english	1	soloist	fil-PH	s o ʊ l ̴ o ʊ ə s t	0.33	0.00	replaced
+suspicion	english	1	suspicion	fil-PH	s ə s p ɪ ʃ ə n	0.38	0.00	replaced
+tabulation	english	1	tabulation	fil-PH	t æ b j ə l ̴ e ɪ ʃ ə n	0.55	0.00	replaced
+vacant	english	1	vacant	fil-PH	v e ɪ k ɛ n t	0.43	0.14	replaced
+caterpillar	english	1	caterpillar	fil-PH	k æ t ɜ ˞ p ɪ l ̴ ɜ ˞	0.44	0.22	replaced
+clarification	english	1	clarification	fil-PH	k l ̴ ɛ ɹ ə f ə k e ɪ ʃ ə n	0.54	0.00	replaced
+compost	english	1	compost	fil-PH	k ɑ m p o ʊ s t	0.25	0.00	replaced
+fortification	english	1	fortification	fil-PH	f ɔ ɹ t ə f ə k e ɪ ʃ ə n	0.46	0.00	replaced
+sákal-sakal	hyphen	1	sákal sakal	fil-PH	s æ q æ l ̴ s æ q æ l ̴	0.50	0.00	replaced
+textual	english	1	textual	fil-PH	t ɛ k s t j u w ə l ̴	0.25	0.38	rejected
+usap-usap	hyphen	1	usap usap	fil-PH	u s a p i s a p	0.50	0.12	replaced
+debonair	english	1	debonair	fil-PH	d ɛ b ə n ɛ ɹ	0.29	0.00	replaced
+gulang-gulang	hyphen	1	gulang gulang	fil-PH	g u ː l a ŋ g u ː l a ŋ	0.50	0.00	replaced
+saver	english	1	saver	fil-PH	s e ɪ v ɜ ˞	0.67	0.17	replaced
+fifty-fifty	hyphen	1	fifty fifty	fil-PH	f ɪ f t i f ɪ f t i	0.50	0.00	replaced
+homage	english	1	homage	fil-PH	h a m ɛ d ʒ	0.75	0.50	rejected
+iridium	english	1	iridium	fil-PH	j ʊ ɹ ɹ ɪ d i ə m	0.43	0.43	rejected
+observe	english	1	observe	fil-PH	ə b z ɜ ˞ v	0.67	0.17	replaced
+-esque	english	1	esque	fil-PH	ɛ s k	0.33	0.00	replaced
+-fuge	english	1	fuge	fil-PH	f j u d ʒ	0.75	0.00	replaced
+-meter	english	1	meter	fil-PH	m i t ɜ ˞	0.60	0.20	replaced
+áanga-angà	hyphen	1	áanga angà	fil-PH	a a ŋ a	0.43	0.43	rejected
+áapa-apa	hyphen	1	áapa apa	fil-PH	ə a p ə ə p a	0.43	0.00	replaced
+aato-ato	hyphen	1	aato ato	fil-PH	a a t o a t o	0.57	0.00	replaced
+abal-abal	hyphen	1	abal abal	fil-PH	a b a l a b a l	0.50	0.00	replaced
+abalone	english	1	abalone	fil-PH	æ b ə l ̴ o ʊ n i	0.25	0.00	replaced
+abang-abang	hyphen	1	abang abang	fil-PH	a ː b a ŋ a ː b a ŋ	0.50	0.00	replaced
+abaw-abaw	hyphen	1	abaw abaw	fil-PH	a b a w ə b a w	0.50	0.00	replaced
+abáy-abáy	hyphen	1	abáy abáy	fil-PH	a b a ə b a ɪ	0.50	0.25	replaced
+abbreviation	english	1	abbreviation	fil-PH	ə b ɹ i v i e ɪ ʃ ə n	0.45	0.00	replaced
+abil-abil	hyphen	1	abil abil	fil-PH	ə b i l ə b i l	0.50	0.00	replaced
+ábo-abo	hyphen	1	ábo abo	fil-PH	a b o a b o	0.50	0.00	replaced
+abor-abor	hyphen	1	abor abor	fil-PH	a b o r	0.50	0.50	rejected
+abortifacient	english	1	abortifacient	fil-PH	e ɪ b ɔ ɹ d ə v f e ɪ ʃ ə n t	0.38	0.31	rejected
+ábot-watas	hyphen	1	ábot watas	fil-PH	ə b o t w a t ə s	0.56	0.00	replaced
+aboy-aboy	hyphen	1	aboy aboy	fil-PH	ə b ɔ j ə b ɔ j	0.50	0.00	replaced
+abu-abo	hyphen	1	abu abo	fil-PH	ə b u ə b o w	0.50	0.17	replaced
+ábug-abog	hyphen	1	ábug abog	fil-PH	a b u g a b u g	0.50	0.12	replaced
+abusing	english	1	abusing	fil-PH	ə b j u z ɪ ŋ	0.57	0.00	replaced
+abuy-aboy	hyphen	1	abuy aboy	fil-PH	ɑ b u j ɑ b o j	0.50	0.00	replaced
+acetone	english	1	acetone	fil-PH	æ s ə t o ʊ n	0.43	0.00	replaced
+achaean	english	1	achaean	fil-PH	e k e ɪ ə n	0.60	0.60	rejected
+achene	english	1	achene	fil-PH	e ɪ k e ɪ n	0.75	0.75	rejected
+activate	english	1	activate	fil-PH	æ k t ə v e ɪ t	0.38	0.00	replaced
+activation	english	1	activation	fil-PH	æ k t ə v e ɪ ʃ ə n	0.50	0.00	replaced
+adenoid	english	1	adenoid	fil-PH	æ d ə n ɔ ɪ d	0.29	0.00	replaced
+adis-adis	hyphen	1	adis adis	fil-PH	a d i s ə d i s	0.50	0.00	replaced
+adjective	english	1	adjective	fil-PH	æ d ʒ ɪ k t ɪ v	0.71	0.00	replaced
+adulation	english	1	adulation	fil-PH	æ d j u l ̴ e ɪ ʃ ə n	0.56	0.33	replaced
+aerie	english	1	aerie	fil-PH	ɛ ɹ i	0.67	0.00	replaced
+aerodrome	english	1	aerodrome	fil-PH	ɛ ɹ ə d ɹ o ʊ m	0.38	0.00	replaced
+ag-ag	hyphen	1	ag ag	fil-PH	a g a g	0.50	0.00	replaced
+agagha	cut	1	agagha	fil-PH	a g a	0.50	0.50	rejected
+ágal-agal	hyphen	1	ágal agal	fil-PH	a g a l a g a l	0.50	0.00	replaced
+ágal-ágal	hyphen	1	ágal ágal	fil-PH	a g a l a g a l	0.50	0.00	replaced
+agar-kain	hyphen	1	agar kain	fil-PH	a g a r k a i n	0.50	0.00	replaced
+agi-agi	hyphen	1	agi agi	fil-PH	a g i a g i	0.50	0.00	replaced
+agid-agid	hyphen	1	agid agid	fil-PH	a g i d a g i d	0.50	0.00	replaced
+agil-agil	hyphen	1	agil agil	fil-PH	ʔ a ː g i l ʔ ɑ ː g i l	0.50	0.00	replaced
+agom-agom	hyphen	1	agom agom	fil-PH	a g ɔ m a g ɔ m	0.50	0.00	replaced
+ágoy-agoy	hyphen	1	ágoy agoy	fil-PH	a g o j a g o j	0.50	0.00	replaced
+agronomist	english	1	agronomist	fil-PH	ə g ɹ ɑ n ə m ɪ s t	0.40	0.00	replaced
+aguy-agoy	hyphen	1	aguy agoy	fil-PH	a g o j a g o j	0.50	0.12	replaced
+ainadobo	cut	1	ainadobo	fil-PH	ɑ j n a d o b u	0.62	0.25	replaced
+ak-ak	hyphen	1	ak ak	fil-PH	ɑ q ɑ q	0.50	0.00	replaced
+ak-ák	hyphen	1	ak ák	fil-PH	ɑ ː ɑ q	0.50	0.25	replaced
+ákbay-akbay	hyphen	1	ákbay akbay	fil-PH	ɑ q b ɑ ɪ ɑ q b ɑ ɪ	0.60	0.20	replaced
+aleng-aleng	hyphen	1	aleng aleng	fil-PH	a l i ŋ a l i ŋ	0.62	0.25	replaced
+alenleneg	cut	1	alenleneg	fil-PH	a l ɛ n ɲ j ɛ g	0.67	0.33	replaced
+alexandrine	english	1	alexandrine	fil-PH	æ l ̴ ə g z æ n d ɹ i n	0.27	0.00	replaced
+alig-alig	hyphen	1	alig alig	fil-PH	a l i a l i g	0.50	0.12	replaced
+alimony	english	1	alimony	fil-PH	æ l ̴ ə m o ʊ n i	0.25	0.00	replaced
+áling-aling	hyphen	1	áling aling	fil-PH	ə l i ŋ ə l i ŋ	0.62	0.00	replaced
+álkat-talaan	hyphen	1	álkat talaan	fil-PH	ə l k a t t a l a a n	0.64	0.00	replaced
+allegory	english	1	allegory	fil-PH	æ l ̴ ə g ɔ ɹ i	0.43	0.00	replaced
+alligator	english	1	alligator	fil-PH	æ l ̴ ə g e ɪ t ɜ ˞	0.44	0.11	replaced
+alluvium	english	1	alluvium	fil-PH	ə l ̴ u v i ə m	0.43	0.00	replaced
+alog-alog	hyphen	1	alog alog	fil-PH	a l ɔ g a l ɔ g	0.50	0.00	replaced
+alogalog	cut	1	alogalog	fil-PH	a l ɔ g	0.50	0.50	rejected
+alok-alok	hyphen	1	alok alok	fil-PH	ə l o k ə l o k	0.62	0.00	replaced
+alon-alon	hyphen	1	alon alon	fil-PH	a l o n a l o n	0.50	0.00	replaced
+along-radyo	hyphen	1	along radyo	fil-PH	a l ɔ n r a d d ʒ o	0.67	0.22	replaced
+alternator	english	1	alternator	fil-PH	ɔ l ̴ t ɜ ˞ n e ɪ t ɜ ˞	0.55	0.18	replaced
+am-ammo	hyphen	1	am ammo	fil-PH	ɛ j a m a	0.50	0.67	rejected
+áma-sa-kumpil	hyphen	1	áma sa kumpil	fil-PH	ə m a ɛ s a k u m p i l	0.73	0.09	replaced
+ámbon-ambon	hyphen	1	ámbon ambon	fil-PH	a m b ɔ n a m b ɔ n	0.50	0.00	replaced
+ámbun-ambon	hyphen	1	ámbun ambon	fil-PH	ə m b ɔ n ə m b ɔ n	0.50	0.10	replaced
+americium	english	1	americium	fil-PH	e m ɛ ˞ ə s i ə m	0.44	0.33	replaced
+amog-amog	hyphen	1	amog amog	fil-PH	a m ɔ g a m ɔ g	0.50	0.00	replaced
+amoy-alak	hyphen	1	amoy alak	fil-PH	a m o j a l a k	0.50	0.00	replaced
+anak-usa	hyphen	1	anak usa	fil-PH	ə n a k u e s e	0.43	0.29	replaced
+anda-andana	hyphen	1	anda andana	fil-PH	ə n d a ə n d a n ə	0.60	0.00	replaced
+anek-anek	hyphen	1	anek anek	fil-PH	a ː n ɪ k a ː n ɪ k	0.50	0.25	replaced
+ang-ang	hyphen	1	ang ang	fil-PH	a ŋ a ŋ	0.50	0.00	replaced
+ânga-anga	hyphen	1	ânga anga	fil-PH	a ŋ ŋ a a ŋ ŋ a	0.50	0.33	replaced
+ángaw-angaw	hyphen	1	ángaw angaw	fil-PH	ə ŋ a w ə ŋ a w	0.50	0.00	replaced
+angkátangkáyan	cut	1	angkátangkáyan	fil-PH	ə ŋ k a t	0.58	0.58	rejected
+áni-ani	hyphen	1	áni ani	fil-PH	a n i	0.50	0.50	rejected
+anim-anim	hyphen	1	anim anim	fil-PH	ə n i m a n i m	0.50	0.00	replaced
+ánimang-gilid	hyphen	1	ánimang gilid	fil-PH	a n i m a ŋ g i l ̴ i d	0.45	0.00	replaced
+animang-sulok	hyphen	1	animang sulok	fil-PH	a n i m a ŋ s u l ̴ o k	0.45	0.00	replaced
+animism	english	1	animism	fil-PH	æ n ə m ɪ z ə m	0.50	0.00	replaced
+annexation	english	1	annexation	fil-PH	æ n ɛ k s e ɪ ʃ ə n	0.50	0.00	replaced
+ano-apa	hyphen	1	ano apa	fil-PH	ə n o ə p a	0.67	0.00	replaced
+antares	english	1	antares	fil-PH	n ɪ n t ɛ ɹ i z	0.43	0.29	replaced
+antipode	english	1	antipode	fil-PH	æ n t ə p o ʊ d	0.25	0.12	replaced
+antithesis	english	1	antithesis	fil-PH	æ n t ɪ θ ə s ə s	0.33	0.00	replaced
+áp-ap	hyphen	1	áp ap	fil-PH	ɑ p ɑ p	0.50	0.00	replaced
+apan-apan	hyphen	1	apan apan	fil-PH	ə p a n ə p a n	0.50	0.00	replaced
+apat-na-angaw	hyphen	1	apat na angaw	fil-PH	ə p a t n a ə ŋ a w	0.60	0.00	replaced
+api-api	hyphen	1	api api	fil-PH	a p i a p i	0.50	0.00	replaced
+aposapos	cut	1	aposapos	fil-PH	a p o s a p o s	0.50	0.00	replaced
+appellant	english	1	appellant	fil-PH	e ɪ p æ l ̴ ə n t	0.57	0.57	rejected
+approximate	english	1	approximate	fil-PH	ə p ɹ ɑ k s ə m e ɪ t	0.40	0.20	replaced
+apricot	english	1	apricot	fil-PH	e ɪ p ɹ ə k ɑ t	0.50	0.00	replaced
+arag-arag	hyphen	1	arag arag	fil-PH	a r a g a r a g	0.50	0.00	replaced
+arbitrator	english	1	arbitrator	fil-PH	ɑ ɹ b ɪ t ɹ a ɪ t ɜ ˞	0.45	0.18	replaced
+ari-ano	hyphen	1	ari ano	fil-PH	a r i ə n n o	0.50	0.17	replaced
+ari-ari	hyphen	1	ari ari	fil-PH	a r i a r i	0.50	0.00	replaced
+asa-asa	hyphen	1	asa asa	fil-PH	ə s a	0.50	0.50	rejected
+asak-asak	hyphen	1	asak asak	fil-PH	æ ː s ɑ q ɑ s ɑ q	0.50	0.00	replaced
+asal-mahal	hyphen	1	asal mahal	fil-PH	a s a l m ə h a l	0.56	0.00	replaced
+aspi-aspi	hyphen	1	aspi aspi	fil-PH	æ s p i æ s p i	0.50	0.00	replaced
+assimilation	english	1	assimilation	fil-PH	ə s ɪ m ə l ̴ e ɪ ʃ ə n	0.45	0.00	replaced
+at-at	hyphen	1	at at	fil-PH	ʔ ɑ ː t ʔ ɑ ː ɾ	0.50	0.25	replaced
+ata-ata	hyphen	1	ata ata	fil-PH	a t a ə t a	0.50	0.00	replaced
+atang-atang	hyphen	1	atang atang	fil-PH	a t a ŋ a t a ŋ	0.50	0.00	replaced
+átang-átang	hyphen	1	átang átang	fil-PH	ʔ a ː t a ŋ a ː t a ŋ	0.50	0.00	replaced
+atay-atay	hyphen	1	atay atay	fil-PH	ə t a j	0.50	0.50	rejected
+atin-atin	hyphen	1	atin atin	fil-PH	ə t i n ə t i n	0.50	0.00	replaced
+junket	english	2	junket	en-US	d ʒ u ŋ k ɛ t	0.50	0.33	replaced
+vacate	english	2	vacate	en-US	v e ɪ k e ɪ t	0.57	0.00	replaced
+pl	letters	2	P L	fil-PH	p i ɛ l ̴	1.00	0.00	replaced
+pátak-patak	hyphen	2	pátak-patak	fil-PH	p a t ɑ k	0.60	0.50	rejected
+atheism	english	2	atheism	en-US	e θ i ɪ z ə m	0.57	0.43	rejected
+textual	english	2	textual	en-US	t ɛ k s t j u l ̴	0.25	0.38	rejected
+homage	english	2	homage	en-US	h a m ɛ d ʒ	0.75	0.50	rejected
+iridium	english	2	iridium	en-US	i r i d i a m	0.43	0.00	replaced
+áanga-angà	hyphen	2	áanga-angà	fil-PH	a ŋ a ŋ ɐ	0.43	0.29	rejected
+abor-abor	hyphen	2	abor-abor	fil-PH	a b o r	0.50	0.50	rejected
+abortifacient	english	2	abortifacient	en-US	e ɪ b ɔ ɹ d ə v f e ɪ ʃ ə n t	0.38	0.31	rejected
+achaean	english	2	achaean	en-US	e ɪ k i ə n	0.60	0.60	rejected
+achene	english	2	achene	en-US	a k i n	0.75	0.00	replaced
+agagha	cut	2	agagha	fil-PH	a g a h a	0.50	0.17	replaced
+alogalog	cut	2	alog alog	fil-PH	a l ɔ g a l ɔ g	0.50	0.00	replaced
+am-ammo	hyphen	2	am ammo	en-US	e ɪ ɛ m æ m o ʊ	0.50	0.50	rejected
+angkátangkáyan	cut	2	angkátangkáyan	fil-PH	ə ŋ k a t	0.58	0.58	rejected
+áni-ani	hyphen	2	áni-ani	fil-PH	a n i	0.50	0.50	rejected
+appellant	english	2	appellant	en-US	ə ɪ p ɛ l ̴ ə n t	0.57	0.29	replaced
+asa-asa	hyphen	2	asa-asa	fil-PH	a s ə	0.50	0.50	rejected
+atay-atay	hyphen	2	atay-atay	fil-PH	ə t a j	0.50	0.50	rejected
+pátak-patak	hyphen	3	pátakpatak	fil-PH	p ɑ t ɑ q p ɑ t ɑ q	0.60	0.00	replaced
+atheism	english	3	atheism	en-US	e θ i ɪ z ə m	0.57	0.43	rejected
+textual	english	3	textual	en-US	t ɛ k s t ʃ u ə l ̴	0.25	0.00	replaced
+homage	english	3	homage	en-US	ɑ m ə d ʒ	0.75	0.00	replaced
+áanga-angà	hyphen	3	áangaangà	fil-PH	a a ŋ a ŋ a	0.43	0.14	replaced
+abor-abor	hyphen	3	aborabor	fil-PH	æ b o r ɑ b o r	0.50	0.00	replaced
+abortifacient	english	3	abortifacient	en-US	e ɪ b ɔ ɹ d ə f e ɪ ʃ ə n t	0.38	0.23	replaced
+achaean	english	3	achaean	en-US	a k i ə n	0.60	0.20	replaced
+am-ammo	hyphen	3	am ammo	en-US	æ m æ m o ʊ	0.50	0.00	replaced
+áni-ani	hyphen	3	ániani	fil-PH	ə ɲ ɲ a n i	0.50	0.50	rejected
+asa-asa	hyphen	3	asaasa	fil-PH	a s a	0.50	0.50	rejected
+atay-atay	hyphen	3	atayatay	fil-PH	ɑ t ɑ j ɑ t ɑ ɪ	0.50	0.12	replaced
+atheism	english	-	atheism	en-US	e θ i ɪ z ə m	0.57	0.43	kept
+angkátangkáyan	cut	-	angkátangkáyan	fil-PH	ə ŋ k a t	0.58	0.58	kept
+áni-ani	hyphen	-	áni ani	fil-PH	a n i	0.50	0.50	kept
+asa-asa	hyphen	-	asa asa	fil-PH	ə s a	0.50	0.50	kept

@@ -2,16 +2,16 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-1644 clips done, 1921 tries.
+1844 clips done, 2158 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 1408 | 56 |
-| hyphen | 91 | 1 |
-| letters | 78 | 0 |
-| cut | 6 | 2 |
+| english | 1515 | 57 |
+| hyphen | 172 | 3 |
+| letters | 81 | 0 |
+| cut | 11 | 3 |
 | extra | 2 | 0 |
-| **all** | 1585 | 59 |
+| **all** | 1781 | 63 |
 
 ## Replaced (first 60)
 
@@ -141,3 +141,7 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | empiricism | english | empiricism | ɪ m p ɪ ɹ i ɪ s ɪ z ə m | 0.36 → 0.27 |
 | catsup | english | catsup | k æ t s ə p | 0.80 → 0.60 |
 | spurious | english | spurious | s p ɪ ɹ i ə s | 0.25 → 0.25 |
+| atheism | english | atheism | e θ i ɪ z ə m | 0.57 → 0.43 |
+| angkátangkáyan | cut | angkátangkáyan | ə ŋ k a t | 0.58 → 0.58 |
+| áni-ani | hyphen | áni ani | a n i | 0.50 → 0.50 |
+| asa-asa | hyphen | asa asa | ə s a | 0.50 → 0.50 |
