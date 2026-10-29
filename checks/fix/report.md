@@ -2,16 +2,16 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-2644 clips done, 3133 tries.
+2844 clips done, 3393 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 1815 | 72 |
-| hyphen | 584 | 16 |
-| letters | 89 | 0 |
-| cut | 55 | 11 |
+| english | 1914 | 75 |
+| hyphen | 666 | 20 |
+| letters | 90 | 0 |
+| cut | 60 | 17 |
 | extra | 2 | 0 |
-| **all** | 2545 | 99 |
+| **all** | 2732 | 112 |
 
 ## Replaced (first 60)
 
@@ -181,3 +181,16 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | ligaw-insfk | hyphen | ligawinsfk | l i g a w i n | 0.50 → 0.30 |
 | liquidator | english | liquidator | l ̴ ɪ k w ə d e ɪ t ɜ ˞ | 0.27 → 0.18 |
 | lobotomy | english | lobotomy | l ̴ ə b ɑ t ə m i | 0.27 → 0.55 |
+| lukis'lukis | cut | lukis'lukis | l u k i s | 0.50 → 0.50 |
+| mágaling-galing | hyphen | mágaling galing | m a g a l i ŋ | 0.42 → 0.42 |
+| magin- | english | magin | m æ g ə n | 0.40 → 0.40 |
+| makesyu-kesyo | hyphen | makesyu kesyo | m ɛ k s j u w k ɛ ʃ ɔ | 0.75 → 0.42 |
+| masagwásagwà | cut | masagwásagwà | m a s a g w w a | 0.42 → 0.33 |
+| masiglángmasigla | cut | masiglángmasigla | m a s i g l a ŋ | 0.47 → 0.47 |
+| masseur | cut | masseur | m ə s ɜ ˞ | 0.43 → 0.43 |
+| miliwpiliw | cut | miliwpiliw | m i l i w i | 0.60 → 0.40 |
+| milon-tagalog | hyphen | milon tagalog | m i l o n | 0.58 → 0.58 |
+| mulanbulan | cut | mulanbulan | m u l l a n | 0.50 → 0.40 |
+| myocardium | english | myocardium | m a ɪ o ʊ k ɑ ɹ d i ə m | 0.27 → 0.18 |
+| óban-óban | hyphen | óban óban | o b a n | 0.50 → 0.50 |
+| oct- | english | oct | ɑ k t o ʊ b ɜ ˞ | 1.00 → 1.00 |

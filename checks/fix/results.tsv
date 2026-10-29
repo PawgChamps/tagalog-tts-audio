@@ -3136,3 +3136,265 @@ legerdemain	english	-	legerdemain	fil-PH	l ̴ ɛ d ʒ ɜ ˞ d o ʊ m e ɪ n	0.36
 ligaw-insfk	hyphen	-	ligawinsfk	fil-PH	l i g a w i n	0.50	0.30	kept
 liquidator	english	-	liquidator	fil-PH	l ̴ ɪ k w ə d e ɪ t ɜ ˞	0.27	0.18	kept
 lobotomy	english	-	lobotomy	fil-PH	l ̴ ə b ɑ t ə m i	0.27	0.55	kept
+lubi-lubi	hyphen	1	lubi lubi	fil-PH	l u b i l u b i	0.50	0.00	replaced
+lúbid-lubid	hyphen	1	lúbid lubid	fil-PH	l u b ɛ d l u b ɛ d	0.50	0.20	replaced
+lubídlubid	cut	1	lubídlubid	fil-PH	l u b i d l u b i d	0.50	0.00	replaced
+lubis-lubusan	hyphen	1	lubis lubusan	fil-PH	l u b i s l u b u s a n	0.42	0.00	replaced
+lubricate	english	1	lubricate	fil-PH	l ̴ u b ɹ ɪ k e ɪ t	0.33	0.00	replaced
+lúgas-lugas	hyphen	1	lúgas lugas	fil-PH	l u g a s l u g a s	0.50	0.00	replaced
+lukis'lukis	cut	1	lukis'lukis	fil-PH	l u k i s	0.50	0.50	rejected
+lukon-lukon	hyphen	1	lukon lukon	fil-PH	l u k o n l u k o n	0.50	0.00	replaced
+lukto-lukto	hyphen	1	lukto lukto	fil-PH	l o k t o l o q t o	0.50	0.20	replaced
+lulas-lulas	hyphen	1	lulas lulas	fil-PH	l u l a s l u l a s	0.50	0.00	replaced
+lúmakad-lakad	hyphen	1	lúmakad lakad	fil-PH	l ̴ u m a q æ d l a q æ d	0.42	0.00	replaced
+lúmapit-lapit	hyphen	1	lúmapit lapit	fil-PH	ɛ l u m a p i t ɛ l a p i t	0.42	0.17	replaced
+lúmikwad-likwad	hyphen	1	lúmikwad likwad	fil-PH	l u m i k w a d l i k w w a d	0.43	0.07	replaced
+lúmingos-lingos	hyphen	1	lúmingos lingos	fil-PH	l u m i n g o s l i n g o s	0.50	0.33	replaced
+lumingus-lingos	hyphen	1	lumingus lingos	fil-PH	l u m i n o s l i n o s	0.50	0.25	replaced
+lúmipad-lipad	hyphen	1	lúmipad lipad	fil-PH	l ̴ u m i p a d l i p a d	0.42	0.00	replaced
+lúmuksu-lukso	hyphen	1	lúmuksu lukso	fil-PH	RuntimeError HTTP 400 {   "error": {     "code": 400,     "message": "Cloud Text-to-Speech could not generate audio because the input text or prompt violates Verte	0.42		failed
+lúmundag-lundag	hyphen	1	lúmundag lundag	fil-PH	l u m ɔ ̃ d a g l u ̃ d a g	0.43	0.21	replaced
+lunog-lunog	hyphen	1	lunog lunog	fil-PH	l u n ɔ g l u n ɔ g	0.60	0.00	replaced
+lúway-luway	hyphen	1	lúway luway	fil-PH	l u w a j l u w a j	0.50	0.00	replaced
+lw	letters	1	el dobolyu	fil-PH	ə l d o b o j u	0.56	0.44	rejected
+mábahay-bahay	hyphen	1	mábahay bahay	fil-PH	m a b a ː h a i b a h a i	0.50	0.17	replaced
+macroeconomics	english	1	macroeconomics	fil-PH	m æ k ɹ o ʊ i k ə n ɑ m ɪ k s	0.27	0.07	replaced
+mágaling-galing	hyphen	1	mágaling galing	fil-PH	m a g a l i ŋ	0.42	0.42	rejected
+magbigay-kasíyahan	hyphen	1	magbigay kasíyahan	fil-PH	m a g b i g a i k a s i j a h a n	0.53	0.06	replaced
+magin-	english	1	magin	fil-PH	m æ g ə n	0.40	0.40	rejected
+magnifier	english	1	magnifier	fil-PH	m æ g n ə f a ɪ ɜ ˞	0.30	0.10	replaced
+mágtandang-tandangan	hyphen	1	mágtandang tandangan	fil-PH	m a g t a n d a ŋ t a n d a ŋ a n	0.47	0.00	replaced
+maid-of-honor	english	1	maid of honor	fil-PH	m e ɪ d ə v ɑ n ɜ ˞	0.50	0.10	replaced
+mailbag	english	1	mailbag	fil-PH	m e ɪ l ̴ b æ g	0.43	0.00	replaced
+mailman	english	1	mailman	fil-PH	m e ɪ l ̴ m æ n	0.43	0.00	replaced
+mais-mais	hyphen	1	mais mais	fil-PH	m a i s m a j s	0.50	0.12	replaced
+major-dome	english	1	major dome	fil-PH	m e ɪ d ʒ ɜ ˞ d o ʊ m	0.50	0.10	replaced
+makesyu-kesyo	hyphen	1	makesyu kesyo	fil-PH	m ɛ k s j u w k ɛ ʃ ɔ	0.75	0.42	rejected
+mála-mala	hyphen	1	mála mala	fil-PH	m a l a	0.50	0.50	rejected
+malinin-linis	hyphen	1	malinin linis	fil-PH	m a l i n i n i s	0.42	0.25	replaced
+malong-a-andong	hyphen	1	malong a andong	fil-PH	m a l ɔ ŋ a a n d ɔ ̃	0.55	0.09	replaced
+mamaling-babae	hyphen	1	mamaling babae	fil-PH	m a m a l i ŋ g b a b a e	0.42	0.08	replaced
+mámasyal-masyal	hyphen	1	mámasyal masyal	fil-PH	m a m a s j a l m a s j a l	0.42	0.33	rejected
+mána-mana	hyphen	1	mána mana	fil-PH	m a n a m a n a	0.50	0.00	replaced
+manger	english	1	manger	fil-PH	m ɛ ɲ ʒ ə	0.57	0.57	rejected
+manicurist	english	1	manicurist	fil-PH	m æ n ɪ k j ʊ ɹ ɪ s t	0.27	0.09	replaced
+manioc	english	1	manioc	fil-PH	m æ n i ɑ k	0.33	0.00	replaced
+mano-manok	hyphen	1	mano manok	fil-PH	m a n u m ə n ɔ k	0.56	0.11	replaced
+manok-manok	hyphen	1	manok manok	fil-PH	m a ː n u k m a n u k	0.50	0.20	replaced
+mánti-mantikà	hyphen	1	mánti mantikà	fil-PH	m ə n t i m ə n t i k ə	0.42	0.00	replaced
+marabou	english	1	marabou	fil-PH	m ɛ ɹ ə b u	0.33	0.00	replaced
+maramingmarami	cut	1	maramingmarami	fil-PH	m ə r a m i ŋ k m ə r a m i	0.46	0.08	replaced
+marinate	english	1	marinate	fil-PH	m ɛ ɹ ə n e ɪ t	0.38	0.00	replaced
+maro-maro	hyphen	1	maro maro	fil-PH	m a ː r o m a ɾ o	0.50	0.00	replaced
+marok-barok	hyphen	1	marok barok	fil-PH	m a ʁ ɾ ɔ k b ɑ ʁ ɔ k	0.50	0.10	replaced
+marong-parong	hyphen	1	marong parong	fil-PH	m a ː r o ŋ p a r u ŋ	0.60	0.10	replaced
+maruk-baruk	hyphen	1	maruk baruk	fil-PH	m a ː ɾ u k b ɑ ː ɾ u k	0.60	0.00	replaced
+marxism	english	1	marxism	fil-PH	m ɑ ɹ k s ɪ z ə m	0.33	0.00	replaced
+marzipan	english	1	marzipan	fil-PH	m ɑ ɹ z ə p æ n	0.25	0.00	replaced
+masagwásagwà	cut	1	masagwásagwà	fil-PH	m a s a g w a	0.42	0.42	rejected
+masiglángmasigla	cut	1	masiglángmasigla	fil-PH	m ə s i g l a	0.47	0.53	rejected
+masseur	cut	1	masseur	fil-PH	m ə s ɜ ˞	0.43	0.43	rejected
+mastery	english	1	mastery	fil-PH	m æ s t ɜ ˞ i	0.29	0.14	replaced
+mata-mata	hyphen	1	mata mata	fil-PH	m a t a m a t a	0.50	0.00	replaced
+mate-mate	hyphen	1	mate mate	fil-PH	m e ɪ t m e ɪ t	0.62	0.00	replaced
+materialism	english	1	materialism	fil-PH	m ə t ɪ ɹ i ə l ̴ ɪ z ə m	0.42	0.00	replaced
+matriarchy	english	1	matriarchy	fil-PH	m e ɪ t ɹ i ɑ ɹ k i	0.40	0.00	replaced
+matriculate	english	1	matriculate	fil-PH	m ə t ɹ ɪ k j ə l ̴ e ɪ t	0.33	0.00	replaced
+matrimony	english	1	matrimony	fil-PH	m æ t ɹ ə m o ʊ n i	0.40	0.00	replaced
+maturation	english	1	maturation	fil-PH	m æ t ʃ ɜ ˞ e ɪ ʃ ə n	0.50	0.10	replaced
+mawardi-wardi	hyphen	1	mawardi wardi	fil-PH	m e ə w ə ɾ d i w ə ɾ ə d i	0.42	0.17	replaced
+may-base	hyphen	1	may base	fil-PH	m a j v e s	0.57	0.43	rejected
+maya-kapra	hyphen	1	maya kapra	fil-PH	m ɑ j ɑ q ɑ p r ɑ	0.56	0.00	replaced
+máyang-dampol	hyphen	1	máyang dampol	fil-PH	m a j a ŋ d e ə m p u l	0.55	0.18	replaced
+máyang-paking	hyphen	1	máyang paking	fil-PH	m a ː j a ŋ p a k i ŋ	0.50	0.00	replaced
+máybigay-biyaya	hyphen	1	máybigay biyaya	fil-PH	m a ɪ b i g a ɪ b i j a j a	0.43	0.14	replaced
+mayflower	english	1	mayflower	fil-PH	m e ɪ f l ̴ a ʊ ɜ ˞	0.44	0.11	replaced
+mediate	english	1	mediate	fil-PH	m i d i a t	0.43	0.29	replaced
+meditate	english	1	meditate	fil-PH	m ɛ d ə t e ɪ t	0.50	0.00	replaced
+medyo-medyo	hyphen	1	medyo medyo	fil-PH	m e d ʒ o m e d ʒ o	0.70	0.40	replaced
+médyu-medyo	hyphen	1	médyu medyo	fil-PH	m ɛ d d ʒ o m ɛ d ʒ o	0.50	0.25	replaced
+megalopolis	english	1	megalopolis	fil-PH	m ɛ g ə l ̴ ɑ p ə l ̴ ə s	0.45	0.00	replaced
+melius	english	1	melius	fil-PH	m ɛ l ̴ i ə s	0.33	0.33	rejected
+ménos-menos	hyphen	1	ménos menos	fil-PH	m e n o s m ɛ n o s	0.50	0.00	replaced
+mercantilism	english	1	mercantilism	fil-PH	m ɜ ˞ k ə n t ə l ̴ ɪ z ə m	0.31	0.08	replaced
+mesolithic	english	1	mesolithic	fil-PH	m ɛ s ə l ̴ ɪ θ ɪ k	0.44	0.11	replaced
+mesozoic	english	1	mesozoic	fil-PH	m ɛ z ə z o ʊ ɪ k	0.44	0.11	replaced
+messianic	english	1	messianic	fil-PH	m ɛ s i æ n ɛ k	0.25	0.12	replaced
+methanol	english	1	methanol	fil-PH	m ɛ θ ə n ɔ l	0.29	0.14	replaced
+methodical	english	1	methodical	fil-PH	m ə θ ɑ d ə k ə l ̴	0.67	0.00	replaced
+methodology	english	1	methodology	fil-PH	m ɛ θ ə d ɑ l ̴ ə d ʒ i	0.60	0.00	replaced
+meticulous	english	1	meticulous	fil-PH	m ə t ɪ k j ə l ̴ ə s	0.40	0.00	replaced
+metier	english	1	metier	fil-PH	m ɛ t j e	0.50	0.17	replaced
+mgabaka	cut	1	mgabaka	fil-PH	m æ ɣ ɑ b ɑ q ɑ	0.57	0.14	replaced
+mî-mi	hyphen	1	mî mi	fil-PH	m i m i	0.50	0.00	replaced
+micro-	english	1	micro	fil-PH	m i ɪ k r o	0.29	0.29	rejected
+microcosm	english	1	microcosm	fil-PH	m a ɪ k ɹ o k ɑ z ə m	0.64	0.09	replaced
+micron	english	1	micron	fil-PH	m a ɪ k ɹ ɑ n	0.29	0.00	replaced
+mídyu-midyo	hyphen	1	mídyu midyo	fil-PH	m i d i o m i d i o	0.50	0.62	rejected
+mídyu-midyu	hyphen	1	mídyu midyu	fil-PH	m i d j u m i d j u	0.62	0.50	rejected
+mildew	english	1	mildew	fil-PH	m ɪ l ̴ d u	0.40	0.00	replaced
+militarism	english	1	militarism	fil-PH	m ɪ l ̴ ə t ʊ ˞ ɪ z ə m	0.36	0.18	replaced
+miliwpiliw	cut	1	miliwpiliw	fil-PH	m i l j u	0.60	0.70	rejected
+milon-milunan	hyphen	1	milon milunan	fil-PH	m i l o n m i l u n a n	0.42	0.00	replaced
+milon-tagalog	hyphen	1	milon tagalog	fil-PH	m i l o n	0.58	0.58	rejected
+mimeograph	english	1	mimeograph	fil-PH	m ɪ m i ə g ɹ æ f	0.44	0.00	replaced
+minimalism	english	1	minimalism	fil-PH	m ɪ n ə m ə l ̴ ɪ z ə m	0.36	0.00	replaced
+minoan	english	1	minoan	fil-PH	m ə n o ʊ ə n	0.29	0.00	replaced
+mínus-minos	hyphen	1	mínus minos	fil-PH	m i n u s m i n u s	0.50	0.10	replaced
+minuscule	english	1	minuscule	fil-PH	m ɪ n ə s k j u l ̴	0.33	0.00	replaced
+mirog-mirog	hyphen	1	mirog mirog	fil-PH	m i r ɔ g m i r ɔ g	0.50	0.00	replaced
+miurit-murit	hyphen	1	miurit murit	fil-PH	m i j u r i t m u r i t	0.55	0.09	replaced
+modality	english	1	modality	fil-PH	m o ʊ d æ l ̴ ə t i	0.25	0.25	rejected
+modernism	english	1	modernism	fil-PH	m ɑ d ɜ ˞ n ɪ z ə m	0.40	0.10	replaced
+modicum	english	1	modicum	fil-PH	m ɑ d ə k ə m	0.29	0.14	replaced
+molest	english	1	molest	fil-PH	m ə l ̴ ɛ s t	0.33	0.00	replaced
+molybdenum	english	1	molybdenum	fil-PH	m ə l ̴ ɪ b d ə n ə m	0.40	0.10	replaced
+monetarism	english	1	monetarism	fil-PH	m ɑ n ə t ɜ ˞ ɪ z ə m	0.45	0.09	replaced
+monogram	english	1	monogram	fil-PH	m ɑ n ə g ɹ æ m	0.25	0.00	replaced
+monotheism	english	1	monotheism	fil-PH	m ɑ n ə θ i ɪ z ə m	0.60	0.00	replaced
+monotone	english	1	monotone	fil-PH	m ɑ n ə t o ʊ n	0.50	0.00	replaced
+monotype	english	1	monotype	fil-PH	m ɑ n ə t a ɪ p	0.50	0.00	replaced
+monovalent	english	1	monovalent	fil-PH	m ɑ n o ʊ v e ɪ ə l ̴ ə n t	0.45	0.27	replaced
+motong-botong	hyphen	1	motong botong	fil-PH	RuntimeError HTTP 400 {   "error": {     "code": 400,     "message": "Cloud Text-to-Speech could not generate audio because the input text or prompt violates Verte	0.50		failed
+mû-mo	hyphen	1	mû mo	fil-PH	m o	0.50	0.50	rejected
+muchang-muchang	hyphen	1	muchang muchang	fil-PH	m u t ʃ a ŋ m u t ʃ a ŋ	0.50	0.00	replaced
+muffler	english	1	muffler	fil-PH	m ə f l ̴ ɜ ˞	0.33	0.17	replaced
+muha-muha	hyphen	1	muha muha	fil-PH	m u h a m u h a	0.62	0.00	replaced
+múkhang-kuwalta	hyphen	1	múkhang kuwalta	fil-PH	m u a ŋ k w a l t a	0.62	0.23	replaced
+mukoymukoy	cut	1	mukoymukoy	fil-PH	m u k o j	0.50	0.50	rejected
+mulan-bulan	hyphen	1	mulan bulan	fil-PH	m u l a n b u l a n	0.50	0.00	replaced
+mulanbulan	cut	1	mulanbulan	fil-PH	m u l l a n	0.50	0.40	rejected
+multicolor	english	1	multicolor	fil-PH	m ə l ̴ t i k ɔ l ̴ ɜ ˞	0.40	0.20	replaced
+multiplication	english	1	multiplication	fil-PH	m ə l ̴ t ə p l ̴ ə k e ɪ ʃ ə n	0.50	0.00	replaced
+munday	english	1	munday	fil-PH	m ə n d e	0.50	0.17	replaced
+múnglay-munglay	hyphen	1	múnglay munglay	fil-PH	m ɔ ŋ g l a j m o ŋ g l a j	0.50	0.33	replaced
+mura-mura	hyphen	1	mura mura	fil-PH	m u ɾ a m u r ə	0.50	0.00	replaced
+musing	english	1	musing	fil-PH	m j u z ɪ ŋ	0.67	0.00	replaced
+musket	english	1	musket	fil-PH	m ə s k ə t	0.33	0.00	replaced
+mussel	english	1	mussel	fil-PH	m ɑ s o l ̴	0.40	0.20	replaced
+muting	english	1	muting	fil-PH	m j u t ɪ ŋ	0.67	0.00	replaced
+muyo-muyo	hyphen	1	muyo muyo	fil-PH	m u j o m u j o	0.50	0.00	replaced
+myocardium	english	1	myocardium	fil-PH	m a ɪ o ʊ k ɑ ɹ d i ə m	0.27	0.18	rejected
+nágbibigay-kabatiran	hyphen	1	nágbibigay kabatiran	fil-PH	n a g b i b i g a j k a b a t i r a n	0.47	0.00	replaced
+nami-nami	hyphen	1	nami nami	fil-PH	n a ː m i ː n a ː m i	0.50	0.00	replaced
+nanay-papa-alpha	hyphen	1	nanay papa alpha	fil-PH	n a n a j p a p ə a l f ə	0.64	0.14	replaced
+nantsa-chancing	hyphen	1	nantsa chancing	fil-PH	n æ n t ʃ ə t ʃ æ n s ɪ ŋ	0.55	0.00	replaced
+napisang-pisang	hyphen	1	napisang pisang	fil-PH	n a p i s a ŋ p i s a m	0.42	0.08	replaced
+narcotic	english	1	narcotic	fil-PH	n ɑ ɹ k ɑ d ɪ k	0.25	0.12	replaced
+naturalization	english	1	naturalization	fil-PH	n æ t ʃ ɹ ə l ̴ ɪ z e ɪ ʃ ə n	0.57	0.14	replaced
+nautilus	english	1	nautilus	fil-PH	n ɔ t ə l ̴ ə s	0.57	0.00	replaced
+nave	english	1	nave	fil-PH	n e ɪ v	0.75	0.00	replaced
+navigator	english	1	navigator	fil-PH	n æ v ə g e ɪ t ɜ ˞	0.40	0.10	replaced
+nâwo-nawo	hyphen	1	nâwo nawo	fil-PH	n a ʊ w ɔ n a ʊ w ɔ	0.50	0.25	replaced
+nayuk-nayuk	hyphen	1	nayuk nayuk	fil-PH	n æ j u q n æ j u q	0.50	0.00	replaced
+nayun-nayon	hyphen	1	nayun nayon	fil-PH	n a j o n n a j o n	0.50	0.10	replaced
+necropolis	english	1	necropolis	fil-PH	n ə k ɹ ɑ p ə l ̴ ə s	0.40	0.00	replaced
+nefarious	english	1	nefarious	fil-PH	n ə f ɛ ɹ i ə s	0.38	0.00	replaced
+negation	english	1	negation	fil-PH	n ə g e ɪ t ʃ i ə n	0.62	0.25	replaced
+negotiate	english	1	negotiate	fil-PH	n ə g o ʊ ʃ i e ɪ t	0.70	0.00	replaced
+nehemiah	english	1	nehemiah	fil-PH	n i j a m a j a	0.71	0.29	replaced
+neoteny	english	1	neoteny	fil-PH	n i ɑ t ə n i	0.57	0.00	replaced
+newsprint	english	1	newsprint	fil-PH	n u z p ɹ ɪ n t	0.50	0.00	replaced
+ngâ-nga	hyphen	1	ngâ nga	fil-PH	ŋ a ŋ a	0.75	0.00	replaced
+ngila-ngila	hyphen	1	ngila ngila	fil-PH	n i l a n i l a	0.62	0.25	replaced
+ngipínngipin	cut	1	ngipínngipin	fil-PH	n i p i n	0.50	0.50	rejected
+ngoy-ngoy	hyphen	1	ngoy ngoy	fil-PH	g ɔ j g ɔ j	0.67	0.33	replaced
+ngoy-ngóy	hyphen	1	ngoy ngóy	fil-PH	ɛ n d ʒ i o ʊ w a ɪ ŋ ɔ ɪ	0.50	1.00	rejected
+nguyo-nguyo	hyphen	1	nguyo nguyo	fil-PH	ŋ o ʊ j u ŋ o j u	0.50	0.50	rejected
+niacin	english	1	niacin	fil-PH	n a j ə s ə n	0.29	0.14	replaced
+nihilism	english	1	nihilism	fil-PH	n a ɪ ə l ̴ ɪ z ə m	0.67	0.00	replaced
+nilay-nilay	hyphen	1	nilay nilay	fil-PH	n i l ̴ a ɪ n i l ̴ a ɪ	0.50	0.20	replaced
+nîpa-nipa	hyphen	1	nîpa nipa	fil-PH	n i p a n i p a	0.50	0.00	replaced
+nipâ-nipâ	hyphen	1	nipâ nipâ	fil-PH	n i p a n i p a	0.50	0.00	replaced
+nipat-nipat	hyphen	1	nipat nipat	fil-PH	n i p a t n i p a t	0.50	0.00	replaced
+nítong-parang	hyphen	1	nítong parang	fil-PH	n i t o ŋ p a r a ŋ	0.60	0.00	replaced
+nobelium	english	1	nobelium	fil-PH	n o ʊ b ɛ l ̴ j ə m	0.44	0.11	replaced
+notion	english	1	notion	fil-PH	n o ʊ ʃ ə n	0.67	0.00	replaced
+núling-salità	hyphen	1	núling salità	fil-PH	n u l i ŋ s ə l i t a	0.64	0.00	replaced
+nullification	english	1	nullification	fil-PH	n ə l ̴ ə f ə k e ɪ ʃ ə n	0.50	0.00	replaced
+numerator	english	1	numerator	fil-PH	n u m ɜ ˞ e ɪ t ɜ ˞	0.60	0.30	replaced
+numerology	english	1	numerology	fil-PH	n u m ɜ ˞ ɑ l ̴ ə d ʒ i	0.40	0.10	replaced
+oban-oban	hyphen	1	oban oban	fil-PH	u b a n u b a n	0.50	0.25	replaced
+óban-óban	hyphen	1	óban óban	fil-PH	o b a n	0.50	0.50	rejected
+objectionable	english	1	objectionable	fil-PH	ə b d ʒ ɛ k ʃ ə n ə b ə l ̴	0.33	0.00	replaced
+obligate	english	1	obligate	fil-PH	ɑ b l ̴ ə g e ɪ t	0.50	0.00	replaced
+obliterate	english	1	obliterate	fil-PH	e ɪ b l ̴ ɪ t ɜ ˞ e ɪ t	0.30	0.30	rejected
+oblivion	english	1	oblivion	fil-PH	o ʊ b l ̴ ɪ v i ə n	0.25	0.25	rejected
+oboist	english	1	oboist	fil-PH	o ʊ b o ʊ ə s t	0.38	0.00	replaced
+obscure	english	1	obscure	fil-PH	ə b s k j ʊ ɹ	0.29	0.00	replaced
+obsequious	english	1	obsequious	fil-PH	ə b s i k w i ə s	0.56	0.00	replaced
+observance	english	1	observance	fil-PH	ə b z ɜ ˞ v ə n s	0.33	0.11	replaced
+obsidian	english	1	obsidian	fil-PH	ə b s ɪ d i ə n	0.25	0.00	replaced
+obsolescent	english	1	obsolescent	fil-PH	ɑ b s ə l ̴ ɛ s ə n t	0.40	0.00	replaced
+obstinate	english	1	obstinate	fil-PH	ɑ b s t ə n ɛ t	0.38	0.12	replaced
+obud-obud	hyphen	1	obud obud	fil-PH	o b o d o b o d	0.62	0.25	replaced
+obviate	english	1	obviate	fil-PH	ɑ b v i a ɪ t	0.43	0.14	replaced
+occident	english	1	occident	fil-PH	ɑ k s ə d ɛ n t	0.38	0.00	replaced
+occlusion	english	1	occlusion	fil-PH	ə k l ̴ u ʒ ə n	0.57	0.00	replaced
+occult	english	1	occult	fil-PH	ə k ə l ̴ t	0.40	0.00	replaced
+ocelot	english	1	ocelot	fil-PH	ɔ l s o ʊ l ̴ ɑ t	0.50	0.67	rejected
+oct-	english	1	oct	fil-PH	ɑ k t o ʊ b ɜ ˞	1.00	1.00	rejected
+octogenarian	english	1	octogenarian	fil-PH	ɑ k t ɪ d ʒ ə n ɛ ɹ i ə n	0.33	0.17	replaced
+odious	english	1	odious	fil-PH	o w ɾ i ə s	0.50	0.33	replaced
+lukis'lukis	cut	2	lukis'lukis	fil-PH	l u k i s	0.50	0.50	rejected
+lúmuksu-lukso	hyphen	2	lúmuksu-lukso	fil-PH	l ̴ u m u k s o	0.42	0.42	rejected
+lw	letters	2	L W	fil-PH	ɛ l ̴ d ə b ə l ̴ j u	0.56	0.00	replaced
+mágaling-galing	hyphen	2	mágaling-galing	fil-PH	m a g a l i ŋ	0.42	0.42	rejected
+magin-	english	2	magin	en-US	m æ g ə n	0.40	0.40	rejected
+makesyu-kesyo	hyphen	2	makesyu-kesyo	fil-PH	m ɛ s k j o	0.75	0.50	rejected
+mála-mala	hyphen	2	mála-mala	fil-PH	m a l ə	0.50	0.50	rejected
+mámasyal-masyal	hyphen	2	mámasyal-masyal	fil-PH	m a m a ʃ a l	0.42	0.42	rejected
+manger	english	2	manger	en-US	m æ n d ʒ ɜ ˞	0.57	0.43	rejected
+masagwásagwà	cut	2	masagwásagwà	fil-PH	m a s a g w w a	0.42	0.33	rejected
+masiglángmasigla	cut	2	masiglángmasigla	fil-PH	m a s i g l a ŋ	0.47	0.47	rejected
+masseur	cut	2	masseur	fil-PH	m ə s u	0.43	0.43	rejected
+may-base	hyphen	2	may-base	fil-PH	m a j	0.57	0.57	rejected
+melius	english	2	melius	en-US	m i l ̴ i ə s	0.33	0.17	replaced
+micro-	english	2	micro	en-US	m i k r o ʊ	0.29	0.14	replaced
+mídyu-midyo	hyphen	2	mídyu-midyo	fil-PH	m i d ʒ o m i d ʒ o	0.50	0.12	replaced
+mídyu-midyu	hyphen	2	mídyu-midyu	fil-PH	n i d i w	0.62	0.75	rejected
+miliwpiliw	cut	2	miliwpiliw	fil-PH	m i l i w i	0.60	0.40	rejected
+milon-tagalog	hyphen	2	milon-tagalog	fil-PH	m i l o n	0.58	0.58	rejected
+modality	english	2	modality	en-US	m ə ʊ d æ l ̴ ə t i	0.25	0.12	replaced
+motong-botong	hyphen	2	motong-botong	fil-PH	m o t o ŋ	0.50	0.50	rejected
+mû-mo	hyphen	2	mû-mo	fil-PH	m u m u	0.50	0.25	replaced
+mukoymukoy	cut	2	mukoy mukoy	fil-PH	m u k o j m u k o j	0.50	0.00	replaced
+mulanbulan	cut	2	mulanbulan	fil-PH	m u l a n	0.50	0.50	rejected
+myocardium	english	2	myocardium	en-US	m a ɪ o ʊ k ɑ ɹ d i ə m	0.27	0.18	rejected
+ngipínngipin	cut	2	ngipín ngipin	fil-PH	n i p i n n i p i n	0.50	0.20	replaced
+ngoy-ngóy	hyphen	2	ngoy-ngóy	fil-PH	ŋ ɔ j	0.50	0.50	rejected
+nguyo-nguyo	hyphen	2	nguyo-nguyo	fil-PH	ŋ u j o ŋ u j u	0.50	0.12	replaced
+óban-óban	hyphen	2	óban-óban	fil-PH	o b a n	0.50	0.50	rejected
+obliterate	english	2	obliterate	en-US	ə b l ̴ ɪ t ɜ ˞ e ɪ t	0.30	0.10	replaced
+oblivion	english	2	oblivion	en-US	e ɪ b o ʊ l ̴ ɪ v i ə n	0.25	0.50	rejected
+ocelot	english	2	ocelot	en-US	ɑ s ə l ̴ ɑ t	0.50	0.00	replaced
+oct-	english	2	oct	en-US	ɑ k t o ʊ b ɜ ˞	1.00	1.00	rejected
+lúmuksu-lukso	hyphen	3	lúmuksulukso	fil-PH	l u m u k s u l u k s o	0.42	0.00	replaced
+mágaling-galing	hyphen	3	mágalinggaling	fil-PH	m a g a l i ŋ	0.42	0.42	rejected
+magin-	english	3	magin	en-US	i m a d ʒ ə n	0.40	0.40	rejected
+makesyu-kesyo	hyphen	3	makesyukesyo	fil-PH	m e k s j ɔ k ʃ o ˞	0.75	0.50	rejected
+mála-mala	hyphen	3	málamala	fil-PH	m a l a m a l a	0.50	0.00	replaced
+mámasyal-masyal	hyphen	3	mámasyalmasyal	fil-PH	m ə m ə ʃ a l m ə ʃ a l	0.42	0.00	replaced
+manger	english	3	manger	en-US	m e ɪ n d ʒ ɜ ˞	0.57	0.14	replaced
+may-base	hyphen	3	maybase	fil-PH	m a j b a s	0.57	0.14	replaced
+mídyu-midyu	hyphen	3	mídyumidyu	fil-PH	m i d ʒ u m i d ʒ u	0.62	0.00	replaced
+milon-tagalog	hyphen	3	milontagalog	fil-PH	m i l o ̃	0.58	0.67	rejected
+motong-botong	hyphen	3	motongbotong	fil-PH	m o t o ŋ b o t o ŋ	0.50	0.00	replaced
+myocardium	english	3	myocardium	en-US	m a ɪ o ʊ k ɑ ɹ d i ə m	0.27	0.18	rejected
+ngoy-ngóy	hyphen	3	ngoyngóy	fil-PH	ŋ o j ŋ o i	0.50	0.17	replaced
+óban-óban	hyphen	3	óbanóban	fil-PH	o b æ n u	0.50	0.50	rejected
+oblivion	english	3	oblivion	en-US	o b l ̴ ɪ v i ə n	0.25	0.12	replaced
+oct-	english	3	oct	en-US	ɑ k t o ʊ b ɜ ˞	1.00	1.00	rejected
+lukis'lukis	cut	-	lukis'lukis	fil-PH	l u k i s	0.50	0.50	kept
+mágaling-galing	hyphen	-	mágaling galing	fil-PH	m a g a l i ŋ	0.42	0.42	kept
+magin-	english	-	magin	fil-PH	m æ g ə n	0.40	0.40	kept
+makesyu-kesyo	hyphen	-	makesyu kesyo	fil-PH	m ɛ k s j u w k ɛ ʃ ɔ	0.75	0.42	kept
+masagwásagwà	cut	-	masagwásagwà	fil-PH	m a s a g w w a	0.42	0.33	kept
+masiglángmasigla	cut	-	masiglángmasigla	fil-PH	m a s i g l a ŋ	0.47	0.47	kept
+masseur	cut	-	masseur	fil-PH	m ə s ɜ ˞	0.43	0.43	kept
+miliwpiliw	cut	-	miliwpiliw	fil-PH	m i l i w i	0.60	0.40	kept
+milon-tagalog	hyphen	-	milon tagalog	fil-PH	m i l o n	0.58	0.58	kept
+mulanbulan	cut	-	mulanbulan	fil-PH	m u l l a n	0.50	0.40	kept
+myocardium	english	-	myocardium	fil-PH	m a ɪ o ʊ k ɑ ɹ d i ə m	0.27	0.18	kept
+óban-óban	hyphen	-	óban óban	fil-PH	o b a n	0.50	0.50	kept
+oct-	english	-	oct	fil-PH	ɑ k t o ʊ b ɜ ˞	1.00	1.00	kept
