@@ -60,3 +60,230 @@ director	english	3	director	en-US	d i ɹ ɛ k t ɜ ˞	0.25	0.25	rejected
 input	extra	3	input	fil-PH	ɾ ɛ g a l o	1.00	1.00	rejected
 director	english	-	director	fil-PH	d ɪ ɹ ɛ k t ɜ ˞	0.25	0.25	kept
 aatoato	cut	-	aatoato	fil-PH	a t o	0.43	0.57	kept
+power	english	1	power	fil-PH	p a ʊ ɜ ˞	0.60	0.20	replaced
+this	english	1	this	fil-PH	ð ɪ s	1.00	0.00	replaced
+control	english	1	control	fil-PH	k ə n t ɹ o ʊ l ̴	0.25	0.00	replaced
+operation	english	1	operation	fil-PH	ɑ p ɜ ˞ e ɪ ʃ ə n	0.67	0.11	replaced
+commission	english	1	commission	fil-PH	k ə m ɪ ʃ ə n	0.43	0.00	replaced
+that	english	1	that	fil-PH	ð æ t	0.67	0.00	replaced
+case	english	1	case	fil-PH	k e ɪ s	0.75	0.00	replaced
+investigation	english	1	investigation	fil-PH	ɪ n v ɛ s t ə g e ɪ ʃ ə n	0.31	0.00	replaced
+family	english	1	family	fil-PH	f æ m l ̴ i	0.67	0.17	replaced
+region	english	1	region	fil-PH	r i d ʒ o n	0.80	0.20	replaced
+club	english	1	club	fil-PH	k l ̴ ə b	0.25	0.00	replaced
+american	english	1	american	fil-PH	ə m ɛ ɹ i k ə n	0.25	0.12	replaced
+official	english	1	official	fil-PH	ə f ɪ ʃ ə l ̴	0.50	0.00	replaced
+text	english	1	text	fil-PH	p ɑ k	1.00	0.80	rejected
+your	english	1	your	fil-PH	j ɔ ɹ	1.00	0.00	replaced
+association	english	1	association	fil-PH	ə s o ʊ s i e ɪ ʃ i ə n	0.55	0.09	replaced
+life	english	1	life	fil-PH	l ̴ a ɪ f	0.50	0.00	replaced
+please	english	1	please	fil-PH	p l ̴ i z	1.00	0.00	replaced
+illegal	english	1	illegal	fil-PH	ɪ l ̴ i g ə l ̴	0.33	0.00	replaced
+education	english	1	education	fil-PH	ɛ d ʒ j u k e ɪ ʃ ə n	0.67	0.22	replaced
+corporation	english	1	corporation	fil-PH	k ɔ ɹ p ɜ ˞ e ɪ ʃ ə n	0.45	0.09	replaced
+division	english	1	division	fil-PH	d i v i z o n	0.43	0.29	replaced
+father	english	1	father	fil-PH	f ɑ ð ɜ ˞	1.00	0.20	replaced
+institute	english	1	institute	fil-PH	ɪ n s t ə t u t	0.25	0.00	replaced
+production	english	1	production	fil-PH	p ɹ ə d ə k ʃ ə n	0.56	0.00	replaced
+comedy	english	1	comedy	fil-PH	k ɑ m ə d i	0.33	0.00	replaced
+administration	english	1	administration	fil-PH	æ d m ɪ n ɪ s t ɹ e ɪ ʃ ə n	0.29	0.00	replaced
+doctor	english	1	doctor	fil-PH	d ɑ k t ɜ ˞	0.33	0.17	replaced
+military	english	1	military	fil-PH	m ɪ l ̴ ə t ɛ ɹ i	0.38	0.00	replaced
+beauty	english	1	beauty	fil-PH	p i u ɾ i	0.60	0.60	rejected
+private	english	1	private	fil-PH	p ɹ a ɪ v ə t	0.43	0.00	replaced
+republic	english	1	republic	fil-PH	ɹ i p ə b l ̴ ə k	0.50	0.00	replaced
+message	english	1	message	fil-PH	m ɛ s a d ʒ	0.60	0.00	replaced
+travel	english	1	travel	fil-PH	t ɹ æ v ə l ̴	0.33	0.00	replaced
+finals	english	1	finals	fil-PH	f i n ə l ̴ z	0.29	0.14	replaced
+character	english	1	character	fil-PH	k ɛ ɹ ɪ k t ɜ ˞	0.25	0.12	replaced
+authority	english	1	authority	fil-PH	ə θ ɔ ɹ ə t i	0.71	0.00	replaced
+female	english	1	female	fil-PH	f i m e ɪ l ̴	0.83	0.00	replaced
+interior	english	1	interior	fil-PH	ɪ n t ɪ ɹ i ɜ ˞	0.38	0.12	replaced
+fire	english	1	fire	fil-PH	f a ɪ ɹ	0.40	0.20	replaced
+foundation	english	1	foundation	fil-PH	f a ʊ n d e ɪ ʃ ə n	0.60	0.00	replaced
+supply	english	1	supply	fil-PH	s ə p l ̴ a ɪ	0.50	0.00	replaced
+television	english	1	television	fil-PH	t ɛ l ̴ ə v ɪ ʒ ə n	0.44	0.00	replaced
+organization	english	1	organization	fil-PH	ɔ ɹ g ə n ə z e ɪ ʃ ə n	0.42	0.00	replaced
+safety	english	1	safety	fil-PH	s e ɪ f t i	0.50	0.00	replaced
+break	english	1	break	fil-PH	b ɹ e ɪ k	0.40	0.00	replaced
+governor	english	1	governor	fil-PH	g ə v ɜ ˞ n ɜ ˞	0.50	0.25	replaced
+science	english	1	science	fil-PH	s a ɪ ə n s	0.67	0.00	replaced
+death	english	1	death	fil-PH	d ɛ θ	1.00	0.00	replaced
+major	english	1	major	fil-PH	m e ɪ d ʒ ɜ ˞	0.83	0.17	replaced
+jason	english	1	jason	fil-PH	d ʒ a ɪ s o n	0.50	0.33	replaced
+blood	english	1	blood	fil-PH	b l ̴ ə d	1.00	0.00	replaced
+information	english	1	information	fil-PH	ɪ n f ɜ ˞ m e ɪ ʃ ə n	0.45	0.09	replaced
+protocol	english	1	protocol	fil-PH	p ɹ o ʊ t ə k ɔ l ̴	0.33	0.11	replaced
+stress	english	1	stress	fil-PH	s t ɹ ɛ s	1.00	0.00	replaced
+contract	english	1	contract	fil-PH	k ɑ n t ɹ æ k t	0.25	0.00	replaced
+sc	letters	1	es si	fil-PH	e s	0.75	0.50	rejected
+our	english	1	our	fil-PH	a ʊ r	0.75	0.25	replaced
+jail	english	1	jail	fil-PH	d ʒ e ɪ l	0.50	0.00	replaced
+look	english	1	look	fil-PH	l ̴ ʊ k	1.00	0.00	replaced
+professional	english	1	professional	fil-PH	p ɹ ə f ɛ ʃ ə n ə l ̴	0.50	0.00	replaced
+junior	english	1	junior	fil-PH	d ʒ u n ɜ ˞	0.50	0.33	rejected
+judge	english	1	judge	fil-PH	d ʒ ɛ d d ʒ	0.67	0.67	rejected
+registration	english	1	registration	fil-PH	ɹ ɛ d ʒ ɪ s t ɹ e ɪ ʃ ə n	0.42	0.00	replaced
+coliseum	english	1	coliseum	fil-PH	k ɑ l ̴ ə s i ə m	0.38	0.00	replaced
+universe	english	1	universe	fil-PH	j u n i v ɜ ˞ s	0.25	0.25	rejected
+lakers	english	1	lakers	fil-PH	l ̴ e ɪ k ɜ ˞ z	0.29	0.14	replaced
+immigration	english	1	immigration	fil-PH	ɪ m ə g ɹ e ɪ ʃ ə n	0.60	0.00	replaced
+commander	english	1	commander	fil-PH	k ə m æ n d ɜ ˞	0.38	0.12	replaced
+place	english	1	place	fil-PH	p l ̴ e ɪ s	0.60	0.00	replaced
+cover	english	1	cover	fil-PH	k ə v ɜ ˞	0.60	0.20	replaced
+economic	english	1	economic	fil-PH	ɛ k o n ɑ m i k	0.38	0.12	replaced
+attention	english	1	attention	fil-PH	ə t ɛ n ʃ ə n	0.57	0.00	replaced
+election	english	1	election	fil-PH	ɪ l ̴ ɛ k ʃ ə n	0.57	0.00	replaced
+restaurant	english	1	restaurant	fil-PH	ɹ ɛ s t ɜ ˞ ɑ n t	0.33	0.11	replaced
+supreme	english	1	supreme	fil-PH	s ə p ɹ i m	0.50	0.00	replaced
+experience	english	1	experience	fil-PH	ɪ k s p ɪ ɹ i ə n s	0.40	0.00	replaced
+thank	english	1	thank	fil-PH	s ɛ ŋ k	0.75	0.50	rejected
+anniversary	english	1	anniversary	fil-PH	æ n ə v ɜ ˞ s ɜ ˞ i	0.40	0.20	replaced
+alcohol	english	1	alcohol	fil-PH	ə l k ə ɔ l	0.43	0.29	replaced
+great	english	1	great	fil-PH	g r a t	0.40	0.40	rejected
+customs	english	1	customs	fil-PH	k ə s t ə m z	0.43	0.00	replaced
+condom	english	1	condom	fil-PH	k ɑ n d ə m	0.33	0.00	replaced
+laboratory	english	1	laboratory	fil-PH	l ̴ æ b ɹ ə t ɔ ɹ i	0.33	0.00	replaced
+construction	english	1	construction	fil-PH	k ə n s t ɹ ə k ʃ ə n	0.45	0.00	replaced
+voice	english	1	voice	fil-PH	v ɔ j s	1.00	0.25	replaced
+change	english	1	change	fil-PH	t ʃ a n d ʒ e	0.60	0.60	rejected
+novel	english	1	novel	fil-PH	n ɑ v ə l ̴	0.40	0.00	replaced
+stadium	english	1	stadium	fil-PH	s t e ɪ d i ə m	0.50	0.00	replaced
+complex	english	1	complex	fil-PH	k ə m p l ̴ ɛ k s	0.38	0.00	replaced
+tournament	english	1	tournament	fil-PH	t ʊ ɹ n ə m ə n t	0.33	0.00	replaced
+fossil	english	1	fossil	fil-PH	f ɑ s ə l ̴	0.40	0.00	replaced
+obvious	english	1	obvious	fil-PH	ɑ b v i ə s	0.67	0.00	replaced
+mg	letters	1	em dyi	fil-PH	i ɛ m w a ɪ a ɪ	0.50	1.00	rejected
+february	english	1	february	fil-PH	f ɛ b ɹ u ɛ ɹ i	0.44	0.33	replaced
+rh	letters	1	ar eych	fil-PH	e ɪ ɑ ɹ e ɪ t ʃ	0.80	0.40	replaced
+representative	english	1	representative	fil-PH	ɹ ɛ p ɹ ə z ɛ n ə t ɪ v	0.31	0.08	replaced
+treatment	english	1	treatment	fil-PH	t ɹ i t m ə n t	0.25	0.00	replaced
+ow	english	1	ow	fil-PH	a o	1.00	1.00	rejected
+protection	english	1	protection	fil-PH	p ɹ ə t ɛ k ʃ ə n	0.56	0.00	replaced
+nationwide	english	1	nationwide	fil-PH	n e ɪ ʃ ə n w a ɪ d	0.50	0.00	replaced
+customer	english	1	customer	fil-PH	k ə s t ə m ɜ ˞	0.38	0.12	replaced
+recording	english	1	recording	fil-PH	ɹ ə k ɔ ɹ d ɪ ŋ	0.38	0.00	replaced
+medicine	english	1	medicine	fil-PH	m ɛ d i s ə n	0.57	0.14	replaced
+original	english	1	original	fil-PH	ɜ ˞ ɪ d ʒ ə n ə l ̴	0.25	0.12	replaced
+transmission	english	1	transmission	fil-PH	t ɹ æ n z m ɪ ʃ ə n	0.40	0.10	replaced
+space	english	1	space	fil-PH	s p e ɪ s	0.60	0.00	replaced
+race	english	1	race	fil-PH	r a s	0.75	0.50	rejected
+wildlife	english	1	wildlife	fil-PH	w a ɪ l d l ̴ a ɪ f	0.44	0.00	replaced
+communication	english	1	communication	fil-PH	k ə m j u n ə k e ɪ ʃ ə n	0.46	0.00	replaced
+ph	letters	1	pi eych	fil-PH	p i e ɪ t ʃ	0.80	0.00	replaced
+lp	letters	1	el pi	fil-PH	ɛ l p j u	0.50	0.50	rejected
+fr	letters	1	ef ar	fil-PH	ɛ f ɑ ɹ	0.75	0.00	replaced
+administrator	english	1	administrator	fil-PH	ə d m ɪ n ə s t ɹ e ɪ t ɜ ˞	0.36	0.07	replaced
+triple	english	1	triple	fil-PH	t ɹ ɪ p ə l ̴	0.33	0.00	replaced
+article	english	1	article	fil-PH	ɑ ɹ t ɪ k ə l ̴	0.43	0.14	replaced
+resolution	english	1	resolution	fil-PH	ɹ ɛ z ə l ̴ u ʃ ə n	0.56	0.00	replaced
+diamond	english	1	diamond	fil-PH	d a ɪ m ə n d	0.43	0.00	replaced
+horror	english	1	horror	fil-PH	h ɔ r ɜ r	0.60	0.00	replaced
+competition	english	1	competition	fil-PH	k ɑ m p ə t ɪ ʃ ə n	0.40	0.00	replaced
+elementary	english	1	elementary	fil-PH	ɛ l ̴ ə m ɛ n t ɹ i	0.44	0.00	replaced
+suicide	english	1	suicide	fil-PH	s u ɪ s a ɪ d	0.71	0.14	replaced
+subscription	english	1	subscription	fil-PH	s ə b s k ɹ ɪ p ʃ ə n	0.36	0.00	replaced
+comprehensive	english	1	comprehensive	fil-PH	k ɑ m p ɹ i h ɛ n s ɪ v	0.33	0.00	replaced
+price	english	1	price	fil-PH	p ɹ a ɪ s	0.60	0.00	replaced
+homicide	english	1	homicide	fil-PH	h ɑ m ə s a ɪ d	0.50	0.00	replaced
+month	english	1	month	fil-PH	m a n t	0.75	0.25	replaced
+tourism	english	1	tourism	fil-PH	t ʊ ɹ ɪ z ə m	0.43	0.00	replaced
+tennis	english	1	tennis	fil-PH	t ɛ n ə s	0.40	0.00	replaced
+know	english	1	know	fil-PH	n o w	1.00	0.33	replaced
+brother	english	1	brother	fil-PH	b ɹ ə ð ɜ ˞	0.33	0.17	replaced
+dangerous	english	1	dangerous	fil-PH	d e ɪ n d ʒ ɜ ˞ ə s	0.56	0.11	replaced
+province	english	1	province	fil-PH	p ɹ ɑ v ɪ n s	0.57	0.14	replaced
+celebration	english	1	celebration	fil-PH	s ɛ l ̴ ə b ɹ e ɪ ʃ ə n	0.45	0.00	replaced
+infection	english	1	infection	fil-PH	ɪ n f ɛ k ʃ ə n	0.62	0.00	replaced
+universal	english	1	universal	fil-PH	j u n ə v ɜ ˞ s ə l ̴	0.30	0.10	replaced
+reduction	english	1	reduction	fil-PH	ɹ i d ə k ʃ ə n	0.50	0.12	replaced
+mediterranean	english	1	mediterranean	fil-PH	m ɛ d ə t ɜ ˞ e ɪ n i ə n	0.31	0.08	replaced
+focus	english	1	focus	fil-PH	f o ʊ k ɪ s	0.33	0.17	replaced
+reaction	english	1	reaction	fil-PH	ɹ i æ k ʃ ə n	0.57	0.00	replaced
+reading	english	1	reading	fil-PH	ɹ i d ɪ ŋ	0.60	0.00	replaced
+youth	english	1	youth	fil-PH	j u θ	0.67	0.00	replaced
+application	english	1	application	fil-PH	æ p l ̴ ə k e ɪ ʃ ə n	0.50	0.00	replaced
+professor	english	1	professor	fil-PH	p ɹ ə f ɛ s ɜ ˞	0.25	0.12	replaced
+process	english	1	process	fil-PH	p ɹ ɑ s ɛ s	0.50	0.00	replaced
+paranoid	english	1	paranoid	fil-PH	p ɛ ɹ ə n ɔ ɪ d	0.25	0.00	replaced
+movement	english	1	movement	fil-PH	m u v m ə n t	0.29	0.00	replaced
+forward	english	1	forward	fil-PH	f ɔ ɹ w ɜ ˞ d	1.00	0.14	replaced
+relationship	english	1	relationship	fil-PH	ɹ i l ̴ e ɪ ʃ ə n ʃ ɪ p	0.45	0.00	replaced
+australian	english	1	australian	fil-PH	ɔ s t ɹ e ɪ l ̴ j ə n	0.40	0.00	replaced
+collection	english	1	collection	fil-PH	k ə l ̴ ɛ k ʃ ə n	0.62	0.00	replaced
+location	english	1	location	fil-PH	l ̴ o ʊ k e ɪ ʃ ə n	0.44	0.00	replaced
+maximum	english	1	maximum	fil-PH	m æ k s i m ə m	0.25	0.12	replaced
+phase	english	1	phase	fil-PH	f e ɪ z	0.75	0.00	replaced
+cabinet	english	1	cabinet	fil-PH	k æ b n ə t	0.29	0.14	replaced
+repatriation	english	1	repatriation	fil-PH	ɹ i p e ɪ t ɹ i e ɪ ʃ ə n	0.46	0.00	replaced
+european	english	1	european	fil-PH	j ʊ ɹ ə p i ə n	0.38	0.00	replaced
+how	english	1	how	fil-PH	h a w	0.67	0.33	replaced
+finale	english	1	finale	fil-PH	f ə n æ l ̴ i	0.33	0.00	replaced
+violence	english	1	violence	fil-PH	v a ɪ ə l ̴ ə n s	0.50	0.00	replaced
+pessimist	english	1	pessimist	fil-PH	p ɛ s ə m ɪ s t	0.50	0.12	replaced
+wave	english	1	wave	fil-PH	w e v	0.50	0.25	replaced
+ap	english	1	ap	fil-PH	æ p	0.75	0.75	rejected
+subdivision	english	1	subdivision	fil-PH	s ə b d ɪ v ɪ ʒ ə n	0.40	0.00	replaced
+divine	english	1	divine	fil-PH	d ɪ v a ɪ n	0.33	0.00	replaced
+extension	english	1	extension	fil-PH	ɪ k s t ɛ n ʃ ə n	0.56	0.00	replaced
+common	english	1	common	fil-PH	k ɑ m ə n	0.40	0.00	replaced
+wife	english	1	wife	fil-PH	w i j f	0.50	0.50	rejected
+environment	english	1	environment	fil-PH	ɪ n v a ɪ ɹ ə n m ə n t	0.25	0.00	replaced
+catholic	english	1	catholic	fil-PH	k æ θ l ̴ ɪ k	0.50	0.00	replaced
+prometheus	english	1	prometheus	fil-PH	p ɹ ə m ɪ θ i ə s	0.67	0.00	replaced
+probable	english	1	probable	fil-PH	p ɹ ɑ b ə b ə l ̴	0.38	0.00	replaced
+license	english	1	license	fil-PH	l ̴ a ɪ s ə n s	0.57	0.00	replaced
+factor	english	1	factor	fil-PH	f æ k t ɜ ˞	0.33	0.17	replaced
+fm	letters	1	ef em	fil-PH	ɛ s ɛ m	0.50	0.25	replaced
+muscle	english	1	muscle	fil-PH	m ə s ə l ̴	0.80	0.00	replaced
+mm	letters	1	em em	fil-PH	ɛ m ɛ m	1.00	0.00	replaced
+opinion	english	1	opinion	fil-PH	ə p ɪ n j ə n	0.43	0.00	replaced
+direct	english	1	direct	fil-PH	d ɪ ɹ ɛ k t	0.50	0.17	replaced
+distribution	english	1	distribution	fil-PH	d ɪ s t ɹ ə b j u ʃ ə n	0.42	0.00	replaced
+depression	english	1	depression	fil-PH	d ɪ p ɹ ɛ ʃ ə n	0.38	0.00	replaced
+secret	english	1	secret	fil-PH	s i k ɹ ɪ t	0.33	0.17	replaced
+museum	english	1	museum	fil-PH	m j u z e ə m	0.43	0.14	replaced
+winning	english	1	winning	fil-PH	w ɪ n ɪ ŋ	0.40	0.00	replaced
+product	english	1	product	fil-PH	p ɹ ɑ d ə k t	0.43	0.00	replaced
+connection	english	1	connection	fil-PH	k ə n n ɛ k ʃ i ə n	0.75	0.25	replaced
+bc	letters	1	bi si	fil-PH	b i s a ɪ	0.75	0.25	replaced
+estate	english	1	estate	fil-PH	ɪ s t e ɪ t	0.67	0.00	replaced
+reunion	english	1	reunion	fil-PH	ɹ e u n j ə n	0.43	0.14	replaced
+mountain	english	1	mountain	fil-PH	m a ʊ n t ə n	0.43	0.00	replaced
+upper	english	1	upper	fil-PH	u p ɜ r	0.50	0.25	replaced
+graduate	english	1	graduate	fil-PH	g ɹ æ d ʒ u w e ɪ t	0.38	0.38	rejected
+subject	english	1	subject	fil-PH	s ə b d ʒ ɪ k t	0.29	0.14	replaced
+perpetual	english	1	perpetual	fil-PH	p ɜ ˞ p ɛ t ʃ u ə l ̴	0.33	0.11	replaced
+nuclear	english	1	nuclear	fil-PH	n u k l ̴ i ɜ ˞	0.29	0.14	replaced
+surprise	english	1	surprise	fil-PH	s ə p ɹ a ɪ z	0.50	0.25	replaced
+firm	english	1	firm	fil-PH	f ɜ r m	0.25	0.00	replaced
+language	english	1	language	fil-PH	l ̴ æ ŋ g w ɪ d ʒ	0.43	0.14	replaced
+icon	english	1	icon	fil-PH	a ɪ k ɔ n	0.60	0.20	replaced
+retired	english	1	retired	fil-PH	ɹ i t a ɪ ɜ ˞ d	0.57	0.14	replaced
+text	english	2	text	en-US	ð ə n e ɪ m	1.00	1.00	rejected
+beauty	english	2	beauty	en-US	b j u t i	0.60	0.00	replaced
+sc	letters	2	S C	fil-PH	ɛ s s i	0.75	0.00	replaced
+junior	english	2	junior	en-US	d ʒ u n j ɜ r	0.50	0.00	replaced
+judge	english	2	judge	en-US	d ʒ u d ʒ	0.67	0.33	replaced
+universe	english	2	universe	en-US	j u n ə v ɜ ˞ s	0.25	0.12	replaced
+thank	english	2	thank	en-US	θ ɛ ŋ k	0.75	0.25	replaced
+great	english	2	great	en-US	g r a t	0.40	0.40	rejected
+change	english	2	change	en-US	t ʃ a n d ʒ e	0.60	0.60	rejected
+mg	letters	2	M G	fil-PH	ɛ m d ʒ i	0.50	0.00	replaced
+ow	english	2	ow	en-US	a w	1.00	1.00	rejected
+race	english	2	race	en-US	ɹ e ɪ s	0.75	0.00	replaced
+lp	letters	2	L P	fil-PH	ɛ l ̴ p i	0.50	0.00	replaced
+ap	english	2	ap	en-US	a p i	0.75	0.50	rejected
+wife	english	2	wife	en-US	w i j f e	0.50	0.75	rejected
+graduate	english	2	graduate	en-US	g ɹ æ d ʒ u w e ɪ t	0.38	0.38	rejected
+text	english	3	text	en-US	ð ə g ɹ i	1.00	1.00	rejected
+great	english	3	great	en-US	g ɹ e ɪ t	0.40	0.00	replaced
+change	english	3	change	en-US	t ʃ a n d ʒ e	0.60	0.60	rejected
+ow	english	3	ow	en-US	a o	1.00	1.00	rejected
+ap	english	3	ap	en-US	ɛ p i	0.75	0.25	replaced
+wife	english	3	wife	en-US	w a j f	0.50	0.25	replaced
+graduate	english	3	graduate	en-US	g ɹ æ d ʒ u e t	0.38	0.38	rejected
+text	english	-	text	fil-PH	p ɑ k	1.00	0.80	kept
+change	english	-	change	fil-PH	t ʃ a n d ʒ e	0.60	0.60	kept
+ow	english	-	ow	fil-PH	a o	1.00	1.00	kept
+graduate	english	-	graduate	fil-PH	g ɹ æ d ʒ u w e ɪ t	0.38	0.38	kept

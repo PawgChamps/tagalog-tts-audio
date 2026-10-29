@@ -2,16 +2,16 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-48 clips done, 65 tries.
+244 clips done, 288 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 14 | 1 |
+| english | 201 | 5 |
 | hyphen | 15 | 0 |
-| cut | 6 | 2 |
-| letters | 6 | 2 |
-| extra | 1 | 1 |
-| **all** | 42 | 6 |
+| letters | 15 | 0 |
+| cut | 6 | 1 |
+| extra | 1 | 0 |
+| **all** | 238 | 6 |
 
 ## Replaced (first 60)
 
@@ -59,14 +59,32 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | face | english | face | f e ɪ s | 0.75 → 0.00 |
 | cia | cut | cia | s i a ɪ e ɪ | 0.67 → 0.00 |
 | áboábo | cut | ábo ábo | a b o a b o | 0.50 → 0.00 |
+| power | english | power | p a ʊ ɜ ˞ | 0.60 → 0.20 |
+| this | english | this | ð ɪ s | 1.00 → 0.00 |
+| control | english | control | k ə n t ɹ o ʊ l ̴ | 0.25 → 0.00 |
+| operation | english | operation | ɑ p ɜ ˞ e ɪ ʃ ə n | 0.67 → 0.11 |
+| commission | english | commission | k ə m ɪ ʃ ə n | 0.43 → 0.00 |
+| that | english | that | ð æ t | 0.67 → 0.00 |
+| case | english | case | k e ɪ s | 0.75 → 0.00 |
+| investigation | english | investigation | ɪ n v ɛ s t ə g e ɪ ʃ ə n | 0.31 → 0.00 |
+| family | english | family | f æ m l ̴ i | 0.67 → 0.17 |
+| region | english | region | r i d ʒ o n | 0.80 → 0.20 |
+| club | english | club | k l ̴ ə b | 0.25 → 0.00 |
+| american | english | american | ə m ɛ ɹ i k ə n | 0.25 → 0.12 |
+| official | english | official | ə f ɪ ʃ ə l ̴ | 0.50 → 0.00 |
+| your | english | your | j ɔ ɹ | 1.00 → 0.00 |
+| association | english | association | ə s o ʊ s i e ɪ ʃ i ə n | 0.55 → 0.09 |
+| life | english | life | l ̴ a ɪ f | 0.50 → 0.00 |
+| please | english | please | p l ̴ i z | 1.00 → 0.00 |
+| illegal | english | illegal | ɪ l ̴ i g ə l ̴ | 0.33 → 0.00 |
 
 ## Old clip kept: no try was good enough (all)
 
 | Form | Reason | Sent | Heard | Error before → after |
 |---|---|---|---|---|
 | director | english | director | d ɪ ɹ ɛ k t ɜ ˞ | 0.25 → 0.25 |
-| gg | cut | gg | g i | 1.00 → 0.83 |
 | aatoato | cut | aatoato | a t o | 0.43 → 0.57 |
-| sc | letters | es si | e s | 0.75 → 0.50 |
-| mg | letters | em dyi | ɛ m d i w a ɪ a ɪ | 0.50 → 1.00 |
-| input | extra | input | m a n a g a s | 1.00 → 1.00 |
+| text | english | text | p ɑ k | 1.00 → 0.80 |
+| change | english | change | t ʃ a n d ʒ e | 0.60 → 0.60 |
+| ow | english | ow | a o | 1.00 → 1.00 |
+| graduate | english | graduate | g ɹ æ d ʒ u w e ɪ t | 0.38 → 0.38 |
