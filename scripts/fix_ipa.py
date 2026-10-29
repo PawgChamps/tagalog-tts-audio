@@ -199,9 +199,10 @@ def is_name(r):
 
 
 def origin_of(r):
-    """origin flags of the row: those of its own reading (same sense) when origin.tsv has them, else the spelling's"""
+    """origin flags of the row: those of its own reading (same sense) when origin.tsv has a line for it, even an empty
+    one (its records give no origin), else the spelling's union line"""
     p = plain(r[0])
-    return ORIGIN.get((p, r[5])) or ORIGIN.get(p)
+    return ORIGIN[(p, r[5])] if (p, r[5]) in ORIGIN else ORIGIN.get(p)
 
 
 EN_ONLY_SPELLING = re.compile(r"th|sh|ph|ck|wh|gh|oo|ee|ea|ou|ow|tions?$|[^aeiouy]y$")   # spellings Tagalog and Spanish don't use
