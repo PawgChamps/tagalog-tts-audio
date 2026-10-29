@@ -3,8 +3,8 @@
 
     python3 scripts/score_phones.py LIST.tsv OUTDIR CHECKSDIR
 
-Reads OUTDIR/*.tsv (from scripts/phones.py), writes CHECKSDIR/phones_compare.tsv (one row per clip, one column per
-model) and CHECKSDIR/phones_report.md.  Both sides are reduced to a broad Tagalog phone set before comparing:
+Reads OUTDIR/*.tsv (from scripts/phones.py), writes CHECKSDIR/compare.tsv (one row per clip, one column per
+model) and CHECKSDIR/report.md.  Both sides are reduced to a broad Tagalog phone set before comparing:
 stress, length and diacritics dropped, ɾ/ɹ/r -> r, ɡ -> g, lax and central vowels -> the five Tagalog vowels.
 """
 import collections
@@ -57,7 +57,7 @@ def main():
                     secs[f[1]].append(float(f[3]))
     models = sorted(hyp)
     os.makedirs(checks, exist_ok=True)
-    with open(os.path.join(checks, "phones_compare.tsv"), "w", encoding="utf-8") as fh:
+    with open(os.path.join(checks, "compare.tsv"), "w", encoding="utf-8") as fh:
         fh.write("\t".join(["form", "category", "ipa"] + models) + "\n")
         for r in rows:
             fh.write("\t".join([r["form"], r.get("category", ""), r["ipa"]] + [hyp[m].get(r["form"], "") for m in models]) + "\n")
@@ -101,7 +101,7 @@ def main():
     for m in worst:
         rep += ["", f"## {m}: the 15 clips it disagrees with most", "", "| Form | Category | IPA | Heard |", "|---|---|---|---|"]
         rep += [f"| {f} | {c} | {i} | {h} |" for _, f, c, i, h in worst[m]]
-    open(os.path.join(checks, "phones_report.md"), "w", encoding="utf-8").write("\n".join(rep) + "\n")
+    open(os.path.join(checks, "report.md"), "w", encoding="utf-8").write("\n".join(rep) + "\n")
     print("\n".join(rep[:20]))
 
 

@@ -9,12 +9,13 @@ MODEL: xeus (PhoneticXEUS, changelinglab/PhoneticXeus), zipa (ZIPA CR-CTC, ONNX)
 resumable: forms already in it are skipped.  Output columns: form, model, phones (space-separated), seconds.
 """
 import csv
-import glob
 import os
 import re
+import shutil
 import subprocess
 import sys
 import time
+import traceback
 import urllib.parse
 import urllib.request
 
@@ -23,8 +24,22 @@ import numpy as np
 SR = 16000
 
 
+def find_ffmpeg():
+    exe = shutil.which("ffmpeg")
+    if exe:
+        return exe
+    try:                                            # pip install imageio-ffmpeg ships a static ffmpeg
+        import imageio_ffmpeg
+        return imageio_ffmpeg.get_ffmpeg_exe()
+    except ImportError:
+        sys.exit("phones.py: no ffmpeg (install it, or pip install imageio-ffmpeg)")
+
+
+FFMPEG = None
+
+
 def decode(path):
-    raw = subprocess.run(["ffmpeg", "-v", "quiet", "-i", path, "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"],
+    raw = subprocess.run([FFMPEG, "-v", "error", "-i", path, "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"],
                          check=True, capture_output=True).stdout
     return np.frombuffer(raw, dtype=np.float32).copy()
 
@@ -113,20 +128,23 @@ def load_zipa():
 
 
 def main():
+    global FFMPEG
     model, lst, out = sys.argv[1:4]
     shard = next((a.split("/", 1) for a in sys.argv if re.fullmatch(r"\d+/\d+", a)), ("0", "1"))
     i, n = int(shard[0]), int(shard[1])
     rows = list(csv.DictReader(open(lst, encoding="utf-8"), delimiter="\t"))[i::n]
     done = set()
-    if os.path.exists(out):
-        done = {l.split("\t")[0] for l in open(out, encoding="utf-8")}
+    if os.path.exists(out):                         # rows that failed before are tried again
+        done = {f[0] for f in (l.rstrip("\n").split("\t") for l in open(out, encoding="utf-8"))
+                if len(f) > 2 and not f[2].startswith("ERROR")}
     todo = [r for r in rows if r["form"] not in done]
     print(f"{model}: {len(todo)} of {len(rows)} clips to do", flush=True)
     if not todo:
         return
+    FFMPEG = find_ffmpeg()
     run = {"xeus": load_xeus, "w2v2": load_w2v2, "powsm": load_powsm, "zipa": load_zipa}[model]()
     os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
-    t0 = time.time()
+    t0, failed = time.time(), 0
     with open(out, "a", encoding="utf-8") as fh:
         for k, r in enumerate(todo, 1):
             if not os.path.exists(r["file"]):
@@ -138,11 +156,16 @@ def main():
                 ph = run(decode(r["file"]))
             except Exception as e:                  # keep going; the row records the failure
                 ph = "ERROR " + type(e).__name__
+                failed += 1
+                if failed <= 3:
+                    traceback.print_exc()
+                if failed == k == 10:               # nothing works: stop instead of writing a column of errors
+                    sys.exit(f"{model}: the first 10 clips all failed")
             fh.write(f"{r['form']}\t{model}\t{ph}\t{time.time() - t:.2f}\n")
             if k % 50 == 0:
                 fh.flush()
                 print(f"  {k}/{len(todo)}  {(time.time() - t0) / k:.2f} s per clip", flush=True)
-    print(f"done in {time.time() - t0:.0f} s", flush=True)
+    print(f"done in {time.time() - t0:.0f} s, {failed} failed", flush=True)
 
 
 if __name__ == "__main__":
