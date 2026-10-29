@@ -8,12 +8,12 @@ KEY as in tts_gemini.py ("adc" in GitHub Actions).  LIST (default checks/fix/red
 columns form, reason, ipa_source, error.  Each clip gets up to three tries, each a different way of asking:
 
   hyphen    the hyphen as a space (bûtu butu), then as written, then without the hyphen
-  letters   the letter names (sgt -> "es dyi ti"), twice
+  letters   the letter names (sgt -> "es dyi ti"); the capital letters, "say each letter's name"; the names again
   english   told it is an English word, not to translate it; then the same with the English (US) voice setting, twice
-  extra     as written; then with only "say exactly the text"; then as written again
+  extra     as written; in quotation marks, "say only the word in quotes"; as an English word
   cut       as written; a word made of two equal halves is then sent as two words (buwan buwan)
 
-(English and abbreviation rows of the other reasons are asked the English or letter-name way.)  ZIPA listens to each
+(English rows, abbreviations and forms without a vowel are asked the English or letter-name way whatever the reason.)  ZIPA listens to each
 try (as in scripts/phones.py; needs onnxruntime lhotse huggingface_hub imageio-ffmpeg and $ZIPA_SRC) and the error is
 the share of the IPA's phones it gets wrong, as in score_phones.py.  A try replaces audio/<letter>/<form>.mp3 when it
 is complete (at least 75 % of the phones, not much longer than the word) and clearly better than the old clip: at
@@ -44,6 +44,9 @@ PROMPT_PARTS = ("Read aloud clearly, in a neutral tone. The text is one Filipino
 PROMPT_EN = ("Read aloud clearly, in a neutral tone. The text is a single English word; say only that word, pronounced "
              "the English way. Do not translate it.")
 PROMPT_LETTERS = "Read aloud clearly, in a neutral tone. Say exactly the text, and nothing else."
+PROMPT_CAPS = ("Read aloud clearly, in a neutral tone. The text is letters of the alphabet; say the English name of each "
+               "letter, one after the other, and nothing else.")
+PROMPT_QUOTED = "Read aloud clearly, in a neutral tone. Say only the word in quotation marks, without the quotation marks."
 LETTER = dict(zip("abcdefghijklmnopqrstuvwxyz", "ey bi si di i ef dyi eych ay jey key el em en o pi kyu ar es ti yu vi "
                                               "dobolyu eks way zi".split()))
 ACCEPT_MAX, ACCEPT_GAIN, COMPLETE = 0.4, 0.10, 0.75
@@ -60,9 +63,9 @@ def clip_path(form):
 def tries(form, reason, src):
     """(text, prompt, language) for each try"""
     f = form.strip("-")
-    if src == "spelled" and plain(f).isalpha():
-        t = (" ".join(LETTER[c] for c in plain(f)), PROMPT_LETTERS, "fil-PH")
-        return [t, t]
+    if plain(f).isalpha() and (src == "spelled" or not any(c in "aeiou" for c in plain(f))):
+        names = (" ".join(LETTER[c] for c in plain(f)), PROMPT_LETTERS, "fil-PH")
+        return [names, (" ".join(plain(f).upper()), PROMPT_CAPS, "fil-PH"), names]
     if src == "english":
         text = f.replace("-", " ")
         return [(text, PROMPT_EN, "fil-PH"), (text, PROMPT_EN, "en-US"), (text, PROMPT_EN, "en-US")]
@@ -73,7 +76,7 @@ def tries(form, reason, src):
         if len(f) % 2 == 0 and p[:h] == p[h:]:
             return [(form, PROMPT, "fil-PH"), (f[:h] + " " + f[h:], PROMPT_PARTS, "fil-PH")]
         return [(form, PROMPT, "fil-PH"), (form, PROMPT, "fil-PH")]
-    return [(form, PROMPT, "fil-PH"), (form, PROMPT_LETTERS, "fil-PH"), (form, PROMPT, "fil-PH")]
+    return [(form, PROMPT, "fil-PH"), (f'"{form}"', PROMPT_QUOTED, "fil-PH"), (form, PROMPT_EN, "fil-PH")]
 
 
 def score(ipa, heard):

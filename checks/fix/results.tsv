@@ -59,8 +59,4 @@ input	extra	2	input	fil-PH	ð ə k ə l ̴ æ p s ə v ð ə s t e ɪ t w a ɪ l
 director	english	3	director	en-US	d i ɹ ɛ k t ɜ ˞	0.25	0.25	rejected
 input	extra	3	input	fil-PH	ɾ ɛ g a l o	1.00	1.00	rejected
 director	english	-	director	fil-PH	d ɪ ɹ ɛ k t ɜ ˞	0.25	0.25	kept
-gg	cut	-	gg	fil-PH	g i	1.00	0.83	kept
 aatoato	cut	-	aatoato	fil-PH	a t o	0.43	0.57	kept
-sc	letters	-	es si	fil-PH	e s	0.75	0.50	kept
-mg	letters	-	em dyi	fil-PH	ɛ m d i w a ɪ a ɪ	0.50	1.00	kept
-input	extra	-	input	fil-PH	m a n a g a s	1.00	1.00	kept

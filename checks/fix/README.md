@@ -8,8 +8,8 @@
 | `english` | 2,270 | English word said the Tagalog or Spanish way (*solution* → "soluson"), or translated (*blood* → "dugo", *eighth* → "ikawalo") | told it is an English word, not to translate; then with the English (US) voice setting |
 | `hyphen` | 1,049 | the TTS stopped at the hyphen (*bûtu-butu* → "bûtu") | hyphen as a space; as written; without the hyphen |
 | `cut` | 107 | other clips heard at under 60 % of their phones (*buwanbuwan* → "buwan") | as written; two equal halves as two words |
-| `letters` | 98 | abbreviation not read as its letters (*sgt* → "si") | the letter names (*es dyi ti*) |
-| `extra` | 2 | extra speech: *input* reads the instruction aloud, *tumoy* | as written; with a plainer instruction |
+| `letters` | 98 | abbreviation not read as its letters (*sgt* → "si") | the letter names (*es dyi ti*); the capital letters |
+| `extra` | 2 | extra speech: *input* reads the instruction aloud, *tumoy* | as written; in quotation marks; as an English word |
 
 Left alone on purpose: abbreviations people say as words (*dr* "doktor", *jr*, *gng*); English-tagged words ending
 in -a or -o, words common in Filipino text (*noon* "back then", *cellphone*) and a few Spanish or Tagalog words
