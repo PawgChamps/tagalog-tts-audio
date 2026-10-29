@@ -17,8 +17,9 @@ import unicodedata
 VMAP = {"ɪ": "i", "ʊ": "u", "ɛ": "e", "ɔ": "o", "ɐ": "a", "ə": "a", "ʌ": "a", "ɑ": "a", "æ": "a", "ɒ": "o", "ɨ": "i",
         "ɯ": "u", "ø": "e", "œ": "e", "ɤ": "o", "ɵ": "o", "ɜ": "e", "ɝ": "er", "ɚ": "er", "y": "i"}
 CMAP = {"ɾ": "r", "ɹ": "r", "ʁ": "r", "ɻ": "r", "ɡ": "g", "ɣ": "g", "ɫ": "l", "ɬ": "l", "β": "b", "ð": "d", "ɸ": "f",
-        "ç": "h", "x": "h", "ʃ": "ʃ", "ɕ": "ʃ", "ʒ": "ʒ", "ʑ": "ʒ", "ɲ": "nj", "ŋ": "ŋ", "ʎ": "lj", "ɟ": "dʒ", "c": "k"}
-DROP = set("ˈˌːˑ./[] ʰʲʷˀ̃-")
+        "ç": "h", "x": "h", "ʃ": "ʃ", "ɕ": "ʃ", "ʒ": "ʒ", "ʑ": "ʒ", "ɲ": "nj", "ŋ": "ŋ", "ʎ": "lj", "ɟ": "dʒ", "c": "k",
+        "q": "k", "ʂ": "ʃ", "d̪": "d"}
+DROP = set("ˈˌːˑ./[] ʰʲʷˀ̃-▁˞0123456789")      # ▁ = ZIPA word boundary; digits = tones in the espeak set
 VOWELS = set("aeiou")
 
 
@@ -65,12 +66,13 @@ def main():
            f"{len(rows)} clips. Error rate = phone edit distance / reference length, after reducing both sides to a broad "
            "Tagalog phone set (stress, length and diacritics dropped; ɾ/ɹ → r; lax vowels → a e i o u). The reference is "
            "the IPA column of the word list, so a high rate can mean the model, the audio or the IPA is wrong.", ""]
-    rep += ["| Model | Clips | Error rate | Error rate without ʔ | Exact (without ʔ) | Final ʔ found | Final ʔ invented | s per clip |",
-            "|---|---:|---:|---:|---:|---:|---:|---:|"]
+    rep += ["| Model | Clips | Error rate | Error rate without ʔ | Exact (without ʔ) | Final ʔ found | Final ʔ invented | Much longer than the word | s per clip |",
+            "|---|---:|---:|---:|---:|---:|---:|---:|---:|"]
     cats = sorted({r.get("category", "") for r in rows})
     percat, worst = {}, {}
+    perclip, extra = collections.defaultdict(dict), collections.defaultdict(list)
     for m in models:
-        E = N = E0 = N0 = exact = n = tp = fn = fp = tn = 0
+        E = N = E0 = N0 = exact = n = tp = fn = fp = tn = runaway = 0
         pc = collections.defaultdict(lambda: [0, 0])
         bad = []
         for r in rows:
@@ -78,19 +80,22 @@ def main():
             if h is None or h.startswith("ERROR"):
                 continue
             ref, hp = phones(r["ipa"]), phones(h)
-            d = dist(ref, hp)
+            d = min(dist(ref, hp), len(ref))          # a clip counts at most 100 % wrong
             E += d; N += len(ref); n += 1
             r0, h0 = [x for x in ref if x != "ʔ"], [x for x in hp if x != "ʔ"]
-            d0 = dist(r0, h0); E0 += d0; N0 += len(r0); exact += d0 == 0
+            d0 = min(dist(r0, h0), len(r0)); E0 += d0; N0 += len(r0); exact += d0 == 0
             pc[r.get("category", "")][0] += d0; pc[r.get("category", "")][1] += len(r0)
+            perclip[r["form"]][m] = d0 / max(1, len(r0))
+            if len(h0) > 2 * len(r0) + 4:             # the model heard much more than the word
+                runaway += 1; extra[r["form"]].append(m)
             rf, hf = ref[-1:] == ["ʔ"], hp[-1:] == ["ʔ"]
             tp += rf and hf; fn += rf and not hf; fp += hf and not rf; tn += not rf and not hf
             bad.append((d0 / max(1, len(r0)), r["form"], r.get("category", ""), r["ipa"], h))
         if not n:
-            rep.append(f"| {m} | 0 | – | – | – | – | – | – |")
+            rep.append(f"| {m} | 0 | – | – | – | – | – | – | – |")
             continue
         s = sum(secs[m]) / len(secs[m]) if secs[m] else 0
-        rep.append(f"| {m} | {n} | {E / N:.1%} | {E0 / N0:.1%} | {exact / n:.0%} | {tp}/{tp + fn} | {fp}/{fp + tn} | {s:.2f} |")
+        rep.append(f"| {m} | {n} | {E / N:.1%} | {E0 / N0:.1%} | {exact / n:.0%} | {tp}/{tp + fn} | {fp}/{fp + tn} | {runaway} | {s:.2f} |")
         percat[m] = pc
         worst[m] = sorted(bad, reverse=True)[:15]
     rep += ["", "## Error rate without ʔ, by category", "", "| Category | " + " | ".join(models) + " |",
@@ -98,6 +103,17 @@ def main():
     for c in cats:
         rep.append(f"| {c} | " + " | ".join(f"{percat[m][c][0] / percat[m][c][1]:.1%}" if m in percat and percat[m][c][1] else "–"
                                          for m in models) + " |")
+    ok = [m for m in percat]
+    bad_audio = [f for f, ms in extra.items() if len(ms) >= 2]
+    rep += ["", "## Clips where two or more models hear much more than the word", "",
+            "Usually the TTS read extra text (for example the instruction) into the clip: listen and re-synthesize.", ""]
+    rep += [f"- {f}: " + ", ".join(f"{m} `{hyp[m][f][:120]}`" for m in extra[f]) for f in bad_audio] or ["(none)"]
+    allbad = [(sum(v.values()) / len(v), f) for f, v in perclip.items() if len(v) == len(ok) and min(v.values()) >= 0.4]
+    ipa = {r["form"]: (r.get("category", ""), r["ipa"]) for r in rows}
+    rep += ["", "## Clips every model disagrees with (40 % or more of the phones, without ʔ)", "",
+            "The word list IPA, the audio, or both are likely wrong here.", "",
+            "| Form | Category | IPA | " + " | ".join(ok) + " |", "|---|---|---|" + "---|" * len(ok)]
+    rep += [f"| {f} | {ipa[f][0]} | {ipa[f][1]} | " + " | ".join(hyp[m].get(f, "")[:60] for m in ok) + " |" for _, f in sorted(allbad, reverse=True)]
     for m in worst:
         rep += ["", f"## {m}: the 15 clips it disagrees with most", "", "| Form | Category | IPA | Heard |", "|---|---|---|---|"]
         rep += [f"| {f} | {c} | {i} | {h} |" for _, f, c, i, h in worst[m]]
