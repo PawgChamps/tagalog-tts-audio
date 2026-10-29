@@ -2,16 +2,16 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-244 clips done, 288 tries.
+444 clips done, 530 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 201 | 5 |
+| english | 379 | 15 |
+| letters | 26 | 0 |
 | hyphen | 15 | 0 |
-| letters | 15 | 0 |
 | cut | 6 | 1 |
-| extra | 1 | 0 |
-| **all** | 238 | 6 |
+| extra | 2 | 0 |
+| **all** | 428 | 16 |
 
 ## Replaced (first 60)
 
@@ -88,3 +88,13 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | change | english | change | t ʃ a n d ʒ e | 0.60 → 0.60 |
 | ow | english | ow | a o | 1.00 → 1.00 |
 | graduate | english | graduate | g ɹ æ d ʒ u w e ɪ t | 0.38 → 0.38 |
+| surgery | english | surgery | s ɜ ˞ d ʒ ɜ ˞ i | 0.71 → 0.29 |
+| color | english | color | k ɔ l ̴ ɜ ˞ | 0.40 → 0.40 |
+| junk | english | junk | d ʒ ɛ n k | 0.50 → 0.50 |
+| xi | english | xi | z i ː | 1.00 → 0.50 |
+| jump | english | jump | d ʒ u m p | 0.25 → 0.25 |
+| instruction | english | instruction | l ̴ ɔ ɹ ə l ̴ | 0.80 → 0.80 |
+| aviation | english | aviation | a ɪ v i a ɪ t i o n | 0.67 → 0.56 |
+| thy | english | ti eych way | t i e ɪ t ʃ w e ɪ | 0.67 → 1.00 |
+| av | english | av | a v | 1.00 → 0.75 |
+| ave | english | ave | æ v ə n u | 1.00 → 0.75 |
