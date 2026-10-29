@@ -88,16 +88,10 @@ def load_w2v2():
 
 def load_powsm():
     from espnet2.bin.s2t_inference import Speech2Text
-    s2t, last = None, None
-    for lang in ("<tgl>", "<fil>", "<unk>"):
-        try:
-            s2t = Speech2Text.from_pretrained("espnet/powsm", device="cpu", lang_sym=lang, task_sym="<pr>")
-            print("powsm language token:", lang, flush=True)
-            break
-        except Exception as e:                      # language token not in the vocabulary
-            last = e
-    if s2t is None:
-        raise last
+    s2t = Speech2Text.from_pretrained("espnet/powsm", device="cpu", lang_sym="<unk>", task_sym="<pr>")
+    vocab = s2t.converter.token2id                  # the language token is only looked up when a clip is decoded
+    s2t.lang_sym = next((l for l in ("<tgl>", "<fil>") if l in vocab), "<unk>")
+    print("powsm language token:", s2t.lang_sym, "| <tgl>", "<tgl>" in vocab, "| <fil>", "<fil>" in vocab, flush=True)
 
     def run(wav):
         x = np.pad(wav[:20 * SR], (0, max(0, 20 * SR - len(wav))))
