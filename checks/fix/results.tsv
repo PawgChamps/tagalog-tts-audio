@@ -529,3 +529,231 @@ aviation	english	-	aviation	en-US	a ɪ v i a ɪ t i o n	0.67	0.56	kept
 thy	english	-	ti eych way	fil-PH	t i e ɪ t ʃ w e ɪ	0.67	1.00	kept
 av	english	-	av	en-US	a v	1.00	0.75	kept
 ave	english	-	ave	fil-PH	æ v ə n u	1.00	0.75	kept
+wednesday	english	1	wednesday	fil-PH	w ɛ n z d e	0.50	0.17	replaced
+weight	english	1	weight	fil-PH	w a t	0.75	0.50	rejected
+cocaine	english	1	cocaine	fil-PH	k o ʊ k e ɪ n	0.29	0.00	replaced
+satisfaction	english	1	satisfaction	fil-PH	s æ t ɪ s f æ k ʃ ə n	0.36	0.09	replaced
+doubles	english	1	doubles	fil-PH	d ə b ə l ̴ z	0.67	0.00	replaced
+structure	english	1	structure	fil-PH	s t ɹ ə k t ʃ ɜ ˞	0.50	0.12	replaced
+confidence	english	1	confidence	fil-PH	k ɑ n f ə d ə n s	0.33	0.00	replaced
+railway	english	1	railway	fil-PH	r e l w e ɪ	0.57	0.14	replaced
+client	english	1	client	fil-PH	k l ̴ a ɪ ə n t	0.43	0.00	replaced
+proof	english	1	proof	fil-PH	p ɹ u f	1.00	0.00	replaced
+hb	letters	1	eych bi	fil-PH	i t ʃ b i	1.00	0.20	replaced
+congratulations	english	1	congratulations	fil-PH	k ə n g ɹ æ t ʃ ə l ̴ e ɪ ʃ ə n z	0.47	0.00	replaced
+chocolate	english	1	chocolate	fil-PH	t ʃ ɔ k l ̴ ə t	0.33	0.00	replaced
+promise	english	1	promise	fil-PH	p ɹ ɑ m ə s	0.33	0.00	replaced
+deposit	english	1	deposit	fil-PH	d ə p ɑ z ɪ t	0.57	0.00	replaced
+reserve	english	1	reserve	fil-PH	ɹ i z ɜ ˞ v	0.50	0.17	replaced
+curious	english	1	curious	fil-PH	k j ʊ ɹ i ə s	0.43	0.00	replaced
+clear	english	1	clear	fil-PH	k l ̴ ɪ ɹ	1.00	0.00	replaced
+collaboration	english	1	collaboration	fil-PH	k ə l ̴ æ b ɜ ˞ e ɪ ʃ ə n	0.58	0.08	replaced
+emeritus	english	1	emeritus	fil-PH	ə m ɛ ɹ ə t ə s	0.38	0.12	replaced
+selective	english	1	selective	fil-PH	s ə l ̴ ɛ k t ɪ v	0.38	0.00	replaced
+chamber	english	1	chamber	fil-PH	t ʃ a m b e r	0.57	0.29	replaced
+austrian	english	1	austrian	fil-PH	ɔ s t ɹ i ə n	0.29	0.00	replaced
+rehabilitation	english	1	rehabilitation	fil-PH	ɹ i h ə b ɪ l ̴ ə t e ɪ ʃ ə n	0.50	0.00	replaced
+remote	english	1	remote	fil-PH	ɹ ɪ m o ʊ t	0.50	0.00	replaced
+exempted	english	1	exempted	fil-PH	ɪ g z ɛ m p t ɪ d	0.56	0.00	replaced
+neuron	english	1	neuron	fil-PH	n ɪ ɹ ə n	0.60	0.20	replaced
+thousand	english	1	thousand	fil-PH	θ a ʊ z ə n d	0.57	0.00	replaced
+soft	english	1	soft	fil-PH	s ɔ f t	0.50	0.25	replaced
+vacation	english	1	vacation	fil-PH	v e ɪ k e ɪ ʃ ə n	0.56	0.00	replaced
+drawer	english	1	drawer	fil-PH	d r ɔ r	0.50	0.00	replaced
+sabotage	english	1	sabotage	fil-PH	s æ b ə t ɑ ʒ	0.43	0.00	replaced
+discussion	english	1	discussion	fil-PH	d ɪ s k ə ʃ ə n	0.50	0.00	replaced
+irregular	english	1	irregular	fil-PH	ɪ ɹ ɛ g j ə l ̴ ɜ ˞	0.33	0.11	replaced
+valiente	english	1	valiente	fil-PH	v æ l ̴ j ɛ n t e	0.29	0.43	rejected
+grave	english	1	grave	fil-PH	g ɹ r e ɪ v	0.60	0.20	replaced
+jurisdiction	english	1	jurisdiction	fil-PH	d ʒ ʊ ɹ ə s d ɪ k ʃ ə n	0.45	0.00	replaced
+wealth	english	1	wealth	fil-PH	w ɛ l θ	0.75	0.00	replaced
+luxury	english	1	luxury	fil-PH	l ̴ ə g ʒ ɜ ˞ i	0.57	0.14	replaced
+expression	english	1	expression	fil-PH	ɪ k s p ɹ ɛ ʃ ə n	0.56	0.00	replaced
+telephone	english	1	telephone	fil-PH	t ɛ l ̴ ə f o ʊ n	0.50	0.00	replaced
+institution	english	1	institution	fil-PH	ɪ n s t ɪ t u ʃ ə n	0.30	0.00	replaced
+elixir	english	1	elixir	fil-PH	i l ̴ ɪ k s ɜ ˞	0.29	0.14	replaced
+dh	letters	1	di eych	fil-PH	d i a t ʃ	0.60	0.40	replaced
+offense	english	1	offense	fil-PH	ə f ɛ n s	0.40	0.00	replaced
+respect	english	1	respect	fil-PH	ɹ i s p ɛ k t	0.43	0.00	replaced
+nominal	english	1	nominal	fil-PH	n ɑ m ə n ə l ̴	0.29	0.00	replaced
+proclamation	english	1	proclamation	fil-PH	p ɹ ɑ k l ̴ ə m e ɪ ʃ ə n	0.42	0.00	replaced
+cape	english	1	cape	fil-PH	k e ɪ p	0.75	0.00	replaced
+snow	english	1	snow	fil-PH	s n o ʊ	0.25	0.00	replaced
+alley	english	1	alley	fil-PH	æ l ̴ i	0.67	0.00	replaced
+selection	english	1	selection	fil-PH	s ə l ̴ ɛ k ʃ ə n	0.50	0.00	replaced
+operate	english	1	operate	fil-PH	ɑ p ɜ ˞ e ɪ t	0.71	0.14	replaced
+ordinary	english	1	ordinary	fil-PH	ɔ ɹ d ə n ɛ ɹ i	0.50	0.00	replaced
+mohammad	english	1	mohammad	fil-PH	m o ʊ h æ m ə d	0.50	0.12	replaced
+indigent	english	1	indigent	fil-PH	ɪ n d ɪ d ʒ ə n t	0.25	0.00	replaced
+manpower	english	1	manpower	fil-PH	m æ n p a ʊ ɜ ˞	0.38	0.12	replaced
+leah	english	1	leah	fil-PH	l i ə	1.00	0.00	replaced
+liver	english	1	liver	fil-PH	l ̴ ɪ v ɜ ˞	0.80	0.20	replaced
+logistics	english	1	logistics	fil-PH	l ̴ ə d ʒ ɪ s t ɪ k s	0.33	0.00	replaced
+fiction	english	1	fiction	fil-PH	f ɪ k ʃ ə n	0.50	0.00	replaced
+homework	english	1	homework	fil-PH	h o ʊ m w ɜ ˞ k	0.25	0.12	replaced
+collector	english	1	collector	fil-PH	k ə l ̴ ɛ k t ɜ ˞	0.50	0.12	replaced
+religion	english	1	religion	fil-PH	ɹ ɪ l ̴ ɪ d ʒ ə n	0.71	0.00	replaced
+escape	english	1	escape	fil-PH	ɪ s k e ɪ p	0.67	0.00	replaced
+moderate	english	1	moderate	fil-PH	m ɑ d ɜ ˞ e ɪ t	0.29	0.29	rejected
+sensation	english	1	sensation	fil-PH	s ɛ n s e ɪ ʃ ə n	0.56	0.00	replaced
+hypertension	english	1	hypertension	fil-PH	h a ɪ p ɜ ˞ t ɛ n ʃ ə n	0.42	0.08	replaced
+flavor	english	1	flavor	fil-PH	f l ̴ e ɪ v ɜ ˞	0.29	0.14	replaced
+resignation	english	1	resignation	fil-PH	ɹ ɛ z ɪ g n e ɪ ʃ ə n	0.55	0.09	replaced
+hunting	english	1	hunting	fil-PH	h ə n t ɪ ŋ	0.33	0.00	replaced
+basement	english	1	basement	fil-PH	b a ɪ s m ə n t	0.50	0.12	replaced
+rapist	english	1	rapist	fil-PH	ɹ e ɪ p ɪ s t	0.29	0.00	replaced
+variable	english	1	variable	fil-PH	v ɛ ɹ i ə b ə l ̴	0.25	0.00	replaced
+kilometer	english	1	kilometer	fil-PH	k ə l ̴ ɑ m ə t ɜ ˞	0.44	0.11	replaced
+document	english	1	document	fil-PH	d ɑ k j ə m ɛ n t	0.44	0.00	replaced
+portable	english	1	portable	fil-PH	p ɔ ɹ t ə b ə l ̴	0.38	0.00	replaced
+reforestation	english	1	reforestation	fil-PH	ɹ i f ɔ ɹ ə ɪ s t e ɪ ʃ ə n	0.46	0.08	replaced
+given	english	1	given	fil-PH	g ɪ v ɪ n	0.40	0.20	replaced
+observation	english	1	observation	fil-PH	ɑ b z ɜ ˞ v e ɪ ʃ ə n	0.55	0.09	replaced
+reader	english	1	reader	fil-PH	ɹ i d ɜ ˞	1.00	0.20	replaced
+peroxide	english	1	peroxide	fil-PH	p ɜ ˞ ɑ k s a ɪ d	0.33	0.11	replaced
+olive	english	1	olive	fil-PH	a ɪ l ̴ a ɪ v	0.75	0.50	rejected
+absorbent	english	1	absorbent	fil-PH	ə b z ɔ ɹ b ə n t	0.33	0.00	replaced
+mv	letters	1	em vi	fil-PH	ɛ m v i	0.50	0.00	replaced
+premier	english	1	premier	fil-PH	p ɹ ɛ m ɪ ɹ	0.33	0.00	replaced
+juvenile	english	1	juvenile	fil-PH	d ʒ u v ə n a ɪ l ̴	0.29	0.14	replaced
+diagnosis	english	1	diagnosis	fil-PH	d a ɪ ə g n o ʊ s ə s	0.36	0.00	replaced
+offensive	english	1	offensive	fil-PH	ə f ɛ n s ɪ v	0.43	0.00	replaced
+rp	letters	1	ar pi	fil-PH	ɑ ɹ p e ɪ	0.75	0.25	replaced
+doctorate	english	1	doctorate	fil-PH	d ɑ k t ɜ ˞ ə t	0.38	0.12	replaced
+calculator	english	1	calculator	fil-PH	k æ l ̴ k j ə l ̴ e ɪ t ɜ ˞	0.33	0.08	replaced
+embolism	english	1	embolism	fil-PH	ɛ m b ə l ̴ ɪ z ə m	0.40	0.20	replaced
+ddt	letters	1	di di ti	fil-PH	d i d i t i	0.67	0.00	replaced
+literature	english	1	literature	fil-PH	l ̴ ɪ t ɜ ˞ ə t ʃ ɜ ˞	0.33	0.22	replaced
+publication	english	1	publication	fil-PH	p ə b l ̴ ɪ k e ɪ ʃ ə n	0.45	0.00	replaced
+flow	english	1	flow	fil-PH	f l ̴ o ʊ	0.25	0.00	replaced
+defensive	english	1	defensive	fil-PH	d ɪ f ɛ n s ɪ v	0.25	0.00	replaced
+presence	english	1	presence	fil-PH	p ɹ ɛ z ə n s	0.71	0.00	replaced
+mustard	english	1	mustard	fil-PH	m ə s t ɜ ˞ d	0.57	0.14	replaced
+bacon	english	1	bacon	fil-PH	b e k ɛ n	0.50	0.33	replaced
+firearm	english	1	firearm	fil-PH	f a ɪ ɹ ɑ ɹ m	0.25	0.12	replaced
+provision	english	1	provision	fil-PH	p ɹ ə v ɪ ʒ ə n	0.38	0.00	replaced
+destination	english	1	destination	fil-PH	d ɛ s t ə n e ɪ ʃ ə n	0.55	0.00	replaced
+kulang-kulang	hyphen	1	kulang kulang	fil-PH	k u l a ŋ k u ː l a ŋ	0.50	0.00	replaced
+telecommunication	english	1	telecommunication	fil-PH	t ɛ l ̴ ə k ə m j u n ə k e ɪ ʃ ə n	0.35	0.06	replaced
+tension	english	1	tension	fil-PH	t ɛ n ʃ ə n	0.33	0.00	replaced
+repeat	english	1	repeat	fil-PH	ɹ ɪ p i t	1.00	0.00	replaced
+loom	english	1	loom	fil-PH	l ̴ u m	0.67	0.00	replaced
+mp	letters	1	em pi	fil-PH	ɛ m	0.50	0.50	rejected
+visible	english	1	visible	fil-PH	v ɪ z ə b ə l ̴	0.43	0.00	replaced
+observatory	english	1	observatory	fil-PH	ə b z ɜ ˞ v ə t ɔ ɹ i	0.36	0.09	replaced
+victim	english	1	victim	fil-PH	v ɪ k t i m	0.33	0.17	replaced
+dikit-dikit	hyphen	1	dikit dikit	fil-PH	d i k i t d i k i t	0.50	0.00	replaced
+cremation	english	1	cremation	fil-PH	k ɹ i m e ɪ ʃ ə n	0.56	0.00	replaced
+consul	english	1	consul	fil-PH	k ɑ n s o ʊ l ̴	0.33	0.33	rejected
+verification	english	1	verification	fil-PH	v ɛ ɹ ə f ə k e ɪ ʃ ə n	0.50	0.00	replaced
+athlete	english	1	athlete	fil-PH	æ θ l ̴ i t	0.60	0.00	replaced
+beau	english	1	beau	fil-PH	b ɔ w	1.00	0.33	replaced
+beneficiary	english	1	beneficiary	fil-PH	b ɛ n ə f ɪ ʃ i ɛ ɹ i	0.45	0.00	replaced
+chronicles	english	1	chronicles	fil-PH	k ɹ ɑ n ɪ k ə l ̴ z	0.44	0.00	replaced
+columnist	english	1	columnist	fil-PH	k ɑ l ̴ ə m n ə s t	0.33	0.00	replaced
+wolf	english	1	wolf	fil-PH	v o l f	0.50	0.50	rejected
+settlement	english	1	settlement	fil-PH	s ɛ t ə l ̴ m ə n t	0.33	0.00	replaced
+economics	english	1	economics	fil-PH	ɛ k ə n ɑ m ɪ k s	0.33	0.00	replaced
+blinds	english	1	blinds	fil-PH	b l ̴ a ɪ n d z	0.29	0.00	replaced
+ûto-uto	hyphen	1	ûto uto	fil-PH	u t o u t o	0.50	0.00	replaced
+revolutionary	english	1	revolutionary	fil-PH	ɹ ɛ v ə l ̴ u ʃ ə n ɛ ɹ i	0.42	0.00	replaced
+produce	english	1	produce	fil-PH	p ɹ ə d u s	0.33	0.00	replaced
+fungi	english	1	fungi	fil-PH	f ə ŋ g a ɪ	0.67	0.33	replaced
+strength	english	1	strength	fil-PH	s t ɹ ɛ ŋ θ	0.29	0.14	replaced
+fe	english	1	fe	fil-PH	f i	0.33	0.33	rejected
+cage	english	1	cage	fil-PH	k e d ʒ	0.75	0.25	replaced
+cotton	english	1	cotton	fil-PH	k ɑ t ə n	0.40	0.00	replaced
+rainbow	english	1	rainbow	fil-PH	r a n b o w	0.43	0.43	rejected
+contribution	english	1	contribution	fil-PH	k ɑ n t ɹ ə b j u ʃ ə n	0.50	0.00	replaced
+khz	letters	1	key eych zi	fil-PH	k i e t ʃ z i	0.75	0.25	replaced
+cha-cha	hyphen	1	cha cha	fil-PH	t ʃ ɑ	0.50	0.50	rejected
+declaration	english	1	declaration	fil-PH	d ɛ k l ̴ ɜ ˞ e ɪ ʃ ə n	0.45	0.09	replaced
+popularity	english	1	popularity	fil-PH	p ɑ p j ə l ̴ ɛ ɹ ə t i	0.36	0.00	replaced
+mosque	english	1	mosque	fil-PH	m a s k	0.50	0.00	replaced
+particular	english	1	particular	fil-PH	p ɜ ˞ t ɪ k j ə l ̴ ɜ ˞	0.36	0.18	replaced
+origin	english	1	origin	fil-PH	ɔ ɹ ə d ʒ ə n	0.33	0.00	replaced
+glow	english	1	glow	fil-PH	g l ̴ o w	0.25	0.25	rejected
+decade	english	1	decade	fil-PH	d ɛ k e ɪ d	0.50	0.00	replaced
+conviction	english	1	conviction	fil-PH	k ə n v ɪ k ʃ i ə n	0.44	0.11	replaced
+prostitution	english	1	prostitution	fil-PH	p ɹ ɑ s t ə t u ʃ ə n	0.45	0.00	replaced
+revival	english	1	revival	fil-PH	ɹ i v a ɪ v ə l ̴	0.25	0.00	replaced
+legislation	english	1	legislation	fil-PH	l ̴ ɛ d ʒ ə s l ̴ e ɪ ʃ ə n	0.45	0.00	replaced
+ml	letters	1	em el	fil-PH	ɛ m ɛ l ̴	0.50	0.00	replaced
+opposition	english	1	opposition	fil-PH	ɑ p ə z ɪ ʃ ə n	0.75	0.00	replaced
+initiation	english	1	initiation	fil-PH	ɪ n ɪ ʃ i e ɪ ʃ ə n	0.50	0.00	replaced
+discrimination	english	1	discrimination	fil-PH	d ɪ s k ɹ ɪ m ə n e ɪ ʃ ə n	0.36	0.00	replaced
+brave	english	1	brave	fil-PH	b r e v	0.40	0.20	replaced
+tolerance	english	1	tolerance	fil-PH	t ɑ l ̴ ɜ ˞ ə n s	0.62	0.12	replaced
+voluntary	english	1	voluntary	fil-PH	v ɑ l ̴ ə n t ɛ ɹ i	0.56	0.00	replaced
+description	english	1	description	fil-PH	d ɪ s k ɹ ɪ p ʃ ə n	0.40	0.00	replaced
+native	english	1	native	fil-PH	n e ɪ t ɪ v	0.67	0.00	replaced
+flop	english	1	flop	fil-PH	f l ̴ ɑ p	0.25	0.00	replaced
+diversion	english	1	diversion	fil-PH	d a ɪ v ɜ ˞ ʒ ə n	0.44	0.11	replaced
+conjugal	english	1	conjugal	fil-PH	k ɑ n d ʒ ə g ə l ̴	0.25	0.00	replaced
+ancient	english	1	ancient	fil-PH	e n t ʃ ɛ n t	1.00	0.29	replaced
+sophomore	english	1	sophomore	fil-PH	s ɑ f t m ɔ ɹ	0.50	0.17	replaced
+lounge	english	1	lounge	fil-PH	l ̴ a ʊ n d ʒ	0.80	0.00	replaced
+coronation	english	1	coronation	fil-PH	k ɔ ɹ ə n e ɪ ʃ ə n	0.40	0.00	replaced
+calendar	english	1	calendar	fil-PH	k æ l ̴ ə n d ɜ ˞	0.50	0.12	replaced
+chase	english	1	chase	fil-PH	t ʃ a s e	0.75	0.75	rejected
+unicef	english	1	unicef	fil-PH	j u n ɪ s ɛ f	0.29	0.14	replaced
+bs	letters	1	bi es	fil-PH	b i s	0.75	0.25	replaced
+instrument	english	1	instrument	fil-PH	ɪ n s t ɹ ə m ə n t	0.30	0.00	replaced
+conversion	english	1	conversion	fil-PH	k ə n v ɜ ˞ ʒ ə n	0.44	0.11	replaced
+vowel	english	1	vowel	fil-PH	v a w o l	0.40	0.40	rejected
+perseus	english	1	perseus	fil-PH	p ɜ ˞ s i ə s	0.43	0.14	replaced
+influential	english	1	influential	fil-PH	ɪ n f l ̴ u ɛ n ʃ ə l ̴	0.40	0.00	replaced
+addition	english	1	addition	fil-PH	ə d ɪ ʃ ə n	0.50	0.00	replaced
+crater	english	1	crater	fil-PH	k ɹ e ɪ t ɜ ˞	0.29	0.14	replaced
+electron	english	1	electron	fil-PH	ɪ l ̴ ɛ k t ɹ ɑ n	0.38	0.00	replaced
+dominican	english	1	dominican	fil-PH	d ə m ɪ n ɪ k ə n	0.33	0.11	replaced
+irrigation	english	1	irrigation	fil-PH	i r r i g a ɪ t i o n	0.44	0.67	rejected
+sacred	english	1	sacred	fil-PH	s e ɪ k ɹ ɪ d	0.43	0.14	replaced
+honorary	english	1	honorary	fil-PH	ɑ n ɜ ˞ ɛ ɹ i	0.43	0.14	replaced
+towel	english	1	towel	fil-PH	t a ʊ ə l ̴	0.40	0.00	replaced
+extortion	english	1	extortion	fil-PH	ɪ k s t ɔ ɹ ʃ ə n	0.56	0.11	replaced
+crane	english	1	crane	fil-PH	k ɹ i n	0.40	0.20	replaced
+relation	english	1	relation	fil-PH	ɹ i l ̴ e ɪ ʃ ə n	0.62	0.00	replaced
+immunity	english	1	immunity	fil-PH	ɪ m j u n ə t i	0.25	0.00	replaced
+protect	english	1	protect	fil-PH	p ɹ ə t ɛ k t	0.29	0.00	replaced
+nazareth	english	1	nazareth	fil-PH	n æ z ɜ ˞ ɪ θ	0.43	0.29	replaced
+traumatic	english	1	traumatic	fil-PH	t ɹ ə m æ t ɪ k	0.38	0.12	replaced
+circulation	english	1	circulation	fil-PH	s ɜ ˞ k j ə l ̴ e ɪ ʃ ə n	0.50	0.08	replaced
+waiting	english	1	waiting	fil-PH	w e ɪ t ɪ ŋ	0.50	0.00	replaced
+levi	english	1	levi	fil-PH	u r i v a j	0.40	0.60	rejected
+todo-todo	hyphen	1	todo todo	fil-PH	t o d o ʊ t o d o	0.50	0.12	replaced
+cop	english	1	cop	fil-PH	k ɑ p	0.33	0.00	replaced
+recognition	english	1	recognition	fil-PH	ɹ ɛ k ə g n ɪ ʃ ə n	0.40	0.00	replaced
+mosaic	english	1	mosaic	fil-PH	m o ʊ z e ɪ ɪ k	0.62	0.00	replaced
+evaluation	english	1	evaluation	fil-PH	i v æ l ̴ j u e ɪ ʃ ə n	0.45	0.00	replaced
+explanation	english	1	explanation	fil-PH	ɛ k s p l ̴ ə n e ɪ ʃ ə n	0.33	0.00	replaced
+secretariat	english	1	secretariat	fil-PH	s ɛ k ɹ ə t ɛ ɹ i ə t	0.27	0.09	replaced
+compensation	english	1	compensation	fil-PH	k ɑ m p ə n s e ɪ ʃ ə n	0.42	0.00	replaced
+weight	english	2	weight	en-US	w e t	0.75	0.25	replaced
+valiente	english	2	valiente	en-US	v a l ɛ n t	0.29	0.29	rejected
+moderate	english	2	moderate	en-US	m ɑ d ɜ ˞ e ɪ t	0.29	0.29	rejected
+olive	english	2	olive	en-US	ɑ l ̴ ə v	0.75	0.00	replaced
+mp	letters	2	M P	fil-PH	ɛ m p i	0.50	0.00	replaced
+consul	english	2	consul	en-US	k ɑ n s o l ̴	0.33	0.17	replaced
+wolf	english	2	wolf	en-US	w l f	0.50	0.25	replaced
+fe	english	2	fe	en-US	f i	0.33	0.33	rejected
+rainbow	english	2	rainbow	en-US	r a n b o w	0.43	0.43	rejected
+cha-cha	hyphen	2	cha cha	en-US	t ʃ a	0.50	0.50	rejected
+glow	english	2	glow	en-US	g l ̴ o	0.25	0.25	rejected
+chase	english	2	chase	en-US	t ʃ a s e	0.75	0.75	rejected
+vowel	english	2	vowel	en-US	v a ʊ ə l ̴	0.40	0.00	replaced
+irrigation	english	2	irrigation	en-US	ɪ ɹ ə g e ɪ ʃ ə n	0.44	0.00	replaced
+levi	english	2	levi	en-US	l ̴ i v a j	0.40	0.20	replaced
+valiente	english	3	valiente	en-US	v a l j ɛ n t e	0.29	0.43	rejected
+moderate	english	3	moderate	en-US	m ɑ d ɜ ˞ e ɪ t	0.29	0.29	rejected
+fe	english	3	fe	en-US	s e j	0.33	0.67	rejected
+rainbow	english	3	rainbow	en-US	r a n b o ʊ	0.43	0.29	replaced
+cha-cha	hyphen	3	cha cha	en-US	t ʃ a	0.50	0.50	rejected
+glow	english	3	glow	en-US	g l ̴ o w	0.25	0.25	rejected
+chase	english	3	chase	en-US	t ʃ a s e	0.75	0.75	rejected
+valiente	english	-	valiente	en-US	v a l ɛ n t	0.29	0.29	kept
+moderate	english	-	moderate	fil-PH	m ɑ d ɜ ˞ e ɪ t	0.29	0.29	kept
+fe	english	-	fe	fil-PH	f i	0.33	0.33	kept
+cha-cha	hyphen	-	cha cha	fil-PH	t ʃ ɑ	0.50	0.50	kept
+glow	english	-	glow	fil-PH	g l ̴ o w	0.25	0.25	kept
+chase	english	-	chase	fil-PH	t ʃ a s e	0.75	0.75	kept

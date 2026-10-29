@@ -2,16 +2,16 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-444 clips done, 530 tries.
+644 clips done, 758 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 379 | 15 |
-| letters | 26 | 0 |
-| hyphen | 15 | 0 |
+| english | 560 | 20 |
+| letters | 35 | 0 |
+| hyphen | 19 | 1 |
 | cut | 6 | 1 |
 | extra | 2 | 0 |
-| **all** | 428 | 16 |
+| **all** | 622 | 22 |
 
 ## Replaced (first 60)
 
@@ -98,3 +98,9 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | thy | english | ti eych way | t i e ɪ t ʃ w e ɪ | 0.67 → 1.00 |
 | av | english | av | a v | 1.00 → 0.75 |
 | ave | english | ave | æ v ə n u | 1.00 → 0.75 |
+| valiente | english | valiente | v a l ɛ n t | 0.29 → 0.29 |
+| moderate | english | moderate | m ɑ d ɜ ˞ e ɪ t | 0.29 → 0.29 |
+| fe | english | fe | f i | 0.33 → 0.33 |
+| cha-cha | hyphen | cha cha | t ʃ ɑ | 0.50 → 0.50 |
+| glow | english | glow | g l ̴ o w | 0.25 → 0.25 |
+| chase | english | chase | t ʃ a s e | 0.75 → 0.75 |
