@@ -4,7 +4,8 @@
     python3 scripts/fix_ipa.py            # dry run: prints counts and samples, writes nothing
     python3 scripts/fix_ipa.py --write    # rewrites wordlist_all.tsv (then run scripts/build_index.py)
 
-Needs `pip install cmudict` (English pronunciations for English loanwords).  What it does, in order:
+Needs `pip install cmudict wordfreq` (English pronunciations; word frequencies for hyphenated forms) and the git
+history (the hyphenated forms of rule 8 get back the reading they had before the first run).  What it does, in order:
 
  dictionary readings (ipa_source = dictionary)
    1. drop notes after the closing slash ("/ˈbas/ (Taglish)");
@@ -20,6 +21,11 @@ Needs `pip install cmudict` (English pronunciations for English loanwords).  Wha
  generated readings (rule / spelled)
    7. English loanwords (no accent mark, not a name, found in CMUdict, and a foreign letter or digraph, or six letters or more, or a doubled consonant) get their English reading
       (ipa_source = english); consonant-only words with y (gym, sky) too.
+ hyphenated forms (all sources)
+   8. an English reading needs every part to be English: a Tagalog prefix (mag-isa, may-ari, di-tao), a reduplication
+      (sama-sama, isa-isa), a Tagalog suffix after the hyphen (bay-an, bak-it), or more parts that are words of Filipino
+      than of English text (ari-arian, kilos-mahal) keep the Tagalog reading; a Tagalog prefix on an English word reads
+      the prefix the Tagalog way and the word the English way (i-share /ʔiˈʃɛɹ/, mag-tweet /maɡˈtwit/).
 """
 import re
 import sys
@@ -33,6 +39,12 @@ try:
     CMU = cmudict.dict()
 except ImportError:
     CMU = {}
+try:
+    from wordfreq import zipf_frequency
+except ImportError:
+    zipf_frequency = None
+
+OLD_LIST = "7095dd0a6^:wordlist_all.tsv"            # the list before the first run of this script (git revision:path)
 
 VOW = set("aeiouəɛɔɪʊæʌɑɝɚ")
 FORM_V = set("aeiou")
@@ -138,6 +150,64 @@ def cmu_ipa(form):
     return "/" + res + "/"
 
 
+# ---------------------------------------------------------------- hyphenated forms (rule 8)
+TL_PREFIX = frozenset("""a i ma na ka pa ni mag nag pag ipa ipag maka naka paka makapag nakapag makipag nakipag pakikipag
+    pinag ipinag pina ipina mapag napag mang nang pang sang may di de tag taga tig magka nagka pagka magpa nagpa pagpa
+    magsi nagsi pinaka ika balik kay mala ala alas""".split())
+TL_SUFFIX = frozenset("a o an it ok ay il en ang ing ong as om oy al aw ag at ad ib ip ub ul us ot ap ab ak am og op or et".split())
+EN_DIGRAPH = re.compile(r"th|sh|ch|ph|ck|wh|gh|oo|ee|ea|ou|ow")
+TAGALOG_PLAIN = set()                              # plain spellings the list reads the Tagalog way (filled by main)
+
+
+def part_english(p):
+    """one part of a hyphenated form that would be read the English way on its own: a letter (t-shirt), or a word
+    CMUdict knows with a foreign letter or digraph, six letters or more, or a doubled consonant"""
+    p = plain(p)
+    if len(p) == 1:
+        return True
+    return bool(cmu_word(p)) and bool(FOREIGN_LETTERS.search(p) or len(p) >= 6 or re.search(r"([^aeiou])\1", p))
+
+
+def filipino_word(p):
+    """a word of three letters or more that is clearly more frequent in Filipino text than in English text"""
+    f, e = zipf_frequency(p, "fil"), zipf_frequency(p, "en")
+    return len(p) >= 3 and p.isalpha() and f >= 3.0 and f >= e + 0.5
+
+
+def english_word(p):
+    """a word clearly more frequent in English text than in Filipino text, or one CMUdict knows that is spelled the
+    English way (a foreign letter or digraph, a doubled consonant) and is not a Filipino word"""
+    f, e = zipf_frequency(p, "fil"), zipf_frequency(p, "en")
+    if e >= 3.0 and e >= f + 0.5:
+        return True
+    return bool(cmu_word(p)) and bool(FOREIGN_LETTERS.search(p) or re.search(r"([^aeiou])\1", p)) and not filipino_word(p)
+
+
+def hyphen_reading(form):
+    """rule 8, for a form with an inner hyphen that has an English reading: 'english' (keep it), 'tagalog' (no English
+    reading), or the reading of a Tagalog prefix on an English word"""
+    parts = [plain(p) for p in form.split("-") if p]
+    if parts[0] in TL_PREFIX:
+        stem = parts[1:]
+        if all(p not in TAGALOG_PLAIN and (len(p) == 1 or english_word(p) or (cmu_word(p) and FOREIGN_LETTERS.search(p))
+                                            or 3.0 <= zipf_frequency(p, "en") >= zipf_frequency(p, "fil"))
+               for p in stem) and cmu_ipa("-".join(stem)):
+            pre, eng = M.ipa(parts[0]).strip("/").replace("ˈ", ""), cmu_ipa("-".join(stem)).strip("/")
+            if re.match(r"[ˈˌ]?[aeiouəɛɔɪʊæʌɑɝɚ]", eng):     # a vowel after the hyphen starts with a glottal stop
+                eng = re.sub(r"^([ˈˌ]?)", r"\1ʔ", eng)
+            if "ˈ" not in eng:
+                eng = "ˈ" + eng.lstrip("ˌ")
+            return "/" + pre + eng + "/"
+        return "tagalog"
+    if len(set(parts)) == 1:
+        return "english" if EN_DIGRAPH.search(parts[0]) or english_word(parts[0]) else "tagalog"
+    if parts[-1] in TL_SUFFIX or (parts[-1] in ("in", "on") and zipf_frequency(parts[0], "en") < 4.0):
+        return "tagalog"
+    if sum(map(filipino_word, parts)) > sum(map(english_word, parts)):
+        return "tagalog"
+    return "english"
+
+
 # ---------------------------------------------------------------- dictionary notation
 def move_stress(body, form):
     """stress mark left after a consonant by the dictionary's syllable dot -> start of the syllable (or ˈʔ after a hyphen)"""
@@ -202,7 +272,7 @@ ALT_SENSE = re.compile(r"variante de|forma alternativa|grafia alternativa|sinôn
 NAME_SENSE = re.compile(r"sobrenome|prenome|nome pr[óo]prio|nome de (?:homem|mulher|pessoa)|nome masculino|nome feminino|apelido", re.I)
 
 
-def fix(r):
+def _fix(r, allow_english=True):
     form, src, ipa = r[0], r[6], r[3]
     is_name = bool(NAME_SENSE.search(r[5])) or form[:1].isupper()      # names keep their dictionary / rule reading
     new, nsrc, why = ipa, src, None
@@ -216,7 +286,7 @@ def fix(r):
         multi = " " in body
         dots = "." in body
         if multi or "ʎ" in body:
-            e = cmu_ipa(form) if not has_accent(form) and not is_name else None
+            e = cmu_ipa(form) if allow_english and not has_accent(form) and not is_name else None
             if e:
                 new, nsrc, why = e, "english", "multi-word/ly reading rebuilt from CMUdict"
             elif re.search(r"[aeiou]", plain(form)):
@@ -236,7 +306,7 @@ def fix(r):
             if new != ipa:
                 why = why or ("notation" if dots else "cleaned")
             e = None
-            if not has_accent(form) and not is_name and (LEFTOVER.search(raw) or (not tl and re.search(r"[aeiou][aeiou]", raw))):
+            if allow_english and not has_accent(form) and not is_name and (LEFTOVER.search(raw) or (not tl and re.search(r"[aeiou][aeiou]", raw))):
                 e = cmu_ipa(form)
             if e:
                 new, nsrc, why = e, "english", "spelling leftovers in reading"
@@ -252,7 +322,7 @@ def fix(r):
         p = plain(form)
         looks_english = FOREIGN_LETTERS.search(p) or (src == "spelled" and "y" in p) or (
             src == "rule" and (len(p) >= 6 or re.search(r"([^aeiou])\1", p)) and not ALT_SENSE.search(r[5]))   # long / doubled consonant
-        english = not has_accent(form) and not is_name and re.search(r"[aeiouy]", p) and looks_english
+        english = allow_english and not has_accent(form) and not is_name and re.search(r"[aeiouy]", p) and looks_english
         if english:
             e = cmu_ipa(form)
             if e:
@@ -266,23 +336,54 @@ def fix(r):
     return new, nsrc, why
 
 
+def fix(r):
+    """_fix, then rule 8 for a hyphenated form that would get an English reading"""
+    new, nsrc, why = _fix(r)
+    if nsrc == "english" and r[6] != "english" and "-" in r[0].strip("-"):
+        h = hyphen_reading(r[0])
+        if h == "tagalog":
+            return _fix(r, allow_english=False)
+        if h != "english":
+            return h, "english", "Tagalog prefix on an English word"
+    return new, nsrc, why
+
+
 def main():
     write = "--write" in sys.argv
     lines = open("wordlist_all.tsv", encoding="utf-8").read().split("\n")
     header, body = lines[0], lines[1:]
     if body and body[-1] == "":
         body.pop()
+    if zipf_frequency is None:
+        sys.exit("fix_ipa.py: pip install wordfreq")
+    rows = [ln.split("\t") for ln in body]
+    TAGALOG_PLAIN.update(plain(r[0]) for r in rows if r[6] != "english")
+    old = {}                                             # readings before the first run, for rule 8
+    try:
+        import subprocess
+        txt = subprocess.run(["git", "show", OLD_LIST], capture_output=True, check=True).stdout.decode("utf-8")
+        old = {f[0]: f for f in (ln.split("\t") for ln in txt.split("\n")[1:]) if len(f) == 7}
+    except Exception as ex:
+        print(f"no {OLD_LIST} ({type(ex).__name__}): hyphenated forms that lose their English reading get the rule reading")
     out, stats, samples = [header], {}, {}
-    for ln in body:
-        r = ln.split("\t")
-        assert len(r) == 7, ln[:80]
-        first = r[3]
+    for r in rows:
+        assert len(r) == 7, "\t".join(r)[:80]
+        first, first_src = r[3], r[6]
         why = None
+        if r[6] == "english" and "-" in r[0].strip("-"):  # rule 8: start again from the reading before the first run
+            o = old.get(r[0])
+            r[3], r[6] = (o[3], o[6]) if o else (M.ipa(r[0]), "rule")
         for _ in range(4):                               # repeat until stable (a rule reading can still be an English word)
             new, nsrc, w = fix(r)
             if new == r[3] and nsrc == r[6]:
                 break
             r[3], r[6], why = new, nsrc, w
+        if (r[3], r[6]) == (first, first_src):
+            why = None
+        elif first_src == "english" and r[6] != "english":
+            why = "hyphenated Tagalog form: English reading removed"
+        elif first_src == "english" and not why:
+            why = "Tagalog prefix on an English word"
         if why:
             stats[why] = stats.get(why, 0) + 1
             samples.setdefault(why, []).append((r[0], first, r[3]))
