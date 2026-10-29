@@ -14,6 +14,8 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from tagalog_orthography import syllabify  # noqa: E402
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from make_ipa import ipa as gen_ipa  # noqa: E402
 
 ACUTE = {"a": "á", "e": "é", "i": "í", "o": "ó", "u": "ú"}
 GRAVE = {"a": "à", "e": "è", "i": "ì", "o": "ò", "u": "ù"}
@@ -102,6 +104,7 @@ def main():
         seen = set(ranked)
         ranked += sorted(w for w in by if w not in seen)
     rows, stats = [], collections.Counter()
+    agree, diffs = collections.Counter(), []
     for w in ranked:
         forms = {}
         for r in by[w]:
@@ -133,11 +136,19 @@ def main():
         for f, (src, ipa, sense) in forms.items():
             if has_ipa and src == "class":          # the stress class is weaker evidence and usually repeats an IPA reading
                 continue
-            rows.append([f, w, src, ipa, str(freq[w]["rank"]) if w in freq else "", sense]); stats[src] += 1
+            g = gen_ipa(f)
+            if src == "ipa" and g:                                  # agreement of the rule with the dictionary's own reading
+                norm = lambda x: re.sub(r"[\[\]/ˌː.\s]", "", x)
+                agree["same" if norm(g) == norm(ipa) else "diff"] += 1
+                if norm(g) != norm(ipa) and len(diffs) < 40:
+                    diffs.append((f, ipa, g))
+            final, isrc = (ipa, "dictionary") if ipa else (g, "rule" if re.search(r"[aeiou]", f.lower()) else "spelled")
+            rows.append([f, w, src, final, str(freq[w]["rank"]) if w in freq else "", sense, isrc]); stats[src] += 1; stats["ipa_" + isrc] += 1
     with open(a.out, "w", encoding="utf-8") as fh:
-        fh.write("form\tplain\tstress_source\tipa\trank\tsense\n")
+        fh.write("form\tplain\tstress_source\tipa\trank\tsense\tipa_source\n")
         for r in rows:
             fh.write("\t".join(x.replace("\t", " ") for x in r) + "\n")
+    print("rule vs dictionary IPA:", dict(agree), "| sample of differences:", diffs[:12])
     print(f"{len(ranked):,} spellings -> {len(rows):,} forms; by stress source: {dict(stats)}; -> {a.out}")
 
 
