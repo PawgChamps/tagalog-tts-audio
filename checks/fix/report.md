@@ -2,16 +2,16 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-2844 clips done, 3393 tries.
+3044 clips done, 3635 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 1914 | 75 |
-| hyphen | 666 | 20 |
-| letters | 90 | 0 |
-| cut | 60 | 17 |
+| english | 2037 | 81 |
+| hyphen | 728 | 23 |
+| letters | 91 | 0 |
+| cut | 63 | 19 |
 | extra | 2 | 0 |
-| **all** | 2732 | 112 |
+| **all** | 2921 | 123 |
 
 ## Replaced (first 60)
 
@@ -194,3 +194,14 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | myocardium | english | myocardium | m a ɪ o ʊ k ɑ ɹ d i ə m | 0.27 → 0.18 |
 | óban-óban | hyphen | óban óban | o b a n | 0.50 → 0.50 |
 | oct- | english | oct | ɑ k t o ʊ b ɜ ˞ | 1.00 → 1.00 |
+| oligocene | english | oligocene | ɔ l ̴ ɪ g ə s i n | 0.44 → 0.44 |
+| omnivorous | english | omnivorous | a ɪ ɛ m n ɪ v ɜ ˞ ə s | 0.33 → 0.33 |
+| oppressor | english | oppressor | e ɪ p ɹ ɛ s ɜ ˞ | 0.43 → 0.43 |
+| orig-orig | hyphen | orig orig | ɔ r i n g | 0.50 → 0.50 |
+| pares-pares | hyphen | pares pares | p a ː r e s | 0.60 → 0.50 |
+| páris-paris | hyphen | páris paris | p a r i s | 0.50 → 0.50 |
+| pilítpilitin | cut | pilítpilitin | p i l i t i n | 0.42 → 0.42 |
+| piliwpiliwan | cut | piliwpiliwan | p i l i w a n | 0.42 → 0.42 |
+| plover | english | plover | p l ̴ o ʊ v ɜ ˞ | 0.50 → 0.50 |
+| polemic | english | polemic | p o ʊ l ̴ ɛ m ɪ k | 0.29 → 0.29 |
+| pot-pot | english | pot pot | p ɑ ɹ t p ɑ ɹ t | 0.33 → 0.33 |
