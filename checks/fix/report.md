@@ -2,16 +2,17 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-3526 clips done, 4218 tries.
+3526 clips done, 4252 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
 | english | 2183 | 87 |
-| hyphen | 1019 | 30 |
-| cut | 79 | 28 |
+| hyphen | 1019 | 11 |
 | letters | 98 | 0 |
+| cut | 79 | 14 |
+| repeat | 33 | 0 |
 | extra | 2 | 0 |
-| **all** | 3381 | 145 |
+| **all** | 3414 | 112 |
 
 ## Replaced (first 60)
 
@@ -59,6 +60,7 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | face | english | face | f e ɪ s | 0.75 → 0.00 |
 | cia | cut | cia | s i a ɪ e ɪ | 0.67 → 0.00 |
 | áboábo | cut | ábo ábo | a b o a b o | 0.50 → 0.00 |
+| aatoato | repeat | aatoato | a t o a t o | 0.43 → 0.14 |
 | power | english | power | p a ʊ ɜ ˞ | 0.60 → 0.20 |
 | this | english | this | ð ɪ s | 1.00 → 0.00 |
 | control | english | control | k ə n t ɹ o ʊ l ̴ | 0.25 → 0.00 |
@@ -76,14 +78,12 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | association | english | association | ə s o ʊ s i e ɪ ʃ i ə n | 0.55 → 0.09 |
 | life | english | life | l ̴ a ɪ f | 0.50 → 0.00 |
 | please | english | please | p l ̴ i z | 1.00 → 0.00 |
-| illegal | english | illegal | ɪ l ̴ i g ə l ̴ | 0.33 → 0.00 |
 
 ## Old clip kept: no try was good enough (all)
 
 | Form | Reason | Sent | Heard | Error before → after |
 |---|---|---|---|---|
 | director | english | director | d ɪ ɹ ɛ k t ɜ ˞ | 0.25 → 0.25 |
-| aatoato | cut | aatoato | a t o | 0.43 → 0.57 |
 | text | english | text | p ɑ k | 1.00 → 0.80 |
 | change | english | change | t ʃ a n d ʒ e | 0.60 → 0.60 |
 | ow | english | ow | a o | 1.00 → 1.00 |
@@ -142,13 +142,7 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | catsup | english | catsup | k æ t s ə p | 0.80 → 0.60 |
 | spurious | english | spurious | s p ɪ ɹ i ə s | 0.25 → 0.25 |
 | atheism | english | atheism | e θ i ɪ z ə m | 0.57 → 0.43 |
-| angkátangkáyan | cut | angkátangkáyan | ə ŋ k a t | 0.58 → 0.58 |
-| áni-ani | hyphen | áni ani | a n i | 0.50 → 0.50 |
-| asa-asa | hyphen | asa asa | ə s a | 0.50 → 0.50 |
-| bahaw-bahaw | hyphen | bahaw bahaw | b ə a b ə a w | 0.60 → 0.30 |
 | bald-bala | hyphen | bald bala | b ɔ l d | 0.62 → 0.50 |
-| basar-basar | hyphen | basar basar | v a s a r a b | 0.50 → 0.50 |
-| básugbásog | cut | básugbásog | b a s o g | 0.50 → 0.50 |
 | bronchial | english | bronchial | b r ɔ ŋ k i l | 0.38 → 0.50 |
 | búhosutang | cut | búhosutang | b u h o s | 0.44 → 0.44 |
 | buladbukad | cut | buladbukad | b u l a d | 0.50 → 0.50 |
@@ -166,12 +160,8 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | elaborate | english | elaborate | ɪ l ̴ æ b ɜ ˞ e ɪ t | 0.43 → 0.43 |
 | gaga-go | hyphen | gaga go | g a g a | 0.43 → 0.43 |
 | gamotlahat | cut | gamotlahat | g ə m o t | 0.50 → 0.50 |
-| grádo-grado | hyphen | grádo grado | g r a d o | 0.50 → 0.50 |
-| hákbang-hakbang | hyphen | hákbang hakbang | h a k b a ŋ | 0.50 → 0.50 |
 | hawsyaw | cut | hawsyaw | a w ʃ a w | 0.71 → 0.43 |
-| híging-higing | hyphen | híging higing | h i g i ŋ | 0.50 → 0.50 |
 | ib-ib | hyphen | ib ib | i b | 0.50 → 0.50 |
-| igat-igat | hyphen | igat igat | i g a t | 0.50 → 0.50 |
 | indeterminate | english | indeterminate | ɪ n d ɪ t ɜ ˞ m ə n e ɪ t | 0.33 → 0.25 |
 | ire-ref | hyphen | ire ref | a ɪ ɜ r | 0.50 → 0.50 |
 | iyonout | cut | iyonout | i j o n | 0.43 → 0.43 |
@@ -181,45 +171,23 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | ligaw-insfk | hyphen | ligawinsfk | l i g a w i n | 0.50 → 0.30 |
 | liquidator | english | liquidator | l ̴ ɪ k w ə d e ɪ t ɜ ˞ | 0.27 → 0.18 |
 | lobotomy | english | lobotomy | l ̴ ə b ɑ t ə m i | 0.27 → 0.55 |
-| lukis'lukis | cut | lukis'lukis | l u k i s | 0.50 → 0.50 |
-| mágaling-galing | hyphen | mágaling galing | m a g a l i ŋ | 0.42 → 0.42 |
 | magin- | english | magin | m æ g ə n | 0.40 → 0.40 |
-| makesyu-kesyo | hyphen | makesyu kesyo | m ɛ k s j u w k ɛ ʃ ɔ | 0.75 → 0.42 |
-| masagwásagwà | cut | masagwásagwà | m a s a g w w a | 0.42 → 0.33 |
-| masiglángmasigla | cut | masiglángmasigla | m a s i g l a ŋ | 0.47 → 0.47 |
 | masseur | cut | masseur | m ə s ɜ ˞ | 0.43 → 0.43 |
-| miliwpiliw | cut | miliwpiliw | m i l i w i | 0.60 → 0.40 |
 | milon-tagalog | hyphen | milon tagalog | m i l o n | 0.58 → 0.58 |
-| mulanbulan | cut | mulanbulan | m u l l a n | 0.50 → 0.40 |
 | myocardium | english | myocardium | m a ɪ o ʊ k ɑ ɹ d i ə m | 0.27 → 0.18 |
-| óban-óban | hyphen | óban óban | o b a n | 0.50 → 0.50 |
 | oct- | english | oct | ɑ k t o ʊ b ɜ ˞ | 1.00 → 1.00 |
 | oligocene | english | oligocene | ɔ l ̴ ɪ g ə s i n | 0.44 → 0.44 |
 | omnivorous | english | omnivorous | a ɪ ɛ m n ɪ v ɜ ˞ ə s | 0.33 → 0.33 |
 | oppressor | english | oppressor | e ɪ p ɹ ɛ s ɜ ˞ | 0.43 → 0.43 |
-| orig-orig | hyphen | orig orig | ɔ r i n g | 0.50 → 0.50 |
-| pares-pares | hyphen | pares pares | p a ː r e s | 0.60 → 0.50 |
-| páris-paris | hyphen | páris paris | p a r i s | 0.50 → 0.50 |
-| pilítpilitin | cut | pilítpilitin | p i l i t i n | 0.42 → 0.42 |
-| piliwpiliwan | cut | piliwpiliwan | p i l i w a n | 0.42 → 0.42 |
 | plover | english | plover | p l ̴ o ʊ v ɜ ˞ | 0.50 → 0.50 |
 | polemic | english | polemic | p o ʊ l ̴ ɛ m ɪ k | 0.29 → 0.29 |
 | pot-pot | english | pot pot | p ɑ ɹ t p ɑ ɹ t | 0.33 → 0.33 |
 | puskar | english | puskar | p u s k ɑ ɹ | 0.33 → 0.33 |
 | raisin | english | raisin | r a z o n | 0.50 → 0.50 |
-| rásyun-rasyon | hyphen | rásyun rasyon | ɾ a s i o n r a s i o n | 0.50 → 0.50 |
-| rayúsrayos | cut | rayúsrayos | r a j u s | 0.50 → 0.50 |
 | reseaux | cut | reseaux | r e s s o w | 0.62 → 0.62 |
-| sálop-salop | hyphen | sálop salop | s a l o p | 0.60 → 0.50 |
-| sammisammimi | cut | sammisammimi | s a m i s a m i | 0.67 → 0.33 |
 | sibuyastagalog | cut | sibuyastagalog | s i b u j a s | 0.50 → 0.50 |
 | sleíght | cut | sleíght | s l e t | 0.43 → 0.43 |
-| sumaldáksaldak | cut | sumaldáksaldak | s u m æ l d ɑ q | 0.57 → 0.43 |
-| súson-suson | hyphen | súson suson | s u s o n | 0.50 → 0.50 |
-| táha-táha | hyphen | táha táha | t a x a | 0.50 → 0.50 |
-| tánggal-tanggal | hyphen | tánggal tanggal | t ə ŋ g a l | 0.50 → 0.50 |
 | tao-trap | hyphen | tao trap | t ɑ p | 0.71 → 0.57 |
-| tedted | cut | tedted | t ɛ d | 0.67 → 0.50 |
 | touche | english | touche | t u ʃ e ɪ | 0.67 → 0.67 |
 | triage | english | triage | t ɹ i ɑ ʒ | 0.67 → 0.50 |
 | tuwalyalita | cut | tuwalyalita | t u a l i ə | 0.45 → 0.45 |

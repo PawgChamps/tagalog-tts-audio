@@ -4224,3 +4224,37 @@ xero-	english	3	xero	en-US	ɛ k s ɹ o ʊ	0.40	0.60	rejected
 wálang-mana	hyphen	-	wálang mana	fil-PH	w a l a ŋ	0.44	0.44	kept
 worktext	cut	-	worktext	fil-PH	w ɜ r k	0.56	0.67	kept
 xero-	english	-	xero	fil-PH	ɛ k s r o ʊ	0.40	0.60	kept
+aatoato	repeat	1	aatoato	fil-PH	a t o a t o	0.43	0.14	replaced
+angkátangkáyan	repeat	1	angkátangkáyan	fil-PH	ʔ a ŋ q a t a ŋ q a j a n	0.58	0.00	replaced
+áni-ani	repeat	1	áni, ani	fil-PH	a n i a n i	0.50	0.00	replaced
+asa-asa	repeat	1	asa, asa	fil-PH	a s ə a s ə	0.50	0.00	replaced
+bahaw-bahaw	repeat	1	bahaw, bahaw	fil-PH	b ə a w b ə a w	0.60	0.20	replaced
+basar-basar	repeat	1	basar, basar	fil-PH	b ə s a r b ə s a r	0.50	0.00	replaced
+básugbásog	repeat	1	básugbásog	fil-PH	v a s u g b a s o g	0.50	0.10	replaced
+grádo-grado	repeat	1	grádo, grado	fil-PH	g r a d o g r a d o	0.50	0.00	replaced
+hákbang-hakbang	repeat	1	hákbang, hakbang	fil-PH	h a q b a ŋ h a q b a ŋ	0.50	0.00	replaced
+híging-higing	repeat	1	híging, higing	fil-PH	h i g ɪ ŋ h ɪ g ɪ n	0.50	0.10	replaced
+igat-igat	repeat	1	igat, igat	fil-PH	i g a t i g a t	0.50	0.00	replaced
+lukis'lukis	repeat	1	lukis'lukis	fil-PH	l u k i s l u k i s	0.50	0.00	replaced
+mágaling-galing	repeat	1	mágaling, galing	fil-PH	m a g a l i ŋ g a l i ŋ	0.42	0.00	replaced
+makesyu-kesyo	repeat	1	makesyu, kesyo	fil-PH	n i k ɛ e ʃ ɔ	0.75	0.67	rejected
+masagwásagwà	repeat	1	masagwásagwà	fil-PH	m a s a g w w a s a g w a	0.42	0.08	replaced
+masiglángmasigla	repeat	1	masiglángmasigla	fil-PH	m ə s i g l a ŋ m ə s i g l a	0.47	0.00	replaced
+miliwpiliw	repeat	1	miliwpiliw	fil-PH	m i l i w i l i	0.60	0.20	replaced
+mulanbulan	repeat	1	mulanbulan	fil-PH	m u l a ŋ b u l a n	0.50	0.10	replaced
+óban-óban	repeat	1	óban, óban	fil-PH	o b a n o b a n	0.50	0.00	replaced
+orig-orig	repeat	1	orig, orig	fil-PH	ɔ r i g ɔ r i n g	0.50	0.12	replaced
+pares-pares	repeat	1	pares, pares	fil-PH	p a r e s p a r e s	0.60	0.00	replaced
+páris-paris	repeat	1	páris, paris	fil-PH	p a r i s p a r i s	0.50	0.00	replaced
+pilítpilitin	repeat	1	pilítpilitin	fil-PH	p i l i p i l i t e n	0.42	0.17	replaced
+piliwpiliwan	repeat	1	piliwpiliwan	fil-PH	b ɪ l ̴ i w i b ɪ l ̴ i w ə n	0.42	0.25	replaced
+rásyun-rasyon	repeat	1	rásyun, rasyon	fil-PH	r ə ʃ o n r ə ʃ o n	0.50	0.10	replaced
+rayúsrayos	repeat	1	rayúsrayos	fil-PH	r ɑ ʲ u s r ɑ ʲ ɔ s	0.50	0.20	replaced
+sálop-salop	repeat	1	sálop, salop	fil-PH	s a l o p s a l o p	0.60	0.00	replaced
+sammisammimi	repeat	1	sammisammimi	fil-PH	s a m i s a m i m i	0.67	0.17	replaced
+sumaldáksaldak	repeat	1	sumaldáksaldak	fil-PH	s u m ɑ l ̴ d ɑ k s ɑ l ̴ d ɑ k	0.57	0.00	replaced
+súson-suson	repeat	1	súson, suson	fil-PH	s u s o n s u s o n	0.50	0.00	replaced
+táha-táha	repeat	1	táha, táha	fil-PH	t a x a t a x a	0.50	0.00	replaced
+tánggal-tanggal	repeat	1	tánggal, tanggal	fil-PH	t ʌ ŋ g ʌ l t ̪ ʌ ŋ g ʌ l	0.50	0.00	replaced
+tedted	repeat	1	ted, ted	fil-PH	t ɛ d t ɛ d	0.67	0.00	replaced
+makesyu-kesyo	repeat	2	makesyu-kesyo	fil-PH	m ɛ k s j u k ɛ s j ɔ	0.75	0.17	replaced
