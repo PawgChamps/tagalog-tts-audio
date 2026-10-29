@@ -2,16 +2,16 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-644 clips done, 758 tries.
+844 clips done, 989 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 560 | 20 |
-| letters | 35 | 0 |
-| hyphen | 19 | 1 |
+| english | 734 | 28 |
+| letters | 44 | 0 |
+| hyphen | 28 | 1 |
 | cut | 6 | 1 |
 | extra | 2 | 0 |
-| **all** | 622 | 22 |
+| **all** | 814 | 30 |
 
 ## Replaced (first 60)
 
@@ -104,3 +104,11 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | cha-cha | hyphen | cha cha | t ʃ ɑ | 0.50 → 0.50 |
 | glow | english | glow | g l ̴ o w | 0.25 → 0.25 |
 | chase | english | chase | t ʃ a s e | 0.75 → 0.75 |
+| egyptian | english | egyptian | e d ʒ i p t j o n | 0.71 → 0.57 |
+| generator | english | generator | d ʒ ɛ n ɜ ˞ e ɪ t ɜ ˞ | 0.30 → 0.20 |
+| ac | english | ac | a s i | 1.00 → 0.50 |
+| null | english | null | n o | 0.67 → 0.67 |
+| oct | english | oct | ɑ k t o ʊ b ɜ ˞ | 1.00 → 1.00 |
+| blow | english | blow | b l ̴ o ʊ w | 0.25 → 0.25 |
+| refrigerator | english | refrigerator | ɹ ɛ f ɹ ɪ d ʒ ɜ ˞ e ɪ t ɜ ˞ | 0.31 → 0.23 |
+| separate | english | separate | s ɛ p ɹ ə t | 0.38 → 0.38 |
