@@ -2,16 +2,16 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-1244 clips done, 1444 tries.
+1444 clips done, 1687 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 1074 | 38 |
-| letters | 62 | 0 |
-| hyphen | 59 | 1 |
+| english | 1240 | 48 |
+| hyphen | 75 | 1 |
+| letters | 70 | 0 |
 | cut | 6 | 2 |
 | extra | 2 | 0 |
-| **all** | 1203 | 41 |
+| **all** | 1393 | 51 |
 
 ## Replaced (first 60)
 
@@ -123,3 +123,13 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | adjourn | english | adjourn | e ɪ d ʒ ɜ ˞ n | 0.80 → 0.60 |
 | knesset | english | knesset | k n ɛ s ɪ t | 0.40 → 0.40 |
 | gg | cut | G G | d ʒ i d ʒ i | 1.00 → 0.67 |
+| pandanus | english | pandanus | p ɛ n d æ n ə s | 0.33 → 0.33 |
+| collar | english | collar | k ɔ l ̴ ɜ ˞ | 0.40 → 0.40 |
+| quay | english | quay | k w e ɪ | 1.00 → 1.00 |
+| uranus | english | uranus | j u r e ɪ n ə s | 0.29 → 0.29 |
+| skier | english | skier | s k i ɜ r | 0.40 → 0.40 |
+| velociraptor | english | velociraptor | ð ə l ̴ ɔ s ɜ ɹ æ p t ɜ ˞ | 0.25 → 0.25 |
+| somatic | english | somatic | s ə m æ t ɪ k | 0.25 → 0.25 |
+| cursor | english | cursor | k ɜ ˞ s ɜ ˞ | 0.33 → 0.33 |
+| vie | english | vie | v i | 0.67 → 0.33 |
+| teleprompter | english | teleprompter | t ɛ l ̴ e ɪ p ɹ ɑ m p t ɜ ˞ | 0.25 → 0.25 |

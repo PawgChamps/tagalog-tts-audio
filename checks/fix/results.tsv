@@ -1444,3 +1444,246 @@ mace	english	-	mace	fil-PH	m a s	0.75	0.50	kept
 adjourn	english	-	adjourn	fil-PH	e ɪ d ʒ ɜ ˞ n	0.80	0.60	kept
 knesset	english	-	knesset	en-US	k n ɛ s ɪ t	0.40	0.40	kept
 gg	cut	-	G G	fil-PH	d ʒ i d ʒ i	1.00	0.67	kept
+variation	english	1	variation	fil-PH	v ɛ ɹ i e ɪ ʃ ə n	0.56	0.00	replaced
+posse	english	1	posse	fil-PH	p ɑ s i	0.75	0.00	replaced
+salvation	english	1	salvation	fil-PH	s æ l ̴ v e ɪ ʃ ə n	0.44	0.00	replaced
+siemens	english	1	siemens	fil-PH	s i m ə n z	0.33	0.00	replaced
+pandanus	english	1	pandanus	fil-PH	p ɛ n d æ n ə s	0.33	0.33	rejected
+kl	letters	1	key el	fil-PH	k i l ̴	0.80	0.40	rejected
+conception	english	1	conception	fil-PH	k ə n s ɛ p ʃ ə n	0.56	0.00	replaced
+mano-mano	hyphen	1	mano mano	fil-PH	m a n o m a n o	0.50	0.00	replaced
+restoration	english	1	restoration	fil-PH	ɹ ɛ s t ɜ ˞ e ɪ ʃ ə n	0.64	0.09	replaced
+poseidon	english	1	poseidon	fil-PH	p ə s a ɪ d ə n	0.38	0.00	replaced
+deduction	english	1	deduction	fil-PH	d ɪ d ə k ʃ i ə n	0.62	0.12	replaced
+collar	english	1	collar	fil-PH	k ɔ l ̴ ɜ ˞	0.40	0.40	rejected
+invention	english	1	invention	fil-PH	ɪ n v ɛ n t i o n	0.62	0.38	replaced
+propagation	english	1	propagation	fil-PH	p ɹ ɑ p ə g e ɪ ʃ ə n	0.45	0.00	replaced
+immoral	english	1	immoral	fil-PH	ɪ m m ɔ ɹ ə l ̴	0.33	0.17	replaced
+substitution	english	1	substitution	fil-PH	s ə b s t ɪ t u ʃ ə n	0.45	0.00	replaced
+nd	letters	1	en di	fil-PH	ɛ n d i	0.50	0.00	replaced
+redemption	english	1	redemption	fil-PH	ɹ i d ɛ m p ʃ ə n	0.44	0.00	replaced
+premarital	english	1	premarital	fil-PH	p ɹ i m ɛ ɹ ə t ə l ̴	0.30	0.00	replaced
+maze	english	1	maze	fil-PH	m ɛ j z	0.75	0.25	replaced
+acorn	english	1	acorn	fil-PH	e ɪ k ɔ ɹ n	0.83	0.00	replaced
+mf	letters	1	em ef	fil-PH	i ɛ s	0.50	0.75	rejected
+olympus	english	1	olympus	fil-PH	ə l i m p ə s	0.25	0.25	rejected
+exclusion	english	1	exclusion	fil-PH	ɪ k s k l ̴ u ʒ ə n	0.44	0.00	replaced
+saturation	english	1	saturation	fil-PH	s æ t ʃ ɜ ˞ e ɪ ʃ ə n	0.60	0.10	replaced
+monoxide	english	1	monoxide	fil-PH	m ə n ɑ k s a ɪ d	0.44	0.00	replaced
+piping	english	1	piping	fil-PH	p a ɪ p ɪ ŋ	0.33	0.00	replaced
+anthropology	english	1	anthropology	fil-PH	æ n θ ɹ ə p ɑ l ̴ ə d ʒ i	0.55	0.00	replaced
+racer	english	1	racer	fil-PH	ɹ e ɪ s ɜ ˞	0.33	0.17	replaced
+ww	letters	1	dobolyu dobolyu	fil-PH	d ə b ə l ̴ j u d ə b ə l ̴ j u	0.86	0.00	replaced
+fragmentation	english	1	fragmentation	fil-PH	f ɹ æ g m ə n t e ɪ ʃ ə n	0.31	0.00	replaced
+erotic	english	1	erotic	fil-PH	ɪ ɹ ɑ d ɪ k	0.50	0.17	replaced
+meteorology	english	1	meteorology	fil-PH	m i t i ɜ ˞ ɑ l ̴ ə d ʒ i	0.64	0.09	replaced
+gossip	english	1	gossip	fil-PH	g ɑ s ə p	0.40	0.00	replaced
+competitor	english	1	competitor	fil-PH	k ə m p ɛ t ɪ t ɜ ˞	0.50	0.20	replaced
+dive	english	1	dive	fil-PH	d a ɪ v	0.50	0.00	replaced
+emotion	english	1	emotion	fil-PH	ɪ m o ʊ ʃ ə n	0.43	0.00	replaced
+faraday	english	1	faraday	fil-PH	f ɛ ɹ ə d e ɪ	0.29	0.14	replaced
+judaism	english	1	judaism	fil-PH	d ʒ u d i ɪ z ə m	0.44	0.11	replaced
+protagonist	english	1	protagonist	fil-PH	p ɹ o ʊ t æ g ə n ə s t	0.33	0.00	replaced
+sebaceous	english	1	sebaceous	fil-PH	s ə b e ɪ ʃ ə s	0.62	0.00	replaced
+quay	english	1	quay	fil-PH	k w e ɪ	1.00	1.00	rejected
+facilitator	english	1	facilitator	fil-PH	f ə s ɪ l ̴ ə t e ɪ t ɜ ˞	0.33	0.08	replaced
+uranus	english	1	uranus	fil-PH	j u r e ɪ n ə s	0.29	0.29	rejected
+dysfunction	english	1	dysfunction	fil-PH	d ɪ s f ə ŋ k ʃ ə n	0.40	0.00	replaced
+crusade	english	1	crusade	fil-PH	k ɹ u s e ɪ d	0.43	0.00	replaced
+daybreak	english	1	daybreak	fil-PH	d a b r a ɪ k	0.50	0.38	replaced
+bukong-bukong	hyphen	1	bukong bukong	fil-PH	b u k o ŋ b u k o ŋ	0.50	0.00	replaced
+epithelium	english	1	epithelium	fil-PH	ɛ p ɪ θ i l ̴ i ə m	0.33	0.11	replaced
+fraction	english	1	fraction	fil-PH	f ɹ æ k ʃ ə n	0.29	0.00	replaced
+metallurgy	english	1	metallurgy	fil-PH	m ɛ t ə l ̴ ɜ ˞ d ʒ i	0.44	0.11	replaced
+neurosis	english	1	neurosis	fil-PH	n ɪ ɹ o ʊ s ə s	0.62	0.12	replaced
+skier	english	1	skier	fil-PH	s k i ɜ r	0.40	0.40	rejected
+dáyang-dayang	hyphen	1	dáyang dayang	fil-PH	d a j a ŋ d a j a ŋ	0.50	0.00	replaced
+dáyang-dáyang	hyphen	1	dáyang dáyang	fil-PH	d a j a ŋ d a j a ŋ	0.50	0.00	replaced
+proposition	english	1	proposition	fil-PH	p ɹ ɑ p ə z ɪ ʃ ə n	0.50	0.00	replaced
+seduction	english	1	seduction	fil-PH	s ɪ d ə k ʃ ə n	0.62	0.00	replaced
+bandage	english	1	bandage	fil-PH	b æ n d ɪ d ʒ	0.33	0.00	replaced
+affiliate	english	1	affiliate	fil-PH	ə f ɪ l ̴ i e ɪ t	0.38	0.00	replaced
+contraception	english	1	contraception	fil-PH	k ɑ n t ɹ ə s ɛ p ʃ ə n	0.42	0.00	replaced
+bicycle	english	1	bicycle	fil-PH	b a ɪ s ɪ k ə l ̴	0.62	0.00	replaced
+cane	english	1	cane	fil-PH	k e n	1.00	0.25	replaced
+inventor	english	1	inventor	fil-PH	ʔ ɪ n v ɛ n t ɜ ˞	0.38	0.12	replaced
+foramen	english	1	foramen	fil-PH	f ɹ ɜ ˞ ɹ e ɪ m ə n	0.62	0.12	replaced
+heretic	english	1	heretic	fil-PH	h ɛ ɹ ə t ɪ k	0.29	0.00	replaced
+martyrdom	english	1	martyrdom	fil-PH	m ɑ ɹ t ɜ ˞ d ə m	0.33	0.11	replaced
+newsletter	english	1	newsletter	fil-PH	n u z l ̴ ɛ t ɜ ˞	0.38	0.12	replaced
+pathogen	english	1	pathogen	fil-PH	p æ θ ə d ʒ ə n	0.71	0.00	replaced
+realism	english	1	realism	fil-PH	ɹ i ə l ̴ ɪ z ə m	0.62	0.00	replaced
+montage	english	1	montage	fil-PH	m ɑ n t a ʒ	0.50	0.00	replaced
+indirect	english	1	indirect	fil-PH	ɪ n d ɜ ˞ ɛ k t	0.25	0.12	replaced
+ovum	english	1	ovum	fil-PH	o ʊ v ɛ m	0.40	0.20	replaced
+valium	english	1	valium	fil-PH	v æ l ̴ j ə m	0.57	0.43	rejected
+bayou	english	1	bayou	fil-PH	b a ɪ j u	0.50	0.25	replaced
+locomotion	english	1	locomotion	fil-PH	l ̴ o ʊ k ə m o ʊ ʃ ə n	0.45	0.00	replaced
+velociraptor	english	1	velociraptor	fil-PH	ð ə l ̴ ɔ s ɜ ɹ æ p t ɜ ˞	0.25	0.25	rejected
+ampere	english	1	ampere	fil-PH	æ m p ɪ ɹ	0.60	0.20	replaced
+baritone	english	1	baritone	fil-PH	b ɛ ɹ ə t o ʊ n	0.38	0.00	replaced
+descendant	english	1	descendant	fil-PH	d ɪ s ɛ n d ə n t	0.33	0.00	replaced
+lamang-kati	hyphen	1	lamang kati	fil-PH	l a m a ŋ k a t i	0.44	0.00	replaced
+pâlo-palo	hyphen	1	pâlo palo	fil-PH	p a l o p a l o	0.50	0.00	replaced
+repellent	english	1	repellent	fil-PH	ɹ ə p ɛ l ̴ ə n t	0.38	0.12	replaced
+rodent	english	1	rodent	fil-PH	ɹ o ʊ d ə n t	0.29	0.00	replaced
+somatic	english	1	somatic	fil-PH	s ə m æ t ɪ k	0.25	0.25	rejected
+wálang-lamang	hyphen	1	wálang lamang	fil-PH	w a l a ŋ l a m a ŋ	0.50	0.00	replaced
+gunpowder	english	1	gunpowder	fil-PH	g ə n p a ʊ d ɜ ˞	0.33	0.11	replaced
+refuge	english	1	refuge	fil-PH	ɹ ɛ f j u d ʒ	0.67	0.00	replaced
+multicultural	english	1	multicultural	fil-PH	m ə l ̴ t i k ə l ̴ t ʃ ɜ ˞ ə l ̴	0.31	0.08	replaced
+expatriate	english	1	expatriate	fil-PH	ɛ k s p e ɪ t ɹ i ə t	0.33	0.17	replaced
+speculation	english	1	speculation	fil-PH	s p ɛ k j ə l ̴ e ɪ ʃ ə n	0.42	0.00	replaced
+pronunciation	english	1	pronunciation	fil-PH	p ɹ o ʊ n ə n s i e ɪ ʃ ə n	0.43	0.00	replaced
+morality	english	1	morality	fil-PH	m ɜ ˞ æ l ̴ ə t i	0.62	0.12	replaced
+turbine	english	1	turbine	fil-PH	t ɜ ˞ b a ɪ n	0.29	0.14	replaced
+renegade	english	1	renegade	fil-PH	ɹ ɛ n ə g e ɪ d	0.38	0.00	replaced
+antelope	english	1	antelope	fil-PH	æ n t ə l ̴ o ʊ p	0.38	0.00	replaced
+polaris	english	1	polaris	fil-PH	p ɔ l ̴ l ̴ ɛ ɹ ɪ s	0.38	0.25	replaced
+skylark	english	1	skylark	fil-PH	s k a ɪ l ̴ ɑ ɹ k	0.25	0.00	replaced
+bátasang-bansa	hyphen	1	bátasang bansa	fil-PH	b a t a s a ŋ b ə n s a	0.42	0.00	replaced
+colloquial	english	1	colloquial	fil-PH	k ə l ̴ o ʊ k w i l ̴	0.40	0.10	replaced
+cytoplasm	english	1	cytoplasm	fil-PH	s a ɪ t ə p l ̴ æ z ə m	0.45	0.00	replaced
+distillation	english	1	distillation	fil-PH	d ɪ s t ə l ̴ e ɪ ʃ ə n	0.36	0.00	replaced
+geologic	english	1	geologic	fil-PH	d ʒ i o l ̴ ɔ d ʒ i k	0.50	0.25	replaced
+mnemonic	english	1	mnemonic	fil-PH	n u m ɑ n ɪ k	0.29	0.14	replaced
+monochrome	english	1	monochrome	fil-PH	m ɑ n ə k ɹ o ʊ m	0.33	0.00	replaced
+preamble	english	1	preamble	fil-PH	p ɹ i æ m b ə l ̴	0.75	0.00	replaced
+prompt	english	1	prompt	fil-PH	p ɹ ɑ m p t	0.50	0.00	replaced
+vulgar	english	1	vulgar	fil-PH	v ɔ l g a	0.33	0.50	rejected
+erection	english	1	erection	fil-PH	d ɪ ɹ ɛ k ʃ ə n	0.71	0.14	replaced
+tow	english	1	tow	fil-PH	t o ʊ	0.33	0.00	replaced
+thinner	english	1	thinner	fil-PH	s ɪ n ɜ ˞	0.60	0.40	replaced
+constellation	english	1	constellation	fil-PH	k ɑ n s t ə l ̴ e ɪ ʃ ə n	0.58	0.00	replaced
+eocene	english	1	eocene	fil-PH	i a s i n	1.00	0.00	replaced
+epistemology	english	1	epistemology	fil-PH	ɪ p ɪ s t ə m ɑ l ̴ ə d ʒ i	0.42	0.08	replaced
+neurotic	english	1	neurotic	fil-PH	n ʊ ɹ ɑ d ɪ k	0.29	0.14	replaced
+oblique	english	1	oblique	fil-PH	o ʊ b l ̴ i k	0.40	0.40	rejected
+sgd	letters	1	es dyi di	fil-PH	ɛ s d i w a ɪ a ɪ d ə	0.67	1.00	rejected
+affinity	english	1	affinity	fil-PH	ə f ɪ n ɪ t i	0.29	0.14	replaced
+cursor	english	1	cursor	fil-PH	k ɜ ˞ s ɜ ˞	0.33	0.33	rejected
+elongated	english	1	elongated	fil-PH	ɪ l ̴ ɔ ŋ g e ɪ t ə d	0.70	0.00	replaced
+hibernation	english	1	hibernation	fil-PH	h a ɪ b ɜ ˞ n e ɪ ʃ i ə n	0.50	0.17	replaced
+masse	english	1	masse	fil-PH	m æ s	0.33	0.00	replaced
+microscopic	english	1	microscopic	fil-PH	m a ɪ k ɹ ə s k ɑ p ɪ k	0.33	0.00	replaced
+modulation	english	1	modulation	fil-PH	m ɑ d ʒ u l ̴ e ɪ ʃ ə n	0.60	0.10	replaced
+sala-sala	hyphen	1	sala sala	fil-PH	s a l l a s a l l a	0.50	0.25	replaced
+contrary	english	1	contrary	fil-PH	k ə n t ɹ ɛ ɹ i	0.50	0.00	replaced
+excelsior	english	1	excelsior	fil-PH	ɪ k s ɛ l ̴ s i j ɔ ɹ	0.44	0.22	replaced
+astronomer	english	1	astronomer	fil-PH	ə s t ɹ ɑ n ə m ɜ ˞	0.40	0.10	replaced
+caricature	english	1	caricature	fil-PH	k ɛ ɹ ɪ k ə t ʃ ɜ ˞	0.33	0.22	replaced
+preservation	english	1	preservation	fil-PH	p ɹ ɛ z ɜ ˞ v e ɪ ʃ ə n	0.42	0.08	replaced
+topical	english	1	topical	fil-PH	t ɑ p ɪ k ə l ̴	0.29	0.14	replaced
+apex	english	1	apex	fil-PH	e ɪ p ɛ k s	0.33	0.00	replaced
+quit	english	1	quit	fil-PH	k w ɪ t	0.50	0.00	replaced
+siyam-siyam	hyphen	1	siyam siyam	fil-PH	s i j a m s i j a m	0.60	0.00	replaced
+uric	english	1	uric	fil-PH	j u r ɛ k	0.40	0.40	rejected
+relate	english	1	relate	fil-PH	ɹ i l ̴ e ɪ t	0.67	0.00	replaced
+mayonnaise	english	1	mayonnaise	fil-PH	m e ɪ ə n e ɪ z	0.62	0.00	replaced
+terrorism	english	1	terrorism	fil-PH	t ɛ ɹ ɜ ˞ ɪ z ə m	0.44	0.11	replaced
+posthumous	english	1	posthumous	fil-PH	p ɑ s t ʃ u m ə s	0.50	0.00	replaced
+decathlon	english	1	decathlon	fil-PH	d ə k æ θ ə l ̴ ɑ n	0.38	0.38	rejected
+phrase	english	1	phrase	fil-PH	f ɹ e ɪ z	0.80	0.00	replaced
+macaroni	english	1	macaroni	fil-PH	m æ k ɜ ˞ o ʊ n i	0.33	0.11	replaced
+obesity	english	1	obesity	fil-PH	o ʊ b i s ɪ t i	0.75	0.12	replaced
+selenium	english	1	selenium	fil-PH	s ə l ̴ i n i ə m	0.50	0.00	replaced
+civilization	english	1	civilization	fil-PH	s ɪ v ə l ̴ ɪ z e ɪ ʃ ə n	0.50	0.00	replaced
+consideration	english	1	consideration	fil-PH	k ə n s ɪ d ɜ ˞ e ɪ ʃ ə n	0.38	0.08	replaced
+expulsion	english	1	expulsion	fil-PH	ɪ k s p ə l ̴ ʃ ə n	0.56	0.00	replaced
+occasion	english	1	occasion	fil-PH	ə k e ɪ ʒ ə n	0.71	0.00	replaced
+proportion	english	1	proportion	fil-PH	p ɹ ə p ɔ ɹ ʃ ə n	0.44	0.00	replaced
+vase	english	1	vase	fil-PH	v ɛ s	0.75	0.25	replaced
+elevated	english	1	elevated	fil-PH	ɛ l ̴ ə v e ɪ t ɪ d	0.67	0.00	replaced
+excommunication	english	1	excommunication	fil-PH	ɛ k s k ə m j u n ə k e ɪ ʃ ə n	0.44	0.00	replaced
+classified	english	1	classified	fil-PH	k l ̴ æ s ə f a ɪ d	0.33	0.00	replaced
+lc	letters	1	el si	fil-PH	ɛ l	0.50	0.50	rejected
+perennial	english	1	perennial	fil-PH	p ɜ ˞ ɛ n i ə l ̴	0.50	0.12	replaced
+resuscitation	english	1	resuscitation	fil-PH	ɹ ɪ s ə s ɪ t e ɪ ʃ ə n	0.42	0.00	replaced
+unitary	english	1	unitary	fil-PH	j u n ə t ɛ ɹ i	0.25	0.12	replaced
+decoy	english	1	decoy	fil-PH	d i k ɔ j	0.40	0.40	rejected
+faction	english	1	faction	fil-PH	s æ k ʃ ə n	0.50	0.17	replaced
+periodic	english	1	periodic	fil-PH	p ɪ ɹ i ɑ d ɪ k	0.50	0.00	replaced
+patriotic	english	1	patriotic	fil-PH	p e ɪ t ɹ i ɑ t ɪ k	0.40	0.00	replaced
+vie	english	1	vie	fil-PH	v i ɛ	0.67	0.67	rejected
+sorority	english	1	sorority	fil-PH	s ɜ ˞ ɔ ɹ ə t i	0.25	0.12	replaced
+evident	english	1	evident	fil-PH	ɛ v ə d ɛ n t	0.43	0.14	replaced
+ignorance	english	1	ignorance	fil-PH	ɪ g n ɜ ˞ ə n s	0.38	0.12	replaced
+sn	letters	1	es en	fil-PH	e s ɛ n	0.50	0.00	replaced
+batang-batang	hyphen	1	batang batang	fil-PH	b a t a ŋ b a t a ŋ	0.50	0.00	replaced
+persecution	english	1	persecution	fil-PH	p ɜ ˞ s ə k j u ʃ ə n	0.36	0.09	replaced
+vibrator	english	1	vibrator	fil-PH	v a ɪ b ɹ e ɪ t ɜ ˞	0.50	0.10	replaced
+insemination	english	1	insemination	fil-PH	ɪ n s ɛ m ə n e ɪ ʃ ə n	0.42	0.00	replaced
+lúlutang-lutang	hyphen	1	lúlutang lutang	fil-PH	l u l u t a ŋ l u ː t a ŋ	0.42	0.00	replaced
+respirator	english	1	respirator	fil-PH	ɹ ɛ s p ɜ ˞ e ɪ t ɜ ˞	0.36	0.18	replaced
+retire	english	1	retire	fil-PH	ɹ ɪ t a ɪ ɹ	0.50	0.00	replaced
+teleprompter	english	1	teleprompter	fil-PH	t ɛ l ̴ e ɪ p ɹ ɑ m p t ɜ ˞	0.25	0.25	rejected
+asiatic	english	1	asiatic	fil-PH	e ʒ i a r ɛ k	0.62	0.38	replaced
+pvt	letters	1	pi vi ti	fil-PH	p i v i t i	0.50	0.00	replaced
+qualitative	english	1	qualitative	fil-PH	k w ɑ l ̴ ə t e ɪ t ɪ v	0.55	0.00	replaced
+corinthians	english	1	corinthians	fil-PH	k ɜ ˞ ɪ n θ i ə n z	0.60	0.10	replaced
+escalator	english	1	escalator	fil-PH	ɛ s k ə l ̴ e ɪ t ɜ ˞	0.40	0.10	replaced
+imagination	english	1	imagination	fil-PH	ɪ m æ d ʒ ə n e ɪ ʃ ə n	0.45	0.00	replaced
+intentional	english	1	intentional	fil-PH	ɪ n t ɛ n ʃ ə n ə l ̴	0.40	0.00	replaced
+ointment	english	1	ointment	fil-PH	ɔ ɪ n t m ɛ n t	0.50	0.12	replaced
+caterer	english	1	caterer	fil-PH	k e ɪ t ɜ ˞ ɜ ˞	0.38	0.25	replaced
+commodity	english	1	commodity	fil-PH	k ə m ɑ d ə t i	0.50	0.00	replaced
+crimson	english	1	crimson	fil-PH	k ɹ ɪ m z ə n	0.29	0.00	replaced
+icarus	english	1	icarus	fil-PH	e k ɔ r ɛ s	0.33	0.50	rejected
+caramel	english	1	caramel	fil-PH	k æ ɹ ə m ɛ l ̴	0.29	0.29	rejected
+carotid	english	1	carotid	fil-PH	k ɜ ˞ ɑ t ɪ d	0.29	0.14	replaced
+femur	english	1	femur	fil-PH	f i m ɜ ˞	0.40	0.20	replaced
+pituitary	english	1	pituitary	fil-PH	p ə t u ə t ɛ ɹ i	0.44	0.00	replaced
+reincarnation	english	1	reincarnation	fil-PH	ɹ i ɪ n k ɑ ɹ n e ɪ ʃ ə n	0.38	0.00	replaced
+specification	english	1	specification	fil-PH	s p ɛ s ə f ə k e ɪ ʃ ə n	0.38	0.15	replaced
+carbonated	english	1	carbonated	fil-PH	k ɑ ɹ b ə n e ɪ t ɪ d	0.45	0.00	replaced
+deliver	english	1	deliver	fil-PH	d ɪ l ̴ ɪ v ɜ ˞	0.43	0.14	replaced
+exclamation	english	1	exclamation	fil-PH	ɛ k s k l ̴ ə m e ɪ ʃ ə n	0.42	0.00	replaced
+illustration	english	1	illustration	fil-PH	ɪ l ̴ ə s t ɹ e ɪ ʃ ə n	0.55	0.00	replaced
+kailangang-kailangang	hyphen	1	kailangang kailangang	fil-PH	k a i l a ŋ a ŋ k a i l a ŋ a ŋ	0.56	0.00	replaced
+pla-pla	hyphen	1	pla pla	fil-PH	p l a p l a	0.50	0.00	replaced
+bato-bato	hyphen	1	bato bato	fil-PH	b a t o b a t a	0.50	0.12	replaced
+báto-báto	hyphen	1	báto báto	fil-PH	b a t o b a t o	0.50	0.00	replaced
+joule	english	1	joule	fil-PH	d ʒ u ə l ̴	0.67	0.33	replaced
+pandanus	english	2	pandanus	en-US	p æ n d æ n ɪ s	0.33	0.33	rejected
+kl	letters	2	K L	fil-PH	k e ɪ ɛ l ̴	0.80	0.00	replaced
+collar	english	2	collar	en-US	k ɔ l ̴ ɜ ˞	0.40	0.40	rejected
+mf	letters	2	M F	fil-PH	ɛ m ɛ f	0.50	0.00	replaced
+olympus	english	2	olympus	en-US	o ʊ l ̴ ɪ m p ə s	0.25	0.00	replaced
+quay	english	2	quay	en-US	k w e ɪ	1.00	1.00	rejected
+uranus	english	2	uranus	en-US	j ʊ ɹ e ɪ n ə s	0.29	0.29	rejected
+skier	english	2	skier	en-US	s k i e r	0.40	0.40	rejected
+valium	english	2	valium	en-US	v æ l ̴ i ə m	0.57	0.29	replaced
+velociraptor	english	2	velociraptor	en-US	ð ə l ̴ ɔ s ɜ ˞ æ p t ɜ ˞	0.25	0.33	rejected
+somatic	english	2	somatic	en-US	s ɪ m æ t ɪ k	0.25	0.25	rejected
+vulgar	english	2	vulgar	en-US	v ə l ̴ g ɜ ˞	0.33	0.17	replaced
+oblique	english	2	oblique	en-US	o b l ̴ i k	0.40	0.20	replaced
+sgd	letters	2	S G D	fil-PH	ɛ s d ʒ i d i	0.67	0.00	replaced
+cursor	english	2	cursor	en-US	k ɜ ˞ s ɜ ˞	0.33	0.33	rejected
+uric	english	2	uric	en-US	j ʊ ɹ ɪ k	0.40	0.20	replaced
+decathlon	english	2	decathlon	en-US	d i k æ θ ə l ̴ ə n	0.38	0.25	replaced
+lc	letters	2	L C	fil-PH	ɛ l ̴ s i	0.50	0.00	replaced
+decoy	english	2	decoy	en-US	d i k ɔ ɪ	0.40	0.20	replaced
+vie	english	2	vie	en-US	v i	0.67	0.33	rejected
+teleprompter	english	2	teleprompter	en-US	t ɛ l ̴ e ɪ p ɹ ɑ m p t ɜ ˞	0.25	0.25	rejected
+icarus	english	2	icarus	en-US	ɪ k ɜ ˞ ə s	0.33	0.17	replaced
+caramel	english	2	caramel	en-US	k ɛ ɹ ə m ɛ l ̴	0.29	0.14	replaced
+pandanus	english	3	pandanus	en-US	p æ n d æ n ɪ s	0.33	0.33	rejected
+collar	english	3	collar	en-US	k ɔ l ̴ ɜ ˞	0.40	0.40	rejected
+quay	english	3	quay	en-US	k w e ɪ	1.00	1.00	rejected
+uranus	english	3	uranus	en-US	j ʊ ɹ e ɪ n ə s	0.29	0.29	rejected
+skier	english	3	skier	en-US	s k i ɜ r	0.40	0.40	rejected
+velociraptor	english	3	velociraptor	en-US	ð ə l ̴ ɔ s ɪ ɹ æ p t ɜ ˞	0.25	0.25	rejected
+somatic	english	3	somatic	en-US	s ɪ m æ t ɪ k	0.25	0.25	rejected
+cursor	english	3	cursor	en-US	k ɜ ˞ s ɜ ˞	0.33	0.33	rejected
+vie	english	3	vie	en-US	v i ː	0.67	0.33	rejected
+teleprompter	english	3	teleprompter	en-US	t ɛ l ̴ e ɪ p ɹ ɑ m p t ɜ ˞	0.25	0.25	rejected
+pandanus	english	-	pandanus	fil-PH	p ɛ n d æ n ə s	0.33	0.33	kept
+collar	english	-	collar	fil-PH	k ɔ l ̴ ɜ ˞	0.40	0.40	kept
+quay	english	-	quay	fil-PH	k w e ɪ	1.00	1.00	kept
+uranus	english	-	uranus	fil-PH	j u r e ɪ n ə s	0.29	0.29	kept
+skier	english	-	skier	fil-PH	s k i ɜ r	0.40	0.40	kept
+velociraptor	english	-	velociraptor	fil-PH	ð ə l ̴ ɔ s ɜ ɹ æ p t ɜ ˞	0.25	0.25	kept
+somatic	english	-	somatic	fil-PH	s ə m æ t ɪ k	0.25	0.25	kept
+cursor	english	-	cursor	fil-PH	k ɜ ˞ s ɜ ˞	0.33	0.33	kept
+vie	english	-	vie	en-US	v i	0.67	0.33	kept
+teleprompter	english	-	teleprompter	fil-PH	t ɛ l ̴ e ɪ p ɹ ɑ m p t ɜ ˞	0.25	0.25	kept
