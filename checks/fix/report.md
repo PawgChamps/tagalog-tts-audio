@@ -2,16 +2,16 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-3044 clips done, 3635 tries.
+3244 clips done, 3885 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 2037 | 81 |
-| hyphen | 728 | 23 |
-| letters | 91 | 0 |
-| cut | 63 | 19 |
+| english | 2126 | 83 |
+| hyphen | 816 | 27 |
+| cut | 70 | 25 |
+| letters | 95 | 0 |
 | extra | 2 | 0 |
-| **all** | 2921 | 123 |
+| **all** | 3109 | 135 |
 
 ## Replaced (first 60)
 
@@ -205,3 +205,15 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | plover | english | plover | p l ̴ o ʊ v ɜ ˞ | 0.50 → 0.50 |
 | polemic | english | polemic | p o ʊ l ̴ ɛ m ɪ k | 0.29 → 0.29 |
 | pot-pot | english | pot pot | p ɑ ɹ t p ɑ ɹ t | 0.33 → 0.33 |
+| puskar | english | puskar | p u s k ɑ ɹ | 0.33 → 0.33 |
+| raisin | english | raisin | r a z o n | 0.50 → 0.50 |
+| rásyun-rasyon | hyphen | rásyun rasyon | ɾ a s i o n r a s i o n | 0.50 → 0.50 |
+| rayúsrayos | cut | rayúsrayos | r a j u s | 0.50 → 0.50 |
+| reseaux | cut | reseaux | r e s s o w | 0.62 → 0.62 |
+| sálop-salop | hyphen | sálop salop | s a l o p | 0.60 → 0.50 |
+| sammisammimi | cut | sammisammimi | s a m i s a m i | 0.67 → 0.33 |
+| sibuyastagalog | cut | sibuyastagalog | s i b u j a s | 0.50 → 0.50 |
+| sleíght | cut | sleíght | s l e t | 0.43 → 0.43 |
+| sumaldáksaldak | cut | sumaldáksaldak | s u m æ l d ɑ q | 0.57 → 0.43 |
+| súson-suson | hyphen | súson suson | s u s o n | 0.50 → 0.50 |
+| táha-táha | hyphen | táha táha | t a x a | 0.50 → 0.50 |

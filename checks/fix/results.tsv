@@ -3640,3 +3640,253 @@ piliwpiliwan	cut	-	piliwpiliwan	fil-PH	p i l i w a n	0.42	0.42	kept
 plover	english	-	plover	fil-PH	p l ̴ o ʊ v ɜ ˞	0.50	0.50	kept
 polemic	english	-	polemic	fil-PH	p o ʊ l ̴ ɛ m ɪ k	0.29	0.29	kept
 pot-pot	english	-	pot pot	en-US	p ɑ ɹ t p ɑ ɹ t	0.33	0.33	kept
+pukos-pukos	hyphen	1	pukos pukos	fil-PH	b u q o s b u q o s	0.50	0.20	replaced
+pukot-pukot	hyphen	1	pukot pukot	fil-PH	p u k o t p u k o t	0.60	0.00	replaced
+pukus-pukos	hyphen	1	pukus pukos	fil-PH	p u k u s p u k u s	0.60	0.10	replaced
+pulirpulir	cut	1	pulirpulir	fil-PH	p u l i r	0.60	0.50	rejected
+púmasyal-pasyal	hyphen	1	púmasyal pasyal	fil-PH	p u m ə ʃ a l p ə ʃ a l	0.42	0.00	replaced
+punctuation	english	1	punctuation	fil-PH	p ə ŋ k t ʃ u e ɪ ʃ ə n	0.45	0.00	replaced
+púnit-punit	hyphen	1	púnit punit	fil-PH	p u n i t p u n i t	0.60	0.00	replaced
+purgatory	english	1	purgatory	fil-PH	p ɜ ˞ g ə t ɔ ɹ i	0.33	0.11	replaced
+puritan	english	1	puritan	fil-PH	p j ʊ ɹ ə t ə n	0.25	0.00	replaced
+purloin	english	1	purloin	fil-PH	p ɜ ˞ l ̴ ɔ ɪ n	0.29	0.14	replaced
+púruk-purok	hyphen	1	púruk purok	fil-PH	p u r o k p u r o k	0.60	0.10	replaced
+puskar	english	1	puskar	fil-PH	p u s k ɑ ɹ	0.33	0.33	rejected
+púsu-pusò	hyphen	1	púsu pusò	fil-PH	p u s o ʊ p u s o ʊ	0.50	0.25	replaced
+puta-puta	hyphen	1	puta puta	fil-PH	p u t ə p u t ə	0.50	0.00	replaced
+pútuk-putok	hyphen	1	pútuk putok	fil-PH	p u ː t u q p u t u q	0.60	0.10	replaced
+quarter-hour	hyphen	1	quarter hour	fil-PH	k w ɔ ɹ t ɜ ˞ a ʊ ɹ	0.45	0.18	replaced
+quinine	english	1	quinine	fil-PH	k w a ɪ n a ɪ n	0.50	0.00	replaced
+quintal	english	1	quintal	fil-PH	k w i n t o	0.29	0.29	rejected
+quintuple	english	1	quintuple	fil-PH	k w ɪ n t ə p ə l ̴	0.44	0.11	replaced
+quintuplet	english	1	quintuplet	fil-PH	k w ɪ n t ə p l ̴ ə t	0.40	0.00	replaced
+quip	english	1	quip	fil-PH	k w ɪ p	0.25	0.00	replaced
+radiator	english	1	radiator	fil-PH	ɹ e ɪ d i e ɪ t ɜ ˞	0.60	0.10	replaced
+radiography	english	1	radiography	fil-PH	ɹ e ɪ d i ɑ g ɹ ə f i	0.55	0.00	replaced
+radiologist	english	1	radiologist	fil-PH	ɹ e ɪ d i ɑ l ̴ ə d ʒ ɪ s t	0.75	0.00	replaced
+rága-raga	hyphen	1	rága raga	fil-PH	r a g a r a g a	0.50	0.00	replaced
+ragtime	english	1	ragtime	fil-PH	ɹ æ g t a ɪ m	0.43	0.00	replaced
+rahan-rahan	hyphen	1	rahan rahan	fil-PH	r a h a n r a h a n	0.50	0.00	replaced
+rainwater	english	1	rainwater	fil-PH	ɹ e ɪ n w ɔ t ɜ ˞	0.44	0.11	replaced
+raisin	english	1	raisin	fil-PH	r a z o n	0.50	0.50	rejected
+ramay-ramay	hyphen	1	ramay ramay	fil-PH	r a m a j r a m ə j	0.50	0.00	replaced
+rásyun-rasyon	hyphen	1	rásyun rasyon	fil-PH	ɾ a s i o n r a s i o n	0.50	0.50	rejected
+ratify	english	1	ratify	fil-PH	ɹ æ t ə f a ɪ	0.29	0.00	replaced
+rayos-x	english	1	rayos x	fil-PH	ɹ e ɪ z ɛ k s	0.44	0.22	replaced
+rayúsrayos	cut	1	rayúsrayos	fil-PH	r a j u s	0.50	0.50	rejected
+realist	english	1	realist	fil-PH	ɹ i ə l ̴ ɪ s t	0.29	0.00	replaced
+recitation	english	1	recitation	fil-PH	ɹ ɛ s ɪ t e ɪ ʃ ə n	0.40	0.10	replaced
+recondition	english	1	recondition	fil-PH	ɹ i k ə n d ɪ ʃ ə n	0.50	0.00	replaced
+rectifier	english	1	rectifier	fil-PH	ɹ ɛ k t u f a ɪ ɹ	0.30	0.20	rejected
+rehabilitate	english	1	rehabilitate	fil-PH	ɹ i h ə b ɪ l ̴ ə t e ɪ t	0.42	0.00	replaced
+remunerate	english	1	remunerate	fil-PH	ɹ ɛ m j u n ɜ ˞ a ɪ t	0.45	0.27	replaced
+renovate	english	1	renovate	fil-PH	ɹ ɛ n ə v e ɪ t	0.38	0.00	replaced
+reparation	english	1	reparation	fil-PH	ɹ ɛ p ɜ ˞ e ɪ ʃ i ə n	0.60	0.20	replaced
+repartee	english	1	repartee	fil-PH	ɹ ɛ p ɑ ɹ t e ɪ	0.43	0.29	replaced
+repossess	english	1	repossess	fil-PH	ɹ i p ə z ɛ s	0.43	0.00	replaced
+reseaux	cut	1	reseaux	fil-PH	r e s s o w	0.62	0.62	rejected
+respiration	english	1	respiration	fil-PH	ɹ ɛ s p ɜ ˞ e ɪ ʃ ə n	0.36	0.09	replaced
+retardation	english	1	retardation	fil-PH	ɹ i t ɑ ɹ d e ɪ ʃ ə n	0.45	0.00	replaced
+retract	english	1	retract	fil-PH	ɹ i t ɹ æ k t	0.29	0.00	replaced
+retraction	english	1	retraction	fil-PH	ɹ i t ɹ æ k ʃ ə n	0.33	0.00	replaced
+retribution	english	1	retribution	fil-PH	ɹ ɛ t ɹ ə b j u ʃ ə n	0.55	0.00	replaced
+revisionism	english	1	revisionism	fil-PH	ɹ i v ɪ ʒ ə n ɪ z ə m	0.55	0.00	replaced
+revisionist	english	1	revisionist	fil-PH	ɹ i v ɪ ʒ ə n ɪ s t	0.40	0.00	replaced
+revolve	english	1	revolve	fil-PH	ɹ i v ɑ l ̴ v	0.33	0.00	replaced
+revulsion	english	1	revulsion	fil-PH	ɹ i v o ʊ l ̴ ʃ ə n	0.62	0.25	replaced
+rhodium	english	1	rhodium	fil-PH	ɹ o ʊ d i ə m	0.29	0.00	replaced
+rhododendron	english	1	rhododendron	fil-PH	ɹ o ʊ d ə d ɛ n d ɹ ə n	0.25	0.00	replaced
+rikosrikos	cut	1	rikosrikos	fil-PH	r i k o s	0.50	0.50	rejected
+risang-risang	hyphen	1	risang risang	fil-PH	r i s a ŋ r i s a ŋ	0.50	0.00	replaced
+risik-risik	hyphen	1	risik risik	fil-PH	r i s i k r i z i k	0.60	0.10	replaced
+roller-skate	english	1	roller skate	fil-PH	ɹ o ʊ l ̴ ɜ ˞ s k e ɪ t	0.36	0.09	replaced
+romanticism	english	1	romanticism	fil-PH	ɹ o ʊ m æ n t ɪ s ɪ z ə m	0.46	0.08	replaced
+rotate	english	1	rotate	fil-PH	ɹ o ʊ t e ɪ t	0.57	0.00	replaced
+rudiment	english	1	rudiment	fil-PH	ɹ u d ə m ə n t	0.38	0.12	replaced
+ruffles	english	1	ruffles	fil-PH	ɹ ə f ə l ̴ z	0.67	0.00	replaced
+rummage	english	1	rummage	fil-PH	r a m ɛ d ʒ	0.60	0.20	replaced
+sabat-sabat	hyphen	1	sabat sabat	fil-PH	s a b a t s a b a t	0.50	0.00	replaced
+sábid-sabid	hyphen	1	sábid sabid	fil-PH	s a b i d s a b i d	0.50	0.00	replaced
+sabol-sabol	hyphen	1	sabol sabol	fil-PH	s a b o l s a b o l ̴	0.50	0.00	replaced
+sabukotbakulaw	cut	1	sabukotbakulaw	fil-PH	s a b u q u t b a q u l a w	0.50	0.07	replaced
+saccharine	english	1	saccharine	fil-PH	s æ k ɜ ˞ i n	0.38	0.25	replaced
+sadism	english	1	sadism	fil-PH	s e d i z ə m	0.62	0.12	replaced
+sâga-saga	hyphen	1	sâga saga	fil-PH	s a g a s a g a	0.50	0.00	replaced
+sagay-sagay	hyphen	1	sagay sagay	fil-PH	s a g a ɪ s a g a ɪ	0.50	0.20	replaced
+saging-saging	hyphen	1	saging saging	fil-PH	s æ g ɪ ŋ s æ g ɪ ŋ	0.50	0.00	replaced
+sagot-sagot	hyphen	1	sagot sagot	fil-PH	s a g ɔ t s a g ɔ t	0.50	0.00	replaced
+sagu-sago	hyphen	1	sagu sago	fil-PH	s a g o s a g o	0.50	0.12	replaced
+sakil-sakil	hyphen	1	sakil sakil	fil-PH	s a k i l s a k i l	0.50	0.00	replaced
+sákit-babae	hyphen	1	sákit babae	fil-PH	s a q i t b a b a e	0.50	0.00	replaced
+sála-salahan	hyphen	1	sála salahan	fil-PH	s a l a s a l ə a n	0.64	0.09	replaced
+salay-salay	hyphen	1	salay salay	fil-PH	s a l a i s a l a i	0.60	0.20	replaced
+saleng-saleng	hyphen	1	saleng saleng	fil-PH	s a l ɪ ŋ s a l ̴ ɪ ŋ	0.50	0.20	replaced
+saling-bubog	hyphen	1	saling bubog	fil-PH	s a l i n b u b u g	0.50	0.20	replaced
+sálop-salop	hyphen	1	sálop salop	fil-PH	s a l o p	0.60	0.50	rejected
+samansaman	cut	1	samansaman	fil-PH	s a m ə n	0.50	0.50	rejected
+samat-anito	hyphen	1	samat anito	fil-PH	s a m a t a n i t o	0.50	0.00	replaced
+sámba-samba	hyphen	1	sámba samba	fil-PH	s a m b a s a m b a	0.50	0.00	replaced
+sammisammimi	cut	1	sammisammimi	fil-PH	s a m i s a m i	0.67	0.33	rejected
+samot-samot	hyphen	1	samot samot	fil-PH	s a m o t s ə m ə t	0.50	0.10	replaced
+sanctification	english	1	sanctification	fil-PH	s æ ŋ k t ə f ə k e ɪ ʃ ə n	0.50	0.00	replaced
+sânda-sandali	hyphen	1	sânda sandali	fil-PH	s a n d a s a n d ə l i s a n d ə s a n d ə l i	0.42	1.00	rejected
+sandaw-sandaw	hyphen	1	sandaw sandaw	fil-PH	s ə n d a w s a n t d a w	0.50	0.08	replaced
+sándaw-sándaw	hyphen	1	sándaw sándaw	fil-PH	s a n t d a w s a n d a w	0.50	0.08	replaced
+sapasang-usapan	hyphen	1	sapasang usapan	fil-PH	s a p a s a ŋ u s a p a n	0.54	0.00	replaced
+sapát-sapát	hyphen	1	sapát sapát	fil-PH	s a p a t s ə p a t	0.50	0.00	replaced
+sâpi-sapi	hyphen	1	sâpi sapi	fil-PH	s a p i s a p i	0.50	0.00	replaced
+sapot-sapot	hyphen	1	sapot sapot	fil-PH	s a p ɔ t s a p ɔ t	0.50	0.00	replaced
+sarcophagus	english	1	sarcophagus	fil-PH	s ɑ ɹ k ə f ə g ə s	0.30	0.00	replaced
+savor	english	1	savor	fil-PH	s e ɪ v ɜ ˞	0.50	0.17	replaced
+sawa-sawa	hyphen	1	sawa sawa	fil-PH	s a w ə s a w ə	0.50	0.00	replaced
+say-a	hyphen	1	say a	fil-PH	s e	0.75	0.75	rejected
+sáyasáya	cut	1	sáyasáya	fil-PH	s a j ə	0.50	0.50	rejected
+scone	english	1	scone	fil-PH	s k o ʊ n	0.40	0.00	replaced
+scrape	english	1	scrape	fil-PH	s k ɹ e ɪ p	0.33	0.00	replaced
+scrupulous	english	1	scrupulous	fil-PH	s k ɹ u p j ə l ̴ ə s	0.30	0.00	replaced
+sculptural	english	1	sculptural	fil-PH	s k u l ̴ p t u ˞ ɔ l ̴	0.40	0.50	rejected
+scythe	english	1	scythe	fil-PH	s a j θ	1.00	0.67	rejected
+seclusion	english	1	seclusion	fil-PH	s ɪ k l ̴ u ʒ ə n	0.38	0.00	replaced
+secretion	english	1	secretion	fil-PH	s ə k ɹ i ʃ ə n	0.38	0.00	replaced
+secularism	english	1	secularism	fil-PH	s ɛ k j ə l ̴ ɜ ˞ ɪ z ə m	0.42	0.08	replaced
+seismological	english	1	seismological	fil-PH	s a ɪ z m ə l ̴ ɑ d ʒ ɪ k ə l ̴	0.54	0.15	replaced
+self-determination	english	1	self determination	fil-PH	s ɛ l ̴ f d ɪ t ɜ ˞ m ə n e ɪ ʃ ə n	0.41	0.06	replaced
+self-pollination	english	1	self pollination	fil-PH	s ɛ l ̴ f p ɑ l ̴ ə n e ɪ ʃ ə n	0.43	0.00	replaced
+semantic	english	1	semantic	fil-PH	s ɪ m æ n t ɪ k	0.25	0.00	replaced
+semi-documentary	english	1	semi documentary	fil-PH	s ɛ m a ɪ d ɑ k j ə m ɛ n ɜ ˞ i	0.31	0.19	replaced
+seminarian	english	1	seminarian	fil-PH	s ɛ m ə n ɛ ɹ i ə n	0.30	0.00	replaced
+semitic	english	1	semitic	fil-PH	s i m m e r æ k	0.29	0.71	rejected
+separator	english	1	separator	fil-PH	s ɛ p ɜ ˞ e ɪ t ɜ ˞	0.40	0.30	replaced
+septuagenarian	english	1	septuagenarian	fil-PH	s ɛ p t u ˞ ɪ d ʒ ə n ɛ ɹ i ə n	0.29	0.14	replaced
+sibad-sibad	hyphen	1	sibad sibad	fil-PH	s i b a d s i b ə d	0.50	0.00	replaced
+sibay-sibay	hyphen	1	sibay sibay	fil-PH	s i b a j s i b a j	0.50	0.00	replaced
+sibuyastagalog	cut	1	sibuyastagalog	fil-PH	s i b u j a s	0.50	0.50	rejected
+side-street	english	1	side street	fil-PH	s a ɪ d s t ɹ i t	0.33	0.00	replaced
+sîga-siga	hyphen	1	sîga siga	fil-PH	s i g a s i g a	0.50	0.00	replaced
+sigi-sige	hyphen	1	sigi sige	fil-PH	s i g i s i g i	0.50	0.12	replaced
+sign-in	hyphen	1	sign in	fil-PH	s a ɪ n ə n	0.50	0.17	replaced
+sikat-sikat	hyphen	1	sikat sikat	fil-PH	s i k ə t s i k ə t	0.50	0.00	replaced
+sikatsikat	cut	1	sikatsikat	fil-PH	s i k a p	0.50	0.60	rejected
+siko-room	hyphen	1	siko room	fil-PH	s i k ə l ̴ ɹ u m	0.62	0.50	rejected
+sílat-silat	hyphen	1	sílat silat	fil-PH	s i l a t s i l a t	0.50	0.00	replaced
+sili-pasiti	hyphen	1	sili pasiti	fil-PH	s i l ̴ i p a s i t i	0.60	0.00	replaced
+sili-sili	hyphen	1	sili sili	fil-PH	s i l ̴ i s i l ̴ i	0.62	0.00	replaced
+sili-silihan	hyphen	1	sili silihan	fil-PH	s i l i s i l i h a n	0.64	0.00	replaced
+sínghut-singhutin	hyphen	1	sínghut singhutin	fil-PH	s i n u s i n x u t i n	0.43	0.29	replaced
+sinsaw-sinsawan	hyphen	1	sinsaw sinsawan	fil-PH	ɛ s i ə n s a w ə n	0.43	0.43	rejected
+sinto-sinto	hyphen	1	sinto sinto	fil-PH	s i n t o s i n t o	0.50	0.00	replaced
+sînto-sinto	hyphen	1	sînto sinto	fil-PH	s i n t o s i n t o	0.50	0.00	replaced
+síping-siping	hyphen	1	síping siping	fil-PH	s i p i ŋ s i p i ŋ	0.50	0.00	replaced
+sipul-sipul	hyphen	1	sipul sipul	fil-PH	s i p u l o n s i p u l o n	0.60	0.40	replaced
+sípul-sípul	hyphen	1	sípul sípul	fil-PH	s i p u l ̴ s i p u l	0.60	0.00	replaced
+sky-high	hyphen	1	sky high	fil-PH	s k a ɪ h a ɪ	0.43	0.00	replaced
+sleíght	cut	1	sleíght	fil-PH	s l ɛ j i d	0.43	0.57	rejected
+slippery	english	1	slippery	fil-PH	s l ̴ ɪ p ɜ ˞ i	0.86	0.14	replaced
+sobrang-pagbibigay	hyphen	1	sobrang pagbibigay	fil-PH	s o b r a n p a g b i b i g a j	0.62	0.06	replaced
+socialization	english	1	socialization	fil-PH	s o ʊ ʃ ə l ̴ ɪ z e ɪ ʃ ə n	0.54	0.00	replaced
+solicit	english	1	solicit	fil-PH	s ə l ̴ ɪ s ɪ t	0.43	0.00	replaced
+solidity	english	1	solidity	fil-PH	s ə l ̴ ɪ d ə t i	0.38	0.00	replaced
+solo-antso	hyphen	1	solo antso	fil-PH	s o l o a n t ʃ o	0.50	0.00	replaced
+solo-solo	hyphen	1	solo solo	fil-PH	s o l o s o l o	0.50	0.00	replaced
+song-ar	hyphen	1	song ar	fil-PH	s ɔ ŋ ɑ ɹ	0.60	0.00	replaced
+sonnet	english	1	sonnet	fil-PH	s ɑ n ɪ t	0.40	0.00	replaced
+speculator	english	1	speculator	fil-PH	s p ɛ k j ə l ̴ e ɪ t ɜ ˞	0.33	0.08	replaced
+sst	letters	1	es es ti	fil-PH	ɛ s ɛ s t i	0.83	0.00	replaced
+stenographer	english	1	stenographer	fil-PH	s t ə n ɑ g ɹ ə f ɜ ˞	0.36	0.18	replaced
+sterilization	english	1	sterilization	fil-PH	s t ɛ ɹ ə l ̴ ɪ z e ɪ ʃ ə n	0.46	0.08	replaced
+stipulation	english	1	stipulation	fil-PH	s t ɪ p j ə l ̴ e ɪ ʃ ə n	0.50	0.00	replaced
+stoicism	english	1	stoicism	fil-PH	s t o ʊ ɪ s ɪ z ə m	0.50	0.10	replaced
+stowaway	english	1	stowaway	fil-PH	s t o ʊ ə w e ɪ	0.25	0.00	replaced
+stratagem	english	1	stratagem	fil-PH	s t ɹ æ t ə d ʒ ɛ m	0.33	0.11	replaced
+stratification	english	1	stratification	fil-PH	s t ɹ æ t ə f ə k e ɪ ʃ ə n	0.36	0.07	replaced
+subculture	english	1	subculture	fil-PH	s ə b k ə l ̴ t ʃ ɜ ˞	0.44	0.11	replaced
+súbo-subo	hyphen	1	súbo subo	fil-PH	s u b o s u b o	0.50	0.00	replaced
+subordination	english	1	subordination	fil-PH	s ə b ɔ ɹ d ə n e ɪ ʃ ə n	0.46	0.00	replaced
+subtraction	english	1	subtraction	fil-PH	s ə b t ɹ æ k ʃ ə n	0.40	0.00	replaced
+suffocate	english	1	suffocate	fil-PH	s ə f ə k e ɪ t	0.50	0.00	replaced
+suga-suga	hyphen	1	suga suga	fil-PH	s u g a s u g a	0.50	0.00	replaced
+sugba-sugba	hyphen	1	sugba sugba	fil-PH	s u g b a s u b b a	0.60	0.10	replaced
+súlosúlo	cut	1	súlosúlo	fil-PH	s u l o	0.50	0.50	rejected
+sumaldáksaldak	cut	1	sumaldáksaldak	fil-PH	s u m æ l d ɑ q	0.57	0.43	rejected
+súmandal-sandal	hyphen	1	súmandal sandal	fil-PH	s u m a n d a l s a n d a l	0.43	0.00	replaced
+sumirko-sirko	hyphen	1	sumirko sirko	fil-PH	s u m i r k o s i r k o	0.42	0.00	replaced
+súmukot-sukot	hyphen	1	súmukot sukot	fil-PH	s u m u k o t s u k o t	0.42	0.00	replaced
+súndan-sundan	hyphen	1	súndan sundan	fil-PH	s u n d a n s u n d a n	0.50	0.00	replaced
+supposition	english	1	supposition	fil-PH	s ə p ə z ɪ ʃ ə n	0.67	0.00	replaced
+súro-surò	hyphen	1	súro surò	fil-PH	s u r o s u r o	0.50	0.00	replaced
+suroy-suroy	hyphen	1	suroy suroy	fil-PH	s u r u j s u r u i	0.50	0.30	replaced
+súson-suson	hyphen	1	súson suson	fil-PH	s u s o n	0.50	0.50	rejected
+suweldot-baybay	hyphen	1	suweldot baybay	fil-PH	s u ɛ l d ɔ t b a j b a j	0.50	0.07	replaced
+suwéldot-baybáy	hyphen	1	suwéldot baybáy	fil-PH	s u ɛ l d e ɔ t b a j b a j	0.43	0.14	replaced
+swp	letters	1	es dobolyu pi	fil-PH	ɛ s d ə b ə l ̴ j u p i	0.73	0.00	replaced
+swswsw	letters	1	es dobolyu es dobolyu es dobolyu	fil-PH	ɛ s d ə b ə l ̴ j u ɛ s d ə b ə l ̴ j u ɛ s d ə b ə l ̴ j u	0.63	0.00	replaced
+syabu-syabu	hyphen	1	syabu syabu	fil-PH	ʃ a b u ʃ a b u	0.70	0.40	replaced
+syllabic	english	1	syllabic	fil-PH	s ɪ l ̴ æ b ɛ k	0.29	0.29	rejected
+symbiosis	english	1	symbiosis	fil-PH	s ɪ m b i o ʊ s ə s	0.27	0.09	replaced
+synonymous	english	1	synonymous	fil-PH	s ə n ɑ n ə m ə s	0.44	0.00	replaced
+syzygy	letters	1	es way zi way dyi way	fil-PH	ɛ s w e ɪ z i w e ɪ d i w a ɪ a ɪ w e ɪ	0.60	0.53	rejected
+tábas-tabas	hyphen	1	tábas tabas	fil-PH	t a b a s t a b a s	0.50	0.00	replaced
+tábas-tábas	hyphen	1	tábas tábas	fil-PH	t a b a s t a b a s	0.50	0.00	replaced
+tabi-nihok	hyphen	1	tabi nihok	fil-PH	t a b i n i h o k	0.56	0.00	replaced
+tablespoon	english	1	tablespoon	fil-PH	t e ɪ b ə l ̴ s p u n	0.40	0.00	replaced
+tabul-tabul	hyphen	1	tabul tabul	fil-PH	t a b o l t a b u l	0.50	0.10	replaced
+tagpuang-bigkasan	hyphen	1	tagpuang bigkasan	fil-PH	t a g p u a ŋ b i k a s a n	0.60	0.07	replaced
+taha-taha	hyphen	1	taha taha	fil-PH	t a h a t a h a	0.50	0.00	replaced
+táha-táha	hyphen	1	táha táha	fil-PH	t a x a	0.50	0.50	rejected
+tâhi-tahi	hyphen	1	tâhi tahi	fil-PH	t ̪ a ː h i t ̪ a ː h i	0.50	0.00	replaced
+tailing	english	1	tailing	fil-PH	t e ɪ l ̴ ɪ ŋ	0.33	0.00	replaced
+tálang-tálang	hyphen	1	tálang tálang	fil-PH	t a ː l a ŋ t a ː l a ŋ t a ː l a ŋ t a ː l a ŋ	0.50	1.00	rejected
+talang-talang	hyphen	1	talang talang	fil-PH	t a n l a ŋ t a n l a ŋ	0.50	0.20	replaced
+talay-talay	hyphen	1	talay talay	fil-PH	t a ː l a ɪ t a ː l a ɪ	0.50	0.20	replaced
+tali-alos	hyphen	1	tali alos	fil-PH	t a l i ə l ɔ s	0.50	0.00	replaced
+talo-salmg	hyphen	1	talo salmg	fil-PH	t a l o s a l m o	0.67	0.11	replaced
+pulirpulir	cut	2	pulir pulir	fil-PH	p u l i r p u l i r	0.60	0.00	replaced
+puskar	english	2	puskar	en-US	p u s k ɑ ɹ	0.33	0.33	rejected
+quintal	english	2	quintal	en-US	k w ɪ n t ə l ̴	0.29	0.00	replaced
+raisin	english	2	raisin	en-US	v a z o n	0.50	0.67	rejected
+rásyun-rasyon	hyphen	2	rásyun-rasyon	fil-PH	r ə s o n	0.50	0.60	rejected
+rayúsrayos	cut	2	rayúsrayos	fil-PH	r a j u s	0.50	0.50	rejected
+rectifier	english	2	rectifier	en-US	ɹ ɛ k t ə f a ɪ ɜ ˞	0.30	0.10	replaced
+reseaux	cut	2	reseaux	fil-PH	ɾ ɛ s o	0.62	0.62	rejected
+rikosrikos	cut	2	rikos rikos	fil-PH	r i k o s ɾ i k o s	0.50	0.00	replaced
+sálop-salop	hyphen	2	sálop-salop	fil-PH	s a l o p	0.60	0.50	rejected
+samansaman	cut	2	saman saman	fil-PH	s a m ə n s a m a n	0.50	0.00	replaced
+sammisammimi	cut	2	sammisammimi	fil-PH	s a m i	0.67	0.67	rejected
+sânda-sandali	hyphen	2	sânda-sandali	fil-PH	s ə n d ɑ ː s ə n d ə l ̴ i	0.42	0.00	replaced
+say-a	hyphen	2	say-a	fil-PH	a	0.75	0.75	rejected
+sáyasáya	cut	2	sáya sáya	fil-PH	s a j a s a j a	0.50	0.00	replaced
+sculptural	english	2	sculptural	en-US	s k ə l ̴ p t ʃ ɜ ˞ ə l ̴	0.40	0.10	replaced
+scythe	english	2	scythe	en-US	s a ɪ θ	1.00	0.33	replaced
+semitic	english	2	semitic	en-US	s ə m ɪ t ɪ k	0.29	0.00	replaced
+sibuyastagalog	cut	2	sibuyastagalog	fil-PH	s i b u j a s	0.50	0.50	rejected
+sikatsikat	cut	2	sikat sikat	fil-PH	s i k a t s i k a t	0.50	0.00	replaced
+siko-room	hyphen	2	siko-room	fil-PH	s i k o	0.62	0.50	rejected
+sinsaw-sinsawan	hyphen	2	sinsaw-sinsawan	fil-PH	s i n s a w s i n s a w ə n	0.43	0.00	replaced
+sleíght	cut	2	sleíght	fil-PH	s l e t	0.43	0.43	rejected
+súlosúlo	cut	2	súlo súlo	fil-PH	s u l o s u l o	0.50	0.00	replaced
+sumaldáksaldak	cut	2	sumaldáksaldak	fil-PH	s y m æ l d ɑ q	0.57	0.50	rejected
+súson-suson	hyphen	2	súson-suson	fil-PH	s u s o n	0.50	0.50	rejected
+syllabic	english	2	syllabic	en-US	s ə l ̴ æ b ɛ k	0.29	0.14	replaced
+syzygy	letters	2	S Y Z Y G Y	fil-PH	ɛ s w a ɪ z i w a ɪ d ʒ i w a ɪ	0.60	0.00	replaced
+táha-táha	hyphen	2	táha-táha	fil-PH	t a h a	0.50	0.50	rejected
+tálang-tálang	hyphen	2	tálang-tálang	fil-PH	t a l a ŋ t a l a ŋ	0.50	0.00	replaced
+puskar	english	3	puskar	en-US	p æ s k ɑ ˞	0.33	0.33	rejected
+raisin	english	3	raisin	en-US	r a z ə n	0.50	0.50	rejected
+rásyun-rasyon	hyphen	3	rásyunrasyon	fil-PH	r ə s o n	0.50	0.60	rejected
+sálop-salop	hyphen	3	sálopsalop	fil-PH	s a l ̴ o k	0.60	0.60	rejected
+say-a	hyphen	3	saya	fil-PH	s ə j a	0.75	0.00	replaced
+siko-room	hyphen	3	sikoroom	fil-PH	s i k o r o m	0.62	0.12	replaced
+súson-suson	hyphen	3	súsonsuson	fil-PH	s u s ɔ n	0.50	0.50	rejected
+táha-táha	hyphen	3	táhatáha	fil-PH	t a x a	0.50	0.50	rejected
+puskar	english	-	puskar	fil-PH	p u s k ɑ ɹ	0.33	0.33	kept
+raisin	english	-	raisin	fil-PH	r a z o n	0.50	0.50	kept
+rásyun-rasyon	hyphen	-	rásyun rasyon	fil-PH	ɾ a s i o n r a s i o n	0.50	0.50	kept
+rayúsrayos	cut	-	rayúsrayos	fil-PH	r a j u s	0.50	0.50	kept
+reseaux	cut	-	reseaux	fil-PH	r e s s o w	0.62	0.62	kept
+sálop-salop	hyphen	-	sálop salop	fil-PH	s a l o p	0.60	0.50	kept
+sammisammimi	cut	-	sammisammimi	fil-PH	s a m i s a m i	0.67	0.33	kept
+sibuyastagalog	cut	-	sibuyastagalog	fil-PH	s i b u j a s	0.50	0.50	kept
+sleíght	cut	-	sleíght	fil-PH	s l e t	0.43	0.43	kept
+sumaldáksaldak	cut	-	sumaldáksaldak	fil-PH	s u m æ l d ɑ q	0.57	0.43	kept
+súson-suson	hyphen	-	súson suson	fil-PH	s u s o n	0.50	0.50	kept
+táha-táha	hyphen	-	táha táha	fil-PH	t a x a	0.50	0.50	kept
