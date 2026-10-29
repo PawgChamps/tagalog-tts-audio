@@ -1,0 +1,49 @@
+form	reason	ipa_source	ipa	heard	error
+of	english	english	/ˈʌv/	ɔ f	1.00
+national	english	english	/ˈnæʃənəl/	n a s i o n a l	0.43
+director	english	english	/dɚˈɛktɚ/	d i r ɛ k t o r	0.25
+you	english	english	/ˈju/	j o	0.50
+office	english	english	/ˈɔfɪs/	ɔ p i z a	0.75
+secretary	english	english	/ˈsɛkɹəˌtɛɹi/	s e k r e t a r j o	0.44
+first	english	english	/ˈfɝst/	p i n ɛ s t	0.80
+international	english	english	/ˌɪntɚˈnæʃənəl/	i n t ə r n ə s i o n a l	0.33
+public	english	english	/ˈpʌblɪk/	p u b l i k o	0.33
+year	english	english	/ˈjɪɹ/	ɪ æ ː	0.67
+detective	english	english	/dɪˈtɛktɪv/	d ə t ə k t i b e	0.50
+music	english	english	/ˈmjuzɪk/	m u s i k o	0.50
+south	english	english	/ˈsaʊθ/	s o w t	0.75
+face	english	english	/ˈfeɪs/	f a s i	0.75
+chinese	english	english	/tʃaɪˈniz/	s i n e s	0.67
+túluy-tuloy	hyphen	dictionary	/ˈtulujtuloj/	t u l o j	0.50
+ano-ano	hyphen	rule	/ʔanoˈʔano/	ə n o	0.50
+kámi-kami	hyphen	dictionary	/ˈkamikami/	k a m i	0.50
+sáan-saan	hyphen	dictionary	/ˈsaʔansaʔan/	s a a n	0.50
+alas-kuwatro	hyphen	rule	/ʔalaskuˈwatɾo/	ə l ̴ a s	0.64
+síno-sino	hyphen	dictionary	/ˈsinosino/	s i n o	0.50
+ágad-agad	hyphen	dictionary	/ˈʔaɡadaɡad/	a g a d	0.50
+buwan-buwan	hyphen	rule	/buwanˈbuwan/	b w a n	0.60
+gâwa-gawa	hyphen	rule	/ˈɡawaɡawa/	g a w a	0.50
+síla-sila	hyphen	dictionary	/ˈsilasila/	s i l a	0.50
+hâka-haka	hyphen	rule	/ˈhakahaka/	h æ ː q a	0.50
+kalát-kalát	hyphen	dictionary	/kaˈlatkalat/	k ə l a t	0.50
+sâri-sari	hyphen	rule	/ˈsaɾisaɾi/	s a r i	0.50
+líbo-libo	hyphen	dictionary	/ˈlibolibo/	l i b o	0.50
+tabi-tabí	hyphen	rule	/tabitaˈbi/	t a b i	0.50
+hiv	cut	english	/ˌeɪˌtʃaɪˈvi/	h a ɪ v	0.57
+dalangin	cut	dictionary	/daˈlaŋin/		1.00
+cia	cut	english	/ˌsiˌaɪˈeɪ/	ʃ i a	0.67
+socio	cut	english	/ˈsoʊsioʊ/	s o ʃ o	0.57
+gg	cut	dictionary	/ˈdjidji/	g a	1.00
+hierarchy	cut	english	/ˈhaɪɚˌɑɹki/	i r ɔ k i	0.56
+aatoato	cut	rule	/ʔaʔatoˈʔato/	a a t o	0.43
+áboábo	cut	dictionary	/ˈʔaboʔabo/	a b o	0.50
+pm	letters	spelled	/piˈʔem/	p i	0.50
+kc	letters	spelled	/keiˈsi/	k ɛ j	0.60
+sm	letters	spelled	/ʔesˈʔem/	s æ	0.75
+sc	letters	spelled	/ʔesˈsi/	s a	0.75
+lt	letters	spelled	/ʔelˈti/	l a t a	0.75
+bk	letters	spelled	/biˈkei/	b l o	0.80
+mg	letters	spelled	/ʔemˈdʒi/	ɛ m	0.50
+km	letters	spelled	/keiˈʔem/	k a	0.80
+input	extra	dictionary	/ˈʔinput/	ɹ ɛ d ə l a ʊ d k l ɪ ɹ l i ɪ n ə n u t ɹ ə l t o ʊ n ð ə t ɛ k s t ɪ z ə s ɪ ŋ g ə l f ɪ l ə p i n o ʊ w ə ˞ d s e ɪ o ʊ n l i ð æ t w ə ˞ d w ɪ ð ð ə s t ɹ ɛ s w ɛ ɹ ð ə æ k s ɛ n t m ɑ ɹ k s p ʊ t ɪ t	1.00
+tumoy	extra	rule	/ˈtumoj/	t u u n ʲ ɛ k ɭ a ɔ d v ɑ j ɛ m o j	1.00
