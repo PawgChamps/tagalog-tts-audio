@@ -191,8 +191,17 @@ ALT_SENSE = re.compile(r"variante de|forma alternativa|grafia alternativa|sinôn
 NAME_SENSE = re.compile(r"sobrenome|prenome|nome pr[óo]prio|nome de (?:homem|mulher|pessoa)|nome masculino|nome feminino|apelido", re.I)
 
 
+ACRONYM = re.compile(r"^(?:sigla|acr[ôo]nimo)\b", re.I)
+
+
 def is_name(r):
     return bool(NAME_SENSE.search(r[5])) or r[0][:1].isupper()      # names keep their dictionary / rule reading
+
+
+def origin_of(r):
+    """origin flags of the row: those of its own reading (same sense) when origin.tsv has them, else the spelling's"""
+    p = plain(r[0])
+    return ORIGIN.get((p, r[5])) or ORIGIN.get(p)
 
 
 EN_ONLY_SPELLING = re.compile(r"th|sh|ph|ck|wh|gh|oo|ee|ea|ou|ow|tions?$|[^aeiouy]y$")   # spellings Tagalog and Spanish don't use
@@ -211,7 +220,7 @@ def english_ok(r, looks):
     form, p = r[0], plain(r[0])
     if has_accent(form) or is_name(r) or not re.search(r"[aeiouy]", p):
         return False
-    o = ORIGIN.get(p)
+    o = origin_of(r)
     if o and o & DECIDING:                           # the dictionary says whether the word comes from English
         if english_spelled(p) and not ALT_SENSE.search(r[5]):     # its records merge homographs: book (en + native)
             return True
@@ -233,7 +242,7 @@ def english_reading(r, looks):
 def why_not_english(r):
     """why a row may not have an English reading (for the report)"""
     form, p = r[0], plain(r[0])
-    o = ORIGIN.get(p)
+    o = origin_of(r)
     if has_accent(form) or is_name(r) or not re.search(r"[aeiouy]", p):
         return "accent mark, name or no vowel"
     if o and o & DECIDING:
@@ -436,6 +445,9 @@ def _fix(r, allow_english=True):
                     new, nsrc, why = rule, "rule", "stress did not match the accent mark"
     else:                                                # rule / spelled
         p = plain(form)
+        if ACRONYM.search(r[5]) and re.fullmatch(r"[a-z]{2,6}", p) and not has_accent(form):
+            g = M.spelled(form)                          # gma, npa, ust: said letter by letter
+            return g, "spelled", None if (g, "spelled") == (ipa, src) else "acronym read letter by letter"
         looks_english = FOREIGN_LETTERS.search(p) or (src == "spelled" and "y" in p) or (
             src == "rule" and (len(p) >= 6 or re.search(r"([^aeiou])\1", p)) and not ALT_SENSE.search(r[5]))   # long / doubled consonant
         e = english_reading(r, bool(looks_english)) if allow_english else None
@@ -479,11 +491,14 @@ def load_inputs(origin="origin.tsv"):
     if not os.path.exists(origin):
         sys.exit(f"{origin} is missing: run scripts/make_origin.py <dictionary json> first")
     lines = open(origin, encoding="utf-8").read().split("\n")
-    names = lines[0].split("\t")[1:]
+    head = lines[0].split("\t")
+    by_sense = len(head) > 1 and head[1] == "sense"      # plain, sense, flags...: one line per reading, plus the union
+    names = head[2 if by_sense else 1:]
     for ln in lines[1:]:
         if ln:
-            k, *fl = ln.split("\t")
-            ORIGIN[k] = {n for n, v in zip(names, fl) if v == "1"}
+            f = ln.split("\t")
+            key = (f[0], f[1]) if by_sense and f[1] else f[0]
+            ORIGIN[key] = {n for n, v in zip(names, f[2 if by_sense else 1:]) if v == "1"}
     try:
         WORDS.update(w.strip() for w in open(WORD_LIST, encoding="utf-8", errors="ignore"))
     except OSError:

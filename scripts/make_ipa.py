@@ -16,6 +16,10 @@ MAP = {"ng": "ŋ", "ts": "tʃ", "ch": "tʃ", "sh": "ʃ", "sy": "ʃ", "dy": "dʒ"
 ONSET_CLUSTERS = {a + b for a in "bkdgpstfv" for b in "lr"}
 
 
+def is_vowel(c):
+    return c != "" and (c in VOWELS or c in ACUTE or c in GRAVE or c in CIRC)
+
+
 def tokens(word):
     """-> list of (kind, text, mark) with kind 'V' (vowel, mark = None|'acute'|'grave'|'circ') or 'C' or '-' (boundary)."""
     out, i, w = [], 0, word.lower()
@@ -28,6 +32,8 @@ def tokens(word):
             out.append(("V", ch, None)); i += 1
         elif ch in "-‧·":
             out.append(("-", "", None)); i += 1
+        elif ch == "y" and not (i > 0 and is_vowel(w[i - 1])) and not is_vowel(w[i + 1:i + 2]):
+            out.append(("V", "i", None)); i += 1            # y with no vowel beside it is the vowel i (panty, typo, berry)
         elif ch == "c" and w[i + 1:i + 2] in ("e", "i", "y", "é", "í", "è", "ì", "ê", "î"):
             out.append(("C", "s", None)); i += 1            # soft c (cebo, cielo)
         elif w[i:i + 2] in UNITS:
