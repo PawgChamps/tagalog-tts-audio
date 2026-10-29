@@ -2,6 +2,7 @@
 """List the clips to re-synthesize, from the phone check of all clips (checks/phones/wordlist_all/compare.tsv, ZIPA).
 
     python3 scripts/make_fix_list.py [CHECKSDIR] [OUT]     (defaults: checks/phones/wordlist_all checks/fix/redo.tsv)
+    python3 scripts/make_fix_list.py --repeat              (after a fix run: checks/fix/repeat.tsv, see below)
 
 Needs `pip install wordfreq`.  The reference is the IPA column of wordlist_all.tsv as it is now; phones are compared
 the way scripts/score_phones.py does (broad phone set, glottal stops dropped).  One reason per clip, first match wins:
@@ -17,6 +18,9 @@ the way scripts/score_phones.py does (broad phone set, glottal stops dropped).  
   cut        any other clip of 6+ phones heard at under 60 % of them (buwanbuwan -> buwan)
 
 Columns: form, reason, ipa_source, ipa, heard (ZIPA), error (share of the IPA's phones wrong, at most 1).
+
+--repeat lists the reduplications among the hyphen and cut clips of redo.tsv (not English, not abbreviations) that the
+fix run kept because no try was good enough, with reason `repeat`: the TTS says them only once (asa-asa -> "asa").
 """
 import csv
 import os
@@ -42,7 +46,27 @@ def err(ref, heard):
     return min(dist(r0, h0), len(r0)) / max(1, len(r0)), len(r0), len(h0)
 
 
+def repeat(redo="checks/fix/redo.tsv", results="checks/fix/results.tsv", out="checks/fix/repeat.tsv"):
+    final = {}
+    for r in csv.DictReader(open(results, encoding="utf-8"), delimiter="\t", quoting=csv.QUOTE_NONE):
+        if r["outcome"] in ("replaced", "kept"):
+            final[r["form"]] = r["outcome"]
+    def repeats(form):                            # some three letters occur twice: a (partial) reduplication
+        p = re.sub(r"[^a-z]", "", plain(form))
+        return any(p.count(p[i:i + 3]) > 1 for i in range(len(p) - 2))
+    rows = [r for r in csv.DictReader(open(redo, encoding="utf-8"), delimiter="\t", quoting=csv.QUOTE_NONE)
+            if r["reason"] in ("hyphen", "cut") and r["ipa_source"] not in ("english", "spelled") and final.get(r["form"]) == "kept"
+            and repeats(r["form"])]
+    cols = ["form", "reason", "ipa_source", "ipa", "heard", "error"]
+    with open(out, "w", encoding="utf-8") as fh:
+        fh.write("\t".join(cols) + "\n")
+        fh.writelines("\t".join(dict(r, reason="repeat")[c] for c in cols) + "\n" for r in rows)
+    print(f"{len(rows)} clips -> {out}")
+
+
 def main():
+    if "--repeat" in sys.argv:
+        return repeat()
     checks = sys.argv[1] if len(sys.argv) > 1 else "checks/phones/wordlist_all"
     out = sys.argv[2] if len(sys.argv) > 2 else "checks/fix/redo.tsv"
     from wordfreq import zipf_frequency as z

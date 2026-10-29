@@ -12,6 +12,8 @@ columns form, reason, ipa_source, error.  Each clip gets up to three tries, each
   english   told it is an English word, not to translate it; then the same with the English (US) voice setting, twice
   extra     as written; in quotation marks, "say only the word in quotes"; as an English word
   cut       as written; a word made of two equal halves is then sent as two words (buwan buwan)
+  repeat    reduplications still said once after the above (asa-asa -> "asa"): told the word repeats a part and
+            every part must be said; the parts separated by a comma, then as written, then by a space
 
 (English rows, abbreviations and forms without a vowel are asked the English or letter-name way whatever the reason.)  ZIPA listens to each
 try (as in scripts/phones.py; needs onnxruntime lhotse huggingface_hub imageio-ffmpeg and $ZIPA_SRC) and the error is
@@ -19,7 +21,8 @@ the share of the IPA's phones it gets wrong, as in score_phones.py.  A try repla
 is complete (at least 75 % of the phones, not much longer than the word) and clearly better than the old clip: at
 least 0.10 less error, and 0.4 or less.  Otherwise the old clip stays.
 
-Writes OUT/results.tsv (one row per try; resumable: a form with a final row is not tried again) and OUT/report.md.
+Writes OUT/results.tsv (one row per try; resumable: a form with a final row for its reason is not tried again) and
+OUT/report.md.
 --commit commits audio/ and OUT after each batch and pushes (for GitHub Actions).
 """
 import argparse
@@ -47,6 +50,8 @@ PROMPT_LETTERS = "Read aloud clearly, in a neutral tone. Say exactly the text, a
 PROMPT_CAPS = ("Read aloud clearly, in a neutral tone. The text is letters of the alphabet; say the English name of each "
                "letter, one after the other, and nothing else.")
 PROMPT_QUOTED = "Read aloud clearly, in a neutral tone. Say only the word in quotation marks, without the quotation marks."
+PROMPT_REPEAT = ("Read aloud clearly, in a neutral tone. The text is one Filipino word made by repeating a part. Say every "
+                 "part, the repeated one too, with the stress where the accent marks put it, and nothing else.")
 LETTER = dict(zip("abcdefghijklmnopqrstuvwxyz", "ey bi si di i ef dyi eych ay jey key el em en o pi kyu ar es ti yu vi "
                                               "dobolyu eks way zi".split()))
 ACCEPT_MAX, ACCEPT_GAIN, COMPLETE = 0.4, 0.10, 0.75
@@ -63,6 +68,14 @@ def clip_path(form):
 def tries(form, reason, src):
     """(text, prompt, language) for each try"""
     f = form.strip("-")
+    if reason == "repeat":                          # a reduplication the TTS kept saying only once
+        parts = [p for p in f.split("-") if p]
+        h = len(f) // 2
+        if len(parts) == 1 and len(f) % 2 == 0 and plain(f)[:h] == plain(f)[h:]:
+            parts = [f[:h], f[h:]]
+        if len(parts) > 1:
+            return [(", ".join(parts), PROMPT_REPEAT, "fil-PH"), (form, PROMPT_REPEAT, "fil-PH"), (" ".join(parts), PROMPT_REPEAT, "fil-PH")]
+        return [(form, PROMPT_REPEAT, "fil-PH"), (form, PROMPT_REPEAT, "fil-PH")]
     if plain(f).isalpha() and (src == "spelled" or not any(c in "aeiou" for c in plain(f))):
         names = (" ".join(LETTER[c] for c in plain(f)), PROMPT_LETTERS, "fil-PH")
         return [names, (" ".join(plain(f).upper()), PROMPT_CAPS, "fil-PH"), names]
@@ -160,8 +173,8 @@ def main():
     os.makedirs(a.out, exist_ok=True)
     res_path = os.path.join(a.out, "results.tsv")
     results = list(csv.DictReader(open(res_path, encoding="utf-8"), delimiter="\t", quoting=csv.QUOTE_NONE)) if os.path.exists(res_path) else []
-    done = {r["form"] for r in results if r["outcome"] in ("replaced", "kept")}
-    todo = [r for r in todo if r["form"] not in done and r["form"] in ipa and os.path.exists(clip_path(r["form"]))]
+    done = {(r["form"], r["reason"]) for r in results if r["outcome"] in ("replaced", "kept")}
+    todo = [r for r in todo if (r["form"], r["reason"]) not in done and r["form"] in ipa and os.path.exists(clip_path(r["form"]))]
     if a.limit:
         todo = todo[:a.limit]
     print(f"{len(todo)} clips to fix ({len(done)} done before)", flush=True)
