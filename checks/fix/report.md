@@ -2,16 +2,16 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-2044 clips done, 2408 tries.
+2244 clips done, 2645 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 1549 | 63 |
-| hyphen | 315 | 6 |
+| english | 1698 | 68 |
+| hyphen | 355 | 7 |
 | letters | 83 | 0 |
-| cut | 20 | 6 |
+| cut | 24 | 7 |
 | extra | 2 | 0 |
-| **all** | 1969 | 75 |
+| **all** | 2162 | 82 |
 
 ## Replaced (first 60)
 
@@ -157,3 +157,10 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | cadena-de-amor | english | cadena de amor | k ə d i n ə ə v e ɪ m ɔ ɹ | 0.25 → 0.42 |
 | calan | english | calan | k æ l ̴ ə n | 0.33 → 0.33 |
 | chalcedony | english | chalcedony | k æ l ̴ s ɛ d ə n i | 0.40 → 0.40 |
+| cognoscenti | english | cognoscenti | k ɑ g n ə s ɛ n t i | 0.30 → 0.20 |
+| debase | english | debase | d e b a s | 0.67 → 0.50 |
+| dugo-q | hyphen | dugo q | d u g o ʊ | 0.50 → 0.38 |
+| duodenum | english | duodenum | d u o ʊ d i n ə m | 0.38 → 0.38 |
+| dyukaka | cut | dyukaka | d ʒ u q a | 0.57 → 0.57 |
+| egotist | english | egotist | i g o ʊ t ɪ s t | 0.29 → 0.29 |
+| elaborate | english | elaborate | ɪ l ̴ æ b ɜ ˞ e ɪ t | 0.43 → 0.43 |
