@@ -4133,3 +4133,94 @@ touche	english	-	touche	fil-PH	t u ʃ e ɪ	0.67	0.67	kept
 triage	english	-	triage	fil-PH	t ɹ i ɑ ʒ	0.67	0.50	kept
 tuwalyalita	cut	-	tuwalyalita	fil-PH	t u a l i ə	0.45	0.45	kept
 voyeur	english	-	voyeur	fil-PH	v ɔ j e ˞	0.50	0.50	kept
+wálang-kapit	hyphen	1	wálang kapit	fil-PH	w ə l a ŋ k a p i t	0.50	0.00	replaced
+wálang-karamay	hyphen	1	wálang karamay	fil-PH	RuntimeError HTTP 400 {   "error": {     "code": 400,     "message": "Cloud Text-to-Speech could not generate audio because the input text or prompt violates Verte	0.58		failed
+wálang-kasya	hyphen	1	wálang kasya	fil-PH	w a l a ŋ k a ʃ a	0.44	0.00	replaced
+wálang-katawan	hyphen	1	wálang katawan	fil-PH	w a l a ŋ k a t a w a n	0.58	0.00	replaced
+wálang-kaugnayan	hyphen	1	wálang kaugnayan	fil-PH	w a l a ŋ k a u g n a j a n	0.64	0.00	replaced
+walang-kaya	hyphen	1	walang kaya	fil-PH	w a l a ŋ k a j ə	0.44	0.00	replaced
+wálang-kilos	hyphen	1	wálang kilos	fil-PH	w a l a ŋ k i l o s	0.50	0.00	replaced
+wálang-kinatawan	hyphen	1	wálang kinatawan	fil-PH	w a l a ŋ k i n a t ə w a n	0.64	0.00	replaced
+wálang-komplikasyon	hyphen	1	wálang komplikasyon	fil-PH	w a l a ŋ k o m p l i k ə ʃ i o n	0.69	0.06	replaced
+wálang-kondisyon	hyphen	1	wálang kondisyon	fil-PH	w a l a ŋ k o n d i s i o n	0.62	0.15	replaced
+wálang-lagì	hyphen	1	wálang lagì	fil-PH	w a l ̴ a ŋ l ̴ a g i	0.44	0.00	replaced
+wálang-lalin	hyphen	1	wálang lalin	fil-PH	w a l a ŋ l a l i n	0.50	0.00	replaced
+wálang-lamay	hyphen	1	wálang lamay	fil-PH	w a l a ŋ l a m a j	0.50	0.00	replaced
+wálang-lingon	hyphen	1	wálang lingon	fil-PH	w a ː l a ŋ l i ŋ ŋ o n	0.50	0.10	replaced
+wálang-makakain	hyphen	1	wálang makakain	fil-PH	w a l a ŋ m a k a k a i n	0.62	0.00	replaced
+wálang-makatumbas	hyphen	1	wálang makatumbas	fil-PH	w a l a ŋ m a k a t u m b a s	0.67	0.00	replaced
+wálang-malak	hyphen	1	wálang malak	fil-PH	w a ː l a ŋ m a ː l a k k ɛ	0.50	0.20	replaced
+wálang-malapitan	hyphen	1	wálang malapitan	fil-PH	w a ː l a ŋ m a ː l a p i t a n	0.64	0.00	replaced
+wálang-mana	hyphen	1	wálang mana	fil-PH	w a l a ŋ	0.44	0.44	rejected
+wálang-matwid	hyphen	1	wálang matwid	fil-PH	w a l a ŋ m a t w i d	0.55	0.00	replaced
+wálang-nais	hyphen	1	wálang nais	fil-PH	w a ː l a ŋ n a ː i s	0.44	0.00	replaced
+wálang-nalalaman	hyphen	1	wálang nalalaman	fil-PH	w a l a ŋ n a l a l a m a n	0.64	0.00	replaced
+wálang-nanood	hyphen	1	wálang nanood	fil-PH	w a l a ŋ n a n o o d	0.55	0.00	replaced
+wálang-nararamdaman	hyphen	1	wálang nararamdaman	fil-PH	w a ː l a ŋ n a ː r a ː r a m d a ː m a n	0.76	0.00	replaced
+wálang-ningas	hyphen	1	wálang ningas	fil-PH	w a l ̴ a ŋ n i ŋ n a s	0.50	0.10	replaced
+wálang-pain	hyphen	1	wálang pain	fil-PH	w a l ̴ ə ŋ p e ɪ n	0.44	0.11	replaced
+wálang-palabas	hyphen	1	wálang palabas	fil-PH	w a l ̴ a ŋ p a l ̴ a b a s	0.58	0.00	replaced
+wálang-palad	hyphen	1	wálang palad	fil-PH	w a l ̴ ə ŋ p æ l ̴ ə d	0.50	0.00	replaced
+wálang-palò	hyphen	1	wálang palò	fil-PH	w a ː l a ŋ p a ː l o	0.44	0.00	replaced
+wálang-pandama	hyphen	1	wálang pandama	fil-PH	w a l a ŋ p a n d ə m a	0.58	0.00	replaced
+wálang-pasan	hyphen	1	wálang pasan	fil-PH	w a l a ŋ p a s a n	0.50	0.00	replaced
+wálang-patlang	hyphen	1	wálang patlang	fil-PH	w a l ̴ a ŋ p a t l ̴ a ŋ	0.55	0.00	replaced
+wálang-prinsipyo	hyphen	1	wálang prinsipyo	fil-PH	w a l a n p r i n s i p i o	0.64	0.14	replaced
+wálang-puna	hyphen	1	wálang puna	fil-PH	w a l a ŋ p u n a	0.44	0.00	replaced
+wálang-raya	hyphen	1	wálang raya	fil-PH	w a l a ŋ r a j a	0.44	0.00	replaced
+wálang-sabog	hyphen	1	wálang sabog	fil-PH	w a l a ŋ s a b ɔ g	0.50	0.00	replaced
+wálang-sama	hyphen	1	wálang sama	fil-PH	w a l a ŋ s a m a	0.44	0.00	replaced
+wálang-sara	hyphen	1	wálang sara	fil-PH	w a l a ŋ s a ɾ a	0.44	0.00	replaced
+wálang-siguro	hyphen	1	wálang siguro	fil-PH	w a l ̴ a ŋ s i g u r o	0.55	0.00	replaced
+wálang-sisihan	hyphen	1	wálang sisihan	fil-PH	w a l a ŋ s i s i h a n	0.58	0.00	replaced
+wálang-tabing	hyphen	1	wálang tabing	fil-PH	w a l a ŋ t a b i ŋ	0.50	0.00	replaced
+wálang-tabon	hyphen	1	wálang tabon	fil-PH	w a l a ŋ t a b o n	0.50	0.00	replaced
+wálang-tanim	hyphen	1	wálang tanim	fil-PH	w a l a ŋ t ə n i m	0.60	0.00	replaced
+wálang-tanod	hyphen	1	wálang tanod	fil-PH	w a l ̴ a ŋ t ɑ n o d	0.50	0.00	replaced
+wálang-tasa	hyphen	1	wálang tasa	fil-PH	w a l a ŋ t a s a	0.44	0.00	replaced
+wálang-tawag	hyphen	1	wálang tawag	fil-PH	w a l ̴ a ŋ t a w a g	0.50	0.00	replaced
+wálang-tawid	hyphen	1	wálang tawid	fil-PH	w a l a ŋ t a w i d	0.50	0.00	replaced
+wálang-titulo	hyphen	1	wálang titulo	fil-PH	w a l a ŋ t i t u l o	0.55	0.00	replaced
+wálang-totoo	hyphen	1	wálang totoo	fil-PH	w a l a ŋ t o t o o	0.60	0.00	replaced
+wálang-tumpak	hyphen	1	wálang tumpak	fil-PH	w a l a ŋ t u m p a k	0.55	0.00	replaced
+wálang-ulit	hyphen	1	wálang ulit	fil-PH	w ɑ l a ŋ u l ̴ ɪ k t	0.44	0.11	replaced
+wálang-umpisa	hyphen	1	wálang umpisa	fil-PH	w a l a ŋ ʔ u m p i s a	0.55	0.00	replaced
+wálang-utang	hyphen	1	wálang utang	fil-PH	w a l a ŋ u t a ŋ	0.44	0.00	replaced
+wálang-walay	hyphen	1	wálang walay	fil-PH	w a l ̴ a ŋ w a l a i	0.50	0.10	replaced
+wálang-yaman	hyphen	1	wálang yaman	fil-PH	w a l a ŋ j a m a n	0.50	0.00	replaced
+wâlis-haba	hyphen	1	wâlis haba	fil-PH	w a l ̴ i s h a b ɜ	0.44	0.11	replaced
+waluhang-sulok	hyphen	1	waluhang sulok	fil-PH	w a l u h a ŋ s u l u q	0.42	0.08	replaced
+wári-warì	hyphen	1	wári warì	fil-PH	w ɑ ː r i w ɑ ː r i	0.50	0.00	replaced
+wasak-wasak	hyphen	1	wasak wasak	fil-PH	w a s æ k w a s æ k	0.50	0.00	replaced
+wásu-wasò	hyphen	1	wásu wasò	fil-PH	w a s u w a s o	0.50	0.00	replaced
+weigh	english	1	weigh	fil-PH	w e ɪ	0.67	0.00	replaced
+wíit-wiit	hyphen	1	wíit wiit	fil-PH	w i t w i t	0.62	0.25	replaced
+wîka-wika	hyphen	1	wîka wika	fil-PH	w i k a w i k a	0.50	0.00	replaced
+wíndang-windang	hyphen	1	wíndang windang	fil-PH	w i n d ʊ ŋ w ɪ n d a ŋ	0.58	0.08	replaced
+window-pane	english	1	window pane	fil-PH	w ɪ n d o ʊ p e ɪ n	0.30	0.00	replaced
+withhold	english	1	withhold	fil-PH	w ɪ θ h o ʊ l ̴ d	0.25	0.00	replaced
+worktext	cut	1	worktext	fil-PH	w ɜ r k	0.56	0.67	rejected
+wp	letters	1	dobolyu pi	fil-PH	d ə b ə l ̴ j u p i	0.78	0.00	replaced
+writhed-hornbill	hyphen	1	writhed hornbill	fil-PH	ɹ a ɪ v d h ɔ ɹ n b ɪ l	0.82	0.18	replaced
+x-axis	english	1	x axis	fil-PH	ɛ k s æ k s ɛ s	0.50	0.12	replaced
+xero-	english	1	xero	fil-PH	ɛ k s r o ʊ	0.40	0.60	rejected
+yakagán	cut	1	yakagán	fil-PH	j a q a g a n	0.43	0.00	replaced
+yaring-bahay	hyphen	1	yaring bahay	fil-PH	j a r i ŋ b a h a j	0.50	0.00	replaced
+yaring-pabrika	hyphen	1	yaring pabrika	fil-PH	j a r i n p a b r i k a	0.58	0.08	replaced
+yaring-yari	hyphen	1	yaring yari	fil-PH	j a r i ŋ j a r i	0.44	0.00	replaced
+yl	letters	1	way el	fil-PH	w e ɪ ɛ l ̴	0.80	0.20	replaced
+yttrium	english	1	yttrium	fil-PH	j ɪ t ɹ i u m	0.50	0.33	replaced
+z-ray	english	1	z ray	fil-PH	z i ː ɹ a	0.80	0.40	replaced
+zeros	english	1	zeros	fil-PH	z i r o z	0.33	0.17	replaced
+zionism	english	1	zionism	fil-PH	z a ɪ ə n ɪ z ə m	0.56	0.00	replaced
+zither	english	1	zither	fil-PH	z ɪ ð ɜ ˞	0.60	0.20	replaced
+zn	letters	1	zi en	fil-PH	z i ː ə n	0.50	0.25	replaced
+wálang-karamay	hyphen	2	wálang-karamay	fil-PH	w a l a ŋ k a r a m a i	0.58	0.08	replaced
+wálang-mana	hyphen	2	wálang-mana	fil-PH	w a l a n	0.44	0.44	rejected
+worktext	cut	2	worktext	fil-PH	w ɜ r k	0.56	0.67	rejected
+xero-	english	2	xero	en-US	ɛ k s	0.40	0.80	rejected
+wálang-mana	hyphen	3	wálangmana	fil-PH	w a l a ŋ	0.44	0.44	rejected
+xero-	english	3	xero	en-US	ɛ k s ɹ o ʊ	0.40	0.60	rejected
+wálang-mana	hyphen	-	wálang mana	fil-PH	w a l a ŋ	0.44	0.44	kept
+worktext	cut	-	worktext	fil-PH	w ɜ r k	0.56	0.67	kept
+xero-	english	-	xero	fil-PH	ɛ k s r o ʊ	0.40	0.60	kept

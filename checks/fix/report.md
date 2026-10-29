@@ -2,16 +2,16 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-3444 clips done, 4128 tries.
+3526 clips done, 4218 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 2174 | 86 |
-| hyphen | 953 | 29 |
-| cut | 78 | 27 |
-| letters | 95 | 0 |
+| english | 2183 | 87 |
+| hyphen | 1019 | 30 |
+| cut | 79 | 28 |
+| letters | 98 | 0 |
 | extra | 2 | 0 |
-| **all** | 3302 | 142 |
+| **all** | 3381 | 145 |
 
 ## Replaced (first 60)
 
@@ -224,3 +224,6 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | triage | english | triage | t ɹ i ɑ ʒ | 0.67 → 0.50 |
 | tuwalyalita | cut | tuwalyalita | t u a l i ə | 0.45 → 0.45 |
 | voyeur | english | voyeur | v ɔ j e ˞ | 0.50 → 0.50 |
+| wálang-mana | hyphen | wálang mana | w a l a ŋ | 0.44 → 0.44 |
+| worktext | cut | worktext | w ɜ r k | 0.56 → 0.67 |
+| xero- | english | xero | ɛ k s r o ʊ | 0.40 → 0.60 |
