@@ -18,8 +18,8 @@ The clips were made with Google Cloud Text-to-Speech, model **Gemini 3.1 Flash T
 | IPA from (`ipa_source`) | Forms |
 |---|---:|
 | the dictionary's own reading, cleaned (`dictionary`) | 89,519 |
-| generated from the accented form (`rule`) | 50,903 |
-| English reading from CMUdict, for English loanwords (`english`) | 10,648 |
+| generated from the accented form (`rule`) | 51,174 |
+| English reading from CMUdict, for English loanwords (`english`) | 10,377 |
 | abbreviation read letter by letter (`spelled`) | 192 |
 <!-- /counts -->
 
@@ -40,7 +40,7 @@ The clips were made with Google Cloud Text-to-Speech, model **Gemini 3.1 Flash T
 | `respell.tsv` | text sent to the voice instead of the form (`lrt` → `el ar ti`) |
 | `origin.tsv` | where the dictionary says each spelling comes from (English, Spanish, a Tagalog root…), for the English readings |
 | `docs/index.html` | the search page, published with GitHub Pages |
-| `checks/` | the phone check of the clips (`checks/phones/`) and the accent-mark changes of the rebuild (`checks/forms_fix/`) |
+| `checks/` | the phone check of the clips (`checks/phones/`), the re-synthesis of the clips it found wrong (`checks/fix/`) and the accent-mark changes of the rebuild (`checks/forms_fix/`) |
 | `scripts/` | everything that makes the above |
 
 ## How a form gets its accent marks
@@ -88,8 +88,10 @@ length marks or syllable dots, `j` for the glide. `ipa_source` says where it com
 - `english`: CMUdict, for English loanwords. A word counts as one when the dictionary derives it from an English word
   spelled the same way, and not also from Spanish or a Tagalog root (`origin.tsv`, written by `scripts/make_origin.py`).
   With no origin given, a single word of the English word list counts when it looks English: a letter or digraph
-  Tagalog does not use, six letters or more, or a doubled consonant. Names and accented forms never count, and a
-  hyphenated form only when the dictionary calls the whole form English.
+  Tagalog does not use, six letters or more, or a doubled consonant. Names and accented forms never count. A
+  hyphenated form counts only when every part is English: a Tagalog prefix, a reduplication or a Tagalog suffix keeps
+  the Tagalog reading (*mag-isa*, *sama-sama*, *bay-an*), and a Tagalog prefix on an English word reads each part its own
+  way (*i-share* /ʔiˈʃɛɹ/).
 - `spelled`: abbreviations with no vowel, read by letter names with the last one stressed (`tv`, `dr`); `ng` is /ˈnaŋ/.
 
 `scripts/fix_ipa.py` brings every reading to that style. It drops syllable dots, length marks and tie bars, puts the
@@ -108,13 +110,15 @@ A phone-recognition model listens to each clip and writes the phones it hears, a
 them with the IPA (`checks/phones/README.md`). On all 151,262 current clips, ZIPA's phones differ from the IPA in 12.8 %
 of the phones (9.6 % without the glottal stop). By IPA source, that is 7.6 % for `dictionary`, 9.6 % for `rule`,
 10.7 % for hyphenated forms and 24.7 % for `english`. It also found 1,013 hyphenated clips cut at the hyphen, 2,992
-English loanwords spoken the Tagalog way and 5 clips with extra speech (`checks/phones/wordlist_all/`).
+English loanwords spoken the Tagalog way and 5 clips with extra speech (`checks/phones/wordlist_all/`). `scripts/fix_clips.py` then re-synthesized the 3,526 clips
+the check found wrong, up to three tries each, and replaced a clip only when ZIPA confirmed the new one: 3,414 replaced,
+112 kept (`checks/fix/`).
 
 ## Workflows
 
 | Workflow | What it does |
 |---|---|
-| *Synthesize audio* (`synthesize.yml`) | runs a list through the voice in batches of 2,000, commits each batch to the branch it runs on, and starts a new run of itself at the 5-hour limit; `list=next` and `list=next-pilot` run the lists of the rebuild |
+| *Synthesize audio* (`synthesize.yml`) | with `fix=checks/fix/redo.tsv`, re-synthesizes and checks the clips of a fix list (`scripts/fix_clips.py`); otherwise runs a list through the voice in batches of 2,000, commits each batch to the branch it runs on, and starts a new run of itself at the 5-hour limit; `list=next` and `list=next-pilot` run the lists of the rebuild |
 | *Phone recognition* (`phones.yml`) | the phone check of a list, one job per model and shard; commits `checks/phones/<list>/` |
 | *Fix IPA* (`fix_ipa.yml`) | `scripts/fix_ipa.py` with CMUdict on `wordlist_all.tsv`, then `index.json` |
 | *Prepare the rebuild* (`prepare.yml`) | IPA for `next/wordlist.tsv` and the plan of the switch (`scripts/plan_next.py`) |

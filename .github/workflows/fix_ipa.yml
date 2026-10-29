@@ -21,7 +21,7 @@ jobs:
         with: { python-version: "3.12" }
       - name: Install CMUdict and the English word list
         run: |
-          pip install -q cmudict
+          pip install -q cmudict wordfreq
           [ -f /usr/share/dict/words ] || { sudo apt-get update -q && sudo apt-get install -y -q wamerican; }
           readlink -f /usr/share/dict/words                # the list the local runs used: wamerican (american-english)
       - name: Fix the IPA and rebuild the index

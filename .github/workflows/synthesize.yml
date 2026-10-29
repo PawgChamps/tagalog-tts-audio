@@ -1,18 +1,21 @@
 name: Synthesize audio
 # Runs a word list through Gemini 3.1 Flash TTS (voice Laomedeia) and commits the clips to the branch it runs on.
 # Resumable: files that already exist are skipped, so a run that stops at the time limit simply starts again (it
-# re-dispatches itself with the same inputs).
+# re-dispatches itself with the same inputs).  With `fix` set to a fix list (checks/fix/redo.tsv), it re-synthesizes
+# those clips instead, checks every try with the ZIPA phone recognizer and replaces a clip only when the new one is
+# right (scripts/fix_clips.py).
 on:
   workflow_dispatch:
     inputs:
       list:      { description: "Word list (TSV, first column the accented form), or next / next-pilot (next/RUNBOOK.md)", default: "wordlist_all.tsv" }
       outdir:    { description: "Folder for the clips (<outdir>/<letter>/<form>.mp3)", default: "audio" }
-      respell:   { description: "TSV form<TAB>text sent instead of the form, if the file exists", default: "respell.tsv" }
-      prompt:    { description: "Prompt: tagalog or english (scripts/tts_gemini.py PROMPTS)", default: "tagalog" }
+      respell:   { description: "TSV form<TAB>text[<TAB>prompt] sent instead of the form, if the file exists", default: "respell.tsv" }
+      prompt:    { description: "Prompt: a name from scripts/tts_gemini.py PROMPTS (tagalog, english…) or the text", default: "tagalog" }
       batch:     { description: "Words per commit", default: "2000" }
       workers:   { description: "Parallel requests", default: "4" }
       hours:     { description: "Stop after this many hours (max 5)", default: "5" }
       max_words: { description: "Stop after this many words in total (0 = the whole list)", default: "0" }
+      fix:       { description: "Fix list to re-synthesize and check (e.g. checks/fix/redo.tsv); empty = synthesize the word list", default: "" }
 permissions:
   contents: write
   actions: write
@@ -32,18 +35,44 @@ jobs:
       WORKERS: ${{ inputs.workers }}
       HOURS: ${{ inputs.hours }}
       MAX_WORDS: ${{ inputs.max_words }}
+      FIX: ${{ inputs.fix }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: { python-version: "3.12" }
+        with: { python-version: "3.11" }
       - run: pip install google-auth requests
+      - name: Install the phone recognizer (ZIPA)
+        if: inputs.fix != ''
+        run: |
+          pip install -q numpy==1.26.4 imageio-ffmpeg
+          pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q onnxruntime soundfile librosa lhotse huggingface_hub
+          git clone -q --depth 1 https://github.com/lingjzhu/zipa "$RUNNER_TEMP/zipa"
+      - uses: actions/cache@v4
+        if: inputs.fix != ''
+        with:
+          path: ~/.cache/huggingface
+          key: hf-zipa-v1
       - name: Authenticate to Google (workload identity federation, no key)
         uses: google-github-actions/auth@v2
         with:
           workload_identity_provider: ${{ secrets.GCP_WIF_PROVIDER }}
           service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+      - name: Re-synthesize and check the fix list
+        id: fix
+        if: inputs.fix != ''
+        env:
+          ZIPA_SRC: ${{ runner.temp }}/zipa
+          HF_HUB_DISABLE_PROGRESS_BARS: "1"
+        run: |
+          git config user.name "tts-bot"; git config user.email "tts-bot@users.noreply.github.com"
+          LIM=(); [ "$MAX_WORDS" -gt 0 ] && LIM=(--limit "$MAX_WORDS")
+          timeout $(( HOURS * 3600 ))s python3 scripts/fix_clips.py adc "$FIX" --commit --workers "$WORKERS" --batch 200 "${LIM[@]}" \
+            --model gemini-3.1-flash-tts-preview --voice Laomedeia || { [ $? -eq 124 ] && echo "more=1" >> "$GITHUB_OUTPUT"; }
+          if [ -f checks/fix/report.md ]; then cat checks/fix/report.md >> "$GITHUB_STEP_SUMMARY"; fi
       - name: Synthesize in batches
         id: synth
+        if: inputs.fix == ''
         run: |
           git config user.name "tts-bot"; git config user.email "tts-bot@users.noreply.github.com"
           END=$(( $(date +%s) + HOURS * 3600 ))
@@ -75,8 +104,8 @@ jobs:
           done
           if [ "$more" = 1 ]; then echo "more=1" >> "$GITHUB_OUTPUT"; fi
       - name: Continue in a new run if the time limit stopped this one
-        if: steps.synth.outputs.more == '1'
+        if: steps.synth.outputs.more == '1' || steps.fix.outputs.more == '1'
         run: |
           gh workflow run synthesize.yml --ref "$GITHUB_REF_NAME" -f list="$LIST" -f outdir="$OUTDIR" -f respell="$RESPELL" \
-            -f prompt="$PROMPT" -f batch="$BATCH" -f workers="$WORKERS" -f hours="$HOURS" -f max_words="$MAX_WORDS"
+            -f prompt="$PROMPT" -f batch="$BATCH" -f workers="$WORKERS" -f hours="$HOURS" -f max_words="$MAX_WORDS" -f fix="$FIX"
         env: { GH_TOKEN: "${{ github.token }}" }

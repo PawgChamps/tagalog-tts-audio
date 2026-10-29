@@ -6,9 +6,10 @@
     python3 scripts/fix_ipa.py --list next/wordlist.tsv --out next/wordlist_ipa.tsv   # another list, written elsewhere
 
 Besides the list it reads origin.tsv (what the dictionary says about each word's origin, from scripts/make_origin.py),
-the English word list /usr/share/dict/words, CMUdict (`pip install cmudict`) and, when the list has English readings, the
-list as it was before English readings existed (git history, commit 685c194).  Without CMUdict the English readings
-already in the list are kept or taken back, and none are added.  Running it again changes nothing.  What it does, in order:
+the English word list /usr/share/dict/words, CMUdict (`pip install cmudict`), word frequencies (`pip install wordfreq`,
+for rule 8) and, when the list has English readings, the list as it was before English readings existed (git history,
+commit 685c194).  Without CMUdict the English readings already in the list are kept or taken back, and none are added;
+without wordfreq the same holds for hyphenated forms.  Running it again changes nothing.  What it does, in order:
 
  dictionary readings (ipa_source = dictionary)
    1. drop notes after the closing slash ("/ˈbas/ (Taglish)");
@@ -30,10 +31,16 @@ already in the list are kept or taken back, and none are added.  Running it agai
    - origin.tsv says English, not Spanish or native, and not respelled from another English word (bi from bee), at any
      length (affixes only when they also look English, as below); or
    - no origin information, or only a language other than English, Spanish and Tagalog (chef and boutique: French),
-     a single word (no hyphen) of the English word list, not given as a variant spelling of
-     another word, and it looks English: a letter or digraph Tagalog does not use, six letters or more or a doubled
-     consonant (rule readings), spelling leftovers such as th, ea or ou in the reading (dictionary readings), y as the
-     only vowel (gym).
+     not given as a variant spelling of another word, and it looks English: a letter or digraph Tagalog does not use,
+     six letters or more or a doubled consonant (rule readings), spelling leftovers such as th, ea or ou in the reading
+     (dictionary readings), y as the only vowel (gym).  A single word must also be in the English word list; a
+     hyphenated form goes on to rule 8.
+ hyphenated forms (all sources)
+   8. an English reading needs every part to be English: a Tagalog prefix (mag-isa, may-ari, di-tao), a reduplication
+      (sama-sama, isa-isa), a Tagalog suffix after the hyphen (bay-an, bak-it), or more parts that are words of Filipino
+      than of English text (ari-arian, kilos-mahal) keep the Tagalog reading; a Tagalog prefix on an English word reads
+      the prefix the Tagalog way and the word the English way (i-share /ʔiˈʃɛɹ/, mag-tweet /maɡˈtwit/), unless the list
+      reads that word the Tagalog way.  Single words are settled first, so that this is known.
  A row that loses its English reading gets back its reading from before English readings, cleaned as above (the rule
  reading if it had no dictionary reading).
 """
@@ -52,12 +59,17 @@ try:
     CMU = cmudict.dict()
 except ImportError:
     CMU = {}
+try:
+    from wordfreq import zipf_frequency
+except ImportError:
+    zipf_frequency = None
 
-OLD_LIST = "685c194c74c6b51bc24ee55fd40c8c00974f715d"         # wordlist_all.tsv before English readings (7095dd0)
+OLD_LIST = "685c194c74c6b51bc24ee55fd40c8c00974f715d"         # wordlist_all.tsv before English readings (same file as 7095dd0^)
 WORD_LIST = "/usr/share/dict/words"
 ORIGIN, WORDS = {}, set()          # plain spelling -> origin flags (origin.tsv); English word list
 DECIDING = {"en", "es", "native", "respelled"}   # flags that settle English or not; `other` alone (chef: French) does not
 HAVE, PENDING = {}, set()          # English readings already in the list (they stand in for CMUdict); rows waiting for it
+TAGALOG_PLAIN = set()              # plain spellings of the single words the list reads the Tagalog way (rule 8; filled by run)
 
 VOW = set("aeiouəɛɔɪʊæʌɑɝɚ")
 FORM_V = set("aeiou")
@@ -74,6 +86,10 @@ def plain(s):
 
 def has_accent(form):
     return any(c in ACCENTED for c in form.lower())
+
+
+def inner_hyphen(form):
+    return "-" in form.strip("-")
 
 
 def tagalog_like(form):
@@ -164,6 +180,7 @@ def cmu_ipa(form):
     return "/" + res + "/"
 
 
+# ---------------------------------------------------------------- which words get an English reading
 ALT_SENSE = re.compile(r"variante de|forma alternativa|grafia alternativa|sinônimo de|"
                        r"(?:grafia|forma) (?:datada|obsoleta|antiga|arcaica) de", re.I)     # Tagalog variants, not English
 NAME_SENSE = re.compile(r"sobrenome|prenome|nome pr[óo]prio|nome de (?:homem|mulher|pessoa)|nome masculino|nome feminino|apelido", re.I)
@@ -174,14 +191,17 @@ def is_name(r):
 
 
 def english_ok(r, looks):
-    """may the row have an English reading (when CMUdict has the spelling)?  looks: it looks English (see fix)"""
+    """may the row have an English reading (when CMUdict has the spelling)?  looks: it looks English (see _fix).
+    A hyphenated form that passes is checked again by rule 8 (fix)."""
     form, p = r[0], plain(r[0])
     if has_accent(form) or is_name(r) or not re.search(r"[aeiouy]", p):
         return False
     o = ORIGIN.get(p)
     if o and o & DECIDING:                           # the dictionary says whether the word comes from English
         return "en" in o and not o & {"es", "native", "respelled"} and (looks or not (form.startswith("-") or form.endswith("-")))
-    return looks and "-" not in form and p in WORDS and not ALT_SENSE.search(r[5])     # no origin, or another language only
+    if not looks or ALT_SENSE.search(r[5]):          # no origin, or another language only
+        return False
+    return inner_hyphen(form) or ("-" not in form and p in WORDS)
 
 
 def english_reading(r, looks):
@@ -202,14 +222,68 @@ def why_not_english(r):
     if o and o & DECIDING:
         if "en" not in o:
             return "the dictionary gives another origin"
-        if "respelled" in o and not o & {"es", "native"}:
+        if o & {"es", "native"}:
+            return "the dictionary also gives a Spanish or native origin"
+        if "respelled" in o:
             return "respelled from another English word"
-        return "affix" if not o & {"es", "native"} else "the dictionary also gives a Spanish or native origin"
+        return "hyphenated, not every part is English (rule 8)" if inner_hyphen(form) else "affix"
+    if ALT_SENSE.search(r[5]):
+        return "no origin information, variant spelling"
+    if inner_hyphen(form):
+        return "hyphenated, not every part is English (rule 8) or does not look English"
     if "-" in form:
-        return "hyphenated, no origin information"
+        return "affix, no origin information"
     if p not in WORDS:
         return "no origin information, not in the English word list"
-    return "no origin information, variant spelling" if ALT_SENSE.search(r[5]) else "no origin information, does not look English"
+    return "no origin information, does not look English"
+
+
+# ---------------------------------------------------------------- hyphenated forms (rule 8)
+TL_PREFIX = frozenset("""a i ma na ka pa ni mag nag pag ipa ipag maka naka paka makapag nakapag makipag nakipag pakikipag
+    pinag ipinag pina ipina mapag napag mang nang pang sang may di de tag taga tig magka nagka pagka magpa nagpa pagpa
+    magsi nagsi pinaka ika balik kay mala ala alas""".split())
+TL_SUFFIX = frozenset("a o an it ok ay il en ang ing ong as om oy al aw ag at ad ib ip ub ul us ot ap ab ak am og op or et".split())
+EN_DIGRAPH = re.compile(r"th|sh|ch|ph|ck|wh|gh|oo|ee|ea|ou|ow")
+
+
+def filipino_word(p):
+    """a word of three letters or more that is clearly more frequent in Filipino text than in English text"""
+    f, e = zipf_frequency(p, "fil"), zipf_frequency(p, "en")
+    return len(p) >= 3 and p.isalpha() and f >= 3.0 and f >= e + 0.5
+
+
+def english_word(p):
+    """a word clearly more frequent in English text than in Filipino text, or one CMUdict knows that is spelled the
+    English way (a foreign letter or digraph, a doubled consonant) and is not a Filipino word"""
+    f, e = zipf_frequency(p, "fil"), zipf_frequency(p, "en")
+    if e >= 3.0 and e >= f + 0.5:
+        return True
+    return bool(cmu_word(p)) and bool(FOREIGN_LETTERS.search(p) or re.search(r"([^aeiou])\1", p)) and not filipino_word(p)
+
+
+def hyphen_reading(form):
+    """rule 8, for a form with an inner hyphen that has an English reading: 'english' (keep it), 'tagalog' (no English
+    reading), or the reading of a Tagalog prefix on an English word"""
+    parts = [plain(p) for p in form.split("-") if p]
+    if parts[0] in TL_PREFIX:
+        stem = parts[1:]
+        if all(p not in TAGALOG_PLAIN and (len(p) == 1 or english_word(p) or (cmu_word(p) and FOREIGN_LETTERS.search(p))
+                                            or 3.0 <= zipf_frequency(p, "en") >= zipf_frequency(p, "fil"))
+               for p in stem) and cmu_ipa("-".join(stem)):
+            pre, eng = M.ipa(parts[0]).strip("/").replace("ˈ", ""), cmu_ipa("-".join(stem)).strip("/")
+            if re.match(r"[ˈˌ]?[aeiouəɛɔɪʊæʌɑɝɚ]", eng):     # a vowel after the hyphen starts with a glottal stop
+                eng = re.sub(r"^([ˈˌ]?)", r"\1ʔ", eng)
+            if "ˈ" not in eng:
+                eng = "ˈ" + eng.lstrip("ˌ")
+            return "/" + pre + eng + "/"
+        return "tagalog"
+    if len(set(parts)) == 1:
+        return "english" if EN_DIGRAPH.search(parts[0]) or english_word(parts[0]) else "tagalog"
+    if parts[-1] in TL_SUFFIX or (parts[-1] in ("in", "on") and zipf_frequency(parts[0], "en") < 4.0):
+        return "tagalog"
+    if sum(map(filipino_word, parts)) > sum(map(english_word, parts)):
+        return "tagalog"
+    return "english"
 
 
 # ---------------------------------------------------------------- dictionary notation
@@ -272,10 +346,10 @@ def stress_ok(form, body):
     return stress_index(body) in ok
 
 
-def fix(r):
+def _fix(r, allow_english=True):
     form, src, ipa = r[0], r[6], r[3]
     new, nsrc, why = ipa, src, None
-    if src == "english":                               # decided in main(): kept, or taken back to the earlier reading
+    if src == "english":                               # decided in run(): kept, or taken back to the earlier reading
         return new, nsrc, why
     if src == "dictionary":
         m = re.match(r"(/[^/]*/)", ipa)
@@ -285,7 +359,7 @@ def fix(r):
         multi = " " in body
         dots = "." in body
         if multi or "ʎ" in body:
-            e = english_reading(r, True)
+            e = english_reading(r, True) if allow_english else None
             if e:
                 new, nsrc, why = e, "english", "multi-word/ly reading rebuilt from CMUdict"
             elif re.search(r"[aeiou]", plain(form)):
@@ -311,7 +385,7 @@ def fix(r):
                               "r written as ɾ" if "/" + nb + "/" == ipa else "cleaned")
             nb = tapped
             looks = bool(LEFTOVER.search(raw) or (not tl and re.search(r"[aeiou][aeiou]", raw)))
-            e = english_reading(r, looks)
+            e = english_reading(r, looks) if allow_english else None
             if e:
                 new, nsrc, why = e, "english", "spelling leftovers in reading" if looks else "English loanword (dictionary reading)"
             elif tl and broken(form, nb) and re.search(r"[aeiou]", plain(form)):
@@ -326,7 +400,7 @@ def fix(r):
         p = plain(form)
         looks_english = FOREIGN_LETTERS.search(p) or (src == "spelled" and "y" in p) or (
             src == "rule" and (len(p) >= 6 or re.search(r"([^aeiou])\1", p)) and not ALT_SENSE.search(r[5]))   # long / doubled consonant
-        e = english_reading(r, bool(looks_english))
+        e = english_reading(r, bool(looks_english)) if allow_english else None
         if e:
             new, nsrc, why = e, "english", "English loanword"
         if nsrc == src:                                  # regenerate with the corrected rule
@@ -335,6 +409,20 @@ def fix(r):
             nsrc = "spelled" if vowelless else "rule"
             if g and (g != ipa or nsrc != src):
                 new, why = g, "rule updated" if g != ipa else "label corrected (spelled -> rule)"
+    return new, nsrc, why
+
+
+def fix(r):
+    """_fix, then rule 8 for a hyphenated form that would get an English reading"""
+    new, nsrc, why = _fix(r)
+    if nsrc == "english" and r[6] != "english" and inner_hyphen(r[0]):
+        if not (CMU and zipf_frequency):             # rule 8 needs both: keep the reading the list has, add none
+            return (new, nsrc, why) if r[0] in HAVE else _fix(r, allow_english=False)
+        h = hyphen_reading(r[0])
+        if h == "tagalog":
+            return _fix(r, allow_english=False)
+        if h != "english":
+            return h, "english", "Tagalog prefix on an English word"
     return new, nsrc, why
 
 
@@ -374,30 +462,37 @@ def old_list():
 
 
 def run(rows):
-    """rows of the list -> (fixed rows, {reason: [(form, before, after)]}, English readings kept)"""
-    HAVE.clear(); PENDING.clear()
+    """rows of the list -> (fixed rows, {reason: [(form, before, after)]}, English readings kept).  Single words go first:
+    rule 8 needs to know which of them the list reads the Tagalog way."""
+    HAVE.clear(); PENDING.clear(); TAGALOG_PLAIN.clear()
     HAVE.update({r[0]: r[3] for r in rows if r[6] == "english"})
     old = old_list() if HAVE else {}
-    out, changes, kept = [], {}, 0
-    for r in rows:
-        r = list(r)
-        first = r[3]
-        if r[6] == "english":                            # recheck from the reading it had before English readings
-            o = old.get(r[0])
-            start = r[:3] + [o[3]] + r[4:6] + [o[6]] if o else r[:3] + [M.ipa(r[0]) or M.spelled(r[0])] + r[4:6] + ["rule"]
-            s, why = settle(start)
-            if s[6] == "english":
-                kept += 1
-                why = None
-            else:
+    out, changes, kept = [None] * len(rows), {}, 0
+    for hyphenated in (False, True):
+        if hyphenated:
+            TAGALOG_PLAIN.update(plain(r[0]) for r in out if r is not None and r[6] != "english")
+        for i, r in enumerate(rows):
+            if inner_hyphen(r[0]) != hyphenated:
+                continue
+            r = list(r)
+            first = r[3]
+            if r[6] == "english":                        # recheck from the reading it had before English readings
+                o = old.get(r[0])
+                start = r[:3] + [o[3]] + r[4:6] + [o[6]] if o else r[:3] + [M.ipa(r[0]) or M.spelled(r[0])] + r[4:6] + ["rule"]
+                s, why = settle(start)
+                if s[6] == "english":
+                    kept += 1
+                    if s[3] == first:
+                        why = None
+                else:
+                    why = "English reading taken back: " + why_not_english(r)
                 r[3], r[6] = s[3], s[6]
-                why = "English reading taken back: " + why_not_english(r)
-        else:
-            s, why = settle(r)
-            r[3], r[6] = s[3], s[6]
-        if why:
-            changes.setdefault(why, []).append((r[0], first, r[3]))
-        out.append(r)
+            else:
+                s, why = settle(r)
+                r[3], r[6] = s[3], s[6]
+            if why:
+                changes.setdefault(why, []).append((r[0], first, r[3]))
+            out[i] = r
     return out, changes, kept
 
 
@@ -419,6 +514,8 @@ def main():
     load_inputs(a.origin)
     if not CMU:
         print("CMUdict is not installed (pip install cmudict): English readings are kept or taken back, none are added")
+    if zipf_frequency is None:
+        print("wordfreq is not installed (pip install wordfreq): hyphenated forms keep the English readings they have, none are added")
     out, changes, kept = run(rows)
     for k, v in sorted(changes.items(), key=lambda kv: -len(kv[1])):
         print(f"{len(v):7}  {k}")
@@ -428,7 +525,7 @@ def main():
     print(f"English readings: {kept:,} kept, {back:,} taken back, {sum(r[6] == 'english' for r in out) - kept:,} added")
     waiting = sum(1 for r in out if r[0] in PENDING and r[6] != "english")
     if waiting:
-        print(f"{waiting:,} rows get an English reading where CMUdict has the spelling (run with CMUdict installed)")
+        print(f"up to {waiting:,} rows get an English reading where CMUdict has the spelling (run with CMUdict and wordfreq installed)")
     print("ipa_source: " + ", ".join(f"{s} {sum(r[6] == s for r in out):,}" for s in ("dictionary", "rule", "english", "spelled")))
     if write:
         open(out_path, "w", encoding="utf-8").write("\n".join([header] + ["\t".join(r) for r in out]) + "\n")

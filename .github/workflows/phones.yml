@@ -1,7 +1,7 @@
 name: Phone recognition (audio to IPA)
 # Runs phone-recognition models over the clips and compares what they hear with the IPA of the word list.
 # Each model runs in its own job (split into `shards` jobs when the list is long); a last job scores them all and
-# commits checks/phones/<list name>/ (raw outputs, compare.tsv, report.md) to the branch it runs on.  Outputs of earlier runs on the same list
+# commits checks/phones/<list name>/ (raw outputs, compare.tsv, report.md) to the branch the run was started on.  Outputs of earlier runs on the same list
 # stay, so models can be run one at a time.
 on:
   workflow_dispatch:
@@ -34,7 +34,6 @@ jobs:
           sparse-checkout: |
             scripts
             checks
-            next
             ${{ inputs.audio == 'checkout' && 'audio' || 'scripts' }}
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
@@ -76,7 +75,6 @@ jobs:
           sparse-checkout: |
             scripts
             checks
-            next
       - uses: actions/download-artifact@v4
         with: { pattern: "phones-*", path: out, merge-multiple: true }
       - name: Score and commit
@@ -91,7 +89,7 @@ jobs:
             git add "$DIR"
             git diff --cached --quiet && exit 0
             git commit -qm "checks: phone recognition of $LIST ($MODELS)"
-            git push -q origin "HEAD:$GITHUB_REF_NAME" && exit 0
+            git push -q origin "HEAD:refs/heads/$GITHUB_REF_NAME" && exit 0
             sleep $((attempt * 5))
           done
           exit 1

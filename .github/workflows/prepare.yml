@@ -32,7 +32,7 @@ jobs:
         with: { python-version: "3.12" }
       - name: Install CMUdict and the English word list
         run: |
-          pip install -q cmudict
+          pip install -q cmudict wordfreq
           [ -f /usr/share/dict/words ] || { sudo apt-get update -q && sudo apt-get install -y -q wamerican; }
       - name: IPA and plan
         run: |
