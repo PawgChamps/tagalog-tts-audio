@@ -44,6 +44,8 @@ def syllabify(toks):
     boundary = False
     for kind, text, mark in toks:
         if kind == "-":
+            if cur is not None:                 # consonants before the hyphen close the syllable before it
+                cur["coda"] += pending; pending = []
             boundary = True; continue
         if kind == "C":
             pending.append(text); continue
@@ -54,7 +56,7 @@ def syllabify(toks):
         else:
             k = len(pending)
             if boundary:
-                cur["coda"] += pending; onset = []
+                onset = pending                 # everything after a hyphen starts the next syllable
             elif k == 0:
                 onset = []
             elif k == 1:
