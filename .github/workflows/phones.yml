@@ -1,0 +1,83 @@
+name: Phone recognition (audio to IPA)
+# Runs phone-recognition models over the clips and compares what they hear with the IPA of the word list.
+# Each model runs in its own job (split into `shards` jobs when the list is long); a last job scores them all and
+# commits checks/phones_report.md and checks/phones_compare.tsv.
+on:
+  workflow_dispatch:
+    inputs:
+      list:   { description: "Rows to check (TSV with form, file, ipa columns)", default: "checks/sample.tsv" }
+      models: { description: "Models, comma-separated: xeus, zipa, powsm, w2v2", default: "xeus,zipa,powsm,w2v2" }
+      shards: { description: "Jobs per model (the list is split between them)", default: "1" }
+permissions:
+  contents: write
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs: { matrix: "${{ steps.m.outputs.matrix }}" }
+    steps:
+      - id: m
+        env: { MODELS: "${{ inputs.models }}", SHARDS: "${{ inputs.shards }}" }
+        run: |
+          python3 -c 'import json, os; ms = [m.strip() for m in os.environ["MODELS"].split(",") if m.strip()]; n = int(os.environ["SHARDS"]); print("matrix=" + json.dumps({"include": [{"model": m, "shard": i, "of": n} for m in ms for i in range(n)]}))' >> "$GITHUB_OUTPUT"
+  recognize:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts
+            checks
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-${{ matrix.model }}-v1
+      - name: Install
+        run: |
+          pip install -q numpy==1.26.4
+          pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          case "${{ matrix.model }}" in
+            xeus)  pip install -q transformers huggingface_hub safetensors soundfile pyyaml typeguard ;;
+            w2v2)  sudo apt-get install -y -q espeak-ng >/dev/null; pip install -q transformers phonemizer ;;
+            powsm) pip install -q espnet espnet_model_zoo ;;
+            zipa)  pip install -q onnxruntime soundfile librosa lhotse huggingface_hub
+                   git clone -q --depth 1 https://github.com/lingjzhu/zipa "$RUNNER_TEMP/zipa" ;;
+          esac
+          pip list 2>/dev/null | grep -i -E "^(torch|transformers|espnet|onnxruntime|lhotse) " || true
+      - name: Recognize
+        env:
+          ZIPA_SRC: ${{ runner.temp }}/zipa
+          HF_HUB_DISABLE_PROGRESS_BARS: "1"
+          AUDIO_REF: ${{ github.sha }}
+        run: python3 scripts/phones.py ${{ matrix.model }} "${{ inputs.list }}" "out/${{ matrix.model }}_${{ matrix.shard }}.tsv" ${{ matrix.shard }}/${{ matrix.of }} --fetch-raw
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phones-${{ matrix.model }}-${{ matrix.shard }}
+          path: out/
+          if-no-files-found: ignore
+  report:
+    needs: recognize
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts
+            checks
+      - uses: actions/download-artifact@v4
+        with: { pattern: "phones-*", path: out, merge-multiple: true }
+      - name: Score and commit
+        run: |
+          python3 scripts/score_phones.py "${{ inputs.list }}" out checks
+          mkdir -p checks/phones_raw && cp out/*.tsv checks/phones_raw/ 2>/dev/null || true
+          git config user.name "phones-bot"; git config user.email "phones-bot@users.noreply.github.com"
+          git add checks
+          git diff --cached --quiet || { git commit -qm "checks: phone recognition of ${{ inputs.list }} (${{ inputs.models }})"; git pull -q --rebase; git push -q; }
