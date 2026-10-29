@@ -2,16 +2,16 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-2244 clips done, 2645 tries.
+2444 clips done, 2886 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 1698 | 68 |
-| hyphen | 355 | 7 |
-| letters | 83 | 0 |
-| cut | 24 | 7 |
+| english | 1788 | 69 |
+| hyphen | 443 | 13 |
+| letters | 85 | 0 |
+| cut | 35 | 9 |
 | extra | 2 | 0 |
-| **all** | 2162 | 82 |
+| **all** | 2353 | 91 |
 
 ## Replaced (first 60)
 
@@ -164,3 +164,12 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | dyukaka | cut | dyukaka | d ʒ u q a | 0.57 → 0.57 |
 | egotist | english | egotist | i g o ʊ t ɪ s t | 0.29 → 0.29 |
 | elaborate | english | elaborate | ɪ l ̴ æ b ɜ ˞ e ɪ t | 0.43 → 0.43 |
+| gaga-go | hyphen | gaga go | g a g a | 0.43 → 0.43 |
+| gamotlahat | cut | gamotlahat | g ə m o t | 0.50 → 0.50 |
+| grádo-grado | hyphen | grádo grado | g r a d o | 0.50 → 0.50 |
+| hákbang-hakbang | hyphen | hákbang hakbang | h a k b a ŋ | 0.50 → 0.50 |
+| hawsyaw | cut | hawsyaw | a w ʃ a w | 0.71 → 0.43 |
+| híging-higing | hyphen | híging higing | h i g i ŋ | 0.50 → 0.50 |
+| ib-ib | hyphen | ib ib | i b | 0.50 → 0.50 |
+| igat-igat | hyphen | igat igat | i g a t | 0.50 → 0.50 |
+| indeterminate | english | indeterminate | ɪ n d ɪ t ɜ ˞ m ə n e ɪ t | 0.33 → 0.25 |
