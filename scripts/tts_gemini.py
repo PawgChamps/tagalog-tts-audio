@@ -2,7 +2,7 @@
 """Synthesize single accented words with Gemini-TTS through the Cloud Text-to-Speech API (v1beta1). Resumable: a word
 whose file exists is skipped. The key is read from a file (or GOOGLE_ACCESS_TOKEN as a bearer token) and never printed.
 Usage: tts_gemini.py <keyfile|-> <wordlist.tsv> <outdir> [--model gemini-3.1-flash-tts-preview] [--voice Laomedeia]
-       [--limit N] [--workers 4] [--prompt "..."]      (keyfile "-" = $GOOGLE_ACCESS_TOKEN; "token:<file>" = access token in a file; "sa:<json>" = service account, needs `pip install google-auth requests`;
+       [--limit N] [--workers 4] [--prompt tagalog|english|"..."] [--respell respell.tsv]      (keyfile "-" = $GOOGLE_ACCESS_TOKEN; "token:<file>" = access token in a file; "sa:<json>" = service account, needs `pip install google-auth requests`;
         header X-Goog-User-Project from $GOOGLE_QUOTA_PROJECT for the token modes)"""
 import argparse
 import base64
@@ -24,15 +24,21 @@ def letter_dir(form):
 
 
 DEFAULT_PROMPT = "Read aloud clearly, in a neutral tone. The text is a single Filipino word; say only that word, with the stress where the accent marks put it."
+PROMPTS = {                                   # --prompt takes one of these names, or the text of a prompt
+    "tagalog": DEFAULT_PROMPT,
+    "english": "Read aloud clearly, in a neutral tone. The text is a single English word as Filipinos use it; say only that word, pronounced the English way.",
+}
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("keyfile"); ap.add_argument("wordlist"); ap.add_argument("outdir")
     ap.add_argument("--model", default="gemini-3.1-flash-tts-preview"); ap.add_argument("--voice", default="Laomedeia")
-    ap.add_argument("--limit", type=int, default=0); ap.add_argument("--workers", type=int, default=4); ap.add_argument("--prompt", default=DEFAULT_PROMPT)
+    ap.add_argument("--limit", type=int, default=0); ap.add_argument("--workers", type=int, default=4)
+    ap.add_argument("--prompt", default="tagalog", help="a prompt name (" + ", ".join(PROMPTS) + ") or the prompt itself")
     ap.add_argument("--respell", default="", help="TSV form<TAB>text: send this text instead of the form (the file keeps the form's name)")
     a = ap.parse_args()
+    a.prompt = PROMPTS.get(a.prompt, a.prompt)
     headers = {"Content-Type": "application/json"}
     if a.keyfile == "-":
         headers["Authorization"] = "Bearer " + os.environ["GOOGLE_ACCESS_TOKEN"].strip()

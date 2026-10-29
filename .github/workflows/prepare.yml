@@ -1,0 +1,45 @@
+name: Prepare the rebuild
+# Gives the rebuilt list next/wordlist.tsv its IPA (scripts/fix_ipa.py with CMUdict: English readings for the English
+# loanwords of origin.tsv) as next/wordlist_ipa.tsv, then plans the switch (scripts/plan_next.py): the readings to
+# synthesize, the clips to rename, re-synthesize or retire, the pilots and next/plan.md. Commits next/ to the branch.
+on:
+  workflow_dispatch:
+    inputs:
+      hyphen:        { description: "Hyphenated forms sent with the hyphen as a space, joined or kept (space, join, keep)", default: "space" }
+      pilot:         { description: "Rows in next/pilot.tsv", default: "300" }
+      pilot_english: { description: "Rows in next/pilot_english.tsv", default: "60" }
+      redo:          { description: "Re-synthesize the clips the phone check found wrong (auto: only if scripts/fix_clips.py has not; yes; no)", default: "auto" }
+permissions:
+  contents: write
+concurrency: { group: synthesize, cancel-in-progress: false }
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      HYPHEN: ${{ inputs.hyphen }}
+      PILOT: ${{ inputs.pilot }}
+      PILOT_EN: ${{ inputs.pilot_english }}
+      REDO: ${{ inputs.redo }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts
+            checks
+            next
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Install CMUdict and the English word list
+        run: |
+          pip install -q cmudict
+          [ -f /usr/share/dict/words ] || { sudo apt-get update -q && sudo apt-get install -y -q wamerican; }
+      - name: IPA and plan
+        run: |
+          python3 scripts/fix_ipa.py --list next/wordlist.tsv --out next/wordlist_ipa.tsv | tail -4
+          python3 scripts/plan_next.py --list next/wordlist_ipa.tsv --hyphen "$HYPHEN" --pilot "$PILOT" --pilot-english "$PILOT_EN" --redo "$REDO"
+      - name: Commit
+        run: |
+          git config user.name "plan-bot"; git config user.email "plan-bot@users.noreply.github.com"
+          git add next
+          git diff --cached --quiet || { git commit -qm "next: IPA and plan (hyphen $HYPHEN)"; git pull -q --rebase; git push -q; }

@@ -1,45 +1,145 @@
 # Tagalog word audio
 
-One MP3 per reading of single-word headwords for a Tagalog dictionary:
-151,262 clips, synthesized with Google Cloud Text-to-Speech, model **Gemini 3.1 Flash TTS**, voice **Laomedeia**.
+One MP3 per reading of every single-word headword of a Tagalog → Portuguese dictionary, each with an IPA reading.
+The clips were made with Google Cloud Text-to-Speech, model **Gemini 3.1 Flash TTS**, voice **Laomedeia**.
 
 **[Listen and search online](https://pawgchamps.github.io/tagalog-tts-audio/)**
 
-Tagalog does not write stress, so each word is sent with the accent marks of the *Ortograpiyang Pambansa*
-(`báka` cow, `bakâ` maybe; `punò` tree, `punô` full), derived from the word's IPA, from the printed headword or
-from the stress class. Heteronyms get one clip per reading. `wordlist_all.tsv` lists every form with its IPA and
-frequency rank; `index.json` maps each form to its file.
+<!-- counts -->
+151,262 clips for 151,262 forms of 141,604 spellings.
 
-Layout: `audio/<first letter>/<accented form>.mp3`, e.g. `audio/b/báka.mp3`. The search page is `docs/index.html`, published with GitHub Pages.
-
-## Regenerate
-`scripts/make_wordlist.py` builds the list from the dictionary JSON, `scripts/make_ipa.py` and `scripts/fix_ipa.py` write and clean its IPA; `scripts/tts_gemini.py` synthesizes
-(resumable, skips existing files); `run_batches.sh` runs the list in batches and pushes each one.
-Cost: billed per token by Google (about 25 audio tokens per second of speech).
-
-## How the IPA was determined
-
-Every row of `wordlist_all.tsv` has an IPA reading in the `ipa` column, and `ipa_source` says where it came from:
-
-| Where the IPA comes from | Forms |
+| Stress from (`stress_source`) | Forms |
 |---|---:|
-| The dictionary's own reading, cleaned (`ipa_source` = `dictionary`) | 89,519 |
-| Generated from the accented spelling by rule (`rule`) | 50,903 |
-| English pronunciation from CMUdict, for English loanwords (`english`) | 10,648 |
-| Consonant-only abbreviations read letter by letter, such as tv, dr (`spelled`) | 192 |
+| the dictionary's stress class (malumay, malumi, mabilis, maragsa) (`class`) | 31,810 |
+| the dictionary's IPA (earlier list) (`ipa`) | 85,316 |
+| the accented headword (earlier list) (`headword`) | 8,152 |
+| no source marks the stress: the voice's own reading (`none`) | 25,984 |
 
-- **Dictionary readings** are the IPA of the Tagalog to Portuguese dictionary, collected from Wiktionary and the other sources of the project. They are used as they stand, after the cleaning described below.
-- **Rule-generated readings** come from `scripts/make_ipa.py`, which reads the accent marks of the *Ortograpiyang Pambansa* in the `form` column: an acute mark stresses that syllable, a final grave mark means penultimate stress plus a final glottal stop, a circumflex means final stress plus a final glottal stop, and no mark means penultimate stress. Syllables follow the usual Tagalog rules (maximal onsets, `ng`, `ts`, `ch` and `sh` as single consonants, `ny` and `sy` read as n+j and s+j, a hyphen starts a new syllable); a vowel that starts a word, follows another vowel in a different syllable or follows a hyphen gets a glottal stop.
-- **English readings** are taken from CMUdict for English words (no accent mark, not a name, and either a letter or digraph Tagalog does not use, six letters or more, or a doubled consonant), written in the same style: `/ˈsɪti/`, `/ˈskul/`.
-- **Spelled abbreviations** have no vowel to read, so they are spelled out by letter names with the last letter stressed. The particle `ng` is read /ˈnaŋ/.
-- The style is `/kuˈmaʔin/`, `/ˈbahaj/`, `/ŋaˈjon/`: ˈ before the stressed syllable, no length marks, no syllable dots, `j` for the glide.
+| IPA from (`ipa_source`) | Forms |
+|---|---:|
+| the dictionary's own reading, cleaned (`dictionary`) | 89,519 |
+| generated from the accented form (`rule`) | 50,903 |
+| English reading from CMUdict, for English loanwords (`english`) | 10,648 |
+| abbreviation read letter by letter (`spelled`) | 192 |
+<!-- /counts -->
 
-**Cleaning.** `scripts/fix_ipa.py` brought the readings to that style and corrected what an audit of all 151,262 rows found wrong (it needs `pip install cmudict`, and running it again changes nothing):
-- 63,668 dictionary readings had syllable dots, length marks or tie bars, which left the stress mark after a consonant (`/ʔib.ˈaŋ/` for *ibáng*, now `/ʔiˈbaŋ/`); the dots and marks are removed, the stress mark moved to the start of its syllable, and two vowels in a row now get their glottal stop (`/kahalaˈtaan/` is now `/kahalaˈtaʔan/`).
-- 1,701 readings stressed a vowel the accent mark does not allow (`/paɡ.ˈulan/` for *pag-ulán*); they now use the rule reading.
-- 759 readings had lost vowels (`/ˈdopdks/` for *dopaka*) or read consonant + `y` as consonant + `i` (`/pariˈan/` for *paryán*, now `/paɾˈjan/`); they now use the rule reading.
-- 32 readings held several words or a garbled reduplication (`/ma.la.ˈkiŋ tiː.tik/` for *malakíng*), 12 carried a note such as "(Rizal)", and 252 *ly* words were written with `ʎ` (now `lj`).
-- 10,648 English words, which the Tagalog rules had read letter by letter (`/ˈskhoʔol/` for *school*, `/ˈhealth/` for *health*), now have English readings. Names keep their dictionary or rule reading.
-- The rule now reads `ch` as tʃ, `sh` as ʃ and a soft `c` as s.
+<!-- rebuild -->
+> **Rebuild in progress.** `next/wordlist.tsv` is a new list that takes its accent marks from the sources in the order
+> described below (KWF > UP > Wiktionary > books). `checks/forms_fix/changes.tsv` lists what changes for each spelling.
+> Until the switch is merged, the files at the top of the repository and the counts above are the earlier list, which
+> took its marks from the dictionary's IPA, headwords and stress classes. Steps: [`next/RUNBOOK.md`](next/RUNBOOK.md).
+<!-- /rebuild -->
 
-**Limits.** The IPA is metadata: the audio was synthesized from the accented spelling, never from the IPA, so the two cannot disagree for words that carry an accent mark. For the 25,984 forms that have no stress information (`stress_source` = `none`) the IPA assumes penultimate stress, the Tagalog default, and the audio is whatever the voice chose for the bare word. English words of up to five letters, English compounds that CMUdict lacks (*worktext*) and Spanish words are still read by the Tagalog rules. About 1,000 dictionary readings have fewer or more vowels than the spelling, which is right for glides (*kaimito* /kajˈmito/) and English words (*wood* /ˈwud/) but was not checked word by word, and *þig* is a headword the dictionary spells with a stray letter.
+## Files
+
+| Path | Contents |
+|---|---|
+| `audio/<first letter>/<form>.mp3` | the clips, named after the accented form: `audio/b/bakâ.mp3` (`audio/_/` for forms that start with another character) |
+| `wordlist_all.tsv` | every form: `form`, `plain` (the spelling without marks), `stress_source`, `ipa`, `rank` (frequency rank of the spelling, empty if unranked), `sense` (a Portuguese gloss of the spelling), `ipa_source` |
+| `index.json` | form → `file`, `plain`, `ipa`, `rank` for every form that has a clip; the dictionary and the search page read it |
+| `respell.tsv` | text sent to the voice instead of the form (`lrt` → `el ar ti`) |
+| `origin.tsv` | where the dictionary says each spelling comes from (English, Spanish, a Tagalog root…), for the English readings |
+| `docs/index.html` | the search page, published with GitHub Pages |
+| `checks/` | the phone check of the clips (`checks/phones/`) and the accent-mark changes of the rebuild (`checks/forms_fix/`) |
+| `scripts/` | everything that makes the above |
+
+## How a form gets its accent marks
+
+Tagalog spelling leaves stress unwritten, so each form is sent to the voice with the marks of the *Ortograpiyang
+Pambansa*:
+
+- no mark: stress on the next-to-last syllable (`baka` cow)
+- acute: stress where the mark is (`bakít`)
+- final grave: next-to-last stress and a final glottal stop (`punò` tree)
+- final circumflex: last-syllable stress and a final glottal stop (`bakâ` maybe, `punô` full)
+
+A spelling with several readings gets one form, and one clip, per reading.
+
+`scripts/make_wordlist.py` takes the marks from these sources, in this order (`stress_source`):
+
+1. **KWF**: the Komisyon sa Wikang Filipino's *Diksiyonaryo ng Wikang Filipino* (app and website) and its
+   *Diksiyonaryong Filipino-English*, with the derived forms they print.
+2. **UP**: the *UP Diksiyonaryong Filipino*, from diksiyonaryo.ph, or from the 2001 print for words the site lacks.
+3. **Wiktionary**: the stress of its IPA.
+4. **Books**: the project's other dictionaries (Vicassan, Leo English, Leo James, Tuttle, Ramos…), then old word lists
+   (Calderón 1915, Nigg 1904, Freelang: `legacy`), and last the dictionary's stress class (`class`).
+
+When sources mark the same word differently, the higher one wins. A homograph that only a lower source lists keeps that
+source's reading: UP's `dagá` and `dagà` stand beside the KWF's `daga` and `dagâ`, and Wiktionary's `lalakí` (future of
+*lumaki*) beside `lalaki` "man". Two entries are taken as the same word when their definitions share content words;
+without definitions, the part of speech decides.
+
+- Names take the stress of the respelling the dictionary prints: `Cebu (se•bú)` → `Cebú`, `Jose (ho•sé)` → `José`.
+- English loanwords stay as spelt, so that the voice reads them the English way.
+- A form that no source marks keeps its bare spelling (`none`), and the voice reads it its own way.
+- Known limit: two paraphrased definitions of one word can give two readings (`parábula` from the KWF, `parabula` from UP).
+
+The rules in detail are in the docstring of `scripts/make_wordlist.py`.
+
+## IPA
+
+Every form has an IPA reading in the style `/kuˈmaʔin/`, `/ˈbahaj/`, `/ŋaˈjon/`: ˈ before the stressed syllable, no
+length marks or syllable dots, `j` for the glide. `ipa_source` says where it comes from:
+
+- `dictionary`: the dictionary's own reading (Wiktionary's, or another source's), cleaned.
+- `rule`: made from the accented form by `scripts/make_ipa.py`. It reads the marks as above, takes the longest possible
+  onsets, treats `ng`, `ts`, `ch` and `sh` as single consonants and `ny`, `sy` as n+j, s+j, and puts a glottal stop
+  before a vowel that starts the word, follows a vowel of another syllable or follows a hyphen.
+- `english`: CMUdict, for English loanwords. A word counts as one when the dictionary derives it from an English word
+  spelled the same way, and not also from Spanish or a Tagalog root (`origin.tsv`, written by `scripts/make_origin.py`).
+  With no origin given, a single word of the English word list counts when it looks English: a letter or digraph
+  Tagalog does not use, six letters or more, or a doubled consonant. Names and accented forms never count, and a
+  hyphenated form only when the dictionary calls the whole form English.
+- `spelled`: abbreviations with no vowel, read by letter names with the last one stressed (`tv`, `dr`); `ng` is /ˈnaŋ/.
+
+`scripts/fix_ipa.py` brings every reading to that style. It drops syllable dots, length marks and tie bars, puts the
+stress mark at the start of its syllable, adds the glottal stop between two vowels, writes the tap as ɾ and *ly* as
+`lj`, and ends a final grave or circumflex in ʔ. A reading whose stress or vowels contradict the accent marks is
+replaced by the rule reading, and the English loanwords get their CMUdict reading. Running it again changes nothing.
+
+The IPA is metadata: the audio is synthesized from the accented form, never from the IPA. Forms with no stress
+information get next-to-last stress in the IPA, while the voice reads the bare word its own way. English words that the
+dictionary does not derive from English (it calls *chef* French), English compounds CMUdict lacks (*worktext*) and
+Spanish words are read by the Tagalog rules.
+
+## Phone check
+
+A phone-recognition model listens to each clip and writes the phones it hears, and `scripts/score_phones.py` compares
+them with the IPA (`checks/phones/README.md`). On all 151,262 current clips, ZIPA's phones differ from the IPA in 12.8 %
+of the phones (9.6 % without the glottal stop). By IPA source, that is 7.6 % for `dictionary`, 9.6 % for `rule`,
+10.7 % for hyphenated forms and 24.7 % for `english`. It also found 1,013 hyphenated clips cut at the hyphen, 2,992
+English loanwords spoken the Tagalog way and 5 clips with extra speech (`checks/phones/wordlist_all/`).
+
+## Workflows
+
+| Workflow | What it does |
+|---|---|
+| *Synthesize audio* (`synthesize.yml`) | runs a list through the voice in batches of 2,000, commits each batch to the branch it runs on, and starts a new run of itself at the 5-hour limit; `list=next` and `list=next-pilot` run the lists of the rebuild |
+| *Phone recognition* (`phones.yml`) | the phone check of a list, one job per model and shard; commits `checks/phones/<list>/` |
+| *Fix IPA* (`fix_ipa.yml`) | `scripts/fix_ipa.py` with CMUdict on `wordlist_all.tsv`, then `index.json` |
+| *Prepare the rebuild* (`prepare.yml`) | IPA for `next/wordlist.tsv` and the plan of the switch (`scripts/plan_next.py`) |
+| *Switch to the rebuilt list* (`switch.yml`) | `scripts/apply_next.py`: renames, retires and replaces clips, then installs the new list |
+| *Request* (`request.yml`) | starts the workflows listed in `next/request.txt` when a push changes it, for agents that can push but cannot start workflows (`scripts/request.py`) |
+
+The workflows reach Google through workload identity federation (repository secrets `GCP_WIF_PROVIDER`,
+`GCP_SERVICE_ACCOUNT`, `GCP_PROJECT_NUMBER`), so no key is stored in the repository. Google bills the voice per token,
+about 25 audio tokens per second of speech.
+
+## Making the list again
+
+The word list comes from the dictionary project: its published JSON, its KWF and UP source files, and two of its
+modules (`tagalog_orthography`, `tagalog_phonetics_baybayin`).
+
+```bash
+export TGL_ROOT=/path/to/Tagalog                       # the dictionary project
+export PYTHONPATH="$TGL_ROOT/Project TGL to PRT-BR/Scripts"
+DICT="$TGL_ROOT/Project TGL to PRT-BR/tagalog_ptbr_dictionary.json"
+python3 scripts/make_wordlist.py "$DICT" --top 0 --out next/wordlist.tsv
+python3 scripts/make_origin.py "$DICT" --list wordlist_all.tsv next/wordlist.tsv --out origin.tsv
+python3 checks/forms_fix/compare_forms.py wordlist_all.tsv index.json next/wordlist.tsv checks/forms_fix/changes.tsv
+```
+
+Then the *Prepare*, *Synthesize* and *Switch* workflows do the rest (`next/RUNBOOK.md`). Outside Actions,
+`scripts/tts_gemini.py <key> <list.tsv> audio` synthesizes a list. It is resumable, because existing files are
+skipped, and `<key>` is a key file, `-` for `$GOOGLE_ACCESS_TOKEN`, or `adc`. `scripts/build_index.py` then rebuilds
+`index.json`. `run_batches.sh` does both in batches and pushes each one.

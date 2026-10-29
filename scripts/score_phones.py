@@ -73,7 +73,7 @@ def main():
             "|---|---:|---:|---:|---:|---:|---:|---:|---:|"]
     cats = sorted({r.get("category", "") for r in rows})
     percat, worst = {}, {}
-    perclip, extra = collections.defaultdict(dict), collections.defaultdict(list)
+    perclip, extra, short = collections.defaultdict(dict), collections.defaultdict(list), collections.defaultdict(list)
     for m in models:
         E = N = E0 = N0 = exact = n = tp = fn = fp = tn = runaway = 0
         pc = collections.defaultdict(lambda: [0, 0])
@@ -91,6 +91,8 @@ def main():
             perclip[r["form"]][m] = d0 / max(1, len(r0))
             if len(h0) > 2 * len(r0) + 4:             # the model heard much more than the word
                 runaway += 1; extra[r["form"]].append(m)
+            if len(r0) >= 6 and len(h0) < 0.6 * len(r0):   # much less: the clip stops early (often at a hyphen)
+                short[r["form"]].append(m)
             rf, hf = ref[-1:] == ["ʔ"], hp[-1:] == ["ʔ"]
             tp += rf and hf; fn += rf and not hf; fp += hf and not rf; tn += not rf and not hf
             bad.append((d0 / max(1, len(r0)), r["form"], r.get("category", ""), r["ipa"], h))
@@ -114,6 +116,17 @@ def main():
     rep += ["", f"## Clips where {need} or more models hear much more than the word ({len(bad_audio)}, all in extra_speech.tsv)", "",
             "Usually the TTS read extra text (for example the instruction) into the clip: listen and re-synthesize.", ""]
     rep += [f"- {f}: " + ", ".join(f"{m} `{hyp[m][f][:120]}`" for m in extra[f]) for f in bad_audio[:100]] or ["(none)"]
+    kind = {r["form"]: "hyphenated" if "-" in r["form"].strip("-") else "plain" for r in rows}
+    ipa_of = {r["form"]: r["ipa"] for r in rows}
+    cut = [f for f, ms in short.items() if len(ms) >= need]
+    with open(os.path.join(checks, "truncated.tsv"), "w", encoding="utf-8") as fh:
+        fh.write("kind\tform\tipa\t" + "\t".join(ok) + "\n")
+        fh.write("".join(f"{kind[f]}\t{f}\t{ipa_of[f]}\t" + "\t".join(hyp[m].get(f, "") for m in ok) + "\n" for f in cut))
+    heard = collections.Counter(kind[f] for f, v in perclip.items() if len(v) >= need)
+    cuts = collections.Counter(kind[f] for f in cut)
+    rep += ["", f"## Clips heard much shorter than the word (under 60 % of its phones, words of 6+ phones): {len(cut)}, "
+            "all in truncated.tsv", "", "| Kind | Cut short | Clips | Share |", "|---|---:|---:|---:|"]
+    rep += [f"| {k} | {cuts[k]} | {heard[k]} | {cuts[k] / heard[k]:.1%} |" for k in ("hyphenated", "plain") if heard[k]]
     allbad = [(sum(v.values()) / len(v), f) for f, v in perclip.items() if len(v) == len(ok) and min(v.values()) >= 0.4]
     ipa = {r["form"]: (r.get("category", ""), r["ipa"]) for r in rows}
     allbad.sort(reverse=True)

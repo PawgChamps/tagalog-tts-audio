@@ -1,0 +1,23 @@
+name: Switch to the rebuilt list
+# Once every clip of the plan is committed: renames, retires and replaces clips, installs next/wordlist_ipa.tsv as
+# wordlist_all.tsv, rebuilds index.json, updates the README counts and removes next/ (scripts/apply_next.py).
+# Refuses while clips are missing.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: synthesize, cancel-in-progress: false }
+jobs:
+  switch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Switch
+        run: |
+          git config user.name "switch-bot"; git config user.email "switch-bot@users.noreply.github.com"
+          python3 scripts/apply_next.py
+          git commit -qm "Switch to the rebuilt word list (KWF > UP > Wiktionary > books)"
+          git pull -q --rebase && git push -q

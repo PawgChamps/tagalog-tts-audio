@@ -1,0 +1,22 @@
+name: Request
+# Starts the workflows named in next/request.txt when a push changes that file, on the branch pushed to. For agents that
+# can push but cannot start workflows; see scripts/request.py for the format and next/RUNBOOK.md for the steps.
+on:
+  push:
+    paths: ["next/request.txt"]
+permissions:
+  actions: write
+  contents: read
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts
+            next
+      - name: Start the requested workflows
+        run: python3 scripts/request.py next/request.txt
+        env: { GH_TOKEN: "${{ github.token }}" }

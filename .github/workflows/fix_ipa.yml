@@ -1,0 +1,35 @@
+name: Fix IPA
+# Runs scripts/fix_ipa.py with CMUdict installed (English readings for the English loanwords of origin.tsv), rebuilds
+# index.json and commits the two files when they change.  The audio is not checked out: build_index.py takes the list of
+# clips from the commit.  fix_ipa.py reads the word list as it was before English readings (git show 685c194), hence the
+# full history (commits and folders only; sparse checkouts fetch file contents on demand).
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: fix-ipa, cancel-in-progress: false }
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: scripts          # cone mode: the files at the root (wordlist_all.tsv, origin.tsv, index.json) come too
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Install CMUdict and the English word list
+        run: |
+          pip install -q cmudict
+          [ -f /usr/share/dict/words ] || { sudo apt-get update -q && sudo apt-get install -y -q wamerican; }
+          readlink -f /usr/share/dict/words                # the list the local runs used: wamerican (american-english)
+      - name: Fix the IPA and rebuild the index
+        run: |
+          python3 scripts/fix_ipa.py --write
+          python3 scripts/build_index.py
+      - name: Commit
+        run: |
+          git config user.name "ipa-bot"; git config user.email "ipa-bot@users.noreply.github.com"
+          git add wordlist_all.tsv index.json
+          git diff --cached --quiet || { git commit -qm "IPA: fix_ipa.py with CMUdict (English readings only for English loanwords)"; git pull -q --rebase; git push -q; }

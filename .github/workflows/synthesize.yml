@@ -1,13 +1,17 @@
 name: Synthesize audio
-# Runs the word list through Gemini 3.1 Flash TTS (voice Laomedeia) and commits the clips. Resumable: files that
-# already exist are skipped, so a run that stops at the 6-hour limit is simply started again (it re-dispatches itself).
+# Runs a word list through Gemini 3.1 Flash TTS (voice Laomedeia) and commits the clips to the branch it runs on.
+# Resumable: files that already exist are skipped, so a run that stops at the time limit simply starts again (it
+# re-dispatches itself with the same inputs).
 on:
   workflow_dispatch:
     inputs:
-      batch:   { description: "Words per commit", default: "2000" }
-      workers: { description: "Parallel requests", default: "4" }
-      hours:   { description: "Stop after this many hours (max 5)", default: "5" }
-      list:    { description: "Word list file", default: "wordlist_all.tsv" }
+      list:      { description: "Word list (TSV, first column the accented form), or next / next-pilot (next/RUNBOOK.md)", default: "wordlist_all.tsv" }
+      outdir:    { description: "Folder for the clips (<outdir>/<letter>/<form>.mp3)", default: "audio" }
+      respell:   { description: "TSV form<TAB>text sent instead of the form, if the file exists", default: "respell.tsv" }
+      prompt:    { description: "Prompt: tagalog or english (scripts/tts_gemini.py PROMPTS)", default: "tagalog" }
+      batch:     { description: "Words per commit", default: "2000" }
+      workers:   { description: "Parallel requests", default: "4" }
+      hours:     { description: "Stop after this many hours (max 5)", default: "5" }
       max_words: { description: "Stop after this many words in total (0 = the whole list)", default: "0" }
 permissions:
   contents: write
@@ -20,6 +24,14 @@ jobs:
     timeout-minutes: 350
     env:
       GOOGLE_QUOTA_PROJECT: ${{ secrets.GCP_PROJECT_NUMBER }}
+      LIST: ${{ inputs.list }}
+      OUTDIR: ${{ inputs.outdir }}
+      RESPELL: ${{ inputs.respell }}
+      PROMPT: ${{ inputs.prompt }}
+      BATCH: ${{ inputs.batch }}
+      WORKERS: ${{ inputs.workers }}
+      HOURS: ${{ inputs.hours }}
+      MAX_WORDS: ${{ inputs.max_words }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -34,20 +46,37 @@ jobs:
         id: synth
         run: |
           git config user.name "tts-bot"; git config user.email "tts-bot@users.noreply.github.com"
-          END=$(( $(date +%s) + ${{ inputs.hours }} * 3600 ))
-          total=$(( $(wc -l < ${{ inputs.list }}) - 1 ))
-          MAX=${{ inputs.max_words }}; [ "$MAX" -gt 0 ] && [ "$MAX" -lt "$total" ] && total=$MAX
-          N=${{ inputs.batch }}; [ "$N" -gt "$total" ] && N=$total
-          for ((start = 0; start < total && $(date +%s) < END; start += N)); do
-            { head -1 ${{ inputs.list }}; tail -n +2 ${{ inputs.list }} | sed -n "$((start + 1)),$((start + N))p"; } > "$RUNNER_TEMP/batch.tsv"
-            python3 scripts/tts_gemini.py adc "$RUNNER_TEMP/batch.tsv" audio $( [ -f respell.tsv ] && echo "--respell respell.tsv" ) --workers ${{ inputs.workers }} \
-              --model gemini-3.1-flash-tts-preview --voice Laomedeia | tail -1
-            python3 scripts/build_index.py
-            git add audio index.json
-            git diff --cached --quiet || { git commit -qm "audio: rows $((start + 1))-$((start + N))"; git pull -q --rebase; git push -q; }
+          END=$(( $(date +%s) + HOURS * 3600 ))
+          # list=next: the four lists of the rebuild plan in turn; list=next-pilot: its two pilots (next/RUNBOOK.md)
+          case "$LIST" in
+            next)       RESPELL=next/respell.tsv
+                        JOBS="next/synthesize.tsv:audio:tagalog next/synthesize_english.tsv:audio:english next/redo.tsv:next/redo_audio:tagalog next/redo_english.tsv:next/redo_audio:english" ;;
+            next-pilot) RESPELL=next/respell.tsv
+                        JOBS="next/pilot.tsv:audio:tagalog next/pilot_english.tsv:next/redo_audio:english" ;;
+            *)          JOBS="$LIST:$OUTDIR:$PROMPT" ;;
+          esac
+          RESP=(); [ -f "$RESPELL" ] && RESP=(--respell "$RESPELL")
+          more=0
+          for job in $JOBS; do
+            IFS=: read -r L O P <<< "$job"
+            [ -f "$L" ] || continue
+            total=$(( $(wc -l < "$L") - 1 ))
+            [ "$MAX_WORDS" -gt 0 ] && [ "$MAX_WORDS" -lt "$total" ] && total=$MAX_WORDS
+            N=$BATCH; [ "$N" -gt "$total" ] && N=$total
+            for ((start = 0; start < total; start += N)); do
+              if [ "$(date +%s)" -ge "$END" ]; then more=1; break 2; fi
+              { head -1 "$L"; tail -n +2 "$L" | sed -n "$((start + 1)),$((start + N))p"; } > "$RUNNER_TEMP/batch.tsv"
+              python3 scripts/tts_gemini.py adc "$RUNNER_TEMP/batch.tsv" "$O" "${RESP[@]}" --prompt "$P" \
+                --workers "$WORKERS" --model gemini-3.1-flash-tts-preview --voice Laomedeia | tail -1
+              python3 scripts/build_index.py
+              git add "$O" index.json
+              git diff --cached --quiet || { git commit -qm "audio: $L rows $((start + 1))-$((start + N))"; git pull -q --rebase; git push -q; }
+            done
           done
-          if [ "$start" -lt "$total" ]; then echo "more=1" >> "$GITHUB_OUTPUT"; fi
+          if [ "$more" = 1 ]; then echo "more=1" >> "$GITHUB_OUTPUT"; fi
       - name: Continue in a new run if the time limit stopped this one
         if: steps.synth.outputs.more == '1'
-        run: gh workflow run synthesize.yml --ref "$GITHUB_REF_NAME" -f batch=${{ inputs.batch }} -f workers=${{ inputs.workers }} -f hours=${{ inputs.hours }} -f max_words=${{ inputs.max_words }} -f list=${{ inputs.list }}
+        run: |
+          gh workflow run synthesize.yml --ref "$GITHUB_REF_NAME" -f list="$LIST" -f outdir="$OUTDIR" -f respell="$RESPELL" \
+            -f prompt="$PROMPT" -f batch="$BATCH" -f workers="$WORKERS" -f hours="$HOURS" -f max_words="$MAX_WORDS"
         env: { GH_TOKEN: "${{ github.token }}" }

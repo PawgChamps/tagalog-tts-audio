@@ -3,29 +3,48 @@
 
     python3 scripts/fix_ipa.py            # dry run: prints counts and samples, writes nothing
     python3 scripts/fix_ipa.py --write    # rewrites wordlist_all.tsv (then run scripts/build_index.py)
+    python3 scripts/fix_ipa.py --list next/wordlist.tsv --out next/wordlist_ipa.tsv   # another list, written elsewhere
 
-Needs `pip install cmudict` (English pronunciations for English loanwords).  What it does, in order:
+Besides the list it reads origin.tsv (what the dictionary says about each word's origin, from scripts/make_origin.py),
+the English word list /usr/share/dict/words, CMUdict (`pip install cmudict`) and, when the list has English readings, the
+list as it was before English readings existed (git history, commit 685c194).  Without CMUdict the English readings
+already in the list are kept or taken back, and none are added.  Running it again changes nothing.  What it does, in order:
 
  dictionary readings (ipa_source = dictionary)
    1. drop notes after the closing slash ("/ˈbas/ (Taglish)");
    2. readings that hold several words ("/ˈɡeŋ ɡeŋ/", garbled reduplications) are rebuilt: by rule for Tagalog spellings,
-      from CMUdict for English ones, letter by letter for consonant-only abbreviations;
-   3. notation brought to the documented style: no syllable dots, no length marks, no tie bars, glide y -> j, ʎ -> lj;
+      from CMUdict for English words, letter by letter for consonant-only abbreviations;
+   3. notation brought to the documented style: no syllable dots, no length marks, no tie bars, glide y -> j, ʎ -> lj,
+      r -> ɾ;
    4. the stress mark is moved to the start of its syllable when the dictionary's dot had left it after a consonant
       (ʔib.ˈaŋ -> ʔiˈbaŋ); after a hyphen the glottal stop is written (paɡ.ˈaral -> paɡˈʔaɾal);
-   4b. two vowels in a row get their glottal stop (kahalataan -> kahalataʔan); readings that lost vowels or read
-      consonant+y as consonant+i (akyat -> ki-at) are replaced by the rule reading;
+   4b. two vowels in a row get their glottal stop (kahalataan -> kahalataʔan); a final grave or circumflex accent gets
+      its glottal stop (badò -> ˈbadoʔ); readings that lost vowels or read consonant+y as consonant+i (akyat -> ki-at)
+      are replaced by the rule reading;
    5. if the stress still is not on the vowel the accent mark of the spelling names, the rule reading replaces it;
-   6. readings that still contain spelling leftovers (th, sh, ea, ou ...) for words CMUdict knows are replaced by it.
+   6. English words (below) get their CMUdict reading.
  generated readings (rule / spelled)
-   7. English loanwords (no accent mark, not a name, found in CMUdict, and a foreign letter or digraph, or six letters or more, or a doubled consonant) get their English reading
-      (ipa_source = english); consonant-only words with y (gym, sky) too.
+   7. English words get their CMUdict reading; the others are regenerated with the current rule.
+ English words (ipa_source = english): no accent mark, not a name, a vowel letter (dr and st are not read as drive and
+ street), CMUdict has the spelling, and either
+   - origin.tsv says English, not Spanish or native, and not respelled from another English word (bi from bee), at any
+     length (affixes only when they also look English, as below); or
+   - no origin information, or only a language other than English, Spanish and Tagalog (chef and boutique: French),
+     a single word (no hyphen) of the English word list, not given as a variant spelling of
+     another word, and it looks English: a letter or digraph Tagalog does not use, six letters or more or a doubled
+     consonant (rule readings), spelling leftovers such as th, ea or ou in the reading (dictionary readings), y as the
+     only vowel (gym).
+ A row that loses its English reading gets back its reading from before English readings, cleaned as above (the rule
+ reading if it had no dictionary reading).
 """
+import argparse
+import os
 import re
+import subprocess
 import sys
 import unicodedata
 
-sys.path.insert(0, __import__("os").path.dirname(__file__))
+sys.path.insert(0, os.path.dirname(__file__))
 import make_ipa as M
 
 try:
@@ -34,9 +53,16 @@ try:
 except ImportError:
     CMU = {}
 
+OLD_LIST = "685c194c74c6b51bc24ee55fd40c8c00974f715d"         # wordlist_all.tsv before English readings (7095dd0)
+WORD_LIST = "/usr/share/dict/words"
+ORIGIN, WORDS = {}, set()          # plain spelling -> origin flags (origin.tsv); English word list
+DECIDING = {"en", "es", "native", "respelled"}   # flags that settle English or not; `other` alone (chef: French) does not
+HAVE, PENDING = {}, set()          # English readings already in the list (they stand in for CMUdict); rows waiting for it
+
 VOW = set("aeiouəɛɔɪʊæʌɑɝɚ")
 FORM_V = set("aeiou")
 ACCENTED = dict(zip("áéíóúàèìòùâêîôû", "aeiouaeiouaeiou"))
+GLOTTAL_MARKS = set("àèìòùâêîôû")
 FOREIGN_LETTERS = re.compile(r"[cfjqvxz]|ch|sh|th|ph|ck|wh|gh|oo|ee|ou|ea|ow|ie")
 LEFTOVER = re.compile(r"th|sh|ch|ck|ph|ea|ou|oo|ee|ie|ui|qu|wh|ow|gh")
 CL = {a + b for a in "bkdɡpstfv" for b in "lɾr"}
@@ -138,6 +164,54 @@ def cmu_ipa(form):
     return "/" + res + "/"
 
 
+ALT_SENSE = re.compile(r"variante de|forma alternativa|grafia alternativa|sinônimo de|"
+                       r"(?:grafia|forma) (?:datada|obsoleta|antiga|arcaica) de", re.I)     # Tagalog variants, not English
+NAME_SENSE = re.compile(r"sobrenome|prenome|nome pr[óo]prio|nome de (?:homem|mulher|pessoa)|nome masculino|nome feminino|apelido", re.I)
+
+
+def is_name(r):
+    return bool(NAME_SENSE.search(r[5])) or r[0][:1].isupper()      # names keep their dictionary / rule reading
+
+
+def english_ok(r, looks):
+    """may the row have an English reading (when CMUdict has the spelling)?  looks: it looks English (see fix)"""
+    form, p = r[0], plain(r[0])
+    if has_accent(form) or is_name(r) or not re.search(r"[aeiouy]", p):
+        return False
+    o = ORIGIN.get(p)
+    if o and o & DECIDING:                           # the dictionary says whether the word comes from English
+        return "en" in o and not o & {"es", "native", "respelled"} and (looks or not (form.startswith("-") or form.endswith("-")))
+    return looks and "-" not in form and p in WORDS and not ALT_SENSE.search(r[5])     # no origin, or another language only
+
+
+def english_reading(r, looks):
+    if not english_ok(r, looks):
+        return None
+    e = HAVE.get(r[0]) or cmu_ipa(r[0])
+    if e is None and not CMU:
+        PENDING.add(r[0])
+    return e
+
+
+def why_not_english(r):
+    """why a row may not have an English reading (for the report)"""
+    form, p = r[0], plain(r[0])
+    o = ORIGIN.get(p)
+    if has_accent(form) or is_name(r) or not re.search(r"[aeiouy]", p):
+        return "accent mark, name or no vowel"
+    if o and o & DECIDING:
+        if "en" not in o:
+            return "the dictionary gives another origin"
+        if "respelled" in o and not o & {"es", "native"}:
+            return "respelled from another English word"
+        return "affix" if not o & {"es", "native"} else "the dictionary also gives a Spanish or native origin"
+    if "-" in form:
+        return "hyphenated, no origin information"
+    if p not in WORDS:
+        return "no origin information, not in the English word list"
+    return "no origin information, variant spelling" if ALT_SENSE.search(r[5]) else "no origin information, does not look English"
+
+
 # ---------------------------------------------------------------- dictionary notation
 def move_stress(body, form):
     """stress mark left after a consonant by the dictionary's syllable dot -> start of the syllable (or ˈʔ after a hyphen)"""
@@ -198,15 +272,10 @@ def stress_ok(form, body):
     return stress_index(body) in ok
 
 
-ALT_SENSE = re.compile(r"variante de|forma alternativa|grafia alternativa|sinônimo de", re.I)      # Tagalog variants, not English
-NAME_SENSE = re.compile(r"sobrenome|prenome|nome pr[óo]prio|nome de (?:homem|mulher|pessoa)|nome masculino|nome feminino|apelido", re.I)
-
-
 def fix(r):
     form, src, ipa = r[0], r[6], r[3]
-    is_name = bool(NAME_SENSE.search(r[5])) or form[:1].isupper()      # names keep their dictionary / rule reading
     new, nsrc, why = ipa, src, None
-    if src == "english":
+    if src == "english":                               # decided in main(): kept, or taken back to the earlier reading
         return new, nsrc, why
     if src == "dictionary":
         m = re.match(r"(/[^/]*/)", ipa)
@@ -216,7 +285,7 @@ def fix(r):
         multi = " " in body
         dots = "." in body
         if multi or "ʎ" in body:
-            e = cmu_ipa(form) if not has_accent(form) and not is_name else None
+            e = english_reading(r, True)
             if e:
                 new, nsrc, why = e, "english", "multi-word/ly reading rebuilt from CMUdict"
             elif re.search(r"[aeiou]", plain(form)):
@@ -232,14 +301,19 @@ def fix(r):
             tl = tagalog_like(form)
             if tl:
                 nb = hiatus(nb)
-            new = "/" + nb + "/"
+            glottal = form[-1:].lower() in GLOTTAL_MARKS and not nb.endswith("ʔ")
+            if glottal:
+                nb += "ʔ"
+            tapped = nb.replace("r", "ɾ")
+            new = "/" + tapped + "/"
             if new != ipa:
-                why = why or ("notation" if dots else "cleaned")
-            e = None
-            if not has_accent(form) and not is_name and (LEFTOVER.search(raw) or (not tl and re.search(r"[aeiou][aeiou]", raw))):
-                e = cmu_ipa(form)
+                why = why or ("notation" if dots else "final glottal stop added" if glottal else
+                              "r written as ɾ" if "/" + nb + "/" == ipa else "cleaned")
+            nb = tapped
+            looks = bool(LEFTOVER.search(raw) or (not tl and re.search(r"[aeiou][aeiou]", raw)))
+            e = english_reading(r, looks)
             if e:
-                new, nsrc, why = e, "english", "spelling leftovers in reading"
+                new, nsrc, why = e, "english", "spelling leftovers in reading" if looks else "English loanword (dictionary reading)"
             elif tl and broken(form, nb) and re.search(r"[aeiou]", plain(form)):
                 rule = M.ipa(form)
                 if nvow(rule.replace("ʔ", "")) == len(form_vowels(form)):
@@ -252,11 +326,9 @@ def fix(r):
         p = plain(form)
         looks_english = FOREIGN_LETTERS.search(p) or (src == "spelled" and "y" in p) or (
             src == "rule" and (len(p) >= 6 or re.search(r"([^aeiou])\1", p)) and not ALT_SENSE.search(r[5]))   # long / doubled consonant
-        english = not has_accent(form) and not is_name and re.search(r"[aeiouy]", p) and looks_english
-        if english:
-            e = cmu_ipa(form)
-            if e:
-                new, nsrc, why = e, "english", "English loanword"
+        e = english_reading(r, bool(looks_english))
+        if e:
+            new, nsrc, why = e, "english", "English loanword"
         if nsrc == src:                                  # regenerate with the corrected rule
             vowelless = not re.search(r"[aeiou]", plain(form))
             g = M.spelled(form) if vowelless else M.ipa(form)
@@ -266,34 +338,101 @@ def fix(r):
     return new, nsrc, why
 
 
+def settle(r):
+    """apply fix() until the row no longer changes (a rule reading can still be an English word) -> (row, last reason)"""
+    r, why = list(r), None
+    for _ in range(4):
+        new, nsrc, w = fix(r)
+        if new == r[3] and nsrc == r[6]:
+            break
+        r[3], r[6], why = new, nsrc, w
+    return r, why
+
+
+def load_inputs(origin="origin.tsv"):
+    if not os.path.exists(origin):
+        sys.exit(f"{origin} is missing: run scripts/make_origin.py <dictionary json> first")
+    lines = open(origin, encoding="utf-8").read().split("\n")
+    names = lines[0].split("\t")[1:]
+    for ln in lines[1:]:
+        if ln:
+            k, *fl = ln.split("\t")
+            ORIGIN[k] = {n for n, v in zip(names, fl) if v == "1"}
+    try:
+        WORDS.update(w.strip() for w in open(WORD_LIST, encoding="utf-8", errors="ignore"))
+    except OSError:
+        sys.exit(f"the English word list {WORD_LIST} is missing (apt install wamerican)")
+
+
+def old_list():
+    """form -> row of wordlist_all.tsv before English readings existed"""
+    try:
+        txt = subprocess.run(["git", "show", OLD_LIST + ":wordlist_all.tsv"], capture_output=True, check=True).stdout.decode("utf-8")
+    except (OSError, subprocess.CalledProcessError) as e:
+        sys.exit(f"needs the git history to recheck the English readings (git show {OLD_LIST[:7]}:wordlist_all.tsv): {e}")
+    return {r[0]: r for r in (ln.split("\t") for ln in txt.split("\n")[1:] if ln)}
+
+
+def run(rows):
+    """rows of the list -> (fixed rows, {reason: [(form, before, after)]}, English readings kept)"""
+    HAVE.clear(); PENDING.clear()
+    HAVE.update({r[0]: r[3] for r in rows if r[6] == "english"})
+    old = old_list() if HAVE else {}
+    out, changes, kept = [], {}, 0
+    for r in rows:
+        r = list(r)
+        first = r[3]
+        if r[6] == "english":                            # recheck from the reading it had before English readings
+            o = old.get(r[0])
+            start = r[:3] + [o[3]] + r[4:6] + [o[6]] if o else r[:3] + [M.ipa(r[0]) or M.spelled(r[0])] + r[4:6] + ["rule"]
+            s, why = settle(start)
+            if s[6] == "english":
+                kept += 1
+                why = None
+            else:
+                r[3], r[6] = s[3], s[6]
+                why = "English reading taken back: " + why_not_english(r)
+        else:
+            s, why = settle(r)
+            r[3], r[6] = s[3], s[6]
+        if why:
+            changes.setdefault(why, []).append((r[0], first, r[3]))
+        out.append(r)
+    return out, changes, kept
+
+
 def main():
-    write = "--write" in sys.argv
-    lines = open("wordlist_all.tsv", encoding="utf-8").read().split("\n")
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--write", action="store_true", help="rewrite the list (or write --out)")
+    ap.add_argument("--list", default="wordlist_all.tsv")
+    ap.add_argument("--origin", default="origin.tsv")
+    ap.add_argument("--out", default="", help="write the fixed list here instead of over --list (implies --write)")
+    a = ap.parse_args()
+    write, out_path = a.write or bool(a.out), a.out or a.list
+    lines = open(a.list, encoding="utf-8").read().split("\n")
     header, body = lines[0], lines[1:]
     if body and body[-1] == "":
         body.pop()
-    out, stats, samples = [header], {}, {}
-    for ln in body:
-        r = ln.split("\t")
-        assert len(r) == 7, ln[:80]
-        first = r[3]
-        why = None
-        for _ in range(4):                               # repeat until stable (a rule reading can still be an English word)
-            new, nsrc, w = fix(r)
-            if new == r[3] and nsrc == r[6]:
-                break
-            r[3], r[6], why = new, nsrc, w
-        if why:
-            stats[why] = stats.get(why, 0) + 1
-            samples.setdefault(why, []).append((r[0], first, r[3]))
-        out.append("\t".join(r))
-    for k, v in sorted(stats.items(), key=lambda kv: -kv[1]):
-        print(f"{v:7}  {k}")
-        for s in samples[k][:4]:
+    rows = [ln.split("\t") for ln in body]
+    for r in rows:
+        assert len(r) == 7, "\t".join(r)[:80]
+    load_inputs(a.origin)
+    if not CMU:
+        print("CMUdict is not installed (pip install cmudict): English readings are kept or taken back, none are added")
+    out, changes, kept = run(rows)
+    for k, v in sorted(changes.items(), key=lambda kv: -len(kv[1])):
+        print(f"{len(v):7}  {k}")
+        for s in v[:4]:
             print(f"           {s[0]}   {s[1]}  ->  {s[2]}")
+    back = sum(len(v) for k, v in changes.items() if k.startswith("English reading taken back"))
+    print(f"English readings: {kept:,} kept, {back:,} taken back, {sum(r[6] == 'english' for r in out) - kept:,} added")
+    waiting = sum(1 for r in out if r[0] in PENDING and r[6] != "english")
+    if waiting:
+        print(f"{waiting:,} rows get an English reading where CMUdict has the spelling (run with CMUdict installed)")
+    print("ipa_source: " + ", ".join(f"{s} {sum(r[6] == s for r in out):,}" for s in ("dictionary", "rule", "english", "spelled")))
     if write:
-        open("wordlist_all.tsv", "w", encoding="utf-8").write("\n".join(out) + "\n")
-        print("wordlist_all.tsv rewritten; now run scripts/build_index.py")
+        open(out_path, "w", encoding="utf-8").write("\n".join([header] + ["\t".join(r) for r in out]) + "\n")
+        print(f"{out_path} written" + ("; now run scripts/build_index.py" if out_path == "wordlist_all.tsv" else ""))
 
 
 if __name__ == "__main__":
