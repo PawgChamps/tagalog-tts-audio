@@ -5,45 +5,64 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tagalog word audio</title>
 <style>
-  :root { --bg:#fbfaf7; --fg:#1d1d1b; --muted:#6b6a64; --line:#e4e1d8; --card:#fff; --accent:#1f6f5c; --accent-fg:#fff; }
+  :root { --bg:#fbfaf7; --fg:#1d1d1b; --muted:#6b6a64; --line:#e4e1d8; --card:#fff; --accent:#1f6f5c; --accent-fg:#fff; --hover:#f1efe8; }
   @media (prefers-color-scheme: dark) {
-    :root { --bg:#161715; --fg:#ecebe6; --muted:#9b9a92; --line:#2c2d2a; --card:#1f201d; --accent:#4cb89c; --accent-fg:#10201b; }
+    :root { --bg:#161715; --fg:#ecebe6; --muted:#9b9a92; --line:#2c2d2a; --card:#1f201d; --accent:#4cb89c; --accent-fg:#10201b; --hover:#272825; }
   }
   * { box-sizing: border-box; }
   body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
-  main { max-width:640px; margin:0 auto; padding:32px 16px 64px; }
+  main { max-width:640px; margin:0 auto; padding:0 16px 48px; }
+  header { padding-top:28px; }
   h1 { font-size:1.5rem; margin:0 0 4px; }
-  .sub { color:var(--muted); margin:0 0 20px; font-size:.95rem; }
+  .sub { color:var(--muted); margin:0 0 16px; font-size:.95rem; }
   .sub a { color:inherit; }
-  input[type=search] { width:100%; padding:12px 14px; font:inherit; color:var(--fg); background:var(--card); border:1px solid var(--line); border-radius:10px; }
+  .bar { position:sticky; top:0; z-index:5; background:var(--bg); padding:8px 0 10px; border-bottom:1px solid var(--line); }
+  input[type=search] { width:100%; padding:11px 14px; font:inherit; color:var(--fg); background:var(--card); border:1px solid var(--line); border-radius:10px; }
   input[type=search]:focus { outline:2px solid var(--accent); outline-offset:1px; }
-  #status { color:var(--muted); font-size:.9rem; margin:10px 2px 14px; min-height:1.3em; }
-  ul { list-style:none; margin:0; padding:0; display:grid; gap:8px; }
-  li { display:flex; align-items:center; gap:12px; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:8px 12px 8px 8px; }
-  button { flex:none; width:40px; height:40px; border:0; border-radius:50%; background:var(--accent); color:var(--accent-fg); font-size:15px; cursor:pointer; }
-  button:focus-visible { outline:2px solid var(--fg); outline-offset:2px; }
-  button[aria-pressed=true] { box-shadow:0 0 0 3px color-mix(in srgb, var(--accent) 35%, transparent); }
-  .word { font-size:1.1rem; font-weight:600; }
-  .meta { color:var(--muted); font-size:.85rem; }
+  nav { display:flex; flex-wrap:wrap; gap:2px; margin-top:8px; }
+  nav button { min-width:28px; height:28px; padding:0 4px; border:0; border-radius:6px; background:transparent; color:var(--fg); font:600 .85rem system-ui,sans-serif; cursor:pointer; }
+  nav button:hover { background:var(--hover); }
+  nav button[aria-current=true] { background:var(--accent); color:var(--accent-fg); }
+  nav button:disabled { color:var(--muted); opacity:.4; cursor:default; background:transparent; }
+  #status { color:var(--muted); font-size:.85rem; margin:8px 2px 0; min-height:1.3em; }
+  #list { position:relative; margin-top:6px; }
+  .row { position:absolute; left:0; right:0; height:54px; display:flex; align-items:center; gap:12px; padding:0 12px 0 7px; background:var(--card); border:1px solid var(--line); border-radius:10px; cursor:pointer; }
+  .row:hover { background:var(--hover); }
+  .row button { flex:none; width:38px; height:38px; border:0; border-radius:50%; background:var(--accent); color:var(--accent-fg); font-size:14px; cursor:pointer; }
+  .row button:focus-visible { outline:2px solid var(--fg); outline-offset:2px; }
+  .row button[aria-pressed=true] { box-shadow:0 0 0 3px color-mix(in srgb, var(--accent) 35%, transparent); }
   .info { min-width:0; flex:1; }
-  .rank { color:var(--muted); font-size:.8rem; flex:none; }
-  .err { color:#b3261e; }
+  .word { font-size:1.05rem; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .meta { color:var(--muted); font-size:.82rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .rank { color:var(--muted); font-size:.78rem; flex:none; }
+  .err { color:#b3261e !important; }
+  #empty { color:var(--muted); text-align:center; padding:40px 0; }
 </style>
 </head>
 <body>
 <main>
-  <h1>Tagalog word audio</h1>
-  <p class="sub">Search a word and press play. Accents and capital letters don't matter. <a href="https://github.com/PawgChamps/tagalog-tts-audio">Source on GitHub</a></p>
-  <input id="q" type="search" placeholder="Search, e.g. baka" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Search words" disabled>
-  <div id="status" role="status">Loading the word list…</div>
-  <ul id="list"></ul>
+  <header>
+    <h1>Tagalog word audio</h1>
+    <p class="sub">Every word, A to Z. Scroll, jump to a letter, or search, then press play. <a href="https://github.com/PawgChamps/tagalog-tts-audio">Source on GitHub</a></p>
+  </header>
+  <div class="bar">
+    <input id="q" type="search" placeholder="Search words" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Search words" disabled>
+    <nav id="letters" aria-label="Jump to letter"></nav>
+    <div id="status" role="status">Loading the word list…</div>
+  </div>
+  <div id="list"></div>
+  <div id="empty" hidden>No matches</div>
 </main>
 <script>
 const RAW = "https://raw.githubusercontent.com/PawgChamps/tagalog-tts-audio/main/";
 const BASE = new URLSearchParams(location.search).get("base") || RAW;   // ?base=... for local testing
-const $q = document.getElementById("q"), $status = document.getElementById("status"), $list = document.getElementById("list");
+const ROW = 60, OVERSCAN = 8;
+const $q = document.getElementById("q"), $status = document.getElementById("status"), $list = document.getElementById("list"),
+      $letters = document.getElementById("letters"), $empty = document.getElementById("empty"), $bar = document.querySelector(".bar");
 const norm = s => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
-let entries = [], audio = null, playingBtn = null;
+const letterOf = k => /^[a-z]/.test(k) ? k[0] : "#";
+let all = [], view = [], letterStart = {}, audio = null, playingBtn = null, firstVisible = 0;
+const rows = new Map();                      // index -> element, only the ones near the screen
 
 function url(file) { return BASE + file.split("/").map(encodeURIComponent).join("/"); }
 
@@ -52,49 +71,81 @@ function play(e, btn) {
   audio = new Audio(url(e.file)); playingBtn = btn;
   btn.setAttribute("aria-pressed", "true");
   audio.addEventListener("ended", () => btn.setAttribute("aria-pressed", "false"));
-  audio.addEventListener("error", () => { btn.setAttribute("aria-pressed", "false"); $status.textContent = "Could not load " + e.form + "."; $status.className = "err"; });
+  audio.addEventListener("error", () => { btn.setAttribute("aria-pressed", "false"); $status.textContent = "Could not load " + e.form + "."; $status.classList.add("err"); });
   audio.play().catch(() => {});
 }
 
-function render(results, total, q) {
-  $list.replaceChildren();
-  for (const e of results) {
-    const li = document.createElement("li");
-    const b = document.createElement("button"); b.textContent = "▶"; b.setAttribute("aria-label", "Play " + e.form); b.setAttribute("aria-pressed", "false");
-    b.onclick = () => play(e, b);
-    const info = document.createElement("div"); info.className = "info";
-    const w = document.createElement("div"); w.className = "word"; w.textContent = e.form;
-    info.append(w);
-    if (e.ipa) { const m = document.createElement("div"); m.className = "meta"; m.textContent = e.ipa; info.append(m); }
-    li.append(b, info);
-    if (e.rank != null) { const r = document.createElement("div"); r.className = "rank"; r.textContent = "#" + e.rank; li.append(r); }
-    $list.append(li);
-  }
-  $status.className = "";
-  $status.textContent = q ? (total ? `${results.length < total ? "Showing " + results.length + " of " : ""}${total.toLocaleString()} match${total === 1 ? "" : "es"}` : "No matches") : "Most common words";
+function makeRow(i) {
+  const e = view[i], div = document.createElement("div");
+  div.className = "row"; div.style.top = i * ROW + "px";
+  const b = document.createElement("button"); b.textContent = "▶"; b.setAttribute("aria-label", "Play " + e.form); b.setAttribute("aria-pressed", "false");
+  const info = document.createElement("div"); info.className = "info";
+  const w = document.createElement("div"); w.className = "word"; w.textContent = e.form; info.append(w);
+  if (e.ipa) { const m = document.createElement("div"); m.className = "meta"; m.textContent = e.ipa; info.append(m); }
+  div.append(b, info);
+  if (e.rank != null) { const r = document.createElement("div"); r.className = "rank"; r.textContent = "#" + e.rank; div.append(r); }
+  div.onclick = () => play(e, b);
+  return div;
+}
+
+function draw() {
+  const top = $list.getBoundingClientRect().top;                    // negative once scrolled into the list
+  const barH = $bar.offsetHeight;
+  const first = Math.max(0, Math.floor((barH - top) / ROW) - OVERSCAN);
+  const last = Math.min(view.length - 1, Math.ceil((innerHeight - top) / ROW) + OVERSCAN);
+  for (const [i, el] of rows) if (i < first || i > last) { el.remove(); rows.delete(i); }
+  for (let i = first; i <= last; i++) if (!rows.has(i)) { const el = makeRow(i); $list.append(el); rows.set(i, el); }
+  firstVisible = Math.max(0, Math.floor((barH - top) / ROW));
+  markLetter();
+}
+
+function markLetter() {
+  const cur = view[Math.min(firstVisible, view.length - 1)];
+  const l = cur ? letterOf(cur.key) : "";
+  for (const b of $letters.children) b.setAttribute("aria-current", String(b.dataset.l === l && view === all));
+}
+
+function setView(v, label) {
+  view = v; rows.forEach(el => el.remove()); rows.clear();
+  $list.style.height = v.length * ROW + "px"; $empty.hidden = v.length > 0;
+  $status.classList.remove("err"); $status.textContent = label;
+  draw();
 }
 
 function search() {
   const q = norm($q.value.trim());
-  const exact = [], prefix = [], contains = []; let total = 0; const CAP = 100;
-  if (!q) { render(entries.slice(0, CAP), 0, ""); return; }
-  for (const e of entries) {                 // entries are pre-sorted by frequency rank
+  if (!q) { setView(all, `${all.length.toLocaleString()} words`); return; }
+  const exact = [], prefix = [], contains = [];
+  for (const e of all) {                          // `all` is alphabetical, so each bucket stays alphabetical
     const i = e.key.indexOf(q);
     if (i < 0) continue;
-    total++;
-    const bucket = e.key === q ? exact : i === 0 ? prefix : contains;
-    if (bucket.length < CAP) bucket.push(e);
+    (e.key === q ? exact : i === 0 ? prefix : contains).push(e);
   }
-  render(exact.concat(prefix, contains).slice(0, CAP), total, q);
+  const res = exact.concat(prefix, contains);
+  setView(res, `${res.length.toLocaleString()} match${res.length === 1 ? "" : "es"}`);
+  scrollTo(0, Math.min(scrollY, $list.offsetTop - 8));
+}
+
+function jump(l) {
+  if ($q.value) { $q.value = ""; setView(all, `${all.length.toLocaleString()} words`); }
+  scrollTo({ top: $list.offsetTop + letterStart[l] * ROW - $bar.offsetHeight, behavior: "auto" });
 }
 
 fetch(BASE + "index.json").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(d => {
-  entries = Object.entries(d).map(([form, v]) => ({ form, file: v.file, ipa: v.ipa, rank: v.rank, key: norm(v.plain || form) }));
-  entries.sort((a, b) => (a.rank ?? 1e9) - (b.rank ?? 1e9) || a.form.localeCompare(b.form));
-  $q.disabled = false; $q.focus(); search();
-  let t; $q.addEventListener("input", () => { clearTimeout(t); t = setTimeout(search, 80); });
+  all = Object.entries(d).map(([form, v]) => ({ form, file: v.file, ipa: v.ipa, rank: v.rank, key: norm(v.plain || form) }));
+  all.sort((a, b) => a.key < b.key ? -1 : a.key > b.key ? 1 : a.form.localeCompare(b.form));
+  all.forEach((e, i) => { const l = letterOf(e.key); if (!(l in letterStart)) letterStart[l] = i; });
+  for (const l of "abcdefghijklmnopqrstuvwxyz#") {
+    const b = document.createElement("button"); b.textContent = l === "#" ? "#" : l.toUpperCase(); b.dataset.l = l;
+    if (l in letterStart) b.onclick = () => jump(l); else b.disabled = true;
+    $letters.append(b);
+  }
+  $q.disabled = false;
+  setView(all, `${all.length.toLocaleString()} words`);
+  addEventListener("scroll", draw, { passive: true }); addEventListener("resize", draw);
+  let t; $q.addEventListener("input", () => { clearTimeout(t); t = setTimeout(search, 120); });
   $q.addEventListener("keydown", ev => { if (ev.key === "Enter") { const b = $list.querySelector("button"); if (b) b.click(); } });
-}).catch(err => { $status.className = "err"; $status.textContent = "Could not load the word list (" + err.message + "). Try again later."; });
+}).catch(err => { $status.classList.add("err"); $status.textContent = "Could not load the word list (" + err.message + "). Try again later."; });
 </script>
 </body>
 </html>
