@@ -29,6 +29,7 @@ import sys
 import unicodedata
 
 sys.path.insert(0, os.path.dirname(__file__))
+import make_ipa as M                            # noqa: E402
 from score_phones import dist, phones          # noqa: E402
 
 EXPANDS = {"dr", "dra", "mr", "mrs", "ms", "jr", "sr", "sra", "st", "sta", "sto", "lb", "lbs", "vs", "mt", "ft", "gng",
@@ -95,8 +96,8 @@ def main():
             reason = "hyphen"
         elif src == "spelled" and e >= 0.5 and pf.isalpha():
             reason = "letters"
-        elif src == "english" and form in tagalog_ipa and not re.search(r"[ao]$", pf) and pf not in NOT_ENGLISH:
-            et = err(tagalog_ipa[form], h)[0]
+        elif src == "english" and not re.search(r"[ao]$", pf) and pf not in NOT_ENGLISH:
+            et = err(tagalog_ipa.get(form) or M.ipa(form), h)[0]      # words new to the list: the rule reading
             fil, en = z(pf, "fil"), z(pf, "en")
             tagalog_like = (fil >= en + 1.0 and not EN_SPELLING.search(pf)) or (fil >= 4.0 and fil >= en)
             if not tagalog_like and ((et < e - 0.1 and e >= 0.25) or (e >= 0.6 and et >= 0.6)):
