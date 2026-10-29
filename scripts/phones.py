@@ -4,7 +4,7 @@
     python3 scripts/phones.py MODEL LIST.tsv OUT.tsv [--shard i/n] [--fetch-raw]
 
 MODEL: xeus (PhoneticXEUS, changelinglab/PhoneticXeus), zipa (ZIPA CR-CTC, ONNX), powsm (espnet/powsm), w2v2
-(facebook/wav2vec2-lv-60-espeak-cv-ft).  LIST needs the columns `form` and `file` (audio/<letter>/<form>.mp3).
+(facebook/wav2vec2-lv-60-espeak-cv-ft).  LIST needs the column `form`, and `file` (audio/<letter>/<form>.mp3) unless index.json has the form.
 --fetch-raw downloads clips that are not checked out from raw.githubusercontent.com.  OUT is appended to and
 resumable: forms already in it are skipped.  Output columns: form, model, phones (space-separated), seconds.
 """
@@ -127,6 +127,10 @@ def main():
     shard = next((a.split("/", 1) for a in sys.argv if re.fullmatch(r"\d+/\d+", a)), ("0", "1"))
     i, n = int(shard[0]), int(shard[1])
     rows = list(csv.DictReader(open(lst, encoding="utf-8"), delimiter="\t"))[i::n]
+    if rows and "file" not in rows[0]:              # e.g. wordlist_all.tsv: the clip paths are in index.json
+        import json
+        index = json.load(open("index.json", encoding="utf-8"))
+        rows = [dict(r, file=index[r["form"]]["file"]) for r in rows if r["form"] in index]
     done = set()
     if os.path.exists(out):                         # rows that failed before are tried again
         done = {f[0] for f in (l.rstrip("\n").split("\t") for l in open(out, encoding="utf-8"))

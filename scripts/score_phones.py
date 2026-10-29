@@ -47,6 +47,9 @@ def dist(a, b):
 def main():
     lst, outdir, checks = sys.argv[1:4]
     rows = list(csv.DictReader(open(lst, encoding="utf-8"), delimiter="\t"))
+    for r in rows:                                 # lists without a category (wordlist_all.tsv): hyphen or IPA source
+        if not r.get("category"):
+            r["category"] = "hyphenated" if "-" in r["form"] else (r.get("ipa_source") or "")
     hyp = collections.defaultdict(dict)                           # model -> form -> phones
     secs = collections.defaultdict(list)
     for p in glob.glob(os.path.join(outdir, "*.tsv")):
@@ -104,16 +107,23 @@ def main():
         rep.append(f"| {c} | " + " | ".join(f"{percat[m][c][0] / percat[m][c][1]:.1%}" if m in percat and percat[m][c][1] else "–"
                                          for m in models) + " |")
     ok = [m for m in percat]
-    bad_audio = [f for f, ms in extra.items() if len(ms) >= 2]
-    rep += ["", "## Clips where two or more models hear much more than the word", "",
+    need = min(2, len(ok))
+    bad_audio = [f for f, ms in extra.items() if len(ms) >= need]
+    with open(os.path.join(checks, "extra_speech.tsv"), "w", encoding="utf-8") as fh:
+        fh.write("form\tmodels\n" + "".join(f"{f}\t{','.join(extra[f])}\n" for f in bad_audio))
+    rep += ["", f"## Clips where {need} or more models hear much more than the word ({len(bad_audio)}, all in extra_speech.tsv)", "",
             "Usually the TTS read extra text (for example the instruction) into the clip: listen and re-synthesize.", ""]
-    rep += [f"- {f}: " + ", ".join(f"{m} `{hyp[m][f][:120]}`" for m in extra[f]) for f in bad_audio] or ["(none)"]
+    rep += [f"- {f}: " + ", ".join(f"{m} `{hyp[m][f][:120]}`" for m in extra[f]) for f in bad_audio[:100]] or ["(none)"]
     allbad = [(sum(v.values()) / len(v), f) for f, v in perclip.items() if len(v) == len(ok) and min(v.values()) >= 0.4]
     ipa = {r["form"]: (r.get("category", ""), r["ipa"]) for r in rows}
-    rep += ["", "## Clips every model disagrees with (40 % or more of the phones, without ʔ)", "",
+    allbad.sort(reverse=True)
+    with open(os.path.join(checks, "disagree.tsv"), "w", encoding="utf-8") as fh:
+        fh.write("form\tcategory\tipa\tmean_error\t" + "\t".join(ok) + "\n")
+        fh.write("".join(f"{f}\t{ipa[f][0]}\t{ipa[f][1]}\t{e:.2f}\t" + "\t".join(hyp[m].get(f, "") for m in ok) + "\n" for e, f in allbad))
+    rep += ["", f"## Clips every model disagrees with (40 % or more of the phones, without ʔ): {len(allbad)}, all in disagree.tsv", "",
             "The word list IPA, the audio, or both are likely wrong here.", "",
             "| Form | Category | IPA | " + " | ".join(ok) + " |", "|---|---|---|" + "---|" * len(ok)]
-    rep += [f"| {f} | {ipa[f][0]} | {ipa[f][1]} | " + " | ".join(hyp[m].get(f, "")[:60] for m in ok) + " |" for _, f in sorted(allbad, reverse=True)]
+    rep += [f"| {f} | {ipa[f][0]} | {ipa[f][1]} | " + " | ".join(hyp[m].get(f, "")[:60] for m in ok) + " |" for _, f in allbad[:200]]
     for m in worst:
         rep += ["", f"## {m}: the 15 clips it disagrees with most", "", "| Form | Category | IPA | Heard |", "|---|---|---|---|"]
         rep += [f"| {f} | {c} | {i} | {h} |" for _, f, c, i, h in worst[m]]

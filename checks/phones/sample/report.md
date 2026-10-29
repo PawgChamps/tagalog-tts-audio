@@ -21,13 +21,13 @@
 | heteronym | – | 16.5% | 11.3% | 10.1% |
 | nostress | – | 14.4% | 10.5% | 8.7% |
 
-## Clips where two or more models hear much more than the word
+## Clips where 2 or more models hear much more than the word (1, all in extra_speech.tsv)
 
 Usually the TTS read extra text (for example the instruction) into the clip: listen and re-synthesize.
 
 - input: w2v2 `ɹ iː d ɐ l aʊ d k l iː l i ɪ n ɐ n uː t ɹ əl t oʊ n d ð ə t ɛ k s t ɪ z ɐ s ɪ ŋ ɡ əl f ɪ l ɪ p iː n oʊ w ɜː d s eɪ oʊ n `, xeus `ɹ ɛ d ə l a ʊ d kʰ l ɪ ɹ l i ɪ̃ n ə n u t ɹ ə l tʰ o ʊ̃ n ð ə tʰ ɛ k s t ɪ z ə s ɪ̃ ŋ ɡ ə l f ɪ l ə p ĩ n o ʊ w ə˞ d s `, zipa `▁ ɹ ɛ d ə l a ʊ d k l ɪ ɹ l i ɪ n ə n u t ɹ ə l t o ʊ n ð ə t ɛ k s t ɪ z ə s ɪ ŋ g ə l f ɪ l ə p i n o ʊ w ə ˞ d s e ɪ `
 
-## Clips every model disagrees with (40 % or more of the phones, without ʔ)
+## Clips every model disagrees with (40 % or more of the phones, without ʔ): 18, all in disagree.tsv
 
 The word list IPA, the audio, or both are likely wrong here.
 
