@@ -1,0 +1,66 @@
+form	reason	try	text	language	heard	error_before	error	outcome
+of	english	1	of	fil-PH	ə v	1.00	0.00	replaced
+national	english	1	national	fil-PH	n æ ʃ i ə n ə l ̴	0.43	0.14	replaced
+director	english	1	director	fil-PH	d ɪ ɹ ɛ k t ɜ ˞	0.25	0.25	rejected
+you	english	1	you	fil-PH	j u	0.50	0.00	replaced
+office	english	1	office	fil-PH	ɔ f ɪ s	0.75	0.00	replaced
+secretary	english	1	secretary	fil-PH	s ɛ k ɹ ə t ɛ ɹ i	0.44	0.00	replaced
+first	english	1	first	fil-PH	f ɜ ˞ s t	0.80	0.20	replaced
+international	english	1	international	fil-PH	ɪ n t ɜ ˞ n æ ʃ ə n ə l ̴	0.33	0.08	replaced
+public	english	1	public	fil-PH	p ə b l ̴ ɪ k	0.33	0.00	replaced
+year	english	1	year	fil-PH	j i ɹ	0.67	0.00	replaced
+detective	english	1	detective	fil-PH	d ɪ t ɛ k t ɪ v	0.50	0.00	replaced
+music	english	1	music	fil-PH	m j u z i k	0.50	0.00	replaced
+south	english	1	south	fil-PH	s a w θ	0.75	0.25	replaced
+face	english	1	face	fil-PH	f a s e	0.75	0.75	rejected
+chinese	english	1	chinese	fil-PH	t ʃ a ɪ n i z	0.67	0.00	replaced
+túluy-tuloy	hyphen	1	túluy tuloy	fil-PH	t u l o j t u l o j	0.50	0.10	replaced
+ano-ano	hyphen	1	ano ano	fil-PH	ə n o ə n o	0.50	0.00	replaced
+kámi-kami	hyphen	1	kámi kami	fil-PH	k a m i k a m i	0.50	0.00	replaced
+sáan-saan	hyphen	1	sáan saan	fil-PH	s a ə n s a ə n	0.50	0.00	replaced
+alas-kuwatro	hyphen	1	alas kuwatro	fil-PH	a l l a s k w a t r o	0.64	0.18	replaced
+síno-sino	hyphen	1	síno sino	fil-PH	s i n o s i n o	0.50	0.00	replaced
+ágad-agad	hyphen	1	ágad agad	fil-PH	ə g a d ə g a d	0.50	0.00	replaced
+buwan-buwan	hyphen	1	buwan buwan	fil-PH	b u w a n b u w a n	0.60	0.00	replaced
+gâwa-gawa	hyphen	1	gâwa gawa	fil-PH	g a w ə g a w ə	0.50	0.00	replaced
+síla-sila	hyphen	1	síla sila	fil-PH	s i l a s i l a	0.50	0.00	replaced
+hâka-haka	hyphen	1	hâka haka	fil-PH	h a k a h a k a	0.50	0.00	replaced
+kalát-kalát	hyphen	1	kalát kalát	fil-PH	k ə l l a t k ə l l a t	0.50	0.20	replaced
+sâri-sari	hyphen	1	sâri sari	fil-PH	s a ɾ i s a r i	0.50	0.00	replaced
+líbo-libo	hyphen	1	líbo libo	fil-PH	l i b ɔ l i b ɔ	0.50	0.00	replaced
+tabi-tabí	hyphen	1	tabi tabí	fil-PH	t ə b i t a b i	0.50	0.00	replaced
+hiv	cut	1	hiv	fil-PH	e t ʃ a j v i	0.57	0.29	replaced
+dalangin	cut	1	dalangin	fil-PH	ð ə l ̴ æ ŋ ɪ n	1.00	0.00	replaced
+cia	cut	1	cia	fil-PH	s i ə	0.67	0.50	rejected
+socio	cut	1	socio	fil-PH	s o ʊ s i o ʊ	0.57	0.00	replaced
+gg	cut	1	gg	fil-PH	g i	1.00	0.83	rejected
+hierarchy	cut	1	hierarchy	fil-PH	h a ɪ ɜ ˞ ɑ ɹ k i	0.56	0.11	replaced
+aatoato	cut	1	aatoato	fil-PH	a t o	0.43	0.57	rejected
+áboábo	cut	1	áboábo	fil-PH	ɑ b o	0.50	0.50	rejected
+pm	letters	1	pi em	fil-PH	p i ɛ m	0.50	0.00	replaced
+kc	letters	1	key si	fil-PH	k i s i	0.60	0.20	replaced
+sm	letters	1	es em	fil-PH	ɛ s ɛ m	0.75	0.00	replaced
+sc	letters	1	es si	fil-PH	e s	0.75	0.50	rejected
+lt	letters	1	el ti	fil-PH	ɛ l t i	0.75	0.00	replaced
+bk	letters	1	bi key	fil-PH	b i k i	0.80	0.20	replaced
+mg	letters	1	em dyi	fil-PH	ɛ m d i w a ɪ a ɪ	0.50	1.00	rejected
+km	letters	1	key em	fil-PH	k i ɛ m	0.80	0.20	replaced
+input	extra	1	input	fil-PH	m a n a g a s	1.00	1.00	rejected
+tumoy	extra	1	tumoy	fil-PH	t u m u j	1.00	0.20	replaced
+director	english	2	director	en-US	d i ɹ ɛ k t ɜ ˞	0.25	0.25	rejected
+face	english	2	face	en-US	f e ɪ s	0.75	0.00	replaced
+cia	cut	2	cia	en-US	s i a ɪ e ɪ	0.67	0.00	replaced
+gg	cut	2	g g	fil-PH	g a g a	1.00	1.00	rejected
+aatoato	cut	2	aatoato	fil-PH	a t u	0.43	0.71	rejected
+áboábo	cut	2	ábo ábo	fil-PH	a b o a b o	0.50	0.00	replaced
+sc	letters	2	es si	fil-PH	e s	0.75	0.50	rejected
+mg	letters	2	em dyi	fil-PH	ɛ m d i w a ɪ a ɪ	0.50	1.00	rejected
+input	extra	2	input	fil-PH	ð ə k ə l ̴ æ p s ə v ð ə s t e ɪ t w a ɪ l ̴ p l ̴ ɔ z ə b ə l ̴ w ɑ z n ɑ t p ɹ i d ɪ k t ɪ d b a ɪ m ɛ n i æ n t ɪ s ə p ə n t s	1.00	1.00	rejected
+director	english	3	director	en-US	d i ɹ ɛ k t ɜ ˞	0.25	0.25	rejected
+input	extra	3	input	fil-PH	ɾ ɛ g a l o	1.00	1.00	rejected
+director	english	-	director	fil-PH	d ɪ ɹ ɛ k t ɜ ˞	0.25	0.25	kept
+gg	cut	-	gg	fil-PH	g i	1.00	0.83	kept
+aatoato	cut	-	aatoato	fil-PH	a t o	0.43	0.57	kept
+sc	letters	-	es si	fil-PH	e s	0.75	0.50	kept
+mg	letters	-	em dyi	fil-PH	ɛ m d i w a ɪ a ɪ	0.50	1.00	kept
+input	extra	-	input	fil-PH	m a n a g a s	1.00	1.00	kept
