@@ -149,9 +149,15 @@ def main():
             return
         if stop.is_set():
             return
+        text, pname = respell.get(form, (form, None))
+        prompt = PROMPTS.get(pname, pname) if pname else a.prompt
         try:
-            text, pname = respell.get(form, (form, None))
-            audio = synthesize(get_headers, secret, text, PROMPTS.get(pname, pname) if pname else a.prompt, a.voice, a.model)
+            try:
+                audio = synthesize(get_headers, secret, text, prompt, a.voice, a.model)
+            except RuntimeError as e:             # the content filter refuses some harmless respellings (di matutunaw):
+                if isinstance(e, AuthError) or "usage guidelines" not in str(e) or (text, prompt) == (form, a.prompt):
+                    raise
+                audio = synthesize(get_headers, secret, form, a.prompt, a.voice, a.model)   # try the form as written
         except AuthError as e:
             stop.set()
             print("auth/permission error, stopping:", str(e)[:300])
