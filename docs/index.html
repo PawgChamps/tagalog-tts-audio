@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tagalog word audio</title>
+<style>
+  :root { --bg:#fbfaf7; --fg:#1d1d1b; --muted:#6b6a64; --line:#e4e1d8; --card:#fff; --accent:#1f6f5c; --accent-fg:#fff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#161715; --fg:#ecebe6; --muted:#9b9a92; --line:#2c2d2a; --card:#1f201d; --accent:#4cb89c; --accent-fg:#10201b; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:640px; margin:0 auto; padding:32px 16px 64px; }
+  h1 { font-size:1.5rem; margin:0 0 4px; }
+  .sub { color:var(--muted); margin:0 0 20px; font-size:.95rem; }
+  .sub a { color:inherit; }
+  input[type=search] { width:100%; padding:12px 14px; font:inherit; color:var(--fg); background:var(--card); border:1px solid var(--line); border-radius:10px; }
+  input[type=search]:focus { outline:2px solid var(--accent); outline-offset:1px; }
+  #status { color:var(--muted); font-size:.9rem; margin:10px 2px 14px; min-height:1.3em; }
+  ul { list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+  li { display:flex; align-items:center; gap:12px; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:8px 12px 8px 8px; }
+  button { flex:none; width:40px; height:40px; border:0; border-radius:50%; background:var(--accent); color:var(--accent-fg); font-size:15px; cursor:pointer; }
+  button:focus-visible { outline:2px solid var(--fg); outline-offset:2px; }
+  button[aria-pressed=true] { box-shadow:0 0 0 3px color-mix(in srgb, var(--accent) 35%, transparent); }
+  .word { font-size:1.1rem; font-weight:600; }
+  .meta { color:var(--muted); font-size:.85rem; }
+  .info { min-width:0; flex:1; }
+  .rank { color:var(--muted); font-size:.8rem; flex:none; }
+  .err { color:#b3261e; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Tagalog word audio</h1>
+  <p class="sub">Search a word and press play. Accents and capital letters don't matter. <a href="https://github.com/PawgChamps/tagalog-tts-audio">Source on GitHub</a></p>
+  <input id="q" type="search" placeholder="Search, e.g. baka" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Search words" disabled>
+  <div id="status" role="status">Loading the word list…</div>
+  <ul id="list"></ul>
+</main>
+<script>
+const RAW = "https://raw.githubusercontent.com/PawgChamps/tagalog-tts-audio/main/";
+const BASE = new URLSearchParams(location.search).get("base") || RAW;   // ?base=... for local testing
+const $q = document.getElementById("q"), $status = document.getElementById("status"), $list = document.getElementById("list");
+const norm = s => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+let entries = [], audio = null, playingBtn = null;
+
+function url(file) { return BASE + file.split("/").map(encodeURIComponent).join("/"); }
+
+function play(e, btn) {
+  if (audio) { audio.pause(); if (playingBtn) playingBtn.setAttribute("aria-pressed", "false"); }
+  audio = new Audio(url(e.file)); playingBtn = btn;
+  btn.setAttribute("aria-pressed", "true");
+  audio.addEventListener("ended", () => btn.setAttribute("aria-pressed", "false"));
+  audio.addEventListener("error", () => { btn.setAttribute("aria-pressed", "false"); $status.textContent = "Could not load " + e.form + "."; $status.className = "err"; });
+  audio.play().catch(() => {});
+}
+
+function render(results, total, q) {
+  $list.replaceChildren();
+  for (const e of results) {
+    const li = document.createElement("li");
+    const b = document.createElement("button"); b.textContent = "▶"; b.setAttribute("aria-label", "Play " + e.form); b.setAttribute("aria-pressed", "false");
+    b.onclick = () => play(e, b);
+    const info = document.createElement("div"); info.className = "info";
+    const w = document.createElement("div"); w.className = "word"; w.textContent = e.form;
+    info.append(w);
+    if (e.ipa) { const m = document.createElement("div"); m.className = "meta"; m.textContent = e.ipa; info.append(m); }
+    li.append(b, info);
+    if (e.rank != null) { const r = document.createElement("div"); r.className = "rank"; r.textContent = "#" + e.rank; li.append(r); }
+    $list.append(li);
+  }
+  $status.className = "";
+  $status.textContent = q ? (total ? `${results.length < total ? "Showing " + results.length + " of " : ""}${total.toLocaleString()} match${total === 1 ? "" : "es"}` : "No matches") : "Most common words";
+}
+
+function search() {
+  const q = norm($q.value.trim());
+  const exact = [], prefix = [], contains = []; let total = 0; const CAP = 100;
+  if (!q) { render(entries.slice(0, CAP), 0, ""); return; }
+  for (const e of entries) {                 // entries are pre-sorted by frequency rank
+    const i = e.key.indexOf(q);
+    if (i < 0) continue;
+    total++;
+    const bucket = e.key === q ? exact : i === 0 ? prefix : contains;
+    if (bucket.length < CAP) bucket.push(e);
+  }
+  render(exact.concat(prefix, contains).slice(0, CAP), total, q);
+}
+
+fetch(BASE + "index.json").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(d => {
+  entries = Object.entries(d).map(([form, v]) => ({ form, file: v.file, ipa: v.ipa, rank: v.rank, key: norm(v.plain || form) }));
+  entries.sort((a, b) => (a.rank ?? 1e9) - (b.rank ?? 1e9) || a.form.localeCompare(b.form));
+  $q.disabled = false; $q.focus(); search();
+  let t; $q.addEventListener("input", () => { clearTimeout(t); t = setTimeout(search, 80); });
+  $q.addEventListener("keydown", ev => { if (ev.key === "Enter") { const b = $list.querySelector("button"); if (b) b.click(); } });
+}).catch(err => { $status.className = "err"; $status.textContent = "Could not load the word list (" + err.message + "). Try again later."; });
+</script>
+</body>
+</html>
