@@ -4,14 +4,14 @@
 
 | Model | Clips | Error rate | Error rate without ʔ | Exact (without ʔ) | Final ʔ found | Final ʔ invented | Much longer than the word | s per clip |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| zipa | 34 | 10.1% | 4.3% | 74% | 0/4 | 0/30 | 0 | 0.18 |
+| zipa | 297 | 11.8% | 6.7% | 54% | 0/28 | 0/269 | 0 | 0.13 |
 
 ## Error rate without ʔ, by category
 
 | Category | zipa |
 |---|---:|
-| hyphenated | 5.9% |
-| rule | 3.2% |
+| hyphenated | 7.1% |
+| rule | 5.9% |
 
 ## Clips where 1 or more models hear much more than the word (0, all in extra_speech.tsv)
 
@@ -23,32 +23,39 @@ Usually the TTS read extra text (for example the instruction) into the clip: lis
 
 | Kind | Cut short | Clips | Share |
 |---|---:|---:|---:|
-| hyphenated | 0 | 12 | 0.0% |
-| plain | 0 | 22 | 0.0% |
+| hyphenated | 0 | 197 | 0.0% |
+| plain | 0 | 100 | 0.0% |
 
-## Clips every model disagrees with (40 % or more of the phones, without ʔ): 0, all in disagree.tsv
+## Clips every model disagrees with (40 % or more of the phones, without ʔ): 7, all in disagree.tsv
 
 The word list IPA, the audio, or both are likely wrong here.
 
 | Form | Category | IPA | zipa |
 |---|---|---|---|
+| pag-ipod | hyphenated | /paɡˈʔipod/ | ▁ p a k i p u n t |
+| pugú | rule | /puˈɡu/ | ▁ t u ŋ g u |
+| pingád | rule | /piˈŋad/ | ▁ p i ɲ a d |
+| may-in-may-ín | hyphenated | /majʔinmajˈʔin/ | ▁ m e ɪ n m e ɪ n |
+| dagán-dagán | hyphenated | /daɡandaˈɡan/ | ▁ d a g a d a n d ə g a n ə n |
+| bunút | rule | /buˈnut/ | ▁ b o n o t |
+| bay-án | hyphenated | /bajˈʔan/ | ▁ v a a n |
 
 ## zipa: the 15 clips it disagrees with most
 
 | Form | Category | IPA | Heard |
 |---|---|---|---|
+| pag-ipod | hyphenated | /paɡˈʔipod/ | ▁ p a k i p u n t |
+| pugú | rule | /puˈɡu/ | ▁ t u ŋ g u |
+| pingád | rule | /piˈŋad/ | ▁ p i ɲ a d |
+| may-in-may-ín | hyphenated | /majʔinmajˈʔin/ | ▁ m e ɪ n m e ɪ n |
+| dagán-dagán | hyphenated | /daɡandaˈɡan/ | ▁ d a g a d a n d ə g a n ə n |
+| bunút | rule | /buˈnut/ | ▁ b o n o t |
+| bay-án | hyphenated | /bajˈʔan/ | ▁ v a a n |
+| mag-uungól | hyphenated | /maɡʔuʔuˈŋol/ | ▁ m a g o m o ɔ l |
+| bantáy-pintô | hyphenated | /bantajpinˈtoʔ/ | ▁ v e n t a ʎ p i n t o ɾ |
+| pasabáy-sabayín | hyphenated | /pasabajsabaˈjin/ | ▁ p a s a b a j i n |
+| may-diperénsiya | hyphenated | /majdipeˈɾensija/ | ▁ m ɛ j d i p ɛ r i n ʃ a |
+| nangágkaka- | hyphenated | /naˈŋaɡkaka/ | ▁ l a ŋ a k a ː q a a |
+| mag-alulóng | hyphenated | /maɡʔaluˈloŋ/ | ▁ m a g a ɛ l o l ɔ ̃ |
+| waláng-diyós | hyphenated | /walaŋdiˈjos/ | ▁ w a l a ŋ d ʒ ɔ s |
 | utang-na-loób | hyphenated | /ʔutaŋnaloˈʔob/ | ▁ u t ɑ ̃ n a l ə u b |
-| manipulasyón | rule | /manipulasˈjon/ | ▁ m ə n i p u l ə ʃ u n |
-| baliw | rule | /ˈbaliw/ | ▁ v a l i w |
-| lambát-lambát | hyphenated | /lambatlamˈbat/ | ▁ ɛ l ə m b a t ɛ l ə m b a t |
-| isinaulì | rule | /ʔisinaˈʔuliʔ/ | ▁ i s a n a u l i |
-| pagtuturô | rule | /paɡtutuˈɾoʔ/ | ▁ p a ŋ t u t u r o |
-| labing-waló | hyphenated | /labiŋwaˈlo/ | ▁ l a b i ŋ w a l o k |
-| alsá-balutan | hyphenated | /ʔalˈsabalutan/ | ▁ ə l s a b ə l l u t a n |
-| pagkakásunud-sunod | hyphenated | /paɡkaˈkasunudsunod/ | ▁ p a g k a q a s u n u d s u n u d |
-| sinâ | rule | /siˈnaʔ/ | ▁ s i n a |
-| puno | rule | /ˈpuno/ | ▁ p u n o |
-| pinagkakagastusán | rule | /pinaɡkakaɡastuˈsan/ | ▁ p i n a g k a q a g a s t u s a n |
-| pampamahalaán | rule | /pampamahalaˈʔan/ | ▁ p a m p a m a h a l a a n |
-| pagsang-ayon | hyphenated | /paɡsaŋˈʔajon/ | ▁ p a g s a ŋ a j o n |
-| paghiwá-hiwalayín | hyphenated | /paɡhiwahiwalaˈjin/ | ▁ p ə g h i w a h i w a l ̴ a j ɪ n |

@@ -1,34 +1,300 @@
-sinâ	zipa	▁ s i n a	0.13
-puno	zipa	▁ p u n o	0.10
-nagulat	zipa	▁ n a g u l a t	0.13
-baliw	zipa	▁ v a l i w	0.11
-pagtuturô	zipa	▁ p a ŋ t u t u r o	0.14
-pagkakásunud-sunod	zipa	▁ p a g k a q a s u n u d s u n u d	0.27
-kanais-nais	zipa	▁ k a n a ɪ s n a ɪ s	0.20
-pagsang-ayon	zipa	▁ p a g s a ŋ a j o n	0.17
-pampamahalaán	zipa	▁ p a m p a m a h a l a a n	0.17
-nahulihan	zipa	▁ n a h u l i h a n	0.16
-nanghihina	zipa	▁ n a ŋ h i h i n a	0.16
-gasgas	zipa	▁ g a s g a s	0.14
-kinákapós	zipa	▁ k i n a k ə p o s	0.14
-máiyák	zipa	▁ m ɑ ɪ j ɑ q	0.13
-manipulasyón	zipa	▁ m ə n i p u l ə ʃ u n	0.15
-namamasukan	zipa	▁ n a m a m a s u k a n	0.16
-pag-okupá	zipa	▁ p a g ɔ k u p a	0.20
-lambát-lambát	zipa	▁ ɛ l ə m b a t ɛ l ə m b a t	0.24
-balinó	zipa	▁ b a l i n o	0.13
-magkayakap	zipa	▁ m ɑ g k ɑ j ɑ q ɑ p	0.16
-manampalataya	zipa	▁ m ə n a m p ə l ə t a j ə	0.16
-isinaulì	zipa	▁ i s a n a u l i	0.16
-metabóliko	zipa	▁ m ɛ t a b o l i k o	0.15
-paghiwá-hiwalayín	zipa	▁ p ə g h i w a h i w a l ̴ a j ɪ n	0.45
-Kay-Anlóg	zipa	▁ k a j ə n l ̴ ɔ g	0.23
-kaisá-isá	zipa	▁ k a i s a i s a	0.28
-ohó	zipa	▁ o x o	0.12
-maiibigan	zipa	▁ m a i i b i g a n	0.16
-magpatumpík-tumpík	zipa	▁ m ə g p a t u m p i k t u m p i k	0.32
-pinagkakagastusán	zipa	▁ p i n a g k a q a g a s t u s a n	0.18
-utang-na-loób	zipa	▁ u t ɑ ̃ n a l ə u b	0.25
-labing-waló	zipa	▁ l a b i ŋ w a l o k	0.18
-makabanggâ	zipa	▁ m æ q æ b æ ŋ g ɑ	0.14
-alsá-balutan	zipa	▁ ə l s a b ə l l u t a n	0.23
+sinâ	zipa	▁ s i n a	0.09
+puno	zipa	▁ p u n o	0.08
+nagulat	zipa	▁ n a g u l a t	0.09
+baliw	zipa	▁ v a l i w	0.08
+pagtuturô	zipa	▁ p a ŋ t u t u r o	0.10
+pagkakásunud-sunod	zipa	▁ p a g k a q a s u n u d s u n u d	0.23
+kanais-nais	zipa	▁ k a n a ɪ s n a ɪ s	0.12
+pagsang-ayon	zipa	▁ p a g s a ŋ a j o n	0.15
+pampamahalaán	zipa	▁ p a m p a m a h a l a a n	0.11
+nahulihan	zipa	▁ n a h u l i h a n	0.09
+nanghihina	zipa	▁ n a ŋ h i h i n a	0.09
+gasgas	zipa	▁ g a s g a s	0.09
+kinákapós	zipa	▁ k i n a k ə p o s	0.10
+máiyák	zipa	▁ m ɑ ɪ j ɑ q	0.09
+manipulasyón	zipa	▁ m ə n i p u l ə ʃ u n	0.09
+namamasukan	zipa	▁ n a m a m a s u k a n	0.11
+pag-okupá	zipa	▁ p a g ɔ k u p a	0.11
+lambát-lambát	zipa	▁ ɛ l ə m b a t ɛ l ə m b a t	0.14
+balinó	zipa	▁ b a l i n o	0.10
+magkayakap	zipa	▁ m ɑ g k ɑ j ɑ q ɑ p	0.10
+manampalataya	zipa	▁ m ə n a m p ə l ə t a j ə	0.10
+isinaulì	zipa	▁ i s a n a u l i	0.13
+metabóliko	zipa	▁ m ɛ t a b o l i k o	0.09
+paghiwá-hiwalayín	zipa	▁ p ə g h i w a h i w a l ̴ a j ɪ n	0.24
+Kay-Anlóg	zipa	▁ k a j ə n l ̴ ɔ g	0.14
+kaisá-isá	zipa	▁ k a i s a i s a	0.16
+ohó	zipa	▁ o x o	0.08
+maiibigan	zipa	▁ m a i i b i g a n	0.11
+magpatumpík-tumpík	zipa	▁ m ə g p a t u m p i k t u m p i k	0.17
+pinagkakagastusán	zipa	▁ p i n a g k a q a g a s t u s a n	0.12
+utang-na-loób	zipa	▁ u t ɑ ̃ n a l ə u b	0.13
+labing-waló	zipa	▁ l a b i ŋ w a l o k	0.11
+makabanggâ	zipa	▁ m æ q æ b æ ŋ g ɑ	0.09
+alsá-balutan	zipa	▁ ə l s a b ə l l u t a n	0.14
+di-matutunaw	zipa	ERROR missing clip	0
+kaunting-kauntî	zipa	▁ k a u n t i ŋ k a u n t i	0.14
+pagbukúd-bukurín	zipa	▁ p ə g b u k o t b u k u r i n	0.11
+pagkakatuón	zipa	▁ p a g k a k a t a ʔ o n	0.10
+apí-apihan	zipa	▁ ə p i ə p i a n	0.12
+Kankaná-ey	zipa	▁ k a n k a n a e	0.10
+naghaharing-urì	zipa	▁ n ə g h a h a r i ŋ u ː r i	0.13
+pagkababad	zipa	▁ p a g k a b a b a d	0.09
+laáng-gugulín	zipa	▁ l a a n g u g u l i n	0.19
+pagkapariwarâ	zipa	▁ p ə ŋ k ə p ə ɾ i w ə r a	0.10
+áandap-andáp	zipa	▁ ə n d ə p ə n d a p	0.11
+abór-abór	zipa	▁ a b o r a b o r	0.12
+abót-watas	zipa	▁ ə b o t w ə t t ə s	0.21
+ak-akló	zipa	▁ ʔ a k a k l ̴ o	0.15
+akmól	zipa	▁ a k m ɔ l	0.08
+alkát-talaán	zipa	▁ ə l k a t t ə l ə a n	0.14
+almidór	zipa	▁ ə l m i d o r	0.08
+amór-pátriyo	zipa	▁ a m o r p a t r i o	0.13
+apíng	zipa	▁ ə p i ŋ	0.08
+apót	zipa	▁ ə p ɔ t	0.08
+babagín	zipa	▁ b a b a g i i n	0.09
+bagisbisan	zipa	▁ b a g i s b i s a n	0.09
+bagól-bagól	zipa	▁ b ə g o l b ə g o l	0.12
+bagtál	zipa	▁ b ə g t ɑ ː l	0.09
+baguhing-yarì	zipa	▁ b a g u h i ŋ j a r i	0.12
+balík-sikad	zipa	▁ b a l ɪ k s i k a d	0.20
+baló-baló	zipa	▁ b ə l o v ə l o	0.18
+bantáy-pintô	zipa	▁ v e n t a ʎ p i n t o ɾ	0.12
+baryu-baryuhín	zipa	▁ b ɑ r j u b ɑ r j u w x i n	0.13
+baúl-mundó	zipa	▁ b a u l m u n d o	0.24
+bay-án	zipa	▁ v a a n	0.11
+bay-awáng	zipa	▁ b a j ə w a ŋ	0.11
+bellád	zipa	▁ b e l j a d	0.08
+bigáy-ahon	zipa	▁ b i g a j ə o n	0.14
+bigláng-humawak	zipa	▁ b i g l ̴ a ŋ h u m a w a k	0.14
+bildóg	zipa	▁ b i l d ɔ g	0.09
+boksít	zipa	▁ b ɔ k s i t	0.08
+búk-an	zipa	▁ b u k a n	0.11
+buntong-hinigá	zipa	▁ b u n t u ŋ h i n i g ɑ	0.13
+bunút	zipa	▁ b o n o t	0.08
+bút-o	zipa	▁ b u o	0.12
+dagán-dagán	zipa	▁ d a g a d a n d ə g a n ə n	0.30
+dalás-dalás	zipa	▁ d a l a s d a l a s	0.18
+dapáng-tsinelas	zipa	▁ d ə p a ŋ t ʃ i n ɛ l ə s	0.14
+de-botón	zipa	▁ d ɛ b o t o n	0.13
+di-madayà	zipa	▁ d i m a d a j a	0.24
+di-maipaliliwanag	zipa	▁ d i m a i p a l i w a n a g	0.44
+di-malakí	zipa	▁ d i m a l ə k i	0.17
+di-mapaniwalaín	zipa	▁ d i m a p a n i w a l ə i n	0.45
+di-mapapatigil	zipa	ERROR missing clip	0
+di-masusupil	zipa	▁ d i m a s u s u p i l	0.16
+di-matantô	zipa	▁ d i m a t a n t o	0.14
+di-pagkamatapát	zipa	▁ d i p ə g k ə m m a t ə p a t	0.12
+díd-an	zipa	▁ d i d æ n	0.12
+dighayin	zipa	▁ d i g h a j i n	0.09
+dugal-ók	zipa	▁ d u g æ l l ̴ o q	0.08
+egná	zipa	▁ ɛ g n a	0.07
+entomolóhiko	zipa	▁ ɛ n t o m o l o x i k o	0.09
+galamáy-amo	zipa	▁ g a l a m a j a m o	0.26
+galáw-galawín	zipa	▁ g ə l a w g ə l ə w i n	0.16
+gantíng-loób	zipa	▁ g a n t i ŋ l o o b	0.20
+habíd-habíd	zipa	▁ h a b i d h a b i d	0.23
+hág-ob	zipa	▁ a g ɔ b	0.10
+halintuwáng	zipa	▁ h a l i n t u w a ŋ	0.09
+hálowín	zipa	▁ a l o w i n	0.08
+hambilóng	zipa	▁ h a m b i l o ŋ	0.10
+hayngá	zipa	▁ h a j ŋ a	0.07
+híb-as	zipa	▁ h i b a s	0.10
+hulíng-kabít	zipa	▁ h u l ̴ i ŋ k a b i t	0.18
+humitík	zipa	▁ u m i t i k	0.08
+hunás	zipa	▁ h u n a s	0.08
+ighám	zipa	▁ i h a m	0.10
+ikábaón	zipa	▁ i k a b a o n	0.08
+ilúg-ilugan	zipa	▁ i l u g a i l u g a n	0.15
+ináama-sa-kumpíl	zipa	▁ i n a ə m a s ə k u m p i l	0.12
+ináanák-sa-kumpíl	zipa	▁ i n a ə n a k ɛ s a k u m p i l	0.14
+insiminasyón	zipa	▁ i n s ə m i n ə s o n	0.09
+isís-kulíng	zipa	▁ i s i s k u l i n	0.12
+iyamót	zipa	▁ i j a m ɔ t	0.12
+kaapó-apuhan	zipa	▁ k a ə p ɔ ə p u a n	0.20
+kahoy-lalaó	zipa	▁ k a h o i l a l a o	0.12
+kaisáng-diwà	zipa	▁ k ə j s a ŋ d i w ə	0.12
+kakulbá	zipa	▁ k a k u l b a	0.07
+kambíl	zipa	▁ k ə m b i l	0.08
+kanáynayán	zipa	▁ k ə n ə j n a j ə n	0.09
+kapilas-ng-pusò	zipa	▁ k a p i l a s n a ŋ p u s o	0.13
+kasál-parì	zipa	▁ k a s a l p a r i	0.11
+katé-katerba	zipa	▁ k a t e i k a t e ɾ v a	0.21
+kawaláng-asikaso	zipa	▁ k a w a l a n a s i k a s o	0.11
+kulibengbéng	zipa	▁ k u l i b i ŋ b ɛ ŋ	0.13
+kuluán	zipa	▁ k u l u w a n	0.10
+kulúb-alín	zipa	▁ k o l u b a l i n	0.11
+labóg-labóg	zipa	▁ l a b o g l a b o g	0.13
+lám-ag	zipa	▁ l a m a g	0.18
+lika	zipa	▁ l i k a	0.08
+limáng-libo	zipa	▁ l i m a n l i b o	0.16
+lug-áng	zipa	▁ l u a ŋ	0.15
+lugás-lugás	zipa	▁ l u g a s l u g a s	0.24
+lukút-lukót	zipa	▁ l u k u t l u k u t	0.17
+lumaboy-laboy	zipa	▁ l u m a b o j l a b o j	0.12
+mábukáng-bibíg	zipa	▁ m a b u k a ŋ b i g i	0.21
+mag-aapóg	zipa	▁ m a g a p o g	0.19
+mag-abdiká	zipa	▁ m a g a b d i k a	0.21
+mag-alagaán	zipa	▁ m a g a l a g a a n	0.11
+mag-alimpuyó	zipa	▁ m a g a l i m p u j o	0.13
+mag-alulóng	zipa	▁ m a g a ɛ l o l ɔ ̃	0.20
+mag-andukhâ	zipa	▁ m a g a n d o a	0.15
+mag-asahán	zipa	▁ m ə g a s a h ɑ n	0.19
+mag-atindí	zipa	▁ m a g a t i n d i	0.14
+mag-iigíb	zipa	▁ m a g i ʒ i b	0.15
+mag-ispelingán	zipa	▁ m a g i s p ɛ l ̴ i ŋ a n	0.12
+mag-uungól	zipa	▁ m a g o m o ɔ l	0.17
+magbaklâ-baklaan	zipa	▁ m ɑ g b ɑ q l ̴ æ b ɑ q l ̴ ɑ æ n	0.24
+maghakà-hakà	zipa	▁ m a g h a q a h a q a	0.13
+magkakuwartá	zipa	▁ m ɯ g k æ q w ɑ r t ɑ	0.08
+magkamág-aarál	zipa	▁ m a g k a m a g a a ʁ a l	0.17
+magkásala-salabat	zipa	▁ m a g k a s a l a b a t	0.19
+magpadalang-lathalá	zipa	ERROR missing clip	0
+magpaták-paták	zipa	▁ m ɑ ʁ p ɑ t ɑ q p ɑ t ɑ q	0.14
+magpatakbú-takbó	zipa	▁ m ə g p a t a k b u t a k b u	0.38
+magpawaláng-kabuluhán	zipa	▁ m a b a w a l a ŋ k a b u l u h a n	0.23
+magtiklóp-tuhod	zipa	▁ m ə g t i k l ̴ o p t u h o d	0.19
+makádamdám	zipa	▁ m æ q æ d æ m d æ m	0.08
+makapag-alinlangan	zipa	▁ m a k a p a g a l i n l a ŋ a n	0.15
+makataling-puso	zipa	▁ m a k a t a l i ŋ p u s o	0.10
+makipag-ani	zipa	▁ m a k i p a g a n i	0.17
+makipag-interbiyú	zipa	▁ m a k i p a g i n t e r b j u	0.12
+maláyantók	zipa	▁ m æ l æ j ɑ n t o q	0.10
+mang-aaklás	zipa	▁ m a ŋ a k l a s	0.12
+mantenehín	zipa	▁ m a n t e n e h i n	0.09
+mapag-apuapuan	zipa	▁ m a p a g a p o a p u w a n	0.14
+mapágsabáy-sabáy	zipa	▁ m a p a g s a b a j s a b a j	0.12
+matáng-pilakin	zipa	▁ m a t a ŋ p i l l a q k i n	0.12
+may-diperénsiya	zipa	▁ m ɛ j d i p ɛ r i n ʃ a	0.30
+may-in-may-ín	zipa	▁ m e ɪ n m e ɪ n	0.25
+may-katangahán	zipa	▁ m a j k a ː t a ŋ h a ŋ	0.19
+mayasang	zipa	▁ m e j a s a ŋ	0.12
+nakaáantók	zipa	▁ n a q a a a n t ɔ q	0.10
+nakapag-aalaalá	zipa	▁ n a k a p a g a l a a l a	0.16
+nakasusuyá	zipa	▁ n a q a s u s u j a	0.08
+nangágkaka-	zipa	▁ l a ŋ a k a ː q a a	0.09
+nayapakan	zipa	▁ n e j a p a ː k a n	0.09
+ól-ol	zipa	▁ o l u l	0.11
+pag-antukín	zipa	▁ p a g a n t o k i n	0.12
+pag-arawín	zipa	▁ p a g a r a w i n	0.12
+pag-ipod	zipa	▁ p a k i p u n t	0.11
+pag-ugoy	zipa	▁ p a g u g o j	0.11
+pag-urì-uriin	zipa	▁ p a g u r i u r i i n	0.21
+pag-uukyabít	zipa	▁ p a g u k i a b i t	0.16
+pag-uyad	zipa	▁ p a g u j a d	0.12
+pagka-kadugô	zipa	▁ p a g a k a d u g o	0.14
+pagka-liberál	zipa	▁ p a g k a l i b ə r a l	0.12
+pagkabukáng-liwayway	zipa	▁ p a g k a b u q a ŋ l i w a i w a ɪ j	0.13
+pagkaliham	zipa	▁ p ə g ə l i h a m	0.11
+pagkamág-asawa	zipa	▁ p a g a m a g a s a w a	0.12
+pagkatelegrama	zipa	▁ p a g g a t e l e g r a m m a	0.09
+pagkawalang-kasiyahan	zipa	▁ p ə k ə w ə l a ŋ k ə s i j a h a n	0.11
+pagkulú-kulubutín	zipa	▁ p a k u l o k u l o b u t i n	0.14
+pagmumulíng-tatag	zipa	▁ p a g m u m u l i n t a t a g	0.15
+pagmuní-munihin	zipa	▁ p a g m u n i m u n i h i n	0.13
+pagmuní-muniin	zipa	▁ p a g m u n i m u n i i n	0.23
+pagpapalingún-lingón	zipa	▁ p a g p a p a l i ŋ u ŋ o n l i ŋ o n	0.26
+pagpisán-pisanin	zipa	▁ p a k p i s a n p i s ə n i n	0.11
+pagwaláng-galangan	zipa	▁ f a g w a l ̴ a ŋ g a l ̴ a ŋ ə n	0.18
+pakaguluhín	zipa	▁ t a q a g u l u h i n	0.09
+pakaingát-ingatan	zipa	▁ p a k a i ŋ a t i ŋ a t a n	0.12
+palamám-anan	zipa	▁ p a l a m a m a n a n	0.12
+palukanláng	zipa	▁ p a l u k a n l a ŋ	0.10
+pamalmák	zipa	▁ p ə m ə l m a k	0.08
+pang-aabáng	zipa	▁ p a ŋ a a b a ŋ	0.14
+pang-anuáng	zipa	▁ p ɑ ŋ ə n w ɑ ŋ	0.12
+pangkapwá-tao	zipa	▁ p ə ŋ k a p u a t a w	0.18
+pantáy-kawayan	zipa	▁ p a n t a j k a w a j a n	0.28
+panukat-panahón	zipa	▁ p ə n u k a t p ə n ə o n	0.17
+papag-artistahín	zipa	▁ p a ː p a ː g a ː ɾ t ̪ i s t ̪ a ː h i n	0.16
+papag-intindihín	zipa	▁ p ɑ ː p ə g ɪ n t ̪ i n d ̪ i h i n	0.11
+papaglunsarín	zipa	▁ p a p ə g l u n s ə r i n	0.10
+papagpugarin	zipa	▁ p a p a g b u g a r i n	0.09
+papagretiruhin	zipa	▁ p ə p ə g ɾ e t ̪ i ɾ u ː h ɪ n	0.09
+papagsekretáryahín	zipa	▁ p a p ə g s e k r e t a r i a h i n	0.15
+papagtaksilín	zipa	▁ p a p a g t a q s i l i n	0.12
+papagtawanín	zipa	▁ p ə p ə k t a w ə n i n	0.09
+papitô	zipa	▁ p ə p i t o	0.07
+parehíl	zipa	▁ p ə r ɛ ʒ i l	0.10
+pasabáy-sabayín	zipa	▁ p a s a b a j i n	0.25
+pasaliwâ	zipa	▁ p a s ə ɛ l i g w a	0.09
+pasumpaán	zipa	▁ p a s ə u n p ə a n	0.08
+pauyad-uyad	zipa	▁ p a w j a d u j a d	0.14
+pinagtatlóng-sipì	zipa	▁ p i n ə g t ə t l u ŋ s i p i	0.17
+pingád	zipa	▁ p i ɲ a d	0.07
+pugú	zipa	▁ t u ŋ g u	0.07
+pulî	zipa	▁ p u l i	0.10
+pulú-pulutóng	zipa	▁ p u ʁ l u p u l u t ɔ ̃	0.19
+pulukáng-tilos	zipa	▁ p u l u k a ŋ t i l o s	0.15
+puyák	zipa	▁ p u j a k	0.07
+sabóng-lupà	zipa	▁ s a b o ̃ l u p a	0.12
+salí-salimuutín	zipa	▁ s a l i s a l i m u t i n	0.22
+salí-salisihan	zipa	▁ s a l i s a l i s i h a n	0.18
+salí-salitâ	zipa	▁ s a l i s a l i t a	0.14
+simyéntuhán	zipa	▁ s i m i e n t u a n	0.09
+sipag-ák	zipa	▁ s i p a g a k o	0.17
+sona-glasyál	zipa	▁ z o n ə g l ə s i a l	0.13
+sugá-sugá	zipa	▁ s u g a s u g a	0.11
+sukihán	zipa	▁ s o k i h a n	0.08
+sumarilí	zipa	▁ s u m a r i l i	0.08
+sundá-sundaluhan	zipa	▁ s u n d a s u n d ə l u a n	0.15
+sundá-sundaluhán	zipa	▁ s u n d a s u n d ə l u a n	0.12
+susóng-tubig	zipa	▁ s u s o ̃ t u b i g	0.18
+tab-áng	zipa	▁ t a b a ŋ	0.08
+tagapag-alís	zipa	▁ t a g a p a g a l i s	0.10
+tagapagbasyada	zipa	▁ t ə g a p a k b a ʃ j a d a	0.09
+tagapágkolór	zipa	▁ t a g a p a g k o l o r	0.08
+tagapagpasimulâ	zipa	▁ t a g a p a g p a s i m u l a	0.09
+tagapágsahíg	zipa	▁ t a g a p a g s a h i ŋ g	0.09
+tagapagtagalog	zipa	▁ t ə g a p a g t ə g a l o g	0.09
+tagapágtumpák	zipa	▁ t a g a p a g t u m p ɑ q	0.10
+tahár	zipa	▁ t æ h a r	0.10
+taing-tansô	zipa	▁ t a ː ʔ i ŋ t a n s o	0.12
+tangisán	zipa	▁ t a ŋ m i s a n	0.09
+tangkáy-bigà	zipa	▁ t a ŋ q a j b i g a	0.18
+tangkól	zipa	▁ t æ ŋ q u l	0.07
+taong-mapanlinláng	zipa	▁ t a ː ʔ o ŋ m a p a n l i n l a ŋ	0.13
+tenyentekoronél	zipa	▁ t ɛ n d i ɛ n t ɛ k o r o n ɛ l	0.09
+térsiyo	zipa	▁ t ɛ ɾ s i o	0.07
+uláng-tikatík	zipa	▁ u n l a ŋ k t i k ə t i k	0.10
+umál-umál	zipa	▁ u m a l u m a l	0.18
+uriuriin	zipa	▁ ʔ u r i u r i i n	0.09
+úubu-ubó	zipa	▁ u u b o u b o	0.11
+walampatabâ	zipa	▁ w ə l ə m p ə t a b a	0.12
+waláng-away	zipa	▁ w ə l a ŋ ə w a j	0.15
+waláng-balak	zipa	▁ w a l a ŋ b a l a q	0.12
+waláng-bangon	zipa	▁ w a l ̴ a ŋ b a ŋ o n	0.11
+waláng-dahon	zipa	▁ w a l l a ŋ d a h o n	0.12
+waláng-diyós	zipa	▁ w a l a ŋ d ʒ ɔ s	0.11
+waláng-gugol	zipa	▁ w a l a ŋ g u g o l	0.21
+waláng-hintô	zipa	▁ w a l a ŋ h i n t o	0.11
+waláng-hulog	zipa	▁ w a l a ŋ h u l o g	0.11
+waláng-intindí	zipa	▁ w a l a ŋ i n t i n d i	0.12
+waláng-kagaláw-galáw	zipa	▁ w a l a ŋ k a g a l a u g a l a w	0.16
+waláng-kalaban	zipa	▁ w a l a ŋ k a l a b a n	0.20
+walang-kapagá-pag-asa	zipa	▁ w a l a ŋ k a p a g a p a g a s a	0.11
+waláng-kapareho	zipa	▁ w a l a ŋ k a p ə r ɛ h o	0.12
+waláng-kasalo	zipa	▁ w a l a ŋ k a s a l o	0.18
+waláng-kasama	zipa	▁ w a l a ŋ k a s a m a	0.12
+waláng-kasarian	zipa	▁ w a l a ŋ k a s a r i a n	0.24
+waláng-katíyakan	zipa	▁ w a l a ŋ k a t i j a k a n	0.13
+waláng-kutób	zipa	▁ w a l a ŋ k u t o b	0.11
+waláng-lingóng-likód	zipa	▁ w a l a ŋ l i ŋ o l i k o d	0.18
+waláng-mintís	zipa	▁ w ə l l a ŋ m i n t i s	0.13
+waláng-nérbiyós	zipa	▁ w a l a ŋ n ɛ r b i o s	0.12
+waláng-pagod	zipa	▁ w a l ̴ æ ŋ p ɑ g o d	0.10
+waláng-palyá	zipa	▁ w a l a ŋ p ə l j a	0.15
+waláng-panata	zipa	▁ w a l l a ŋ p a n a t a	0.17
+waláng-patáy	zipa	▁ w a l a ŋ p ə t a j	0.16
+waláng-pilak	zipa	▁ w a l ̴ a ŋ b i l ̴ a k	0.12
+waláng-piták	zipa	▁ w a l a ŋ p i t a k o	0.12
+waláng-sang-ayon	zipa	▁ w a l a ŋ s a n a j o n	0.18
+waláng-siguro	zipa	▁ w a l a ŋ s i g u r o	0.13
+waláng-tanggí	zipa	▁ w a l a ŋ t a ŋ g i	0.12
+waláng-tanúng-tanóng	zipa	▁ w a l a ŋ t ə n u ŋ t ə n u ŋ	0.13
+waláng-tawad	zipa	▁ w a l a ŋ t a w a d	0.11
+waláng-tigás	zipa	▁ w a l a ŋ t i g a s	0.14
+waláng-tingkád	zipa	▁ w ə l a ŋ t i ŋ k a t	0.18
+waláng-tirahan	zipa	▁ w a l a ŋ t i r a h a n	0.12
+walángkintáb	zipa	▁ w ɛ l a ŋ k i n t a b	0.09
+watíng-watíng	zipa	▁ w a t i ŋ w a t i ŋ	0.12
