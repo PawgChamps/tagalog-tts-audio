@@ -21,8 +21,10 @@ Writes, in next/ (every list has the 7 columns of the word list plus `file`, the
   rename.tsv              old file -> new file: the same reading spelled differently (letter case, or an acute the voice
                           reads as the default: súkal = sukal)
   retire.tsv              clips whose reading leaves the list
-  respell.tsv             form -> text sent to the voice: respell.tsv, plus every hyphenated form to synthesize or redo
-                          with the hyphen as a space (--hyphen space; join: the halves joined; keep: as spelt)
+  respell.tsv             form -> text sent to the voice [-> prompt name of scripts/tts_gemini.py]: respell.tsv, plus
+                          each reading to synthesize or redo that is asked differently: with --hyphen space (the
+                          default) the first try of scripts/fix_clips.py (hyphen as a space with prompt `parts`,
+                          abbreviations as letter names with `letters`); join: the halves joined; keep: as spelt
   plan.md                 the counts
 Two forms are the same clip when they differ only in letter case or in an acute that adds nothing (checks/forms_fix)."""
 import argparse
@@ -32,6 +34,10 @@ import random
 import subprocess
 import sys
 import unicodedata
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from fix_clips import tries                     # noqa: E402
+from tts_gemini import read_respell             # noqa: E402
 
 ACU = {"á": "a", "é": "e", "í": "i", "ó": "o", "ú": "u"}
 HEADER = "form\tplain\tstress_source\tipa\trank\tsense\tipa_source"
@@ -193,21 +199,31 @@ def main():
         fh.write("old_file\tnew_file\n" + "".join(f"{x}\t{y}\n" for x, y in rename))
     with open("next/retire.tsv", "w", encoding="utf-8") as fh:
         fh.write("file\n" + "".join(x + "\n" for x in retire))
-    resp = {}
+    resp = {}                                           # form -> (text, prompt name or "": the list's prompt)
     if os.path.exists("respell.tsv"):
-        for ln in open("respell.tsv", encoding="utf-8"):
-            if "\t" in ln:
-                k, v = ln.rstrip("\n").split("\t")[:2]
-                resp[nfc(k)] = v
-    n_resp = 0
+        resp = {k: (t, p or "") for k, (t, p) in read_respell("respell.tsv").items()}
+    n_resp = collections.Counter()
     for r in synth + redo:
-        t = spoken(nfc(r[0]), a.hyphen)
-        if t and nfc(r[0]) not in resp:
-            resp[nfc(r[0])] = t
-            n_resp += 1
+        f = nfc(r[0])
+        if f in resp:
+            continue
+        if a.hyphen == "space":                         # the first try of scripts/fix_clips.py, tested on 3,526 clips
+            text, pname, _ = tries(f, "hyphen" if hyphenated(r) else "new", r[6])[0]
+            default = "english" if r[6] == "english" else "tagalog"
+            if text == f and pname == default:
+                continue
+            resp[f] = (text, "" if pname == default else pname)
+        else:
+            t = spoken(f, a.hyphen)
+            if not t:
+                continue
+            resp[f] = (t, "")
+        n_resp[resp[f][1] or "the list's prompt"] += 1
     with open("next/respell.tsv", "w", encoding="utf-8") as fh:
-        fh.write("".join(f"{k}\t{v}\n" for k, v in resp.items()))
-    how = {"space": "the hyphen read as a space", "join": "the halves joined", "keep": "the hyphen kept"}[a.hyphen]
+        fh.write("".join(f"{k}\t{t}\t{p}\n" if p else f"{k}\t{t}\n" for k, (t, p) in resp.items()))
+    how = {"space": "the hyphen read as a space and told the word is written in parts (prompt `parts`); "
+                    "abbreviations as letter names (`letters`)",
+           "join": "the halves joined", "keep": "the hyphen kept"}[a.hyphen]
     plan = f"""# Plan for the switch to the rebuilt word list
 
 Made by `scripts/plan_next.py` from `{a.list}`.
@@ -226,7 +242,8 @@ Made by `scripts/plan_next.py` from `{a.list}`.
 Why clips are re-synthesized: {", ".join(f"{k} {v:,}" for k, v in why.most_common()) or "none"}{"" if redo_on else
 " (the clips the phone check found wrong are left to scripts/fix_clips.py, checks/fix/)"}.
 
-Hyphenated forms are sent with {how}: {n_resp:,} new lines in `next/respell.tsv` ({len(resp):,} in all).
+Hyphenated forms are sent with {how}: {sum(n_resp.values()):,} new lines in `next/respell.tsv` ({len(resp):,} in all;
+by prompt: {", ".join(f"{k} {v:,}" for k, v in n_resp.most_common()) or "none"}).
 """
     open("next/plan.md", "w", encoding="utf-8").write(plan)
     print(plan)

@@ -41,17 +41,6 @@ sys.path.insert(0, os.path.dirname(__file__))
 import tts_gemini as T                          # noqa: E402
 from score_phones import dist, phones           # noqa: E402
 
-PROMPT = T.DEFAULT_PROMPT
-PROMPT_PARTS = ("Read aloud clearly, in a neutral tone. The text is one Filipino word written here in parts; say every "
-                "part, with the stress where the accent marks put it, and nothing else.")
-PROMPT_EN = ("Read aloud clearly, in a neutral tone. The text is a single English word; say only that word, pronounced "
-             "the English way. Do not translate it.")
-PROMPT_LETTERS = "Read aloud clearly, in a neutral tone. Say exactly the text, and nothing else."
-PROMPT_CAPS = ("Read aloud clearly, in a neutral tone. The text is letters of the alphabet; say the English name of each "
-               "letter, one after the other, and nothing else.")
-PROMPT_QUOTED = "Read aloud clearly, in a neutral tone. Say only the word in quotation marks, without the quotation marks."
-PROMPT_REPEAT = ("Read aloud clearly, in a neutral tone. The text is one Filipino word made by repeating a part. Say every "
-                 "part, the repeated one too, with the stress where the accent marks put it, and nothing else.")
 LETTER = dict(zip("abcdefghijklmnopqrstuvwxyz", "ey bi si di i ef dyi eych ay jey key el em en o pi kyu ar es ti yu vi "
                                               "dobolyu eks way zi".split()))
 ACCEPT_MAX, ACCEPT_GAIN, COMPLETE = 0.4, 0.10, 0.75
@@ -66,7 +55,8 @@ def clip_path(form):
 
 
 def tries(form, reason, src):
-    """(text, prompt, language) for each try"""
+    """(text, prompt name in tts_gemini.PROMPTS, language) for each try; the first is also how
+    scripts/plan_next.py asks for new clips"""
     f = form.strip("-")
     if reason == "repeat":                          # a reduplication the TTS kept saying only once
         parts = [p for p in f.split("-") if p]
@@ -74,22 +64,22 @@ def tries(form, reason, src):
         if len(parts) == 1 and len(f) % 2 == 0 and plain(f)[:h] == plain(f)[h:]:
             parts = [f[:h], f[h:]]
         if len(parts) > 1:
-            return [(", ".join(parts), PROMPT_REPEAT, "fil-PH"), (form, PROMPT_REPEAT, "fil-PH"), (" ".join(parts), PROMPT_REPEAT, "fil-PH")]
-        return [(form, PROMPT_REPEAT, "fil-PH"), (form, PROMPT_REPEAT, "fil-PH")]
+            return [(", ".join(parts), "repeat", "fil-PH"), (form, "repeat", "fil-PH"), (" ".join(parts), "repeat", "fil-PH")]
+        return [(form, "repeat", "fil-PH"), (form, "repeat", "fil-PH")]
     if plain(f).isalpha() and (src == "spelled" or not any(c in "aeiou" for c in plain(f))):
-        names = (" ".join(LETTER[c] for c in plain(f)), PROMPT_LETTERS, "fil-PH")
-        return [names, (" ".join(plain(f).upper()), PROMPT_CAPS, "fil-PH"), names]
+        names = (" ".join(LETTER[c] for c in plain(f)), "letters", "fil-PH")
+        return [names, (" ".join(plain(f).upper()), "caps", "fil-PH"), names]
     if src == "english":
         text = f.replace("-", " ")
-        return [(text, PROMPT_EN, "fil-PH"), (text, PROMPT_EN, "en-US"), (text, PROMPT_EN, "en-US")]
+        return [(text, "english", "fil-PH"), (text, "english", "en-US"), (text, "english", "en-US")]
     if reason == "hyphen" or "-" in f:
-        return [(f.replace("-", " "), PROMPT_PARTS, "fil-PH"), (form, PROMPT, "fil-PH"), (f.replace("-", ""), PROMPT, "fil-PH")]
+        return [(f.replace("-", " "), "parts", "fil-PH"), (form, "tagalog", "fil-PH"), (f.replace("-", ""), "tagalog", "fil-PH")]
     if reason == "cut":
         p, h = plain(f), len(f) // 2
         if len(f) % 2 == 0 and p[:h] == p[h:]:
-            return [(form, PROMPT, "fil-PH"), (f[:h] + " " + f[h:], PROMPT_PARTS, "fil-PH")]
-        return [(form, PROMPT, "fil-PH"), (form, PROMPT, "fil-PH")]
-    return [(form, PROMPT, "fil-PH"), (f'"{form}"', PROMPT_QUOTED, "fil-PH"), (form, PROMPT_EN, "fil-PH")]
+            return [(form, "tagalog", "fil-PH"), (f[:h] + " " + f[h:], "parts", "fil-PH")]
+        return [(form, "tagalog", "fil-PH"), (form, "tagalog", "fil-PH")]
+    return [(form, "tagalog", "fil-PH"), (f'"{form}"', "quoted", "fil-PH"), (form, "english", "fil-PH")]
 
 
 def score(ipa, heard):
@@ -188,7 +178,7 @@ def main():
         get_headers, secret = T.auth(a.keyfile)
 
         def synth(text, prompt, language, path):
-            open(path, "wb").write(T.synthesize(get_headers, secret, text, prompt, a.voice, a.model, language))
+            open(path, "wb").write(T.synthesize(get_headers, secret, text, T.PROMPTS[prompt], a.voice, a.model, language))
     listen = load_listener()
     new = not os.path.exists(res_path)
     log = open(res_path, "a", encoding="utf-8")

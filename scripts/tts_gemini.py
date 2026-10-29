@@ -2,7 +2,7 @@
 """Synthesize single accented words with Gemini-TTS through the Cloud Text-to-Speech API (v1beta1). Resumable: a word
 whose file exists is skipped. The key is read from a file (or GOOGLE_ACCESS_TOKEN as a bearer token) and never printed.
 Usage: tts_gemini.py <keyfile|-> <wordlist.tsv> <outdir> [--model gemini-3.1-flash-tts-preview] [--voice Laomedeia]
-       [--limit N] [--workers 4] [--prompt tagalog|english|"..."] [--respell respell.tsv]      (keyfile "-" = $GOOGLE_ACCESS_TOKEN; "token:<file>" = access token in a file; "sa:<json>" = service account, needs `pip install google-auth requests`;
+       [--limit N] [--workers 4] [--prompt tagalog|english|parts|...|"..."] [--respell respell.tsv]      (keyfile "-" = $GOOGLE_ACCESS_TOKEN; "token:<file>" = access token in a file; "sa:<json>" = service account, needs `pip install google-auth requests`;
         header X-Goog-User-Project from $GOOGLE_QUOTA_PROJECT for the token modes)"""
 import argparse
 import base64
@@ -24,10 +24,29 @@ def letter_dir(form):
 
 
 DEFAULT_PROMPT = "Read aloud clearly, in a neutral tone. The text is a single Filipino word; say only that word, with the stress where the accent marks put it."
-PROMPTS = {                                   # --prompt takes one of these names, or the text of a prompt
-    "tagalog": DEFAULT_PROMPT,
-    "english": 'Read aloud clearly, in a neutral tone. The text is a single English word; say only that word, pronounced the English way. Do not translate it.',   # first try of scripts/fix_clips.py
+PROMPTS = {        # --prompt and the third column of --respell take one of these names (or the text of a prompt).
+    "tagalog": DEFAULT_PROMPT,                # Tested by scripts/fix_clips.py on 3,526 clips (checks/fix/README.md).
+    "english": "Read aloud clearly, in a neutral tone. The text is a single English word; say only that word, pronounced "
+               "the English way. Do not translate it.",
+    "parts": "Read aloud clearly, in a neutral tone. The text is one Filipino word written here in parts; say every part, "
+             "with the stress where the accent marks put it, and nothing else.",          # hyphen sent as a space
+    "repeat": "Read aloud clearly, in a neutral tone. The text is one Filipino word made by repeating a part. Say every "
+              "part, the repeated one too, with the stress where the accent marks put it, and nothing else.",
+    "letters": "Read aloud clearly, in a neutral tone. Say exactly the text, and nothing else.",   # letter names: es dyi ti
+    "caps": "Read aloud clearly, in a neutral tone. The text is letters of the alphabet; say the English name of each "
+            "letter, one after the other, and nothing else.",
+    "quoted": "Read aloud clearly, in a neutral tone. Say only the word in quotation marks, without the quotation marks.",
 }
+
+
+def read_respell(path):
+    """respell file -> {form: (text, prompt name or None)}: form<TAB>text[<TAB>prompt]"""
+    out = {}
+    for line in open(path, encoding="utf-8"):
+        f = line.rstrip("\n").split("\t")
+        if len(f) >= 2:
+            out[unicodedata.normalize("NFC", f[0])] = (f[1], f[2] if len(f) > 2 and f[2] else None)
+    return out
 
 
 class AuthError(RuntimeError):
@@ -108,7 +127,8 @@ def main():
     ap.add_argument("--model", default="gemini-3.1-flash-tts-preview"); ap.add_argument("--voice", default="Laomedeia")
     ap.add_argument("--limit", type=int, default=0); ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--prompt", default="tagalog", help="a prompt name (" + ", ".join(PROMPTS) + ") or the prompt itself")
-    ap.add_argument("--respell", default="", help="TSV form<TAB>text: send this text instead of the form (the file keeps the form's name)")
+    ap.add_argument("--respell", default="", help="TSV form<TAB>text[<TAB>prompt]: send this text (with this prompt) instead "
+                                                  "of the form (the file keeps the form's name)")
     a = ap.parse_args()
     a.prompt = PROMPTS.get(a.prompt, a.prompt)
     get_headers, secret = auth(a.keyfile)
@@ -116,7 +136,7 @@ def main():
     rows = [l.rstrip("\n").split("\t") for l in open(a.wordlist, encoding="utf-8")][1:]
     if a.limit:
         rows = rows[:a.limit]
-    respell = dict(l.rstrip("\n").split("\t")[:2] for l in open(a.respell, encoding="utf-8") if "\t" in l) if a.respell else {}
+    respell = read_respell(a.respell) if a.respell else {}
     log = open(os.path.join(a.outdir, "log.tsv"), "a", encoding="utf-8"); lock = threading.Lock()
     stop = threading.Event(); n = {"ok": 0, "skip": 0, "fail": 0}
 
@@ -130,7 +150,8 @@ def main():
         if stop.is_set():
             return
         try:
-            audio = synthesize(get_headers, secret, respell.get(form, form), a.prompt, a.voice, a.model)
+            text, pname = respell.get(form, (form, None))
+            audio = synthesize(get_headers, secret, text, PROMPTS.get(pname, pname) if pname else a.prompt, a.voice, a.model)
         except AuthError as e:
             stop.set()
             print("auth/permission error, stopping:", str(e)[:300])
