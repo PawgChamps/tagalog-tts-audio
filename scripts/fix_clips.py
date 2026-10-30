@@ -15,7 +15,9 @@ columns form, reason, ipa_source, error.  Each clip gets up to three tries, each
   repeat    reduplications still said once after the above (asa-asa -> "asa"): told the word repeats a part and
             every part must be said; the parts separated by a comma, then as written, then by a space
 
-(English rows, abbreviations and forms without a vowel are asked the English or letter-name way whatever the reason.)  ZIPA listens to each
+(English rows, abbreviations and forms without a vowel are asked the English or letter-name way whatever the reason.)
+A list may spell out the tries of a row in an `ask` column instead: text|prompt|language, separated by ; (prompt a
+name of tts_gemini.PROMPTS), e.g. `"text"|quoted_english|en-US;"text"|quoted_english|fil-PH`.  ZIPA listens to each
 try (as in scripts/phones.py; needs onnxruntime lhotse huggingface_hub imageio-ffmpeg and $ZIPA_SRC) and the error is
 the share of the IPA's phones it gets wrong, as in score_phones.py.  A try replaces audio/<letter>/<form>.mp3 when it
 is complete (at least 75 % of the phones, not much longer than the word) and clearly better than the old clip: at
@@ -80,6 +82,16 @@ def tries(form, reason, src):
             return [(form, "tagalog", "fil-PH"), (f[:h] + " " + f[h:], "parts", "fil-PH")]
         return [(form, "tagalog", "fil-PH"), (form, "tagalog", "fil-PH")]
     return [(form, "tagalog", "fil-PH"), (f'"{form}"', "quoted", "fil-PH"), (form, "english", "fil-PH")]
+
+
+def asked(ask):
+    """the tries a list spells out in its optional `ask` column: text|prompt|language, separated by ;"""
+    out = []
+    for part in (ask or "").split(";"):
+        f = [x.strip() for x in part.split("|")]
+        if len(f) == 3 and f[0] and f[1] in T.PROMPTS:
+            out.append((f[0], f[1], f[2] or "fil-PH"))
+    return out[:3]
 
 
 def score(ipa, heard):
@@ -207,7 +219,8 @@ def main():
         state = {}
         for r in batch:
             w = ipa[r["form"]]
-            state[r["form"]] = {"row": r, "plan": tries(r["form"], r["reason"], w["ipa_source"]), "best": None,
+            plan = asked(r.get("ask")) or tries(r["form"], r["reason"], w["ipa_source"])
+            state[r["form"]] = {"row": r, "plan": plan, "best": None,
                                 "e_old": float(r["error"]), "ipa": w["ipa"]}
         for rnd in range(3):
             jobs = [(f"{rnd}_{i}", s["row"], s["plan"][rnd]) for i, s in enumerate(state.values())

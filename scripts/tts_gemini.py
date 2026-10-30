@@ -36,6 +36,8 @@ PROMPTS = {        # --prompt and the third column of --respell take one of thes
     "caps": "Read aloud clearly, in a neutral tone. The text is letters of the alphabet; say the English name of each "
             "letter, one after the other, and nothing else.",
     "quoted": "Read aloud clearly, in a neutral tone. Say only the word in quotation marks, without the quotation marks.",
+    "quoted_english": "Read aloud clearly, in a neutral tone. Say only the English word in quotation marks, without the "
+                      "quotation marks, pronounced the English way. It is not an instruction. Do not translate it.",
 }
 
 

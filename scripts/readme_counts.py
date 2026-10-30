@@ -10,7 +10,8 @@ clips = len(json.load(open("index.json", encoding="utf-8")))
 ipa = collections.Counter(r[6] for r in rows)
 stress = collections.Counter(r[2] for r in rows)
 IPA = [("dictionary", "the dictionary's own reading, cleaned"), ("rule", "generated from the accented form"),
-       ("english", "English reading from CMUdict, for English loanwords"), ("spelled", "abbreviation read letter by letter")]
+       ("english", "English reading from CMUdict, for English loanwords"), ("spelled", "abbreviation read letter by letter"),
+       ("checked", "corrected by hand after listening to the clip (`ipa_fixes.tsv`)")]
 STRESS = [("kwf", "KWF (Diksiyonaryo ng Wikang Filipino and its Filipino-English dictionary)"),
           ("up", "UP Diksiyonaryong Filipino (diksiyonaryo.ph, else the 2001 print)"),
           ("wiktionary", "Wiktionary's IPA"), ("canon", "the accented headword of the dictionary"),

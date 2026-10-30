@@ -1,0 +1,93 @@
+form	reason	ipa_source	ipa	heard	error	ask
+text	again	english	/ˈtɛkst/	p a s ə t u g a	1.00	"text"|quoted_english|en-US;"text"|quoted_english|fil-PH;text|english|en-US
+change	again	english	/ˈtʃeɪndʒ/	t ʃ a n d ʒ e	0.60	"change"|quoted_english|en-US;"change"|quoted_english|fil-PH;change|english|en-US
+ow	again	english	/ˈoʊ/	ə w i ʃ	1.00	"ow"|quoted_english|en-US;"ow"|quoted_english|fil-PH;ow|english|en-US
+graduate	again	english	/ˈɡɹædʒəwət/	g ɾ a d u a t	0.38	"graduate"|quoted_english|en-US;"graduate"|quoted_english|fil-PH;graduate|english|en-US
+surgery	again	english	/ˈsɝdʒɚi/	s i r u x i a	0.71	"surgery"|quoted_english|en-US;"surgery"|quoted_english|fil-PH;surgery|english|en-US
+junk	again	english	/ˈdʒʌŋk/	d ʒ ɛ n k	0.50	"junk"|quoted_english|en-US;"junk"|quoted_english|fil-PH;junk|english|en-US
+xi	again	english	/ˈʃi/	ʃ a m	1.00	"xi"|quoted_english|en-US;"xi"|quoted_english|fil-PH;xi|english|en-US
+instruction	again	english	/ˌɪnˈstɹʌkʃən/	a ɪ l ə m a	0.80	"instruction"|quoted_english|en-US;"instruction"|quoted_english|fil-PH;instruction|english|en-US
+aviation	again	english	/ˌeɪviˈeɪʃən/	a v i a ʃ j o n	0.67	"aviation"|quoted_english|en-US;"aviation"|quoted_english|fil-PH;aviation|english|en-US
+thy	again	english	/ˈðaɪ/	s a j	0.67	"thy"|quoted_english|en-US;"thy"|quoted_english|fil-PH;thy|english|en-US
+av	again	english	/ˌeɪˈvi/	a v n u	1.00	A V|caps|fil-PH;A V|caps|en-US
+ave	again	rule	/ˈʔave/	a v e n ɲ u u	1.00	"ave"|quoted|fil-PH;ave|tagalog|fil-PH
+moderate	again	english	/ˈmɑdɚət/	m o d e r a t o	0.29	"moderate"|quoted_english|en-US;"moderate"|quoted_english|fil-PH;moderate|english|en-US
+cha-cha	again	english	/ˈtʃɑˌtʃɑ/	t ʃ a	0.50	"cha-cha"|quoted_english|en-US;cha, cha|english|en-US;chacha|english|en-US
+chase	again	english	/ˈtʃeɪs/	t ʃ a s e	0.75	"chase"|quoted_english|en-US;"chase"|quoted_english|fil-PH;chase|english|en-US
+egyptian	again	english	/ɪˈdʒɪpʃən/	e ʒ i p t j o n	0.71	"egyptian"|quoted_english|en-US;"egyptian"|quoted_english|fil-PH;egyptian|english|en-US
+generator	again	english	/ˈdʒɛnɚˌeɪtɚ/	d ʒ ɛ n e r a t o r	0.30	"generator"|quoted_english|en-US;"generator"|quoted_english|fil-PH;generator|english|en-US
+ac	again	english	/ˌeɪˈsi/	a s i n g	1.00	A C|caps|fil-PH;A C|caps|en-US
+null	again	english	/ˈnʌl/	n o ʊ	0.67	"null"|quoted_english|en-US;"null"|quoted_english|fil-PH;null|english|en-US
+refrigerator	again	english	/ɹəˈfɹɪdʒɚˌeɪtɚ/	r ɛ f r i d ʒ e r a t o r	0.31	"refrigerator"|quoted_english|en-US;"refrigerator"|quoted_english|fil-PH;refrigerator|english|en-US
+separate	again	english	/ˈsɛpɚˌeɪt/	s ɛ p a r a t	0.38	"separate"|quoted_english|en-US;"separate"|quoted_english|fil-PH;separate|english|en-US
+isthmus	again	english	/ˈɪsməs/	i s t m u s	0.40	"isthmus"|quoted_english|en-US;"isthmus"|quoted_english|fil-PH;isthmus|english|en-US
+catheter	again	english	/ˈkæθətɚ/	k a t ɛ t e r	0.29	"catheter"|quoted_english|en-US;"catheter"|quoted_english|fil-PH;catheter|english|en-US
+transcription	again	english	/ˌtɹænˈskɹɪpʃən/	i s a	0.83	"transcription"|quoted_english|en-US;"transcription"|quoted_english|fil-PH;transcription|english|en-US
+context	again	english	/ˈkɑntɛkst/	k a s o	0.62	"context"|quoted_english|en-US;"context"|quoted_english|fil-PH;context|english|en-US
+mace	again	english	/ˈmeɪs/	m a s e	0.75	"mace"|quoted_english|en-US;"mace"|quoted_english|fil-PH;mace|english|en-US
+adjourn	again	english	/əˈdʒɝn/	a d d ʒ u m	0.80	"adjourn"|quoted_english|en-US;"adjourn"|quoted_english|fil-PH;adjourn|english|en-US
+pandanus	again	english	/pænˈdeɪnəs/	p ə n d a n u s	0.33	"pandanus"|quoted_english|en-US;"pandanus"|quoted_english|fil-PH;pandanus|english|en-US
+quay	again	english	/ˈki/	k w ɛ j	1.00	"quay"|quoted_english|en-US;"quay"|quoted_english|fil-PH;quay|english|en-US
+uranus	again	english	/ˈjuɹənəs/	u r a n u s	0.29	"uranus"|quoted_english|en-US;"uranus"|quoted_english|fil-PH;uranus|english|en-US
+skier	again	english	/ˈskaɪɹ/	s k i ɜ	0.40	"skier"|quoted_english|en-US;"skier"|quoted_english|fil-PH;skier|english|en-US
+cursor	again	english	/ˈkɝsɚ/	k o r s o r	0.33	"cursor"|quoted_english|en-US;"cursor"|quoted_english|fil-PH;cursor|english|en-US
+vie	again	english	/ˈvaɪ/	v i e	0.67	"vie"|quoted_english|en-US;"vie"|quoted_english|fil-PH;vie|english|en-US
+progenitor	again	english	/pɹoʊˈdʒɛnɪtɚ/	p r o x ɛ n i t o r	0.27	"progenitor"|quoted_english|en-US;"progenitor"|quoted_english|fil-PH;progenitor|english|en-US
+bicarbonate	again	english	/baɪˈkɑɹbənət/	b i k a r b o n a t o	0.27	"bicarbonate"|quoted_english|en-US;"bicarbonate"|quoted_english|fil-PH;bicarbonate|english|en-US
+cation	again	english	/ˈkæˌtaɪən/	k ə ʃ o n	0.57	"cation"|quoted_english|en-US;"cation"|quoted_english|fil-PH;cation|english|en-US
+empiricism	again	english	/ɛmˈpɪɹəˌsɪzəm/	ɛ m p i r i s i s m o	0.36	"empiricism"|quoted_english|en-US;"empiricism"|quoted_english|fil-PH;empiricism|english|en-US
+catsup	again	english	/ˈkɛtʃəp/	k a t s o p	0.80	"catsup"|quoted_english|en-US;"catsup"|quoted_english|fil-PH;catsup|english|en-US
+atheism	again	english	/əˈθaɪsəm/	a p ɛ i s m o	0.57	"atheism"|quoted_english|en-US;"atheism"|quoted_english|fil-PH;atheism|english|en-US
+bald-bala	again	checked	/baldˈbala/	b a l	0.62	bald bala|parts|fil-PH;bald, bala|repeat|fil-PH
+bronchial	again	english	/ˈbɹɑntʃiəl/	b r ɔ n k j a l	0.38	"bronchial"|quoted_english|en-US;"bronchial"|quoted_english|fil-PH;bronchial|english|en-US
+bumpers	again	english	/ˈbʌmpɚz/	b u m p e r s	0.29	"bumpers"|quoted_english|en-US;"bumpers"|quoted_english|fil-PH;bumpers|english|en-US
+chalcedony	again	english	/ˈtʃælsəˌdoʊni/	k a l s e d o ɲ i	0.40	"chalcedony"|quoted_english|en-US;"chalcedony"|quoted_english|fil-PH;chalcedony|english|en-US
+debase	again	english	/dəˈbeɪs/	d ɛ b a s ɛ	0.67	"debase"|quoted_english|en-US;"debase"|quoted_english|fil-PH;debase|english|en-US
+dugo-q	again	checked	/duɡoˈkju/	d u g o	0.43	dugo kyu|parts|fil-PH;dugo, kyu|parts|fil-PH
+duodenum	again	english	/duˈɑdənəm/	d u o d e n ɔ m	0.38	"duodenum"|quoted_english|en-US;"duodenum"|quoted_english|fil-PH;duodenum|english|en-US
+dyukaka	again	rule	/djuˈkaka/	d ʒ u q a	0.57	"dyukaka"|quoted|fil-PH;dyukaka|tagalog|fil-PH
+egotist	again	english	/ˈiɡətɪst/	ɛ g o t i s t	0.29	"egotist"|quoted_english|en-US;"egotist"|quoted_english|fil-PH;egotist|english|en-US
+elaborate	again	english	/ɪˈlæbɹət/	ɛ l a b o r i t	0.43	"elaborate"|quoted_english|en-US;"elaborate"|quoted_english|fil-PH;elaborate|english|en-US
+gaga-go	again	checked	/ɡaɡaˈɡo/	g a g a	0.33	gaga go|parts|fil-PH;gaga, go|parts|fil-PH
+gamotlahat	again	rule	/ɡamoˈtlahat/	g ə m o t	0.50	gamot lahat|parts|fil-PH;gamot, lahat|parts|fil-PH
+hawsyaw	again	dictionary	/ˈhawsjaw/	o ʃ a w	0.71	"hawsyaw"|quoted|fil-PH;hawsyaw|tagalog|fil-PH
+indeterminate	again	english	/ˌɪndɪˈtɝmɪnɪt/	i n d e t æ r m i n e	0.33	"indeterminate"|quoted_english|en-US;"indeterminate"|quoted_english|fil-PH;indeterminate|english|en-US
+k-dye	again	checked	/kejˈdʒej/	k i	0.83	K J|caps|fil-PH;key dyey|letters|fil-PH
+kaxnote	again	rule	/kaksˈnote/	k a s e	0.50	"kaxnote"|quoted|fil-PH;kaxnote|tagalog|fil-PH
+legerdemain	again	english	/ˌlɛdʒɚdəˈmeɪn/	l e g e r d e m a n	0.36	"legerdemain"|quoted_english|en-US;"legerdemain"|quoted_english|fil-PH;legerdemain|english|en-US
+liquidator	again	english	/ˈlɪkwɪˌdeɪtɚ/	l i k w i d a t o r	0.27	"liquidator"|quoted_english|en-US;"liquidator"|quoted_english|fil-PH;liquidator|english|en-US
+lobotomy	again	english	/ˈloʊˌboʊˌtoʊmi/	l o b ɔ t o m i	0.27	"lobotomy"|quoted_english|en-US;"lobotomy"|quoted_english|fil-PH;lobotomy|english|en-US
+myocardium	again	english	/ˌmaɪəˈkɑɹdiəm/	m a j o k a r d i u m	0.27	"myocardium"|quoted_english|en-US;"myocardium"|quoted_english|fil-PH;myocardium|english|en-US
+oct-	again	english	/ˈɔkt/	o q t u b r e	1.00	okt|tagalog|fil-PH;"okt"|quoted|fil-PH
+oligocene	again	english	/ˈɑləɡoʊˌsin/	o l i g ɔ s ɛ n	0.44	"oligocene"|quoted_english|en-US;"oligocene"|quoted_english|fil-PH;oligocene|english|en-US
+omnivorous	again	english	/ɑmˈnɪvɚəs/	o m n i v o r u s	0.33	"omnivorous"|quoted_english|en-US;"omnivorous"|quoted_english|fil-PH;omnivorous|english|en-US
+oppressor	again	english	/əˈpɹɛsɚ/	o p p r e s o r	0.43	"oppressor"|quoted_english|en-US;"oppressor"|quoted_english|fil-PH;oppressor|english|en-US
+plover	again	english	/ˈplʌvɚ/	p l ̴ o ʊ v ɜ ˞	0.33	"plover"|quoted_english|en-US;"plover"|quoted_english|fil-PH;plover|english|en-US
+polemic	again	english	/pəˈlɛmɪk/	p o l l ɛ m i k	0.29	"polemic"|quoted_english|en-US;"polemic"|quoted_english|fil-PH;polemic|english|en-US
+raisin	again	english	/ˈɹeɪzɪn/	r a j s i n	0.50	"raisin"|quoted_english|en-US;"raisin"|quoted_english|fil-PH;raisin|english|en-US
+sibuyastagalog	again	rule	/sibujastaˈɡaloɡ/	s i b u j a s	0.50	sibuyas tagalog|parts|fil-PH;sibuyas, tagalog|parts|fil-PH
+tao-trap	again	checked	/taʔoˈtɾap/	t a o	0.57	tao trap|parts|fil-PH;tao, trap|parts|fil-PH
+triage	again	english	/ˈtɹaɪɪdʒ/	t ɾ i j a ʒ	0.67	"triage"|quoted_english|en-US;"triage"|quoted_english|fil-PH;triage|english|en-US
+tuwalyalita	again	rule	/tuwaljaˈlita/	t u a l i ə	0.45	tuwalya lita|parts|fil-PH;tuwalyalita|tagalog|fil-PH
+voyeur	again	english	/ˌvɔɪˈjuɹ/	v o j ɜ ˞	0.33	"voyeur"|quoted_english|en-US;"voyeur"|quoted_english|fil-PH;voyeur|english|en-US
+worktext	again	rule	/ˈwoɾktekst/	w ɔ r k	0.56	work text|parts|fil-PH;"worktext"|quoted_english|en-US
+boy	again	english	/ˈbɔɪ/	b ɔ j	0.33	"boy"|quoted_english|en-US;"boy"|quoted_english|fil-PH;boy|english|en-US
+user	again	english	/ˈjuzɚ/	b a k a n t e	1.00	"user"|quoted_english|en-US;"user"|quoted_english|fil-PH;user|english|en-US
+er	again	checked	/ʔiˈʔaɾ/	ɯ ð	1.00	E R|caps|fil-PH;E R|caps|en-US
+modus	again	english	/ˈmoʊdəs/	m o d u s	0.33	"modus"|quoted_english|en-US;"modus"|quoted_english|fil-PH;modus|english|en-US
+basal	again	english	/ˈbeɪsəl/	b ə s a l	0.33	"basal"|quoted_english|en-US;"basal"|quoted_english|fil-PH;basal|english|en-US
+bog	again	english	/ˈbɑɡ/	b ɔ g	0.33	"bog"|quoted_english|en-US;"bog"|quoted_english|fil-PH;bog|english|en-US
+sos	again	english	/ˌɛˌoʊˈɛs/	s o s	0.60	S O S|caps|fil-PH;S O S|caps|en-US
+heir	again	english	/ˈɛɹ/	h ɛ ɹ	0.50	"heir"|quoted_english|en-US;"heir"|quoted_english|fil-PH;heir|english|en-US
+ag-agan	again	checked	/ʔaɡˈʔaɡan/	a g	0.67	ag agan|parts|fil-PH;ag, agan|repeat|fil-PH;ag-agan|tagalog|fil-PH
+anemone	again	english	/ˈænɪˌmoʊn/	ə n ɛ m ə n i	0.57	"anemone"|quoted_english|en-US;"anemone"|quoted_english|fil-PH;anemone|english|en-US
+buhosutang	again	rule	/buhoˈsutaŋ/	b u ʒ o s	0.56	buhos utang|parts|fil-PH;buhosutang|tagalog|fil-PH
+buladbukád	again	rule	/buladbuˈkad/	b u l a d	0.50	bulad bukád|parts|fil-PH;bulad, bukád|repeat|fil-PH
+dray	again	english	/ˈdɹeɪ/	d o a j	0.75	"dray"|quoted_english|en-US;"dray"|quoted_english|fil-PH;dray|english|en-US
+ilióyliyo	again	rule	/ʔiliˈʔojlijo/	i l l i o	0.44	ilióy liyo|parts|fil-PH;ilióy, liyo|repeat|fil-PH
+Iyonout	again	rule	/ʔijoˈnoʔut/	i j o n	0.43	"Iyonout"|quoted|fil-PH;Iyonout|tagalog|fil-PH
+pilitpilitin	again	rule	/pilitpiˈlitin/	p i l i t i n	0.42	pilit pilitin|parts|fil-PH;pilit, pilitin|repeat|fil-PH
+rayúsrayós	again	rule	/ɾajusɾaˈjos/	r a j u s	0.50	rayús rayós|parts|fil-PH;rayús, rayós|repeat|fil-PH
+solder	again	english	/ˈsɑdɚ/	s o l d e r	0.40	"solder"|quoted_english|en-US;"solder"|quoted_english|fil-PH;solder|english|en-US
+turbot	again	english	/ˌtɝˈboʊ/	t ɔ r b ɔ t	0.33	"turbot"|quoted_english|en-US;"turbot"|quoted_english|fil-PH;turbot|english|en-US
+webinar	again	english	/ˈwɛbɪnɚ/	w ɛ b ə n ɑ r	0.29	"webinar"|quoted_english|en-US;"webinar"|quoted_english|fil-PH;webinar|english|en-US

@@ -11,6 +11,7 @@ import collections
 import csv
 import glob
 import os
+import re
 import sys
 import unicodedata
 
@@ -25,6 +26,8 @@ VOWELS = set("aeiou")
 
 def phones(s):
     s = unicodedata.normalize("NFD", s or "")
+    s = re.sub(r"[ɜə]\s*˞", "ɝ", s)                    # ZIPA writes an r-coloured vowel as two symbols (ɜ ˞): = ɝ, ɚ
+    s = re.sub(r"\s*˞", "r", s)                         # any other vowel + ˞ (o ˞): the vowel and r
     s = "".join(c for c in s if unicodedata.category(c) != "Mn" and c not in DROP)
     s = s.replace("ts", "ts").replace("tʃ", "C").replace("dʒ", "J").replace("tɕ", "C").replace("dʑ", "J")
     out = []

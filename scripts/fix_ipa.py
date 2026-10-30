@@ -47,6 +47,9 @@ without wordfreq the same holds for hyphenated forms.  Running it again changes 
       reads that word the Tagalog way.  Single words are settled first, so that this is known.
  A row that loses its English reading gets back its reading from before English readings, cleaned as above (the rule
  reading if it had no dictionary reading).
+ corrected by hand (ipa_source = checked)
+   9. the forms of ipa_fixes.tsv take the reading given there (written after listening to the clip and reading the
+      sense: French and Italian words, Tagalog words read as English, symbols); no rule touches them.
 """
 import argparse
 import os
@@ -75,6 +78,7 @@ ORIGIN, WORDS = {}, set()          # plain spelling -> origin flags (origin.tsv)
 DECIDING = {"en", "es", "native", "respelled"}   # flags that settle English or not; `other` alone (chef: French) does not
 HAVE, PENDING = {}, set()          # English readings already in the list (they stand in for CMUdict); rows waiting for it
 TAGALOG_PLAIN = set()              # plain spellings of the single words the list reads the Tagalog way (rule 8; filled by run)
+FIXES_FILE, FIXES = "ipa_fixes.tsv", {}   # form -> reading corrected by hand after listening to its clip (ipa_source checked)
 
 VOW = set("aeiouəɛɔɪʊæʌɑɝɚ")
 FORM_V = set("aeiou")
@@ -528,7 +532,10 @@ def pick(r, rows):
 def run(rows):
     """rows of the list -> (fixed rows, {reason: [(form, before, after)]}, English readings kept).  Single words go first:
     rule 8 needs to know which of them the list reads the Tagalog way."""
-    HAVE.clear(); PENDING.clear(); TAGALOG_PLAIN.clear()
+    HAVE.clear(); PENDING.clear(); TAGALOG_PLAIN.clear(); FIXES.clear()
+    if os.path.exists(FIXES_FILE):
+        FIXES.update({f[0]: f[1] for f in (ln.split("\t") for ln in open(FIXES_FILE, encoding="utf-8").read().split("\n")[1:])
+                      if len(f) >= 2 and f[1]})
     HAVE.update({r[0]: r[3] for r in rows if r[6] == "english"})
     old = old_list() if HAVE else {}
     out, changes, kept = [None] * len(rows), {}, 0
@@ -540,6 +547,12 @@ def run(rows):
                 continue
             r = list(r)
             first = r[3]
+            if r[0] in FIXES:                            # corrected by hand after listening to the clip: as given
+                if (r[3], r[6]) != (FIXES[r[0]], "checked"):
+                    changes.setdefault("corrected by hand (ipa_fixes.tsv)", []).append((r[0], first, FIXES[r[0]]))
+                r[3], r[6] = FIXES[r[0]], "checked"
+                out[i] = r
+                continue
             if r[6] == "english":                        # recheck from the reading it had before English readings
                 o = pick(r, old.get(r[0]))
                 start = r[:3] + [o[3]] + r[4:6] + [o[6]] if o else r[:3] + [M.ipa(r[0]) or M.spelled(r[0])] + r[4:6] + ["rule"]
@@ -590,7 +603,7 @@ def main():
     waiting = sum(1 for r in out if r[0] in PENDING and r[6] != "english")
     if waiting:
         print(f"up to {waiting:,} rows get an English reading where CMUdict has the spelling (run with CMUdict and wordfreq installed)")
-    print("ipa_source: " + ", ".join(f"{s} {sum(r[6] == s for r in out):,}" for s in ("dictionary", "rule", "english", "spelled")))
+    print("ipa_source: " + ", ".join(f"{s} {sum(r[6] == s for r in out):,}" for s in ("dictionary", "rule", "english", "spelled", "checked")))
     if write:
         open(out_path, "w", encoding="utf-8").write("\n".join([header] + ["\t".join(r) for r in out]) + "\n")
         print(f"{out_path} written" + ("; now run scripts/build_index.py" if out_path == "wordlist_all.tsv" else ""))
