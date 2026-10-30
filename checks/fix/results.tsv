@@ -4526,3 +4526,262 @@ pulp	english	-	pulp	fil-PH	p o l p	0.25	0.25	kept
 basal	english	-	basal	fil-PH	b e z ə l ̴	0.33	0.33	kept
 grey	english	-	grey	fil-PH	g r a	0.25	0.50	kept
 bog	english	-	bog	fil-PH	b ɔ g	0.33	0.33	kept
+poison	english	1	poison	fil-PH	p ɔ ɪ z ə n	0.50	0.00	replaced
+lodge	english	1	lodge	fil-PH	l ̴ ɑ d ʒ	0.67	0.00	replaced
+token	english	1	token	fil-PH	t o ʊ k ə n	0.33	0.00	replaced
+sos	english	1	sos	fil-PH	s ɔ s	0.60	0.60	rejected
+ant	english	1	ant	fil-PH	æ n t	0.67	0.00	replaced
+bottle	english	1	bottle	fil-PH	b ɑ t ə l ̴	0.60	0.00	replaced
+tongue	english	1	tongue	fil-PH	t ə ŋ	1.00	0.00	replaced
+hostel	english	1	hostel	fil-PH	h ɑ s t ə l ̴	0.33	0.00	replaced
+sinai	english	1	sinai	fil-PH	s a ɪ n a ɪ	0.33	0.00	replaced
+lobe	english	1	lobe	fil-PH	l o b	0.75	0.25	replaced
+manor	english	1	manor	fil-PH	m æ n ɜ ˞	0.40	0.20	replaced
+gum	english	1	gum	fil-PH	g a m	0.67	0.00	replaced
+ore	english	1	ore	fil-PH	ɔ ɹ	0.50	0.00	replaced
+sire	english	1	sire	fil-PH	s i ɜ	0.60	0.40	rejected
+dairy	english	1	dairy	fil-PH	d ɛ r i	0.50	0.00	replaced
+tonsil	english	1	tonsil	fil-PH	t ɑ n s ə l ̴	0.33	0.00	replaced
+lose	english	1	lose	fil-PH	l ̴ u z	0.67	0.00	replaced
+rum	english	1	rum	fil-PH	r u m	0.33	0.33	rejected
+rotor	english	1	rotor	fil-PH	ɹ o ʊ t ɜ ˞	0.33	0.17	replaced
+mug	english	1	mug	fil-PH	m a g	1.00	0.00	replaced
+hog	english	1	hog	fil-PH	h ɔ g	0.33	0.33	rejected
+xerox	english	1	xerox	fil-PH	z i ɹ ɑ k s	0.50	0.00	replaced
+gland	english	1	gland	fil-PH	g l ̴ æ n d	0.60	0.00	replaced
+angle	english	1	angle	fil-PH	ɛ ŋ g ə l ̴	0.60	0.20	replaced
+ll	letters	1	el el	fil-PH	ɛ l ɛ l	0.75	0.00	replaced
+ton	english	1	ton	fil-PH	t ə n	0.33	0.00	replaced
+mill	english	1	mill	fil-PH	m i l	0.67	0.00	replaced
+dope	english	1	dope	fil-PH	d o w p	0.50	0.25	replaced
+gale	english	1	gale	fil-PH	g e ɪ l ̴	0.75	0.00	replaced
+nap	english	1	nap	fil-PH	n æ p	0.67	0.00	replaced
+leone	english	1	leone	fil-PH	l ̴ i o n	0.60	0.20	replaced
+pale	english	1	pale	fil-PH	p e ɪ l ̴	0.75	0.00	replaced
+raise	english	1	raise	fil-PH	ɹ e ɪ z	0.75	0.00	replaced
+kernel	english	1	kernel	fil-PH	k ɜ ˞ n ə l ̴	0.33	0.17	replaced
+dentist	english	1	dentist	fil-PH	d ɛ n t ɪ s t	0.43	0.14	replaced
+sikh	english	1	sikh	fil-PH	s i k	0.67	0.00	replaced
+warp	english	1	warp	fil-PH	w ɔ r p	0.25	0.00	replaced
+worm	english	1	worm	fil-PH	w ɔ r m	0.50	0.25	replaced
+downs	english	1	downs	fil-PH	d a ʊ n z	0.40	0.00	replaced
+pew	english	1	pew	fil-PH	p j u	1.00	0.00	replaced
+pion	english	1	pion	fil-PH	p a ɪ ə n	0.60	0.00	replaced
+bogus	english	1	bogus	fil-PH	b o w g e s	0.33	0.33	rejected
+natal	english	1	natal	fil-PH	n e ɪ v ə l ̴	0.33	0.17	replaced
+rope	english	1	rope	fil-PH	r o p	0.50	0.25	replaced
+hare	english	1	hare	fil-PH	h i ɹ	0.67	0.33	replaced
+prey	english	1	prey	fil-PH	p ɹ e ɪ	0.25	0.00	replaced
+penis	english	1	penis	fil-PH	p i n ə s	0.40	0.20	replaced
+rayon	english	1	rayon	fil-PH	ɹ e ɪ ə n	0.60	0.00	replaced
+tailor	english	1	tailor	fil-PH	t e ɪ l ̴ ɜ ˞	0.50	0.17	replaced
+titus	english	1	titus	fil-PH	t a ɪ t ə s	0.33	0.00	replaced
+smog	english	1	smog	fil-PH	s m ɑ g	0.25	0.00	replaced
+bun	english	1	bun	fil-PH	b a n	0.67	0.00	replaced
+mod	english	1	mod	fil-PH	m ɑ d	0.67	0.33	replaced
+moses	english	1	moses	fil-PH	m o u z ɛ s	0.50	0.17	replaced
+odor	english	1	odor	fil-PH	o w d e r	0.40	0.20	replaced
+jpe	letters	1	jey pi i	fil-PH	d ʒ e ɪ p i a ɪ	0.50	0.17	replaced
+robe	english	1	robe	fil-PH	r o b	0.50	0.25	replaced
+pond	english	1	pond	fil-PH	p ɑ n d	0.50	0.00	replaced
+sibyl	english	1	sibyl	fil-PH	s e b o l ̴	0.40	0.40	rejected
+anion	english	1	anion	fil-PH	æ n a ɪ ɑ n	0.33	0.17	replaced
+nail	english	1	nail	fil-PH	n e l	0.75	0.25	replaced
+pause	english	1	pause	fil-PH	p ɔ z	0.67	0.00	replaced
+grain	english	1	grain	fil-PH	g r a n	0.40	0.40	rejected
+siyáng-siyá	hyphen	1	siyáng siyá	fil-PH	s j ɑ ŋ ʃ i a	0.67	0.33	replaced
+mores	english	1	mores	fil-PH	m ɔ ɹ i z s	0.33	0.33	rejected
+mob	english	1	mob	fil-PH	m a b	0.33	0.00	replaced
+stain	english	1	stain	fil-PH	s t e ɪ n	0.40	0.00	replaced
+amendment	english	1	amendment	fil-PH	ə m ɛ n d m ə n t	0.56	0.00	replaced
+poet	english	1	poet	fil-PH	p o ʊ ə t	0.40	0.00	replaced
+mite	english	1	mite	fil-PH	m a ɪ t	0.50	0.00	replaced
+potent	english	1	potent	fil-PH	p o ʊ t ə n t	0.29	0.00	replaced
+naked	english	1	naked	fil-PH	n e ɪ k ə d	0.50	0.00	replaced
+satan	english	1	satan	fil-PH	s e ɪ t ə n	0.33	0.00	replaced
+tomb	english	1	tomb	fil-PH	t u m	0.67	0.00	replaced
+karol	english	1	karol	fil-PH	k æ ɹ ə l ̴	0.40	0.40	rejected
+gg	letters	1	dyi dyi	fil-PH	d i w a ɪ a ɪ d i w a ɪ a ɪ	1.00	1.00	rejected
+liar	english	1	liar	fil-PH	l ̴ a ɪ ɜ ˞	0.60	0.20	replaced
+heir	english	1	heir	fil-PH	h ɛ ɹ	0.50	0.50	rejected
+ares	english	1	ares	fil-PH	ɛ ɹ z	0.67	0.33	replaced
+resin	english	1	resin	fil-PH	ɹ ɛ z ə n	0.40	0.00	replaced
+gut	english	1	gut	fil-PH	g ɑ t	1.00	0.00	replaced
+testes	english	1	testes	fil-PH	t ɛ s t i z	0.33	0.00	replaced
+oldies	english	1	oldies	fil-PH	ɔ l ̴ ð i z	0.33	0.17	replaced
+mogul	english	1	mogul	fil-PH	m o ʊ g ə l ̴	0.67	0.00	replaced
+eon	english	1	eon	fil-PH	i a n	1.00	0.00	replaced
+aegis	english	1	aegis	fil-PH	e ɪ d ʒ ɛ s	0.75	0.50	rejected
+tri	english	1	tri	fil-PH	t ɹ a ɪ	0.25	0.00	replaced
+amide	english	1	amide	fil-PH	e ɪ m a ɪ d	0.50	0.00	replaced
+molten	english	1	molten	fil-PH	m ɔ l t ə n	0.43	0.14	replaced
+drain	english	1	drain	fil-PH	d ʒ r a n	0.40	0.60	rejected
+ode	english	1	ode	fil-PH	o ʊ d	0.67	0.00	replaced
+urn	english	1	urn	fil-PH	ɛ r n	0.67	0.00	replaced
+hail	english	1	hail	fil-PH	h e ɪ l ̴	0.25	0.00	replaced
+om	english	1	om	fil-PH	ɔ m	1.00	0.00	replaced
+bedouin	english	1	bedouin	fil-PH	b ɛ d ə w ɪ n	0.57	0.43	rejected
+amine	english	1	amine	fil-PH	a m i n	0.60	0.40	replaced
+syrup	english	1	syrup	fil-PH	s ɪ ɹ ə p	0.40	0.20	replaced
+almond	english	1	almond	fil-PH	ɑ l ̴ m ə n d	0.40	0.20	replaced
+gable	english	1	gable	fil-PH	g e ɪ b ə l ̴	0.67	0.00	replaced
+bastard	english	1	bastard	fil-PH	b æ s t ɜ ˞ d	0.29	0.14	replaced
+nyx	cut	1	en way eks	fil-PH	ɛ n w e ɪ ɛ k s	0.50	0.12	replaced
+pampers	english	1	pampers	fil-PH	p æ m b ɜ ˞ z	0.57	0.29	replaced
+tame	english	1	tame	fil-PH	t e m	0.75	0.25	replaced
+bey	english	1	bey	fil-PH	b e ɪ	0.33	0.00	replaced
+grail	english	1	grail	fil-PH	g ɹ e ɪ l ̴	0.40	0.00	replaced
+ukulele	english	1	ukulele	fil-PH	j u k ə l ̴ e ɪ l ̴ i	0.44	0.00	replaced
+anus	english	1	anus	fil-PH	e n ə s	0.60	0.20	replaced
+pus	english	1	pus	fil-PH	p ə s	0.67	0.00	replaced
+dew	english	1	dew	fil-PH	d j u	1.00	0.50	rejected
+grape	english	1	grape	fil-PH	g ɹ e ɪ p	0.40	0.00	replaced
+mime	english	1	mime	fil-PH	m a ɪ m	0.50	0.00	replaced
+nip	english	1	nip	fil-PH	n ɪ p	0.67	0.00	replaced
+saber	english	1	saber	fil-PH	s a b o r	0.33	0.50	rejected
+beret	english	1	beret	fil-PH	b ɜ ɹ e ɪ	0.60	0.40	replaced
+eldest	english	1	eldest	fil-PH	ɛ l ̴ d ə s t	0.33	0.00	replaced
+oily	english	1	oily	fil-PH	b ɔ ɪ l ̴ i	0.75	0.25	replaced
+beige	english	1	beige	fil-PH	b e ʒ	0.75	0.25	replaced
+sob	english	1	sob	fil-PH	s a b	0.33	0.00	replaced
+lob	english	1	lob	fil-PH	l ̴ a b	0.33	0.00	replaced
+styx	cut	1	es ti way eks	fil-PH	ɛ s t i w a ɪ ɛ k s	0.50	0.00	replaced
+holen	english	1	holen	fil-PH	h o l ̴ ə n d	0.33	0.33	rejected
+modest	english	1	modest	fil-PH	m ɑ d ə s t	0.50	0.00	replaced
+dues	english	1	dues	fil-PH	d u z	1.00	0.00	replaced
+onion	english	1	onion	fil-PH	a n j ɛ n	1.00	0.20	replaced
+rostrum	english	1	rostrum	fil-PH	ɹ ɑ s t ɹ ə m	0.29	0.00	replaced
+radon	english	1	radon	fil-PH	ɹ e ɪ d ɔ n	0.50	0.17	replaced
+sage	english	1	sage	fil-PH	s e d ʒ	0.75	0.25	replaced
+glandular	english	1	glandular	fil-PH	g l ̴ æ n d ʒ ə l ̴ ɜ ˞	0.56	0.11	replaced
+ogre	english	1	ogre	fil-PH	o g e r	0.60	0.20	replaced
+pun	english	1	pun	fil-PH	p ə n	0.67	0.00	replaced
+tinge	english	1	tinge	fil-PH	t ɪ n d ʒ	0.75	0.00	replaced
+trey	english	1	trey	fil-PH	t ɹ e ɪ	0.50	0.00	replaced
+bald	english	1	bald	fil-PH	v ɔ l d	0.75	0.25	replaced
+oar	english	1	oar	fil-PH	o ɹ	1.00	0.00	replaced
+noisy	english	1	noisy	fil-PH	n o e z i	0.80	0.20	replaced
+walrus	english	1	walrus	fil-PH	w ɔ l ̴ ɹ ɪ s	0.50	0.17	replaced
+hump	english	1	hump	fil-PH	h u m p	0.25	0.25	rejected
+damsel	english	1	damsel	fil-PH	d æ m z ə l ̴	0.33	0.00	replaced
+sward	english	1	sward	fil-PH	s w ɔ ɹ d	0.60	0.00	replaced
+blok	english	1	blok	fil-PH	b l ɑ k	0.25	0.00	replaced
+lode	english	1	lode	fil-PH	l ̴ o ʊ d	0.50	0.00	replaced
+humid	english	1	humid	fil-PH	h j u m ə d	0.33	0.00	replaced
+palít-palitan	hyphen	1	palít palitan	fil-PH	p a l i t p a l i t a n	0.42	0.00	replaced
+postwar	english	1	postwar	fil-PH	p o ʊ s t w ɔ ɹ	0.25	0.00	replaced
+soot	english	1	soot	fil-PH	s u t	0.67	0.00	replaced
+tongs	english	1	tongs	fil-PH	t ɔ ŋ z	0.50	0.25	replaced
+ledge	english	1	ledge	fil-PH	l ɛ d ʒ	0.67	0.00	replaced
+opal	english	1	opal	fil-PH	o ʊ p ə l ̴	0.40	0.00	replaced
+mens	english	1	mens	fil-PH	m ɛ n s	0.25	0.25	rejected
+serpent	english	1	serpent	fil-PH	s ɛ r p ɛ n t	0.43	0.14	replaced
+spasm	english	1	spasm	fil-PH	s p æ z ə m	0.50	0.00	replaced
+totem	english	1	totem	fil-PH	t o ʊ d ə m	0.33	0.17	replaced
+wart	english	1	wart	fil-PH	v ɔ r t	0.25	0.25	rejected
+lapse	english	1	lapse	fil-PH	l ̴ æ p s	0.25	0.00	replaced
+oblong	english	1	oblong	fil-PH	a b l ̴ ɔ ŋ	0.60	0.00	replaced
+malt	english	1	malt	fil-PH	m ɔ l t	0.25	0.00	replaced
+opt	english	1	opt	fil-PH	ɑ p t	0.67	0.00	replaced
+alum	english	1	alum	fil-PH	æ l ̴ ə m	0.50	0.00	replaced
+belles	english	1	belles	fil-PH	b ɛ l z	0.50	0.00	replaced
+áb-ab	hyphen	1	áb ab	fil-PH	a b a b	0.50	0.00	replaced
+abbe	english	1	abbe	fil-PH	æ b i	0.67	0.00	replaced
+adieu	english	1	adieu	fil-PH	æ d j u	1.00	0.33	replaced
+ag-agan	hyphen	1	ag agan	fil-PH	a ː g	0.71	0.71	rejected
+alms	english	1	alms	fil-PH	ɑ ʁ m z	0.50	0.25	replaced
+anemone	english	1	anemone	fil-PH	ə n n ɛ m ə n i	0.57	0.71	rejected
+argot	english	1	argot	fil-PH	a ɪ ɹ g o ʊ	0.60	0.60	rejected
+arid	english	1	arid	fil-PH	æ ɹ ə d	0.25	0.00	replaced
+aural	english	1	aural	fil-PH	ɔ r o l	0.75	0.25	replaced
+balsam	english	1	balsam	fil-PH	b ɑ l ̴ s ɯ m	0.33	0.33	rejected
+basting	english	1	basting	fil-PH	b e ɪ s t ɪ ŋ	0.43	0.00	replaced
+berne	english	1	berne	fil-PH	b u r n	0.25	0.25	rejected
+bias-bias	hyphen	1	bias bias	fil-PH	b a j ə s b a j ə s	0.60	0.20	replaced
+bile	english	1	bile	fil-PH	b a ɪ l ̴	0.50	0.00	replaced
+brute	english	1	brute	fil-PH	b r u t	0.25	0.00	replaced
+buhosutang	cut	1	buhosutang	fil-PH	b u h u s	0.56	0.56	rejected
+buladbukád	cut	1	buladbukád	fil-PH	b u l a d	0.50	0.50	rejected
+bulwark	english	1	bulwark	fil-PH	b ʊ l w ɜ r k	0.29	0.00	replaced
+buoy	english	1	buoy	fil-PH	b o j	1.00	0.67	rejected
+chlchlng	letters	1	si eych el si eych el en dyi	fil-PH	ɛ s e ɪ t ʃ ɛ l ̴ ɛ s e ɪ t ʃ ɛ l ̴ ɛ n d i w a ɪ a ɪ	0.78	0.56	rejected
+d-day	english	1	d day	fil-PH	d i d e ɪ	0.60	0.00	replaced
+datíg-datig	hyphen	1	datíg datig	fil-PH	d a t i n g d a t i n g	0.50	0.20	replaced
+daub	english	1	daub	fil-PH	d ʒ a b	1.00	0.67	rejected
+deism	english	1	deism	fil-PH	d e ɪ ɪ z ə m	0.83	0.17	replaced
+deity	english	1	deity	fil-PH	d i ə t i	0.60	0.00	replaced
+diligent	english	1	diligent	fil-PH	d ɪ l ̴ ə d ʒ ə n t	0.75	0.12	replaced
+dime	english	1	dime	fil-PH	d a ɪ m	0.50	0.00	replaced
+downers	english	1	downers	fil-PH	d a ʊ n ɜ ˞ z	0.29	0.14	replaced
+doyen	english	1	doyen	fil-PH	d ɔ ɪ j ə m	0.40	0.60	rejected
+dray	english	1	dray	fil-PH	d ɾ a j	0.75	0.50	rejected
+edam	english	1	edam	fil-PH	i ɾ ə m	0.25	0.25	rejected
+elegy	english	1	elegy	fil-PH	ɛ l ̴ ə d ʒ i	0.40	0.00	replaced
+ewe	english	1	ewe	fil-PH	j i w	1.00	1.00	rejected
+ewer	english	1	ewer	fil-PH	j u ɜ ˞	1.00	0.25	replaced
+gist	english	1	gist	fil-PH	d ʒ ɪ s t	0.25	0.00	replaced
+grate	english	1	grate	fil-PH	g r a t	0.60	0.40	replaced
+grebe	english	1	grebe	fil-PH	g r i b	0.50	0.00	replaced
+gripe	english	1	gripe	fil-PH	g r a ɪ p	0.40	0.00	replaced
+hermit	english	1	hermit	fil-PH	h ɜ ˞ m ə t	0.33	0.17	replaced
+hiyonhiyón	cut	1	hiyonhiyón	fil-PH	h i o n h i o n	0.60	0.20	replaced
+holster	english	1	holster	fil-PH	h o ʊ l ̴ s t ɜ ˞	0.25	0.12	replaced
+sos	english	2	sos	en-US	s o s	0.60	0.60	rejected
+sire	english	2	sire	en-US	s a ɪ ɜ ˞	0.60	0.20	replaced
+rum	english	2	rum	en-US	r a m	0.33	0.00	replaced
+hog	english	2	hog	en-US	h a g	0.33	0.00	replaced
+bogus	english	2	bogus	en-US	b o ʊ g ə s	0.33	0.00	replaced
+sibyl	english	2	sibyl	en-US	s ɪ b ə l ̴	0.40	0.00	replaced
+grain	english	2	grain	en-US	g r a n	0.40	0.40	rejected
+mores	english	2	mores	en-US	m ɔ r e z	0.33	0.17	replaced
+karol	english	2	karol	en-US	k æ ɹ ə l ̴	0.40	0.40	rejected
+gg	letters	2	G G	fil-PH	d ʒ i d ʒ i	1.00	0.00	replaced
+heir	english	2	heir	en-US	h ɛ ɹ	0.50	0.50	rejected
+aegis	english	2	aegis	en-US	e d ʒ e s	0.75	0.50	rejected
+drain	english	2	drain	en-US	d ʒ r a n	0.40	0.60	rejected
+bedouin	english	2	bedouin	en-US	b ɛ d o w ə n	0.57	0.14	replaced
+dew	english	2	dew	en-US	d u	1.00	0.00	replaced
+saber	english	2	saber	en-US	s e j b e r	0.33	0.17	replaced
+holen	english	2	holen	en-US	h o l ̴ l ̴ a n d	0.33	0.33	rejected
+hump	english	2	hump	en-US	h a m p	0.25	0.00	replaced
+mens	english	2	mens	en-US	m ɛ n z	0.25	0.00	replaced
+wart	english	2	wart	en-US	v ɔ r t	0.25	0.25	rejected
+ag-agan	hyphen	2	ag agan	en-US	a ː g	0.71	0.71	rejected
+anemone	english	2	anemone	en-US	æ n ɛ n ə m i	0.57	0.71	rejected
+argot	english	2	argot	en-US	ɑ ɹ g o ʊ	0.60	0.40	replaced
+balsam	english	2	balsam	en-US	b ɔ l ̴ s ə m	0.33	0.00	replaced
+berne	english	2	berne	en-US	b u r n	0.25	0.25	rejected
+buhosutang	cut	2	buhosutang	fil-PH	b u h o s	0.56	0.44	rejected
+buladbukád	cut	2	buladbukád	fil-PH	b u l l a d	0.50	0.50	rejected
+buoy	english	2	buoy	en-US	v u j	1.00	0.67	rejected
+chlchlng	letters	2	C H L C H L N G	fil-PH	s i e ɪ t ʃ ɛ l s i e ɪ t ʃ ɛ l ɛ n d ʒ i	0.78	0.00	replaced
+daub	english	2	daub	en-US	d a b	1.00	0.33	replaced
+doyen	english	2	doyen	en-US	d ɔ j ə n	0.40	0.40	rejected
+dray	english	2	dray	en-US	d ɾ a j	0.75	0.50	rejected
+edam	english	2	edam	en-US	i ː d ə m	0.25	0.00	replaced
+ewe	english	2	ewe	en-US	i w	1.00	1.00	rejected
+sos	english	3	sos	en-US	s ɔ s	0.60	0.60	rejected
+grain	english	3	grain	en-US	g ɹ e ɪ n	0.40	0.00	replaced
+karol	english	3	karol	en-US	k æ ɹ ə l ̴	0.40	0.40	rejected
+heir	english	3	heir	en-US	h ɛ r	0.50	0.50	rejected
+aegis	english	3	aegis	en-US	i d ʒ ɛ s	0.75	0.25	replaced
+drain	english	3	drain	en-US	d r a ɪ n	0.40	0.20	replaced
+holen	english	3	holen	en-US	h o l ɛ n d	0.33	0.50	rejected
+wart	english	3	wart	en-US	v ɔ r t	0.25	0.25	rejected
+ag-agan	hyphen	3	ag agan	en-US	a g	0.71	0.71	rejected
+anemone	english	3	anemone	en-US	ə n n ɛ m ə n i	0.57	0.71	rejected
+berne	english	3	berne	en-US	b ɜ r n	0.25	0.00	replaced
+buoy	english	3	buoy	en-US	b u j	1.00	0.33	replaced
+doyen	english	3	doyen	en-US	d ɔ ɪ ə n	0.40	0.20	replaced
+dray	english	3	dray	en-US	d r a j	0.75	0.50	rejected
+ewe	english	3	ewe	en-US	j u	1.00	0.00	replaced
+sos	english	-	sos	fil-PH	s ɔ s	0.60	0.60	kept
+karol	english	-	karol	fil-PH	k æ ɹ ə l ̴	0.40	0.40	kept
+heir	english	-	heir	fil-PH	h ɛ ɹ	0.50	0.50	kept
+holen	english	-	holen	fil-PH	h o l ̴ ə n d	0.33	0.33	kept
+wart	english	-	wart	fil-PH	v ɔ r t	0.25	0.25	kept
+ag-agan	hyphen	-	ag agan	fil-PH	a ː g	0.71	0.71	kept
+anemone	english	-	anemone	fil-PH	ə n n ɛ m ə n i	0.57	0.71	kept
+buhosutang	cut	-	buhosutang	fil-PH	b u h o s	0.56	0.44	kept
+buladbukád	cut	-	buladbukád	fil-PH	b u l a d	0.50	0.50	kept
+dray	english	-	dray	fil-PH	d ɾ a j	0.75	0.50	kept

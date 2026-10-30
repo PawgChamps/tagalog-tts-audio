@@ -2,17 +2,17 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-3726 clips done, 4520 tries.
+3925 clips done, 4779 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 2364 | 99 |
-| hyphen | 1019 | 11 |
-| letters | 104 | 0 |
-| cut | 80 | 14 |
+| english | 2542 | 106 |
+| hyphen | 1024 | 12 |
+| letters | 108 | 0 |
+| cut | 83 | 15 |
 | repeat | 33 | 0 |
 | extra | 2 | 0 |
-| **all** | 3602 | 124 |
+| **all** | 3792 | 133 |
 
 ## Replaced (first 60)
 
@@ -122,7 +122,6 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | mace | english | mace | m a s | 0.75 → 0.50 |
 | adjourn | english | adjourn | e ɪ d ʒ ɜ ˞ n | 0.80 → 0.60 |
 | knesset | english | knesset | k n ɛ s ɪ t | 0.40 → 0.40 |
-| gg | cut | G G | d ʒ i d ʒ i | 1.00 → 0.67 |
 | pandanus | english | pandanus | p ɛ n d æ n ə s | 0.33 → 0.33 |
 | collar | english | collar | k ɔ l ̴ ɜ ˞ | 0.40 → 0.40 |
 | quay | english | quay | k w e ɪ | 1.00 → 1.00 |
@@ -207,3 +206,13 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | basal | english | basal | b e z ə l ̴ | 0.33 → 0.33 |
 | grey | english | grey | g r a | 0.25 → 0.50 |
 | bog | english | bog | b ɔ g | 0.33 → 0.33 |
+| sos | english | sos | s ɔ s | 0.60 → 0.60 |
+| karol | english | karol | k æ ɹ ə l ̴ | 0.40 → 0.40 |
+| heir | english | heir | h ɛ ɹ | 0.50 → 0.50 |
+| holen | english | holen | h o l ̴ ə n d | 0.33 → 0.33 |
+| wart | english | wart | v ɔ r t | 0.25 → 0.25 |
+| ag-agan | hyphen | ag agan | a ː g | 0.71 → 0.71 |
+| anemone | english | anemone | ə n n ɛ m ə n i | 0.57 → 0.71 |
+| buhosutang | cut | buhosutang | b u h o s | 0.56 → 0.44 |
+| buladbukád | cut | buladbukád | b u l a d | 0.50 → 0.50 |
+| dray | english | dray | d ɾ a j | 0.75 → 0.50 |
