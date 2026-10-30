@@ -46,7 +46,7 @@ jobs:
         run: |
           pip install -q numpy==1.26.4 imageio-ffmpeg
           pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
-          pip install -q onnxruntime soundfile librosa lhotse huggingface_hub
+          pip install -q onnxruntime soundfile librosa lhotse huggingface_hub cmudict
           git clone -q --depth 1 https://github.com/lingjzhu/zipa "$RUNNER_TEMP/zipa"
       - uses: actions/cache@v4
         if: inputs.fix != ''

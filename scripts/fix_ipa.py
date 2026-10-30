@@ -144,10 +144,17 @@ def legal_onset(on):
 def cmu_word(word):
     """one English word -> IPA body (no slashes) with ˈ / ˌ before the stressed syllables, or None"""
     prons = CMU.get(word.lower())
-    if not prons:
-        return None
+    return cmu_body(prons[0]) if prons else None
+
+
+def cmu_variants(form):
+    """every CMUdict reading of a single word, as /.../ (a clip may say any of them: moderate, separate)"""
+    return ["/" + cmu_body(p) + "/" for p in CMU.get(form.lower(), [])] if re.fullmatch(r"[A-Za-z']+", form) else []
+
+
+def cmu_body(pron):
     segs = []                                        # (symbol, is_vowel, stress)
-    for ph in prons[0]:
+    for ph in pron:
         m = re.fullmatch(r"([A-Z]+)([012])?", ph)
         base, st = m.group(1), m.group(2)
         if base in ARPA:

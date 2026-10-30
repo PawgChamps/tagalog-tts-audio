@@ -24,9 +24,9 @@ The clips were made with Google Cloud Text-to-Speech, model **Gemini 3.1 Flash T
 |---|---:|
 | the dictionary's own reading, cleaned (`dictionary`) | 28,058 |
 | generated from the accented form (`rule`) | 107,620 |
-| English reading from CMUdict, for English loanwords (`english`) | 11,630 |
+| English reading from CMUdict, for English loanwords (`english`) | 11,620 |
 | abbreviation read letter by letter (`spelled`) | 210 |
-| corrected by hand after listening to the clip (`ipa_fixes.tsv`) (`checked`) | 15 |
+| corrected by hand after listening to the clip (`ipa_fixes.tsv`) (`checked`) | 25 |
 <!-- /counts -->
 
 ## Files

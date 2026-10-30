@@ -1,0 +1,30 @@
+form	reason	ipa_source	ipa	heard	error	ask
+atheism	again2	checked	/ˈeɪθiˌɪzəm/	a p ɛ i s m o	0.88	atheism|english|fil-PH;"atheism"|quoted_english|fil-PH;atheism|english|en-US
+bicarbonate	again2	english	/baɪˈkɑɹbənət/	b i k a r b o n a t o	0.36	bicarbonate|english|en-US;"bicarbonate"|quoted_english|en-US;bicarbonate|english|fil-PH
+bronchial	again2	checked	/ˈbɹɑŋkiəl/	b r ɔ n k j a l	0.38	bronchial|english|en-US;"bronchial"|quoted_english|en-US;bronchial|english|fil-PH
+chalcedony	again2	checked	/kælˈsɛdəni/	k a l s e d o ɲ i	0.22	chalcedony|english|en-US;"chalcedony"|quoted_english|en-US;chalcedony|english|fil-PH
+elaborate	again2	english	/ɪˈlæbɹət/	ɛ l a b o r i t	0.43	elaborate|english|en-US;"elaborate"|quoted_english|en-US;elaborate|english|fil-PH
+lobotomy	again2	checked	/ləˈbɑtəmi/	l o b ɔ t o m i	0.38	lobotomy|english|en-US;"lobotomy"|quoted_english|en-US;lobotomy|english|fil-PH
+moderate	again2	english	/ˈmɑdɚət/	m o d e r a t o	0.29	moderate|english|en-US;"moderate"|quoted_english|en-US;moderate|english|fil-PH
+spurious	again2	english	/ˈspjʊɹiəs/	s p u r i u s	0.25	spurious|english|en-US;"spurious"|quoted_english|en-US;spurious|english|fil-PH
+turbot	again2	checked	/ˈtɝbət/	t ɔ r b ɔ t	0.33	"turbot"|quoted_english|fil-PH;turbot|english|en-US;turbot|english|fil-PH
+uranus	again2	checked	/jʊˈɹeɪnəs/	u r a n u s	0.50	uranus|english|en-US;"uranus"|quoted_english|en-US;uranus|english|fil-PH
+catsup	again2	checked	/ˈkætsəp/	k a t s o p	0.17	catsup|english|en-US;"catsup"|quoted_english|en-US;catsup|english|fil-PH
+quay	again2	english	/ˈki/	k w ɛ j	0.33	key|english|en-US;"key"|quoted_english|en-US;ki|tagalog|fil-PH
+ow	again2	english	/ˈoʊ/	ə w i ʃ	1.00	O|caps|en-US;O|caps|fil-PH;"O"|quoted_english|en-US
+vie	again2	english	/ˈvaɪ/	v i e	0.67	váy|tagalog|fil-PH;"vie"|quoted_english|en-US;vye|english|en-US
+chase	again2	english	/ˈtʃeɪs/	t ʃ a s e	0.75	cheys|tagalog|fil-PH;Chase|english|en-US;tséys|tagalog|fil-PH
+cation	again2	english	/ˈkæˌtaɪən/	k ə ʃ o n	0.57	cat ion|english|en-US;kat ayon|parts|fil-PH;cat-eye-on|english|en-US
+raisin	again2	english	/ˈɹeɪzɪn/	r a j s i n	0.33	raysin|english|en-US;réysin|tagalog|fil-PH;rey zin|parts|fil-PH
+junk	again2	english	/ˈdʒʌŋk/	d ʒ ɛ n k	0.50	jungk|english|en-US;dyangk|tagalog|fil-PH;"junk"|quoted_english|en-US
+wart	again2	english	/ˈwɔɹt/	w a r t	0.25	"wart"|quoted_english|en-US;wort|tagalog|fil-PH;wohrt|english|en-US
+work	again2	english	/ˈwɝk/	w ɔ r k	0.25	"work"|quoted_english|en-US;werk|english|en-US;wérk|tagalog|fil-PH
+jump	again2	english	/ˈdʒʌmp/	d ʒ u m p	0.25	"jump"|quoted_english|en-US;dyamp|tagalog|fil-PH;jump|english|en-US
+pulp	again2	english	/ˈpʌlp/	p u l p	0.25	"pulp"|quoted_english|en-US;palp|tagalog|fil-PH;pulp|english|en-US
+ave	again2	rule	/ˈʔave/	a v e n ɲ u u	1.00	áve|tagalog|fil-PH;a ve|parts|fil-PH;"ave"|quoted|fil-PH
+k-dye	again2	checked	/kejˈdʒej/	k i	0.83	K J|caps|en-US;key jay|english|en-US;KJ|caps|en-US
+hawsyaw	again2	dictionary	/ˈhawsjaw/	o ʃ a w	0.71	háwsiyaw|tagalog|fil-PH;haw syaw|parts|fil-PH;haw siyaw|parts|fil-PH
+dyukaka	again2	rule	/djuˈkaka/	d ʒ u q a	0.57	dyu ka ka|parts|fil-PH;dyukáka|tagalog|fil-PH;diyukaka|tagalog|fil-PH
+Iyonout	again2	rule	/ʔijoˈnoʔut/	i j o n	0.43	i yo nó ut|parts|fil-PH;Iyonóut|tagalog|fil-PH;iyonó-ut|parts|fil-PH
+karol	again2	checked	/ˈkaɾol/	t a r o l	0.20	karol|tagalog|fil-PH;"karol"|quoted|fil-PH;ka rol|parts|fil-PH
+magin-	again2	rule	/ˈmaɡin/	m a g ʒ i n	0.20	magin|tagalog|fil-PH;ma gin|parts|fil-PH;"magin"|quoted|fil-PH

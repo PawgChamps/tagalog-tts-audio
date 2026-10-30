@@ -19,7 +19,8 @@ columns form, reason, ipa_source, error.  Each clip gets up to three tries, each
 A list may spell out the tries of a row in an `ask` column instead: text|prompt|language, separated by ; (prompt a
 name of tts_gemini.PROMPTS), e.g. `"text"|quoted_english|en-US;"text"|quoted_english|fil-PH`.  ZIPA listens to each
 try (as in scripts/phones.py; needs onnxruntime lhotse huggingface_hub imageio-ffmpeg and $ZIPA_SRC) and the error is
-the share of the IPA's phones it gets wrong, as in score_phones.py.  A try replaces audio/<letter>/<form>.mp3 when it
+the share of the IPA's phones it gets wrong, as in score_phones.py (for an English reading, the closest of CMUdict's
+readings of the word: moderate as adjective or verb).  A try replaces audio/<letter>/<form>.mp3 when it
 is complete (at least 75 % of the phones, not much longer than the word) and clearly better than the old clip: at
 least 0.10 less error, and 0.4 or less.  Otherwise the old clip stays.
 
@@ -42,6 +43,7 @@ from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0, os.path.dirname(__file__))
 import tts_gemini as T                          # noqa: E402
 from score_phones import dist, phones           # noqa: E402
+from fix_ipa import cmu_variants                # noqa: E402   (needs cmudict; without it only the list's reading counts)
 
 LETTER = dict(zip("abcdefghijklmnopqrstuvwxyz", "ey bi si di i ef dyi eych ay jey key el em en o pi kyu ar es ti yu vi "
                                               "dobolyu eks way zi".split()))
@@ -99,6 +101,11 @@ def score(ipa, heard):
     r0 = [x for x in phones(ipa) if x != "ʔ"]
     h0 = [x for x in phones(heard) if x != "ʔ"]
     return min(dist(r0, h0), len(r0)) / max(1, len(r0)), len(r0), len(h0)
+
+
+def best_score(refs, heard):
+    """score() against the closest of several readings of the word"""
+    return min((score(r, heard) for r in refs), key=lambda x: x[0])
 
 
 def good(e, nr, nh, e_old):
@@ -221,7 +228,8 @@ def main():
             w = ipa[r["form"]]
             plan = asked(r.get("ask")) or tries(r["form"], r["reason"], w["ipa_source"])
             state[r["form"]] = {"row": r, "plan": plan, "best": None,
-                                "e_old": float(r["error"]), "ipa": w["ipa"]}
+                                "e_old": float(r["error"]), "ipa": w["ipa"],
+                                "refs": [w["ipa"]] + (cmu_variants(r["form"]) if w["ipa_source"] == "english" else [])}
         for rnd in range(3):
             jobs = [(f"{rnd}_{i}", s["row"], s["plan"][rnd]) for i, s in enumerate(state.values())
                     if rnd < len(s["plan"]) and not s.get("final")]
@@ -234,7 +242,7 @@ def main():
                            "language": language, "heard": "", "error_before": f"{s['e_old']:.2f}", "error": "", "outcome": "failed"}
                     if path:
                         heard = listen(path).replace("▁", "").strip()
-                        e, nr, nh = score(s["ipa"], heard)
+                        e, nr, nh = best_score(s["refs"], heard)
                         rec.update(heard=heard, error=f"{e:.2f}", outcome="rejected")
                         if good(e, nr, nh, s["e_old"]):
                             shutil.move(path, clip_path(row["form"]))

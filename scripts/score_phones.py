@@ -22,6 +22,8 @@ CMAP = {"ɾ": "r", "ɹ": "r", "ʁ": "r", "ɻ": "r", "ɡ": "g", "ɣ": "g", "ɫ": 
         "q": "k", "ʂ": "ʃ", "d̪": "d"}
 DROP = set("ˈˌːˑ./[] ʰʲʷˀ̃-▁˞0123456789")      # ▁ = ZIPA word boundary; digits = tones in the espeak set
 VOWELS = set("aeiou")
+DIPHTHONGS = [("aɪ", "aj"), ("ɑɪ", "aj"), ("äɪ", "aj"), ("eɪ", "ej"), ("ɛɪ", "ej"), ("ɔɪ", "oj"), ("oɪ", "oj"),
+              ("aʊ", "aw"), ("ɑʊ", "aw"), ("oʊ", "o"), ("əʊ", "o"), ("ow", "o")]
 
 
 def phones(s):
@@ -29,6 +31,8 @@ def phones(s):
     s = re.sub(r"[ɜə]\s*˞", "ɝ", s)                    # ZIPA writes an r-coloured vowel as two symbols (ɜ ˞): = ɝ, ɚ
     s = re.sub(r"\s*˞", "r", s)                         # any other vowel + ˞ (o ˞): the vowel and r
     s = "".join(c for c in s if unicodedata.category(c) != "Mn" and c not in DROP)
+    for a, b in DIPHTHONGS:                             # aɪ = aj, ɔɪ = oj, aʊ = aw, oʊ = o: one sound, two notations
+        s = s.replace(a, b)
     s = s.replace("ts", "ts").replace("tʃ", "C").replace("dʒ", "J").replace("tɕ", "C").replace("dʑ", "J")
     out = []
     for c in s:
