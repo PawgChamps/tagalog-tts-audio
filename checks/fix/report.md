@@ -2,17 +2,17 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-3925 clips done, 4779 tries.
+3995 clips done, 4890 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 2542 | 106 |
-| hyphen | 1024 | 12 |
-| letters | 108 | 0 |
-| cut | 83 | 15 |
+| english | 2582 | 110 |
+| hyphen | 1033 | 12 |
+| cut | 94 | 20 |
+| letters | 107 | 0 |
 | repeat | 33 | 0 |
-| extra | 2 | 0 |
-| **all** | 3792 | 133 |
+| extra | 3 | 1 |
+| **all** | 3852 | 143 |
 
 ## Replaced (first 60)
 
@@ -181,6 +181,7 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | plover | english | plover | p l ̴ o ʊ v ɜ ˞ | 0.50 → 0.50 |
 | polemic | english | polemic | p o ʊ l ̴ ɛ m ɪ k | 0.29 → 0.29 |
 | pot-pot | english | pot pot | p ɑ ɹ t p ɑ ɹ t | 0.33 → 0.33 |
+| swswsw | extra | es dobolyu es dobolyu es dobolyu | e s d o v ə l v e e s d o b ə l v e e s d o v ə l  | 1.00 → 1.00 |
 | puskar | english | puskar | p u s k ɑ ɹ | 0.33 → 0.33 |
 | raisin | english | raisin | r a z o n | 0.50 → 0.50 |
 | reseaux | cut | reseaux | r e s s o w | 0.62 → 0.62 |
@@ -216,3 +217,12 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | buhosutang | cut | buhosutang | b u h o s | 0.56 → 0.44 |
 | buladbukád | cut | buladbukád | b u l a d | 0.50 → 0.50 |
 | dray | english | dray | d ɾ a j | 0.75 → 0.50 |
+| ilióyliyo | cut | ilióyliyo | i l i o i o | 0.44 → 0.33 |
+| Iyonout | cut | Iyonout | i j o n | 0.43 → 0.43 |
+| oeuvre | cut | oeuvre | ø v r ɛ | 0.67 → 0.33 |
+| osmosis | english | osmosis | æ z m o ʊ s ə s | 0.25 → 0.25 |
+| pilitpilitin | cut | pilitpilitin | p i l l i t e n | 0.42 → 0.42 |
+| rayúsrayós | cut | rayúsrayós | r a j o s | 0.50 → 0.50 |
+| solder | english | solder | s ɔ d ɜ ˞ | 0.40 → 0.40 |
+| turbot | english | turbot | t ɜ ˞ b ɑ t | 0.33 → 0.50 |
+| webinar | english | webinar | w ɛ b ə n ɑ r | 0.29 → 0.29 |

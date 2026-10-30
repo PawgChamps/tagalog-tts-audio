@@ -4785,3 +4785,116 @@ anemone	english	-	anemone	fil-PH	ə n n ɛ m ə n i	0.57	0.71	kept
 buhosutang	cut	-	buhosutang	fil-PH	b u h o s	0.56	0.44	kept
 buladbukád	cut	-	buladbukád	fil-PH	b u l a d	0.50	0.50	kept
 dray	english	-	dray	fil-PH	d ɾ a j	0.75	0.50	kept
+hops	english	1	hops	fil-PH	h a p s	0.25	0.00	replaced
+ignoramus	english	1	ignoramus	fil-PH	ɪ g n ɔ ˞ e ɪ m ə s	0.40	0.20	replaced
+íisa-isá	hyphen	1	íisa isá	fil-PH	i i s a i s a	0.43	0.00	replaced
+ilapít-lapít	hyphen	1	ilapít lapít	fil-PH	RuntimeError HTTP 400 {   "error": {     "code": 400,     "message": "Cloud Text-to-Speech could not generate audio because the input text or prompt violates Verte	0.45		failed
+ilióyliyo	cut	1	ilióyliyo	fil-PH	i l i o i o	0.44	0.33	rejected
+Iyonout	cut	1	Iyonout	fil-PH	i j u n	0.43	0.57	rejected
+kalí-kalibumbón	extra	1	kalí kalibumbón	fil-PH	RuntimeError HTTP 400 {   "error": {     "code": 400,     "message": "Cloud Text-to-Speech could not generate audio because the input text or prompt violates Verte	1.00		failed
+karis	english	1	karis	fil-PH	k ɛ ɹ ɪ s	0.40	0.20	replaced
+kaul	english	1	kaul	fil-PH	k ɔ l ̴	1.00	0.00	replaced
+kisamkisám	cut	1	kisamkisám	fil-PH	k i s ə m k i s a m	0.50	0.00	replaced
+kruskrús	cut	1	kruskrús	fil-PH	k r u s	0.50	0.50	rejected
+kulóngkulong	cut	1	kulóngkulong	fil-PH	k u l o ̃	0.50	0.60	rejected
+lalamyâ-lamyâ	hyphen	1	lalamyâ lamyâ	fil-PH	l a l a m l a l a m i a	0.42	0.17	replaced
+langaglangág	cut	1	langaglangág	fil-PH	l a ŋ a g	0.50	0.50	rejected
+lehr	english	1	lehr	fil-PH	l ̴ ɛ ɹ	0.67	0.00	replaced
+likás-kaya	hyphen	1	likás kaya	fil-PH	l i k a s k ə j a	0.44	0.00	replaced
+loddoók	cut	1	loddoók	fil-PH	l ̴ u d u q	0.43	0.57	rejected
+lubidlubíd	cut	1	lubidlubíd	fil-PH	l u b i d	0.50	0.50	rejected
+lumping	english	1	lumping	fil-PH	l ̴ ə m p ɪ ŋ	0.33	0.00	replaced
+lye	english	1	lye	fil-PH	l ̴ a ɪ	0.67	0.00	replaced
+magkálaslás-laslás	hyphen	1	magkálaslás laslás	fil-PH	m a g g a l ̴ a s l ̴ a s	0.41	0.41	rejected
+masagwasagwâ	cut	1	masagwasagwâ	fil-PH	m ə s ə g w a	0.42	0.42	rejected
+mating	english	1	mating	fil-PH	m e j r ɛ ŋ	0.50	0.50	rejected
+milón-tagalog	hyphen	1	milón tagalog	fil-PH	m i l ̴ o n t a g a l ̴ o g	0.58	0.00	replaced
+miser	english	1	miser	fil-PH	m a z ɜ ˞	0.50	0.33	rejected
+mme	english	1	mme	fil-PH	ɛ m ɛ m i	0.80	0.00	replaced
+ngipinngipín	cut	1	ngipinngipín	fil-PH	ɲ i p i ŋ	0.50	0.60	rejected
+oboe	english	1	oboe	fil-PH	o u b o w	0.60	0.20	replaced
+oeuvre	cut	1	oeuvre	fil-PH	ø v r ɛ	0.67	0.33	rejected
+onus	english	1	onus	fil-PH	o ʊ n ə s	0.40	0.00	replaced
+osmosis	english	1	osmosis	fil-PH	æ z m o ʊ s ə s	0.25	0.25	rejected
+pabitín-bitinin	hyphen	1	pabitín bitinin	fil-PH	p a b i t i n b i t i n e n	0.57	0.07	replaced
+pager	english	1	pager	fil-PH	p e ɪ d ʒ ɜ ˞	0.33	0.17	replaced
+pala-pala	hyphen	1	pala pala	fil-PH	p a l a p a l a	0.50	0.00	replaced
+pampas	english	1	pampas	fil-PH	p æ m p a s	0.50	0.17	replaced
+peril	english	1	peril	fil-PH	p ɛ ɹ ə l ̴	0.40	0.00	replaced
+petrol	english	1	petrol	fil-PH	p ɛ t ɹ o l ̴	0.29	0.14	replaced
+pilitpilitin	cut	1	pilitpilitin	fil-PH	p i l l i t e n	0.42	0.42	rejected
+plait	english	1	plait	fil-PH	p l ̴ æ t	0.60	0.40	replaced
+ploy	english	1	ploy	fil-PH	p l ̴ ɔ ɪ	0.25	0.00	replaced
+pogrom	english	1	pogrom	fil-PH	p o ʊ g ɹ ɑ m	0.50	0.33	replaced
+pompon	english	1	pompon	fil-PH	p ɑ m p ɑ n	0.50	0.00	replaced
+poplin	english	1	poplin	fil-PH	p ɑ p l ̴ ɪ n	0.33	0.00	replaced
+rayúsrayós	cut	1	rayúsrayós	fil-PH	r a j o s	0.50	0.50	rejected
+riser	english	1	riser	fil-PH	ɹ a ɪ z ɜ ˞	0.33	0.17	replaced
+risík-risík	hyphen	1	risík risík	fil-PH	r i s i k r i s i k	0.50	0.00	replaced
+rosin	english	1	rosin	fil-PH	ɹ ɔ z ə n	0.60	0.20	replaced
+ruin	english	1	ruin	fil-PH	ɹ u ə n	0.50	0.00	replaced
+sadist	english	1	sadist	fil-PH	s e ɪ d ɪ s t	0.43	0.14	replaced
+sew	english	1	sew	fil-PH	s o ʊ	0.67	0.00	replaced
+solder	english	1	solder	fil-PH	s ɔ d ɜ ˞	0.40	0.40	rejected
+stair	english	1	stair	fil-PH	s t ɛ ɹ	0.50	0.00	replaced
+suds	english	1	suds	fil-PH	s ə d z	0.50	0.00	replaced
+swswsw	extra	1	es dobolyu es dobolyu es dobolyu	fil-PH	e s d o v ə l v e e s d o b ə l v e e s d o v ə l v e	1.00	1.00	rejected
+taper	english	1	taper	fil-PH	t e ɪ p ɜ ˞	0.33	0.17	replaced
+temperamental	english	1	temperamental	fil-PH	t ɛ m p ɹ ə m ɛ n t ə l ̴	0.42	0.00	replaced
+tempest	english	1	tempest	fil-PH	t ɛ m p ə s t	0.43	0.00	replaced
+tetrahedron	english	1	tetrahedron	fil-PH	t ɛ t ɹ ə h i d ɹ ə n	0.27	0.00	replaced
+titatita	cut	1	titatita	fil-PH	t i t a	0.50	0.50	rejected
+trot	english	1	trot	fil-PH	t ɹ ɑ t	0.25	0.00	replaced
+trus	english	1	trus	fil-PH	t ɹ u s	0.25	0.25	rejected
+turbot	english	1	turbot	fil-PH	t ɜ ˞ b ɑ t	0.33	0.50	rejected
+ulanmág	cut	1	ulanmág	fil-PH	ɔ l a n	0.43	0.57	rejected
+umbel	english	1	umbel	fil-PH	ə m b ɔ w	0.80	0.40	replaced
+usury	english	1	usury	fil-PH	j u s ɜ ˞ i	0.50	0.33	replaced
+walakwalák	cut	1	walakwalák	fil-PH	w a l a q w a l a q	0.50	0.00	replaced
+warn	english	1	warn	fil-PH	w ɔ r n	0.50	0.00	replaced
+watermelon	english	1	watermelon	fil-PH	w ɔ t ɜ ˞ m ɛ l ̴ ə n	0.30	0.10	replaced
+webinar	english	1	webinar	fil-PH	w ɛ b ə n ɑ r	0.29	0.29	rejected
+wed	english	1	wed	fil-PH	w ɛ n z d i	1.00	1.00	rejected
+yodel	english	1	yodel	fil-PH	j o ʊ d o l ̴	0.33	0.17	replaced
+ilapít-lapít	hyphen	2	ilapít-lapít	fil-PH	i l ə p i t	0.45	0.45	rejected
+ilióyliyo	cut	2	ilióyliyo	fil-PH	i j ɔ j ɔ	0.44	0.56	rejected
+Iyonout	cut	2	Iyonout	fil-PH	i j o n	0.43	0.43	rejected
+kalí-kalibumbón	extra	2	kalí-kalibumbón	fil-PH	k a l i k a l i b u m b o n	1.00	0.00	replaced
+kruskrús	cut	2	krus krús	fil-PH	k r u z k r u z	0.50	0.25	replaced
+kulóngkulong	cut	2	kulóng kulong	fil-PH	k u l o ŋ k u l o ŋ g	0.50	0.10	replaced
+langaglangág	cut	2	langag langág	fil-PH	l a ŋ a g l a ŋ a g	0.50	0.00	replaced
+loddoók	cut	2	loddoók	fil-PH	l a d o o k	0.43	0.29	replaced
+lubidlubíd	cut	2	lubid lubíd	fil-PH	l u b i d l u b i d	0.50	0.00	replaced
+magkálaslás-laslás	hyphen	2	magkálaslás-laslás	fil-PH	m a g k a q a l a s l a s l a s	0.41	0.12	replaced
+masagwasagwâ	cut	2	masagwasagwâ	fil-PH	m a s a g w a s a g u w a	0.42	0.08	replaced
+mating	english	2	mating	en-US	m e t ɪ ŋ	0.50	0.17	replaced
+miser	english	2	miser	en-US	m a ɪ z ɜ ˞	0.50	0.17	replaced
+ngipinngipín	cut	2	ngipin ngipín	fil-PH	n i p i n n i p i n	0.50	0.20	replaced
+oeuvre	cut	2	oeuvre	fil-PH	o v ʁ e	0.67	0.33	rejected
+osmosis	english	2	osmosis	en-US	ɔ s m o ʊ s ə s	0.25	0.25	rejected
+pilitpilitin	cut	2	pilitpilitin	fil-PH	p i l i t i n	0.42	0.42	rejected
+rayúsrayós	cut	2	rayúsrayós	fil-PH	r a j u s	0.50	0.50	rejected
+solder	english	2	solder	en-US	s ɔ d ɜ ˞	0.40	0.40	rejected
+swswsw	extra	2	S W S W S W	fil-PH	ɛ s d ʌ b ə l j u ɛ s d ʌ b ə l j u ɛ s d ʌ b ə l j u	1.00	1.00	rejected
+titatita	cut	2	tita tita	fil-PH	t i t a t i t a	0.50	0.00	replaced
+trus	english	2	trus	en-US	t ɹ ə s	0.25	0.00	replaced
+turbot	english	2	turbot	en-US	t ɜ ˞ b ɑ t	0.33	0.50	rejected
+ulanmág	cut	2	ulanmág	fil-PH	u l a n m a g	0.43	0.00	replaced
+webinar	english	2	webinar	en-US	w ɛ b ə n ɑ ˞	0.29	0.43	rejected
+wed	english	2	wed	en-US	w ɛ d	1.00	0.00	replaced
+ilapít-lapít	hyphen	3	ilapítlapít	fil-PH	i l ə p i t l ə p i t	0.45	0.00	replaced
+osmosis	english	3	osmosis	en-US	ɑ z m o ʊ s ə s	0.25	0.25	rejected
+solder	english	3	solder	en-US	s o ʊ l ̴ d ɜ ˞	0.40	0.80	rejected
+swswsw	extra	3	es dobolyu es dobolyu es dobolyu	fil-PH	ɛ s d ə b ə l ̴ j u ɛ s d ə b ə l ̴ j u ɛ s d ə b ə l ̴ j u ɛ s	1.00	1.00	rejected
+turbot	english	3	turbot	en-US	t ɜ ˞ b ɪ t	0.33	0.50	rejected
+webinar	english	3	webinar	en-US	w ɛ b ə n a r	0.29	0.29	rejected
+ilióyliyo	cut	-	ilióyliyo	fil-PH	i l i o i o	0.44	0.33	kept
+Iyonout	cut	-	Iyonout	fil-PH	i j o n	0.43	0.43	kept
+oeuvre	cut	-	oeuvre	fil-PH	ø v r ɛ	0.67	0.33	kept
+osmosis	english	-	osmosis	fil-PH	æ z m o ʊ s ə s	0.25	0.25	kept
+pilitpilitin	cut	-	pilitpilitin	fil-PH	p i l l i t e n	0.42	0.42	kept
+rayúsrayós	cut	-	rayúsrayós	fil-PH	r a j o s	0.50	0.50	kept
+solder	english	-	solder	fil-PH	s ɔ d ɜ ˞	0.40	0.40	kept
+swswsw	extra	-	es dobolyu es dobolyu es dobolyu	fil-PH	e s d o v ə l v e e s d o b ə l v e e s d o v ə l v e	1.00	1.00	kept
+turbot	english	-	turbot	fil-PH	t ɜ ˞ b ɑ t	0.33	0.50	kept
+webinar	english	-	webinar	fil-PH	w ɛ b ə n ɑ r	0.29	0.29	kept
