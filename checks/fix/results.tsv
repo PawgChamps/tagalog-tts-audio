@@ -5098,3 +5098,50 @@ boy	again	-	boy	fil-PH	b o j	0.33	0.33	kept
 anemone	again	-	"anemone"	en-US	ə n ɛ m ə n i	0.57	0.57	kept
 Iyonout	again	-	Iyonout	fil-PH	i j o n	0.43	0.43	kept
 turbot	again	-	"turbot"	en-US	t ɜ ˞ b ɛ t	0.33	0.33	kept
+atheism	again2	1	atheism	fil-PH	e ɪ θ i ɪ z ə m	0.88	0.00	replaced
+bicarbonate	again2	1	bicarbonate	en-US	b a ɪ k ɑ ɹ b ə n e ɪ t	0.36	0.18	replaced
+bronchial	again2	1	bronchial	en-US	b ɹ ɑ ŋ k i o ʊ	0.38	0.25	replaced
+chalcedony	again2	1	chalcedony	en-US	t ʃ ɑ ɹ l ̴ s ɛ d ə n i	0.22	0.22	rejected
+elaborate	again2	1	elaborate	en-US	ɪ l ̴ æ b ɜ ˞ e ɪ t	0.43	0.00	replaced
+lobotomy	again2	1	lobotomy	en-US	l ̴ ə b ɑ t ə m i	0.38	0.00	replaced
+moderate	again2	1	moderate	en-US	m ɑ d ɜ ˞ e ɪ t	0.29	0.00	replaced
+spurious	again2	1	spurious	en-US	s p ɪ ɹ i ə s	0.25	0.14	replaced
+turbot	again2	1	"turbot"	fil-PH	t ɜ ˞ b ɪ t	0.33	0.17	replaced
+uranus	again2	1	uranus	en-US	j u ɹ e ɪ n ə s	0.50	0.00	replaced
+catsup	again2	1	catsup	en-US	k æ t t s ə p	0.17	0.17	rejected
+quay	again2	1	key	en-US	k i	0.33	0.00	replaced
+ow	again2	1	O	en-US	o ʊ	1.00	0.00	replaced
+vie	again2	1	váy	fil-PH	v a j	0.67	0.00	replaced
+chase	again2	1	cheys	fil-PH	t ʃ ɛ s	0.75	0.25	replaced
+cation	again2	1	cat ion	en-US	k æ t a ɪ ɑ n	0.57	0.00	replaced
+raisin	again2	1	raysin	en-US	r e z ə n	0.33	0.33	rejected
+junk	again2	1	jungk	en-US	d ʒ ɛ n k	0.50	0.50	rejected
+wart	again2	1	"wart"	en-US	v ɔ r t	0.25	0.25	rejected
+work	again2	1	"work"	en-US	w ɜ r k	0.25	0.00	replaced
+jump	again2	1	"jump"	en-US	d ʒ ɛ m p	0.25	0.25	rejected
+pulp	again2	1	"pulp"	en-US	p l p	0.25	0.25	rejected
+ave	again2	1	áve	fil-PH	a v e	1.00	0.00	replaced
+k-dye	again2	1	K J	en-US	k e ɪ d ʒ e ɪ	0.83	0.00	replaced
+hawsyaw	again2	1	háwsiyaw	fil-PH	h a w s i a w	0.71	0.14	replaced
+dyukaka	again2	1	dyu ka ka	fil-PH	d i j u k a k a	0.57	0.14	replaced
+Iyonout	again2	1	i yo nó ut	fil-PH	i j ɔ n o u t	0.43	0.00	replaced
+karol	again2	1	karol	fil-PH	k ə r o ʎ	0.20	0.20	rejected
+magin-	again2	1	magin	fil-PH	m a g i n	0.20	0.00	replaced
+chalcedony	again2	2	"chalcedony"	en-US	k æ l ̴ s ɛ d ə n i	0.22	0.00	replaced
+catsup	again2	2	"catsup"	en-US	k æ t s ə p	0.17	0.00	replaced
+raisin	again2	2	réysin	fil-PH	r ɛ j s i n	0.33	0.17	replaced
+junk	again2	2	dyangk	fil-PH	ʒ a ŋ g o	0.50	0.75	rejected
+wart	again2	2	wort	fil-PH	v ɔ r t	0.25	0.25	rejected
+jump	again2	2	dyamp	fil-PH	d ʒ ɔ m p	0.25	0.25	rejected
+pulp	again2	2	palp	fil-PH	p ə l p u	0.25	0.25	rejected
+karol	again2	2	"karol"	fil-PH	k æ ɹ ə l ̴	0.20	0.20	rejected
+junk	again2	3	"junk"	en-US	d ʒ ɛ n k	0.50	0.50	rejected
+wart	again2	3	wohrt	en-US	w a r t	0.25	0.25	rejected
+jump	again2	3	jump	en-US	d ʒ u m p	0.25	0.25	rejected
+pulp	again2	3	pulp	en-US	p o l p	0.25	0.25	rejected
+karol	again2	3	ka rol	fil-PH	k a r o ʎ	0.20	0.20	rejected
+junk	again2	-	junk	fil-PH	d ʒ ɛ n k	0.50	0.50	kept
+wart	again2	-	wart	fil-PH	v ɔ r t	0.25	0.25	kept
+jump	again2	-	jump	fil-PH	d ʒ u m p	0.25	0.25	kept
+pulp	again2	-	pulp	fil-PH	p o l p	0.25	0.25	kept
+karol	again2	-	karol	fil-PH	k ə r o ʎ	0.20	0.20	kept

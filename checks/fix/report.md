@@ -2,18 +2,19 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-3995 clips done, 5089 tries.
+3995 clips done, 5136 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 2582 | 38 |
+| english | 2582 | 31 |
 | hyphen | 1033 | 5 |
 | letters | 107 | 0 |
 | cut | 94 | 7 |
-| again | 63 | 29 |
+| again | 63 | 7 |
 | repeat | 33 | 0 |
+| again2 | 24 | 5 |
 | extra | 3 | 1 |
-| **all** | 3915 | 80 |
+| **all** | 3939 | 56 |
 
 ## Replaced (first 60)
 
@@ -85,16 +86,12 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | Form | Reason | Sent | Heard | Error before → after |
 |---|---|---|---|---|
 | director | english | director | d ɪ ɹ ɛ k t ɜ ˞ | 0.25 → 0.25 |
-| ow | again | "ow" | a ʊ | 1.00 → 0.50 |
 | color | english | color | k ɔ l ̴ ɜ ˞ | 0.40 → 0.40 |
-| junk | again | junk | d ʒ ɛ n k | 0.50 → 0.50 |
-| jump | english | jump | d ʒ u m p | 0.25 → 0.25 |
-| ave | again | ave | æ v ə n u | 1.00 → 0.75 |
+| junk | again2 | junk | d ʒ ɛ n k | 0.50 → 0.50 |
+| jump | again2 | jump | d ʒ u m p | 0.25 → 0.25 |
 | valiente | english | valiente | v a l ɛ n t | 0.29 → 0.29 |
-| moderate | again | moderate | m ɑ d ɜ ˞ e ɪ t | 0.29 → 0.29 |
 | fe | english | fe | f i | 0.33 → 0.33 |
 | glow | english | glow | g l ̴ o w | 0.25 → 0.25 |
-| chase | again | chase | t ʃ a s e | 0.75 → 0.75 |
 | oct | english | oct | ɑ k t o ʊ b ɜ ˞ | 1.00 → 1.00 |
 | blow | english | blow | b l ̴ o ʊ w | 0.25 → 0.25 |
 | separate | again | separate | s ɛ p ɹ ə t | 0.38 → 0.38 |
@@ -103,38 +100,22 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | ishmael | english | ishmael | e ʃ m e j ɛ l | 0.60 → 0.80 |
 | knesset | english | knesset | k n ɛ s ɪ t | 0.40 → 0.40 |
 | collar | english | collar | k ɔ l ̴ ɜ ˞ | 0.40 → 0.40 |
-| quay | again | quay | k w e ɪ | 1.00 → 1.00 |
-| uranus | again | uranus | j u r e ɪ n ə s | 0.29 → 0.29 |
 | skier | again | skier | s k i ɜ r | 0.40 → 0.40 |
 | velociraptor | english | velociraptor | ð ə l ̴ ɔ s ɜ ɹ æ p t ɜ ˞ | 0.25 → 0.25 |
 | somatic | english | somatic | s ə m æ t ɪ k | 0.25 → 0.25 |
-| vie | again | vie | v i | 0.67 → 0.33 |
 | teleprompter | english | teleprompter | t ɛ l ̴ e ɪ p ɹ ɑ m p t ɜ ˞ | 0.25 → 0.25 |
 | cavan | english | cavan | k æ v ə n | 0.33 → 0.33 |
 | bolognese | english | bolognese | b o ʊ l ̴ ɪ n j e z | 0.58 → 0.50 |
-| bicarbonate | again | bicarbonate | b a ɪ k ɑ ɹ b ə n e ɪ t | 0.27 → 0.18 |
-| cation | again | cation | k e ɪ ʃ ə n | 0.57 → 0.57 |
-| catsup | again | catsup | k æ t s ə p | 0.80 → 0.60 |
-| spurious | english | spurious | s p ɪ ɹ i ə s | 0.25 → 0.25 |
-| atheism | again | atheism | e θ i ɪ z ə m | 0.57 → 0.43 |
-| bronchial | again | "bronchial" | b r ɔ n k i l | 0.38 → 0.38 |
 | búhosutang | cut | búhosutang | b u h o s | 0.44 → 0.44 |
 | buladbukad | cut | buladbukad | b u l a d | 0.50 → 0.50 |
 | caban | english | caban | k æ b ə n | 0.33 → 0.33 |
 | cadena-de-amor | english | cadena de amor | k ə d i n ə ə v e ɪ m ɔ ɹ | 0.25 → 0.42 |
 | calan | english | calan | k æ l ̴ ə n | 0.33 → 0.33 |
-| chalcedony | again | chalcedony | k æ l ̴ s ɛ d ə n i | 0.40 → 0.40 |
 | cognoscenti | english | cognoscenti | k ɑ g n ə s ɛ n t i | 0.30 → 0.20 |
-| dyukaka | again | dyukaka | d ʒ u q a | 0.57 → 0.57 |
-| elaborate | again | elaborate | ɪ l ̴ æ b ɜ ˞ e ɪ t | 0.43 → 0.43 |
-| hawsyaw | again | hawsyaw | a w ʃ a w | 0.71 → 0.43 |
 | ib-ib | hyphen | ib ib | i b | 0.50 → 0.50 |
 | ire-ref | hyphen | ire ref | a ɪ ɜ r | 0.50 → 0.50 |
 | iyonout | cut | iyonout | i j o n | 0.43 → 0.43 |
-| k-dye | again | K J | k e d ʒ e | 0.83 → 0.33 |
 | ligaw-insfk | hyphen | ligawinsfk | l i g a w i n | 0.50 → 0.30 |
-| lobotomy | again | lobotomy | l ̴ ə b ɑ t ə m i | 0.27 → 0.55 |
-| magin- | english | magin | m æ g ə n | 0.40 → 0.40 |
 | masseur | cut | masseur | m ə s ɜ ˞ | 0.43 → 0.43 |
 | milon-tagalog | hyphen | milon tagalog | m i l o n | 0.58 → 0.58 |
 | myocardium | again | myocardium | m a ɪ o ʊ k ɑ ɹ d i ə m | 0.27 → 0.18 |
@@ -142,7 +123,6 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | pot-pot | english | pot pot | p ɑ ɹ t p ɑ ɹ t | 0.33 → 0.33 |
 | swswsw | extra | es dobolyu es dobolyu es dobolyu | e s d o v ə l v e e s d o b ə l v e e s d o v ə l  | 1.00 → 1.00 |
 | puskar | english | puskar | p u s k ɑ ɹ | 0.33 → 0.33 |
-| raisin | again | raisin | r a z o n | 0.50 → 0.50 |
 | reseaux | cut | reseaux | r e s s o w | 0.62 → 0.62 |
 | sleíght | cut | sleíght | s l e t | 0.43 → 0.43 |
 | touche | english | touche | t u ʃ e ɪ | 0.67 → 0.67 |
@@ -150,17 +130,14 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | wálang-mana | hyphen | wálang mana | w a l a ŋ | 0.44 → 0.44 |
 | xero- | english | xero | ɛ k s r o ʊ | 0.40 → 0.60 |
 | boy | again | boy | b o j | 0.33 → 0.33 |
-| work | english | work | w ɔ r k | 0.25 → 0.25 |
 | bank | english | bank | b ɛ ŋ k | 0.25 → 0.25 |
 | golf | english | golf | g o l f | 0.25 → 0.25 |
 | re | english | re | ɹ i | 0.33 → 0.33 |
-| pulp | english | pulp | p o l p | 0.25 → 0.25 |
+| pulp | again2 | pulp | p o l p | 0.25 → 0.25 |
 | grey | english | grey | g r a | 0.25 → 0.50 |
-| karol | english | karol | k æ ɹ ə l ̴ | 0.40 → 0.40 |
+| karol | again2 | karol | k ə r o ʎ | 0.20 → 0.20 |
 | holen | english | holen | h o l ̴ ə n d | 0.33 → 0.33 |
-| wart | english | wart | v ɔ r t | 0.25 → 0.25 |
+| wart | again2 | wart | v ɔ r t | 0.25 → 0.25 |
 | anemone | again | "anemone" | ə n ɛ m ə n i | 0.57 → 0.57 |
-| Iyonout | again | Iyonout | i j o n | 0.43 → 0.43 |
 | oeuvre | cut | oeuvre | ø v r ɛ | 0.67 → 0.33 |
 | osmosis | english | osmosis | æ z m o ʊ s ə s | 0.25 → 0.25 |
-| turbot | again | "turbot" | t ɜ ˞ b ɛ t | 0.33 → 0.33 |
