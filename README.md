@@ -29,6 +29,29 @@ The clips were made with Google Cloud Text-to-Speech, model **Gemini 3.1 Flash T
 | corrected by hand after listening to the clip (`ipa_fixes.tsv`) (`checked`) | 25 |
 <!-- /counts -->
 
+## Mistakes: please report them
+
+Some clips are still wrong, and the [phone check](#phone-check) does not catch them all. Typical problems:
+
+- the stress is on the wrong syllable
+- a glottal stop is missing or added
+- a sound is swallowed or changed
+- an English loanword is read the Tagalog way, or a Tagalog word the English way
+- the clip says another word, or more than the word
+
+If you hear one, make a list and post it as an [issue](https://github.com/PawgChamps/tagalog-tts-audio/issues/new).
+Write one clip per line: first the form exactly as it is spelled on the [search page](https://pawgchamps.github.io/tagalog-tts-audio/)
+or in the file name (without `.mp3`), then what is wrong. If you can, add how it should sound: write the word with the
+accent marks described [below](#how-a-form-gets-its-accent-marks), or write the stressed syllable in capitals. For
+example (made-up lines):
+
+```text
+bakâ      stress on the first syllable; should be ba-KÂ, with a final glottal stop
+blood     read the Tagalog way; it is the English word
+```
+
+Lists of any length are welcome, and one issue can hold many clips.
+
 ## Files
 
 | Path | Contents |
