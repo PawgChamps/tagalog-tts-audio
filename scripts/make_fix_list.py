@@ -94,7 +94,7 @@ def main():
             reason = "extra"
         elif "-" in form.strip("-") and nr >= 4 and nh < 0.6 * nr:
             reason = "hyphen"
-        elif src == "spelled" and e >= 0.5 and pf.isalpha():
+        elif src == "spelled" and e >= 0.5 and pf.isalpha() and "y" not in pf:      # nyx, styx: y is their vowel
             reason = "letters"
         elif src == "english" and not re.search(r"[ao]$", pf) and pf not in NOT_ENGLISH:
             et = err(tagalog_ipa.get(form) or M.ipa(form), h)[0]      # words new to the list: the rule reading

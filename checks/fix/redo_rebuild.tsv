@@ -1,0 +1,575 @@
+form	reason	ipa_source	ipa	heard	error
+on	english	english	/ˈɑn/	o n	0.50
+new	english	english	/ˈnu/	n u n ɛ w	1.00
+director	english	english	/dɚˈɛktɚ/	d i r ɛ k t o r	0.25
+station	english	english	/ˈsteɪʃən/	s t a s j o n	0.57
+up	letters	spelled	/juˈpi/	ɑ p	0.75
+us	english	english	/ˈʌs/	u s a	1.00
+hey	english	english	/ˈheɪ/	h e j	0.33
+program	english	english	/ˈpɹoʊˌɡɹæm/	p r o g r a m a	0.25
+number	english	english	/ˈnʌmbɚ/	n u m ə ɾ u	0.67
+system	english	english	/ˈsɪstəm/	k a b a b a j a n	1.00
+all	english	english	/ˈɔl/	a l	0.50
+state	english	english	/ˈsteɪt/	s t a t	0.40
+law	english	english	/ˈlɔ/	l a o	0.50
+boy	english	english	/ˈbɔɪ/	b ɔ j	0.33
+artist	english	english	/ˈɑɹtəst/	a r t i s t a	0.33
+text	english	english	/ˈtɛkst/	p a s ə t u g a	1.00
+male	english	english	/ˈmeɪl/	r i l a b	1.00
+london	english	english	/ˈlʌndən/	l o n d o n	0.33
+we	english	english	/ˈwi/	u w ɛ	1.00
+dilg	letters	spelled	/diʔaiʔelˈdʒi/	d i l g a ʒ	0.75
+stage	english	english	/ˈsteɪdʒ/	s ̪ t ̪ a h e	0.60
+under	english	english	/ˈʌndɚ/	a ŋ	0.80
+like	english	english	/ˈlaɪk/	b a q a j	1.00
+work	english	english	/ˈwɝk/	w ɔ r k	0.25
+human	english	english	/ˈhjumən/	u m a n	0.33
+palm	english	english	/ˈpɑm/	p a l m ə	0.67
+island	english	english	/ˈaɪlənd/	i s l a n d	0.33
+model	english	english	/ˈmɑdəl/	m ɔ d ɛ l	0.40
+date	english	english	/ˈdeɪt/	d a t	0.50
+gold	english	english	/ˈɡoʊld/	g o d	0.40
+mike	english	english	/ˈmaɪk/	m i j k e	0.75
+bank	english	english	/ˈbæŋk/	b ɑ n q	0.25
+drugs	english	english	/ˈdɹʌɡz/	d r o g a s	0.60
+pop	english	english	/ˈpɑp/	p ɔ p	0.33
+main	english	english	/ˈmeɪn/	m a i s	0.50
+jason	english	english	/ˈdʒeɪsən/	d ʒ a ɪ s o n	0.33
+gate	english	english	/ˈɡeɪt/	g a t e	0.75
+union	english	english	/ˈjunjən/	u n i j o n	0.50
+debut	english	english	/deɪˈbju/	d e b u	0.33
+image	english	english	/ˈɪmədʒ/	i m a x e	0.50
+say	english	english	/ˈseɪ/	a l a j	1.00
+bye	english	english	/ˈbaɪ/	v a j	0.67
+grade	english	english	/ˈɡɹeɪd/	g r a d	0.40
+disaster	english	english	/dɪˈzæstɚ/	d i s a s t e	0.25
+paper	english	english	/ˈpeɪpɚ/	p ə p ɛ l	0.50
+play	english	english	/ˈpleɪ/	p l a j	0.50
+bust	english	english	/ˈbʌst/	b u s t	0.25
+change	english	english	/ˈtʃeɪndʒ/	t ʃ a n d ʒ e	0.60
+property	english	english	/ˈpɹɑpɚti/	p ɾ ɔ p ə ɾ t i	0.25
+lake	english	english	/ˈleɪk/	l a q i	0.75
+train	english	english	/ˈtɹeɪn/	t r a n	0.40
+label	english	english	/ˈleɪbəl/	l a b e l	0.50
+ow	english	english	/ˈoʊ/	ə w i ʃ	1.00
+mind	english	english	/ˈmaɪnd/	m i n d a	0.40
+daily	english	english	/ˈdeɪli/	d a j l i	0.40
+bonus	english	english	/ˈboʊnəs/	b o n o s	0.33
+ray	english	english	/ˈɹeɪ/	r a j	0.67
+wage	english	english	/ˈweɪdʒ/	w a h e	0.75
+bad	english	english	/ˈbæd/	b ə t d ɑ	0.67
+word	english	english	/ˈwɝd/	s i n a b i	1.00
+age	english	english	/ˈeɪdʒ/	a ː h e	1.00
+table	english	english	/ˈteɪbəl/	t æ l æ g æ	0.83
+lot	english	english	/ˈlɑt/	l o	0.67
+pilot	english	english	/ˈpaɪlət/	p i l l ɔ t o	0.67
+letter	english	english	/ˈlɛtɚ/	s ɑ b ɑ q	1.00
+independent	english	english	/ˌɪndɪˈpɛndənt/	i n d ɛ p ɛ n d i ɛ n t ɛ	0.36
+here	english	english	/ˈhiɹ/	s a b i	1.00
+bob	english	english	/ˈbɑb/	b o b	0.33
+pal	english	english	/ˈpæl/	p ə n l a	0.67
+bond	english	english	/ˈbɑnd/	b ɔ n d	0.25
+same	english	english	/ˈseɪm/	s a m	0.50
+term	english	english	/ˈtɝm/	t ɛ r m i n o	0.75
+user	english	english	/ˈjuzɚ/	b a k a n t e	1.00
+suit	english	english	/ˈsut/	s u w i t	0.67
+golf	english	english	/ˈɡɑlf/	g o l f	0.25
+ward	english	english	/ˈwɔɹd/	w a r d	0.25
+pole	english	english	/ˈpoʊl/	p o w l ɛ	0.50
+nation	english	english	/ˈneɪʃən/	n ə s o n	0.67
+kings	english	english	/ˈkɪŋz/	k i ŋ s	0.25
+graduate	english	english	/ˈɡɹædʒəwət/	g ɾ a d u a t	0.38
+many	english	english	/ˈmɛni/	m a n i	0.25
+payment	english	english	/ˈpeɪmənt/	b e j m ɛ n t	0.43
+re	english	english	/ˈɹeɪ/	r e	0.33
+due	english	english	/ˈdu/	d u p u	1.00
+donor	english	english	/ˈdoʊnɚ/	d e ɔ n o r	0.50
+modern	english	english	/ˈmɑdɚn/	m o d ɛ r n o	0.33
+arum	english	english	/ˈɛɹəm/	a r u m	0.50
+surgery	english	english	/ˈsɝdʒɚi/	s i r u x i a	0.71
+saw	english	english	/ˈsɔ/	s a	0.50
+wine	english	english	/ˈwaɪn/	w i j n e	0.75
+minor	english	english	/ˈmaɪnɚ/	m i n o r	0.33
+library	english	english	/ˈlaɪbɹɛˌɹi/	l i j b r a r i	0.38
+robot	english	english	/ˈɹoʊˌbɑt/	r o b o t	0.33
+let	english	english	/ˈlɛt/	l æ	0.67
+sue	english	english	/ˈsu/	s u e	0.50
+analysis	english	english	/əˈnæləsəs/	ə n æ l ̴ ɪ s ɪ s	0.25
+random	english	english	/ˈɹændəm/	r a n d e ɔ m	0.33
+gambling	english	english	/ˈɡæmbəlɪŋ/	g a m b l i n	0.25
+atom	english	english	/ˈætəm/	a t o m	0.25
+start	english	english	/ˈstɑɹt/	t a ŋ k a j	1.00
+solid	english	english	/ˈsɑləd/	s ɔ l i d	0.40
+today	english	english	/təˈdeɪ/	t o t d e e j	0.80
+pants	english	english	/ˈpænts/	p ə n t a ʎ	0.60
+mail	english	english	/ˈmeɪl/	m a j l	0.50
+taste	english	english	/ˈteɪst/	t a s a	0.60
+er	english	english	/ɚ/	ɯ ð	1.00
+indonesian	english	english	/ˌɪndoʊˈniʒən/	i n d o n ɛ ʒ i ə n	0.30
+junk	english	english	/ˈdʒʌŋk/	d ʒ ɛ n k	0.50
+plate	english	english	/ˈpleɪt/	p l a t o	0.60
+xi	english	english	/ˈʃi/	ʃ a m	1.00
+plane	english	english	/ˈpleɪn/	p l a n	0.40
+slot	english	english	/ˈslɑt/	s l ̴ ɔ t	0.25
+bomb	english	english	/ˈbɑm/	b o m b	0.67
+jump	english	english	/ˈdʒʌmp/	d ʒ u m p	0.25
+op	english	english	/ˈɑp/	t o p	1.00
+lung	english	english	/ˈlʌŋ/	l u ŋ	0.33
+pot	english	english	/ˈpɑt/	p ɔ t	0.33
+modus	english	english	/ˈmoʊdəs/	m o d u s	0.33
+adult	english	english	/əˈdʌlt/	ə d d u l t	0.40
+range	english	english	/ˈɹeɪndʒ/	r a ŋ g o	0.80
+instruction	english	english	/ˌɪnˈstɹʌkʃən/	a ɪ l ə m a	0.80
+aviation	english	english	/ˌeɪviˈeɪʃən/	a v i a ʃ j o n	0.67
+rod	english	english	/ˈɹɑd/	r ɔ d	0.33
+thy	english	english	/ˈðaɪ/	s a j	0.67
+rob	english	english	/ˈɹɑb/	r ɔ b	0.33
+promoter	english	english	/pɹəˈmoʊtɚ/	p r o m o t o r	0.33
+raid	english	english	/ˈɹeɪd/	r e j n t	0.75
+networking	english	english	/ˈnɛˌtwɝkɪŋ/	n ɛ t w ɔ r k i n g	0.33
+cost	english	english	/ˈkɑst/	k ɔ s t	0.25
+pulp	english	english	/ˈpʌlp/	p u l p	0.25
+av	english	english	/ˌeɪˈvi/	a v n u	1.00
+dom	english	english	/ˈdɑm/	d e ɔ m	0.67
+dirty	english	english	/ˈdɝti/	d u m i	0.60
+node	english	english	/ˈnoʊd/	n o d o	0.50
+put	english	english	/ˈpʊt/	p o	0.67
+ultimatum	english	english	/ˌʌltəˈmeɪtəm/	u l t i m a t o m	0.50
+sk	letters	spelled	/ʔesˈkei/	s k a j	0.60
+proton	english	english	/ˈpɹoʊˌtɑn/	p ɾ o t o n	0.29
+egg	english	english	/ˈɛɡ/	ɪ t l ̴ o g	1.00
+wales	english	english	/ˈweɪlz/	w a l e s	0.80
+lay	english	english	/ˈleɪ/	l a j	0.67
+depot	english	english	/ˈdipoʊ/	d ɛ p o w	0.40
+satay	english	english	/sæˈteɪ/	s ə t a j	0.40
+lion	english	english	/ˈlaɪən/	l i j o n	0.60
+sore	english	english	/ˈsɔɹ/	s o ɾ ɛ	0.33
+walk	english	english	/ˈwɔk/	g ɔ	0.67
+isis	english	english	/ˈaɪsəs/	i s i s	0.40
+ion	english	english	/ˈaɪən/	i j o n	0.75
+lens	english	english	/ˈlɛnz/	l ɛ n s	0.25
+gain	english	english	/ˈɡeɪn/	g a n	0.50
+brain	english	english	/ˈbɹeɪn/	b r a n	0.40
+soft	english	english	/ˈsɑft/	s ɔ f t	0.25
+opium	english	english	/ˈoʊpiəm/	o ː p i u m	0.33
+planet	english	english	/ˈplænət/	p l a n ɛ t o	0.33
+karaoke	english	english	/ˌkɛɹiˈoʊki/	k æ r a o q e	0.50
+absent	english	english	/ˈæbsənt/	ə p s e n t	0.33
+moderate	english	english	/ˈmɑdɚət/	m o d e r a t o	0.29
+relay	english	english	/ˈɹiˌleɪ/	r e l e j	0.40
+trail	english	english	/ˈtɹeɪl/	t ɾ a j l	0.40
+os	english	english	/ˈɑs/	o s	0.50
+parent	english	english	/ˈpɛɹənt/	p a r ɛ n t	0.33
+bangs	english	english	/ˈbæŋz/	b a ŋ s	0.25
+geyser	english	english	/ˈɡaɪzɚ/	g a j s e r	0.33
+mobil	english	english	/ˈmoʊbəl/	m o b i l	0.33
+rotary	english	english	/ˈɹoʊtɚi/	r o w t a r i	0.29
+unity	english	english	/ˈjunəti/	u n i t i	0.33
+patent	english	english	/ˈpætənt/	p ə t ɛ n t ɛ	0.33
+hang-over	english	english	/ˈhæŋˌoʊvɚ/	h a ŋ o v ɜ ˞	0.25
+opus	english	english	/ˈoʊpəs/	o p u s	0.40
+halt	english	english	/ˈhɔlt/	h a l t	0.25
+plain	english	english	/ˈpleɪn/	p l a j n	0.40
+toy	english	english	/ˈtɔɪ/	t o j	0.33
+fe	english	english	/ˈfeɪ/	f e	0.33
+cha-cha	hyphen	english	/ˈtʃɑˌtʃɑ/	t ʃ a	0.50
+sept	english	english	/ˈsɛpt/	s e p t i e m b ɾ ə	1.00
+ratio	cut	english	/ˈɹeɪʃiˌoʊ/	r a ʃ o	0.57
+glow	english	english	/ˈɡloʊ/	g l o w	0.25
+lotus	english	english	/ˈloʊtəs/	l o t o s	0.33
+basal	english	english	/ˈbeɪsəl/	b ə s a l	0.33
+pump	english	english	/ˈpʌmp/	p u m p	0.25
+pub	english	english	/ˈpʌb/	p u b	0.33
+chase	english	english	/ˈtʃeɪs/	t ʃ a s e	0.75
+bail	english	english	/ˈbeɪl/	b a l ̴	0.50
+hades	english	english	/ˈheɪdiz/	h a d i s	0.50
+ref	english	english	/ˈɹɛf/	r ə f ɾ e n	1.00
+meson	english	english	/ˈmeɪˌzɑn/	m ɛ s o n	0.50
+plug	english	english	/ˈplʌɡ/	b l u g	0.50
+plum	english	english	/ˈplʌm/	p l u m	0.25
+sum	english	english	/ˈsʌm/	s u m	0.33
+basis	english	english	/ˈbeɪsəs/	b a s i s	0.50
+papal	english	english	/ˈpeɪpəl/	p ɑ p ɑ s u q	0.83
+egyptian	english	english	/ɪˈdʒɪpʃən/	e ʒ i p t j o n	0.71
+alumnus	english	english	/əˈlʌmnəs/	ə l l u m n u s	0.43
+grey	english	english	/ˈɡɹeɪ/	g ɾ e j	0.25
+pair	english	english	/ˈpɛɹ/	t e	0.67
+generator	english	english	/ˈdʒɛnɚˌeɪtɚ/	d ʒ ɛ n e r a t o r	0.30
+nose	english	english	/ˈnoʊz/	n o s	0.50
+monument	english	english	/ˈmɑnjumənt/	m o n i u m e n t o	0.44
+sole	english	english	/ˈsoʊl/	s o l e	0.50
+garage	english	english	/ɡɚˈɑʒ/	g ə r a h e	0.60
+ac	english	english	/ˌeɪˈsi/	a s i n g	1.00
+snake	english	english	/ˈsneɪk/	s n a k	0.40
+wise	english	english	/ˈwaɪz/	v a j s	0.75
+rom	english	english	/ˈɹɑm/	r o m	0.33
+gnu	english	english	/ˈnu/	d ʒ i ɛ n d j u	1.00
+warm	english	english	/ˈwɔɹm/	w a r m	0.25
+pg	letters	spelled	/piˈdʒi/	p i	0.50
+null	english	english	/ˈnʌl/	n o ʊ	0.67
+iris	english	english	/ˈaɪɹəs/	i r i s	0.40
+smoke	english	english	/ˈsmoʊk/	s m o k e	0.40
+lump	english	english	/ˈlʌmp/	ɛ l u m p a	0.75
+oct	english	english	/ˈɔkt/	o q t u b r e	1.00
+nile	english	english	/ˈnaɪl/	n i l e	0.50
+bug	english	english	/ˈbʌɡ/	b u g	0.33
+wig	english	english	/ˈwɪɡ/	w i ŋ k	0.67
+write	english	english	/ˈɹaɪt/	w a	0.75
+herb	english	english	/ˈɝb/	h u r b	0.67
+pod	english	english	/ˈpɑd/	p ɔ d	0.33
+bog	english	english	/ˈbɑɡ/	b ɔ g	0.33
+sb	letters	spelled	/ʔesˈbi/	s i	0.50
+breakup	english	english	/ˈbɹeɪˌkʌp/	b ɾ e k u p	0.29
+pupil	english	english	/ˈpjupəl/	p i u p i l	0.33
+blow	english	english	/ˈbloʊ/	b l o w	0.25
+enemy	english	english	/ˈɛnəmi/	e n e m i g o	0.60
+refrigerator	english	english	/ɹəˈfɹɪdʒɚˌeɪtɚ/	r ɛ f r i d ʒ e r a t o r	0.31
+tale	english	english	/ˈteɪl/	t a ː l e	0.75
+duel	english	english	/ˈduəl/	d u w ɛ l o	0.75
+add	letters	spelled	/ʔeidiˈdi/	a n	1.00
+emu	english	english	/ˈimˌju/	t ɛ m u	0.75
+nasal	english	english	/ˈneɪzəl/	n a s a l	0.50
+hose	english	english	/ˈhoʊz/	h o s	0.50
+poison	english	english	/ˈpɔɪzən/	p ɔ j s o n	0.50
+lodge	english	english	/ˈlɑdʒ/	l ɔ d d ʒ	0.67
+token	english	english	/ˈtoʊkən/	t o w k ɛ n	0.33
+separate	english	english	/ˈsɛpɚˌeɪt/	s ɛ p a r a t	0.38
+sos	english	english	/ˌɛˌoʊˈɛs/	s o s	0.60
+ant	english	english	/ˈænt/	æ n t ɑ q	0.67
+bottle	english	english	/ˈbɑtəl/	b o t ̪ e	0.60
+tongue	english	english	/ˈtʌŋ/	t a ŋ ŋ o k	1.00
+hostel	english	english	/ˈhɑstəl/	h o s t ɛ l	0.33
+sinai	english	english	/ˈsaɪˌnaɪ/	s i n a j	0.33
+lobe	english	english	/ˈloʊb/	ʎ ɔ w b e	0.75
+manor	english	english	/ˈmænɚ/	m a n o	0.40
+gum	english	english	/ˈɡʌm/	g u	0.67
+ore	english	english	/ˈɔɹ/	o r e	0.50
+sire	english	english	/ˈsaɪɚ/	s i r e	0.60
+dairy	english	english	/ˈdɛɹi/	d a j r i	0.50
+tonsil	english	english	/ˈtɑnsəl/	t o n s i l	0.33
+lose	english	english	/ˈluz/	l u s e	0.67
+rum	english	english	/ˈɹʌm/	r u m	0.33
+rotor	english	english	/ˈɹoʊtɚ/	r o t o r	0.33
+mug	english	english	/ˈmʌɡ/	m u b g a	1.00
+hog	english	english	/ˈhɑɡ/	h ɔ g	0.33
+xerox	english	english	/ˈzɪɹɑks/	s e r o k s	0.50
+gland	english	english	/ˈɡlænd/	g l a n d u l ə	0.60
+angle	english	english	/ˈæŋɡəl/	a n g u l o	0.60
+ll	letters	spelled	/ʔelˈʔel/	l a	0.75
+ton	english	english	/ˈtʌn/	t o n	0.33
+mill	english	english	/ˈmɪl/	m i l j e	0.67
+dope	english	english	/ˈdoʊp/	d ɔ w p e	0.50
+isthmus	english	english	/ˈɪsməs/	i s t m u s	0.40
+gale	english	english	/ˈɡeɪl/	g a l e	0.75
+nap	english	english	/ˈnæp/	n a p ə g	0.67
+leone	english	english	/liˈoʊn/	l ə j o n	0.60
+pale	english	english	/ˈpeɪl/	p a l ̴ e	0.75
+raise	english	english	/ˈɹeɪz/	r a j s	0.75
+kernel	english	english	/ˈkɝnəl/	k ɜ ˞ n ɛ l ̴	0.33
+dentist	english	english	/ˈdɛntəst/	d ə n t i s t ə	0.43
+sikh	english	english	/ˈsik/	s i k ə p	0.67
+warp	english	english	/ˈwɔɹp/	w a r p	0.25
+worm	english	english	/ˈwɝm/	v ɔ r m	0.50
+downs	english	english	/ˈdaʊnz/	d a w n s	0.40
+pew	english	english	/ˈpju/	v i w	1.00
+pion	english	english	/ˈpaɪˌɑn/	p i j o n	0.60
+bogus	english	english	/ˈboʊɡəs/	b ɔ g o s	0.33
+natal	english	english	/ˈneɪtəl/	n a t a l	0.33
+rope	english	english	/ˈɹoʊp/	r o w p e	0.50
+hare	english	english	/ˈhɛɹ/	h a r e	0.67
+prey	english	english	/ˈpɹeɪ/	p ɾ e j	0.25
+precedent	english	english	/ˈpɹɛsɪdənt/	p ɹ ɛ z ə d ɛ n t	0.33
+penis	english	english	/ˈpinɪs/	p ɛ n n i s	0.40
+rayon	english	english	/ˈɹeɪən/	r ə j o n	0.60
+tailor	english	english	/ˈteɪlɚ/	t a j l o r	0.50
+titus	english	english	/ˈtaɪtəs/	t i t u s	0.33
+catheter	english	english	/ˈkæθətɚ/	k a t ɛ t e r	0.29
+smog	english	english	/ˈsmɑɡ/	s m ɔ g	0.25
+bun	english	english	/ˈbʌn/	b u n o	0.67
+mod	english	english	/ˈmɔd/	m ɔ ʎ	0.67
+moses	english	english	/ˈmoʊzəs/	m o s ɛ s	0.50
+odor	english	english	/ˈoʊdɚ/	o d o r	0.40
+jpe	letters	spelled	/dʒeipiˈʔi/	d ʒ a p i	0.50
+transcription	english	english	/ˌtɹænˈskɹɪpʃən/	i s a	0.83
+robe	english	english	/ˈɹoʊb/	r ɔ b e	0.50
+pond	english	english	/ˈpɑnd/	b ɔ n d	0.50
+sibyl	english	english	/ˈsɪbəl/	s i d i l	0.40
+anion	english	english	/ˈæˌnaɪɔn/	ə n j ɔ n	0.33
+nail	english	english	/ˈneɪl/	n a j i	0.75
+pause	english	english	/ˈpɔz/	b ɔ s	0.67
+grain	english	english	/ˈɡɹeɪn/	g r a n	0.40
+siyáng-siyá	hyphen	rule	/sijaŋsiˈja/	ʃ ɑ ŋ ʃ a	0.67
+hellenic	english	english	/həˈlɛnɪk/	h ɛ l ̴ l ̴ ɛ n ɪ k	0.29
+mores	english	english	/ˈmɔˌɹeɪz/	m o r ɛ s	0.33
+context	english	english	/ˈkɑntɛkst/	k a s o	0.62
+mob	english	english	/ˈmɑb/	m o b	0.33
+stain	english	english	/ˈsteɪn/	s t a j n	0.40
+amendment	english	english	/əˈmɛndmənt/	ə m b i e n d ə m e n t o	0.56
+poet	english	english	/ˈpoʊət/	p o w e t	0.40
+mite	english	english	/ˈmaɪt/	m i t ɛ	0.50
+mace	english	english	/ˈmeɪs/	m a s e	0.75
+potent	english	english	/ˈpoʊtənt/	p o t ɛ n t	0.29
+naked	english	english	/ˈneɪkəd/	n æ q i d	0.50
+adjourn	english	english	/əˈdʒɝn/	a d d ʒ u m	0.80
+satan	english	english	/ˈseɪtən/	s ə t a n	0.33
+tomb	english	english	/ˈtum/	t u m b a	0.67
+karol	english	english	/ˈkɛɹɔl/	t a r o l	0.40
+gg	letters	spelled	/dʒiˈdʒi/	g a	1.00
+liar	english	english	/ˈlaɪɚ/	l a j a	0.60
+heir	english	english	/ˈɛɹ/	h ɛ ɹ	0.50
+ares	english	english	/ˈɑɹz/	ə r ɛ s	0.67
+pandanus	english	english	/pænˈdeɪnəs/	p ə n d a n u s	0.33
+resin	english	english	/ˈɹɛzən/	r ɛ s i n	0.40
+gut	english	english	/ˈɡʌt/	g u t u m	1.00
+invention	english	english	/ˌɪnˈvɛnʃən/	ɪ n v ɛ n t i o n	0.38
+testes	english	english	/ˈtɛˌstiz/	t ɛ s t ɛ s	0.33
+oldies	english	english	/ˈoʊldiz/	ɔ l ̴ d i s	0.33
+mogul	english	english	/ˈmoʊɡəl/	m ɔ w g u l ʎ	0.67
+eon	english	english	/ˈiən/	e j ɔ n	1.00
+aegis	english	english	/ˈidʒəs/	a ɪ h ɪ s	0.75
+tri	english	english	/ˈtɹaɪ/	t ɾ i	0.25
+amide	english	english	/ˈeɪˌmaɪd/	a m i d	0.50
+molten	english	english	/ˈmoʊltən/	m ɔ l t t ɛ n	0.43
+drain	english	english	/ˈdɹeɪn/	d r a n	0.40
+quay	english	english	/ˈki/	k w ɛ j	1.00
+ode	english	english	/ˈoʊd/	o w d e	0.67
+uranus	english	english	/ˈjuɹənəs/	u r a n u s	0.29
+urn	english	english	/ˈɝn/	u r	0.67
+hail	english	english	/ˈheɪl/	h a i l	0.25
+om	english	english	/ˈɔm/	o m k o d	1.00
+skier	english	english	/ˈskaɪɹ/	s k i ɜ	0.40
+bedouin	english	english	/ˈbɛdoʊən/	b ɛ t ɜ ˞ w ɪ n	0.57
+amine	english	english	/ˌeɪˈmin/	ə m i n e	0.60
+syrup	english	english	/ˈsɝəp/	s i r o p	0.40
+almond	english	english	/ˈɑmənd/	a l m o n d	0.40
+gable	english	english	/ˈɡeɪbəl/	g a b b l e	0.67
+bastard	english	english	/ˈbæstɚd/	b ɑ s t ɑ r	0.29
+nyx	cut	spelled	/ʔenwaiˈʔeks/	n ɛ k s	0.50
+pampers	english	english	/ˈpæmpɚz/	b ɑ m b ɜ ˞ s	0.57
+valium	english	english	/ˈveɪliəm/	v æ l ̴ i ə m	0.29
+tame	english	english	/ˈteɪm/	t a m e	0.75
+bey	english	english	/ˈbeɪ/	b e j	0.33
+grail	english	english	/ˈɡɹeɪl/	g ɾ a j l	0.40
+velociraptor	english	english	/vəˈlɔsəˌɹæptɚ/	v e l o s i r a p t o r	0.25
+somatic	english	english	/ˌsoʊˈmɑtɪk/	s ə m æ t ɪ k	0.25
+ukulele	english	english	/ˌjukəˈleɪli/	u k u l e l e	0.44
+anus	english	english	/ˈeɪnəs/	a n u s	0.60
+pus	english	english	/ˈpʌs/	b u s	0.67
+dew	english	english	/ˈdu/	d e w a	1.00
+grape	english	english	/ˈɡɹeɪp/	g r a p	0.40
+mime	english	english	/ˈmaɪm/	m i m e	0.50
+nip	english	english	/ˈnɪp/	n i p i s	0.67
+saber	english	english	/ˈseɪbɚ/	s a b ɛ r	0.33
+beret	english	english	/ˈbɛɹət/	b ə r e	0.60
+cursor	english	english	/ˈkɝsɚ/	k o r s o r	0.33
+eldest	english	english	/ˈɛldəst/	ɛ l d e ɛ s t	0.33
+oily	english	english	/ˈɔɪli/	p ɔ j i m i	0.75
+beige	english	english	/ˈbeɪʒ/	b a d ʒ	0.75
+sob	english	english	/ˈsɑb/	s ɔ b	0.33
+vie	english	english	/ˈvaɪ/	v i e	0.67
+lob	english	english	/ˈlɑb/	l ɔ b	0.33
+styx	cut	spelled	/ʔestiwaiˈʔeks/	s t i k s	0.50
+holen	english	english	/ˈhoʊlən/	h o l l ɛ n	0.33
+teleprompter	english	english	/ˈtɛləˌpɹɑmptɚ/	t ɛ l e p r o m t e r	0.25
+modest	english	english	/ˈmɑdəst/	m o d ɛ s t o	0.50
+dues	english	english	/ˈduz/	d u w e s	1.00
+onion	english	english	/ˈʌnjən/	s i b u j a s	1.00
+progenitor	english	english	/pɹoʊˈdʒɛnɪtɚ/	p r o x ɛ n i t o r	0.27
+rostrum	english	english	/ˈɹɑstɹəm/	r ɔ s t r u m	0.29
+radon	english	english	/ˈɹeɪˌdɑn/	r a d o n	0.50
+sage	english	english	/ˈseɪdʒ/	s a h e	0.75
+glandular	english	english	/ˈɡlændʒəlɚ/	g l a ɲ ʒ u l a	0.56
+ogre	english	english	/ˈoʊɡɚ/	ɔ g r e	0.60
+pun	english	english	/ˈpʌn/	b ɔ n	0.67
+tinge	english	english	/ˈtɪndʒ/	t i ŋ g e	0.75
+trey	english	english	/ˈtɹeɪ/	t ɾ a j	0.50
+bald	english	english	/ˈbɔld/	b ɑ l ̴ ɑ d a	0.75
+oar	english	english	/ˈɔɹ/	u a ɾ	1.00
+noisy	english	english	/ˈnɔɪzi/	m a i ŋ a i	0.80
+walrus	english	english	/ˈwɔlɹəs/	v a l r u s	0.50
+bicarbonate	english	english	/baɪˈkɑɹbənət/	b i k a r b o n a t o	0.27
+cation	english	english	/ˈkæˌtaɪən/	k ə ʃ o n	0.57
+hump	english	english	/ˈhʌmp/	h u m p	0.25
+damsel	english	english	/ˈdæmzəl/	d a m s ɛ l	0.33
+empiricism	english	english	/ɛmˈpɪɹəˌsɪzəm/	ɛ m p i r i s i s m o	0.36
+sward	english	english	/ˈswɔɹd/	s u a ɾ t	0.60
+blok	english	english	/ˈblɑk/	b l ɔ k	0.25
+lode	english	english	/ˈloʊd/	l ɔ d e	0.50
+catsup	english	english	/ˈkɛtʃəp/	k a t s o p	0.80
+humid	english	english	/ˈhjuməd/	j u m i d	0.33
+palít-palitan	hyphen	rule	/paˈlitpalitan/	p a l i t a n	0.42
+postwar	english	english	/ˌpoʊˈstwɔɹ/	p o s t w a r	0.25
+soot	english	english	/ˈsʊt/	s o o t	0.67
+spurious	english	english	/ˈspjʊɹiəs/	s p u r i u s	0.25
+tongs	english	english	/ˈtɑŋz/	t ɔ ŋ s	0.50
+ledge	english	english	/ˈlɛdʒ/	l e ʒ e	0.67
+junket	english	english	/ˈdʒʌŋkɪt/	d ʒ u ŋ k ɛ t	0.33
+opal	english	english	/ˈoʊpəl/	ɔ p a ʎ	0.40
+mens	english	english	/ˈmɛnz/	m ɛ n s	0.25
+serpent	english	english	/ˈsɝpənt/	s ə r p ɛ n t ɛ	0.43
+matron	english	english	/ˈmeɪtɹən/	m a ɪ t r o n	0.29
+spasm	english	english	/ˈspæzəm/	s p a s m u	0.50
+totem	english	english	/ˈtoʊtəm/	t o t ɛ m	0.33
+wart	english	english	/ˈwɔɹt/	w a r t	0.25
+lapse	english	english	/ˈlæps/	l a p s e	0.25
+oblong	english	english	/ˈɑblɔŋ/	ɔ b l ɑ ̃	0.60
+atheism	english	english	/əˈθaɪsəm/	a p ɛ i s m o	0.57
+malt	english	english	/ˈmɔlt/	m a l t	0.25
+opt	english	english	/ˈɑpt/	o p	0.67
+alum	english	english	/ˈæləm/	ə l l u m	0.50
+belles	english	english	/ˈbɛlz/	b ɛ l e s	0.50
+áb-ab	hyphen	rule	/ˈʔabʔab/	a b	0.50
+abbe	english	english	/ˈæbi/	a b ɛ j	0.67
+adieu	english	english	/əˈdu/	e ɪ d j u	1.00
+ag-agan	hyphen	english	/ˈæɡˌeɪɡən/	a g	0.71
+alms	english	english	/ˈɑlmz/	ə l m o s	0.50
+anemone	english	english	/ˈænɪˌmoʊn/	ə n ɛ m ə n i	0.57
+argot	english	english	/ˈɑɹɡət/	a ɪ r g o	0.60
+arid	english	english	/ˈæɹəd/	a r i d	0.25
+aural	english	english	/ˈɔɹəl/	ə w r a ʎ	0.75
+bald-bala	hyphen	english	/ˈbɔldˌbɑlə/	b a l	0.62
+balsam	english	english	/ˈbɔlsəm/	v a l s a m	0.33
+basting	english	english	/ˈbeɪstɪŋ/	b a s t i n	0.43
+berne	english	english	/ˈbɝn/	b ɛ r n e	0.25
+bias-bias	hyphen	english	/ˈbaɪəsˌbaɪəs/	b a j a s	0.60
+bile	english	english	/ˈbaɪl/	b i l e	0.50
+bronchial	english	english	/ˈbɹɑntʃiəl/	b r ɔ n k j a l	0.38
+brute	english	english	/ˈbɹut/	b r u t e	0.25
+buhosutang	cut	rule	/buhoˈsutaŋ/	b u ʒ o s	0.56
+buladbukád	cut	rule	/buladbuˈkad/	b u l a d	0.50
+bulwark	english	english	/ˈbʊlwɚk/	b u l w a k	0.29
+bumpers	english	english	/ˈbʌmpɚz/	b u m p e r s	0.29
+buoy	english	english	/ˈbui/	b o ɔ j	1.00
+chalcedony	english	english	/ˈtʃælsəˌdoʊni/	k a l s e d o ɲ i	0.40
+chlchlng	letters	spelled	/siʔeitʃʔelsiʔeitʃʔelʔenˈdʒi/	t ʃ i l t ʃ i n	0.78
+communion	english	english	/kəmˈjunjən/	k o m j u n i o n	0.33
+d-day	english	english	/ˈdiˌdeɪ/	d a b e	0.60
+datíg-datig	hyphen	rule	/daˈtiɡdatiɡ/	d a t i g	0.50
+daub	english	english	/ˈdɔb/	d a u b a	1.00
+debase	english	english	/dəˈbeɪs/	d ɛ b a s ɛ	0.67
+deism	english	english	/ˈdiɪzəm/	d e j i s m o	0.83
+deity	english	english	/ˈdiəti/	d a i d a d i	0.60
+diligent	english	english	/ˈdɪlɪdʒənt/	m a s i p a g	0.75
+dime	english	english	/ˈdaɪm/	d i m e	0.50
+downers	english	english	/ˈdaʊnɚz/	d a w n e r s	0.29
+doyen	english	english	/ˈdɔɪɪn/	d o j ɛ n	0.40
+dozen	english	english	/ˈdʌzən/	d u z ɛ n	0.40
+dray	english	english	/ˈdɹeɪ/	d o a j	0.75
+dugo-q	hyphen	english	/ˈduɡoʊˌkju/	d u g o	0.50
+duodenum	english	english	/duˈɑdənəm/	d u o d e n ɔ m	0.38
+dyukaka	cut	rule	/djuˈkaka/	d ʒ u q a	0.57
+edam	english	english	/ˈidəm/	e d a m	0.25
+egotist	english	english	/ˈiɡətɪst/	ɛ g o t i s t	0.29
+elaborate	english	english	/ɪˈlæbɹət/	ɛ l a b o r i t	0.43
+elegy	english	english	/ˈɛləˌdʒi/	ɛ l e g i	0.40
+ewe	english	english	/ˈju/	ɛ w e	1.00
+ewer	english	english	/ˈjuɚ/	ɛ w a	1.00
+foyer	english	english	/ˈfɔɪɚ/	f ɔ j ɜ	0.40
+gaga-go	hyphen	english	/ˈɡɑˌɡʌˌɡoʊ/	g a g a	0.43
+gamotlahat	cut	rule	/ɡamoˈtlahat/	g ə m o t	0.50
+gist	english	english	/ˈdʒɪst/	g i s t	0.25
+grate	english	english	/ˈɡɹeɪt/	g r a t e	0.60
+grebe	english	english	/ˈɡɹib/	g ɾ e b e	0.50
+gripe	english	english	/ˈɡɹaɪp/	g r i p e	0.40
+hawsyaw	cut	dictionary	/ˈhawsjaw/	o ʃ a w	0.71
+hermit	english	english	/ˈhɝmət/	ɛ r m i t	0.33
+hiyonhiyón	cut	rule	/hijonhiˈjon/	h i j u n	0.60
+holster	english	english	/ˈhoʊlstɚ/	o l s t ɛ r	0.25
+hops	english	english	/ˈhɑps/	h ɔ p s	0.25
+ignoramus	english	english	/ˌɪɡnɚˈeɪməs/	i g n o ɾ a m u s	0.40
+íisa-isá	hyphen	rule	/ʔiʔisaʔiˈsa/	i i s a	0.43
+ilapít-lapít	hyphen	rule	/ʔilapitlaˈpit/	i l ə p i t	0.45
+ilióyliyo	cut	rule	/ʔiliˈʔojlijo/	i l l i o	0.44
+indeterminate	english	english	/ˌɪndɪˈtɝmɪnɪt/	i n d e t æ r m i n e	0.33
+insinuation	english	english	/ˌɪnˌsɪnjuˈeɪʃən/	ɪ n s ɪ n j u a ɪ t i o n	0.33
+Iyonout	cut	rule	/ʔijoˈnoʔut/	i j o n	0.43
+jot	english	english	/ˈdʒɑt/	d ʒ ɔ t	0.33
+k-dye	hyphen	rule	/ˈkdje/	k i	0.75
+kalí-kalibumbón	extra	rule	/kalikalibumˈbon/	k a l i k a l i b o m b o n k a l i k a l i b u m b o n k a l i k a l i b u m b o n	1.00
+karis	english	english	/ˈkɛɹiz/	k a r i s	0.40
+kaul	english	english	/ˈkɔl/	k a u l o g	1.00
+kaxnote	cut	rule	/kaksˈnote/	k a s e	0.50
+kisamkisám	cut	rule	/kisamkiˈsam/	k i s a m	0.50
+kruskrús	cut	rule	/kɾusˈkɾus/	k r u s	0.50
+kulóngkulong	cut	rule	/kuˈloŋkuloŋ/	k u l u ŋ	0.50
+lalamyâ-lamyâ	hyphen	rule	/lalamjalamˈjaʔ/	l a l a m j a	0.42
+langaglangág	cut	rule	/laŋaɡlaˈŋaɡ/	l a ŋ a g	0.50
+legerdemain	english	english	/ˌlɛdʒɚdəˈmeɪn/	l e g e r d e m a n	0.36
+lehr	english	english	/ˈlɛɹ/	l æ	0.67
+ligaw-insfk	hyphen	rule	/liˈɡawʔinsfk/	l i g a w	0.50
+likás-kaya	hyphen	rule	/liˈkaskaja/	l i k a s	0.44
+liquidator	english	english	/ˈlɪkwɪˌdeɪtɚ/	l i k w i d a t o r	0.27
+lobotomy	english	english	/ˈloʊˌboʊˌtoʊmi/	l o b ɔ t o m i	0.27
+loddoók	cut	rule	/loddoˈʔok/	l ɔ d ɔ	0.43
+lubidlubíd	cut	rule	/lubidluˈbid/	l u b i d	0.50
+lumping	english	english	/ˈlʌmpɪŋ/	l u m p i ŋ k	0.33
+lye	english	english	/ˈlaɪ/	l i e	0.67
+magkálaslás-laslás	hyphen	rule	/maɡkalaslaslaˈslas/	m a g a l ̴ a s l ̴ a s	0.41
+masagwasagwâ	cut	rule	/masaɡwasaɡˈwaʔ/	m a s a g w a	0.42
+masseur	cut	rule	/masˈseʔuɾ/	m ə s ɜ ˞	0.43
+mating	english	english	/ˈmeɪtɪŋ/	m a t i n	0.50
+milón-tagalog	hyphen	rule	/miˈlontaɡaloɡ/	m i l o n	0.58
+miser	english	english	/ˈmaɪzɚ/	m i s s e r	0.50
+mme	english	english	/ˌɛˌmɛˈmi/	e ɪ i n æ	0.80
+myocardium	english	english	/ˌmaɪəˈkɑɹdiəm/	m a j o k a r d i u m	0.27
+ngipinngipín	cut	rule	/ŋipinŋiˈpin/	n i p i n	0.50
+oboe	english	english	/ˈoʊboʊ/	ɔ w v o w	0.60
+oct-	english	english	/ˈɔkt/	o q t u b r e	1.00
+oeuvre	cut	rule	/ʔoʔeˈʔuvɾe/	u v	0.67
+oligocene	english	english	/ˈɑləɡoʊˌsin/	o l i g ɔ s ɛ n	0.44
+omnivorous	english	english	/ɑmˈnɪvɚəs/	o m n i v o r u s	0.33
+onus	english	english	/ˈoʊnəs/	o n u s	0.40
+oppressor	english	english	/əˈpɹɛsɚ/	o p p r e s o r	0.43
+osmosis	english	english	/ˌɔzˈmoʊsɪs/	o s m o s i s	0.25
+pabitín-bitinin	hyphen	rule	/pabiˈtinbitinin/	t ə b i t i n	0.57
+pager	english	english	/ˈpeɪdʒɚ/	p a d ʒ e r	0.33
+pala-pala	hyphen	rule	/palaˈpala/	p a l a	0.50
+pampas	english	english	/ˈpæmpəz/	t a m n p a s	0.50
+peril	english	english	/ˈpɛɹəl/	t ɛ r i l	0.40
+petrol	english	english	/ˈpɛtɹoʊl/	p ə t r ɔ l	0.29
+pilitpilitin	cut	rule	/pilitpiˈlitin/	p i l i t i n	0.42
+plait	english	english	/ˈpleɪt/	p l a j t e	0.60
+plover	english	english	/ˈplʌvɚ/	p l ̴ o ʊ v ɜ ˞	0.50
+ploy	english	english	/ˈplɔɪ/	p l o j	0.25
+pogrom	english	english	/pəˈɡɹɑm/	p ɔ k g r ɔ m	0.50
+polemic	english	english	/pəˈlɛmɪk/	p o l l ɛ m i k	0.29
+pompon	english	english	/ˈpɑmˌpɑn/	p o m p o n t	0.50
+poplin	english	english	/ˈpɑplɪn/	p ɔ b l i n	0.33
+raisin	english	english	/ˈɹeɪzɪn/	r a j s i n	0.50
+rayúsrayós	cut	rule	/ɾajusɾaˈjos/	r a j u s	0.50
+repartee	english	english	/ˌɹɛpɚˈti/	ɹ ɛ p ɑ ɹ t e ɪ	0.29
+reseaux	cut	rule	/ɾeseˈʔaʔuks/	ɾ ɛ s o	0.62
+riser	english	english	/ˈɹaɪzɚ/	r a s e r	0.33
+risík-risík	hyphen	rule	/ɾisikɾiˈsik/	r i s i k	0.50
+rosin	english	english	/ˈɹɑzən/	r u s i n	0.60
+ruin	english	english	/ˈɹuən/	r u i n ə	0.50
+sadist	english	english	/ˈseɪdəst/	s a d i s t	0.43
+sew	english	english	/ˈsoʊ/	s ɛ w	0.67
+sibuyastagalog	cut	rule	/sibujastaˈɡaloɡ/	s i b u j a s	0.50
+solder	english	english	/ˈsɑdɚ/	s o l d e r	0.40
+stair	english	english	/ˈstɛɹ/	s t a ɪ ɹ	0.50
+suds	english	english	/ˈsʌdz/	s u d s	0.50
+swswsw	extra	dictionary	/swswsws/	ɛ s d ə b ə l ̴ j u ɛ s d ə b ə l ̴ j u ɛ s d ə b ə l ̴ j u	1.00
+tao-trap	hyphen	english	/ˈtaʊˌtɹæp/	t a o	0.71
+taper	english	english	/ˈteɪpɚ/	t a p e r	0.33
+temperamental	english	english	/ˌtɛmpɹəˈmɛntəl/	t e e ə n p ɛ r ə m ə n t a l	0.42
+tempest	english	english	/ˈtɛmpəst/	t e ɛ n p ɛ s t	0.43
+tetrahedron	english	english	/ˌtɛtɹəˈhidɹən/	t ɛ t r a ɛ d r o n	0.27
+titatita	cut	rule	/titaˈtita/	t i t a	0.50
+triage	english	english	/ˈtɹaɪɪdʒ/	t ɾ i j a ʒ	0.67
+trot	english	english	/ˈtɹɑt/	t r o t	0.25
+trus	english	english	/ˈtɹʌs/	t r u s	0.25
+turbot	english	english	/ˌtɝˈboʊ/	t ɔ r b ɔ t	0.33
+tuwalyalita	cut	rule	/tuwaljaˈlita/	t u a l i ə	0.45
+ulanmág	cut	rule	/ʔulanˈmaɡ/	u l a n	0.43
+umbel	english	english	/ˈʌmbəl/	u n v ɛ l	0.80
+usury	english	english	/ˈjuʒɚi/	u s u r i	0.50
+voyeur	english	english	/ˌvɔɪˈjuɹ/	v o j ɜ ˞	0.50
+walakwalák	cut	rule	/walakwaˈlak/	w a l a k	0.50
+warn	english	english	/ˈwɔɹn/	w a ɾ	0.50
+watermelon	english	english	/ˈwɔtɚˌmɛlən/	v a t e r m ɛ l o n	0.30
+webinar	english	english	/ˈwɛbɪnɚ/	w ɛ b ə n ɑ r	0.29
+wed	english	english	/ˈwɛd/	w ɛ n s d a j	1.00
+worktext	cut	rule	/ˈwoɾktekst/	w ɔ r k	0.56
+yodel	english	english	/ˈjoʊdəl/	j o d ɛ l	0.33
+yttrium	english	english	/ˈɪtɹiəm/	j ɪ t ɹ i u m	0.33
