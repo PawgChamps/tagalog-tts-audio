@@ -41,6 +41,12 @@ between the parts and the "repeats a part" instruction, an English word with "sa
 translate", and an abbreviation as letter names; `tries()` in `scripts/fix_clips.py` has the exact texts and
 instructions.
 
+## After the rebuild (30/10/2026)
+
+The phone check of the 147,533 clips of the rebuilt list gave `redo_rebuild.tsv` (574 clips; 103 already tried above):
+439 of the other 471 replaced, 32 kept. Most were kept clips of words the rebuilt list now reads the English way
+(`system` was "kababayan", `under` was "ang").
+
 ## Run it
 
 GitHub: Actions → **Synthesize audio** → *Run workflow*, branch of your choice, `fix` = `checks/fix/redo.tsv`

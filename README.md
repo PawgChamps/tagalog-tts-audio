@@ -105,18 +105,28 @@ Spanish words are read by the Tagalog rules.
 ## Phone check
 
 A phone-recognition model listens to each clip and writes the phones it hears, and `scripts/score_phones.py` compares
-them with the IPA (`checks/phones/README.md`). On all 151,262 current clips, ZIPA's phones differ from the IPA in 12.8 %
-of the phones (9.6 % without the glottal stop). By IPA source, that is 7.6 % for `dictionary`, 9.6 % for `rule`,
-10.7 % for hyphenated forms and 24.7 % for `english`. It also found 1,013 hyphenated clips cut at the hyphen, 2,992
-English loanwords spoken the Tagalog way and 5 clips with extra speech (`checks/phones/wordlist_all/`). `scripts/fix_clips.py` then re-synthesized the 3,526 clips
-the check found wrong, up to three tries each, and replaced a clip only when ZIPA confirmed the new one: 3,414 replaced,
-112 kept (`checks/fix/`).
+them with the IPA (`checks/phones/README.md`).
+
+| | Old list, 151,262 clips (29/10) | Rebuilt list, 147,533 clips (30/10) |
+|---|---:|---:|
+| phones wrong, without the glottal stop | 9.6 % | 8.5 % |
+| `dictionary` / `rule` readings | 7.6 % / 9.6 % | 8.6 % / 8.0 % |
+| hyphenated forms | 10.7 % | 7.2 % |
+| `english` readings | 24.7 % | 16.0 % |
+| `spelled` abbreviations | 50.3 % | 20.3 % |
+
+The first check found 1,013 hyphenated clips cut at the hyphen, 2,992 English loanwords spoken the Tagalog way (some
+translated: *blood* → "dugo") and 5 clips with extra speech. `scripts/fix_clips.py` re-synthesized the clips the check
+found wrong, up to three tries each, and replaced a clip only when ZIPA confirmed the new one: 3,414 of 3,526 on the old
+list, then 439 of 471 on the rebuilt one, mostly words the rebuilt list reads the English way (`checks/fix/`). The
+30,083 new clips of the rebuild were asked the way those runs proved (the hyphen as a space with prompt `parts`,
+English words with prompt `english`, `respell.tsv`): none of the 197 hyphenated clips of its pilot was cut short.
 
 ## Workflows
 
 | Workflow | What it does |
 |---|---|
-| *Synthesize audio* (`synthesize.yml`) | with `fix=checks/fix/redo.tsv`, re-synthesizes and checks the clips of a fix list (`scripts/fix_clips.py`); otherwise runs a list through the voice in batches of 2,000, commits each batch to the branch it runs on, and starts a new run of itself at the 5-hour limit; `list=next` and `list=next-pilot` run the lists of the rebuild |
+| *Synthesize audio* (`synthesize.yml`) | with `fix=<fix list>` (`checks/fix/redo_rebuild.tsv`), re-synthesizes and checks the clips of a fix list (`scripts/fix_clips.py`); otherwise runs a list through the voice in batches of 2,000, commits each batch to the branch it runs on, and starts a new run of itself at the 5-hour limit; `list=next` and `list=next-pilot` run the lists of the rebuild |
 | *Phone recognition* (`phones.yml`) | the phone check of a list, one job per model and shard; commits `checks/phones/<list>/` |
 | *Fix IPA* (`fix_ipa.yml`) | `scripts/fix_ipa.py` with CMUdict on `wordlist_all.tsv`, then `index.json` |
 | *Prepare the rebuild* (`prepare.yml`) | IPA for `next/wordlist.tsv` and the plan of the switch (`scripts/plan_next.py`) |
