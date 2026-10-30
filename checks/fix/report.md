@@ -2,17 +2,17 @@
 
 Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scripts/make_fix_list.py`). Each try is checked with ZIPA against the IPA; a clip is replaced only when a try is complete and clearly better (error at most 40% and at least 10% lower than before). `results.tsv` has every try.
 
-3526 clips done, 4252 tries.
+3726 clips done, 4520 tries.
 
 | Reason | Replaced | Old clip kept |
 |---|---:|---:|
-| english | 2183 | 87 |
+| english | 2364 | 99 |
 | hyphen | 1019 | 11 |
-| letters | 98 | 0 |
-| cut | 79 | 14 |
+| letters | 104 | 0 |
+| cut | 80 | 14 |
 | repeat | 33 | 0 |
 | extra | 2 | 0 |
-| **all** | 3414 | 112 |
+| **all** | 3602 | 124 |
 
 ## Replaced (first 60)
 
@@ -195,3 +195,15 @@ Clips re-synthesized by `scripts/fix_clips.py` from `checks/fix/redo.tsv` (`scri
 | wálang-mana | hyphen | wálang mana | w a l a ŋ | 0.44 → 0.44 |
 | worktext | cut | worktext | w ɜ r k | 0.56 → 0.67 |
 | xero- | english | xero | ɛ k s r o ʊ | 0.40 → 0.60 |
+| boy | english | boy | b o j | 0.33 → 0.33 |
+| work | english | work | w ɔ r k | 0.25 → 0.25 |
+| bank | english | bank | b ɛ ŋ k | 0.25 → 0.25 |
+| user | english | user | ð ə w ɜ ˞ d | 1.00 → 0.80 |
+| golf | english | golf | g o l f | 0.25 → 0.25 |
+| re | english | re | ɹ i | 0.33 → 0.33 |
+| er | english | er | ɜ ˞ | 1.00 → 0.50 |
+| modus | english | modus | m ɔ w ɾ ə s | 0.33 → 0.33 |
+| pulp | english | pulp | p o l p | 0.25 → 0.25 |
+| basal | english | basal | b e z ə l ̴ | 0.33 → 0.33 |
+| grey | english | grey | g r a | 0.25 → 0.50 |
+| bog | english | bog | b ɔ g | 0.33 → 0.33 |

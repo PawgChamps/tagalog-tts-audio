@@ -4258,3 +4258,271 @@ táha-táha	repeat	1	táha, táha	fil-PH	t a x a t a x a	0.50	0.00	replaced
 tánggal-tanggal	repeat	1	tánggal, tanggal	fil-PH	t ʌ ŋ g ʌ l t ̪ ʌ ŋ g ʌ l	0.50	0.00	replaced
 tedted	repeat	1	ted, ted	fil-PH	t ɛ d t ɛ d	0.67	0.00	replaced
 makesyu-kesyo	repeat	2	makesyu-kesyo	fil-PH	m ɛ k s j u k ɛ s j ɔ	0.75	0.17	replaced
+on	english	1	on	fil-PH	ɑ n	0.50	0.00	replaced
+new	english	1	new	fil-PH	n u	1.00	0.00	replaced
+station	english	1	station	fil-PH	s t e ɪ ʃ ə n	0.57	0.00	replaced
+up	letters	1	yu pi	fil-PH	j u p i	0.75	0.00	replaced
+us	english	1	us	fil-PH	j u ɛ s	1.00	1.00	rejected
+hey	english	1	hey	fil-PH	h e ɪ	0.33	0.00	replaced
+program	english	1	program	fil-PH	p ɹ o ʊ g ɹ æ m	0.25	0.00	replaced
+number	english	1	number	fil-PH	n ə m b ɜ ˞	0.67	0.17	replaced
+system	english	1	system	fil-PH	s ɪ s t ə m	1.00	0.00	replaced
+all	english	1	all	fil-PH	ɔ l ̴	0.50	0.00	replaced
+state	english	1	state	fil-PH	s t e ɪ t	0.40	0.00	replaced
+law	english	1	law	fil-PH	l ̴ ɔ	0.50	0.00	replaced
+boy	english	1	boy	fil-PH	b o j	0.33	0.33	rejected
+artist	english	1	artist	fil-PH	ɑ ɹ t ɪ s t	0.33	0.17	replaced
+male	english	1	male	fil-PH	m a j l	1.00	0.50	rejected
+london	english	1	london	fil-PH	l ̴ ə n d ə n	0.33	0.00	replaced
+we	english	1	we	fil-PH	w i	1.00	0.00	replaced
+dilg	letters	1	di ay el dyi	fil-PH	d i a ɪ ɛ l ̴ d i w a ɪ a ɪ	0.75	0.75	rejected
+stage	english	1	stage	fil-PH	s t e ɪ d ʒ	0.60	0.00	replaced
+under	english	1	under	fil-PH	ə n d ɜ ˞	0.80	0.20	replaced
+like	english	1	like	fil-PH	l ̴ a ɪ k	1.00	0.00	replaced
+work	english	1	work	fil-PH	w ɔ r k	0.25	0.25	rejected
+human	english	1	human	fil-PH	h j u m ə n	0.33	0.00	replaced
+palm	english	1	palm	fil-PH	p ɑ m	0.67	0.00	replaced
+island	english	1	island	fil-PH	a ɪ l ̴ ə n d	0.33	0.00	replaced
+model	english	1	model	fil-PH	m ɑ d ə l ̴	0.40	0.00	replaced
+date	english	1	date	fil-PH	d e ɪ t	0.50	0.00	replaced
+gold	english	1	gold	fil-PH	g o ʊ l ̴ d	0.40	0.00	replaced
+mike	english	1	mike	fil-PH	m i k e	0.75	0.50	rejected
+bank	english	1	bank	fil-PH	b ɛ n k	0.25	0.50	rejected
+drugs	english	1	drugs	fil-PH	d r ɹ ə g z	0.60	0.20	replaced
+pop	english	1	pop	fil-PH	p ɑ p	0.33	0.00	replaced
+main	english	1	main	fil-PH	m ɛ n	0.50	0.25	replaced
+gate	english	1	gate	fil-PH	g e t	0.75	0.25	replaced
+union	english	1	union	fil-PH	u n j o n	0.50	0.33	replaced
+debut	english	1	debut	fil-PH	d e ɪ b j u	0.33	0.00	replaced
+image	english	1	image	fil-PH	i m a d ʒ	0.50	0.00	replaced
+say	english	1	say	fil-PH	s e ɪ	1.00	0.00	replaced
+bye	english	1	bye	fil-PH	b a ɪ	0.67	0.00	replaced
+grade	english	1	grade	fil-PH	g ɹ r a ɪ d	0.40	0.40	rejected
+disaster	english	1	disaster	fil-PH	d ɪ z æ s t ɜ ˞	0.25	0.12	replaced
+paper	english	1	paper	fil-PH	p e ɪ p ɜ ˞	0.50	0.17	replaced
+play	english	1	play	fil-PH	p l ̴ e ɪ	0.50	0.00	replaced
+bust	english	1	bust	fil-PH	v ə s t	0.25	0.25	rejected
+property	english	1	property	fil-PH	p ɹ ɑ p ɜ ˞ t i	0.25	0.12	replaced
+lake	english	1	lake	fil-PH	l e j k	0.75	0.25	replaced
+train	english	1	train	fil-PH	t ɹ e ɪ n	0.40	0.00	replaced
+label	english	1	label	fil-PH	l ̴ e b ə l ̴	0.50	0.17	replaced
+mind	english	1	mind	fil-PH	m a ɪ n d	0.40	0.00	replaced
+daily	english	1	daily	fil-PH	d e ɪ l ̴ i	0.40	0.00	replaced
+bonus	english	1	bonus	fil-PH	b o n ɛ s	0.33	0.33	rejected
+ray	english	1	ray	fil-PH	ɹ e ɪ	0.67	0.00	replaced
+wage	english	1	wage	fil-PH	w a d ʒ	0.75	0.50	rejected
+bad	english	1	bad	fil-PH	b æ d	0.67	0.00	replaced
+word	english	1	word	fil-PH	w ɜ ˞ d	1.00	0.25	replaced
+age	english	1	age	fil-PH	e d ʒ	1.00	0.33	rejected
+table	english	1	table	fil-PH	t e ɪ b ə l ̴	0.83	0.00	replaced
+lot	english	1	lot	fil-PH	l ̴ ɑ t	0.67	0.00	replaced
+pilot	english	1	pilot	fil-PH	p a ɪ l ̴ ə t	0.67	0.00	replaced
+letter	english	1	letter	fil-PH	l ̴ ɛ t ɜ ˞	1.00	0.20	replaced
+independent	english	1	independent	fil-PH	ɪ n d ɪ p ɛ n d ə n t	0.36	0.00	replaced
+here	english	1	here	fil-PH	h i ɹ	1.00	0.00	replaced
+bob	english	1	bob	fil-PH	v ɑ b	0.33	0.33	rejected
+pal	english	1	pal	fil-PH	p a l ̴	0.67	0.00	replaced
+bond	english	1	bond	fil-PH	b ɑ n d	0.25	0.00	replaced
+same	english	1	same	fil-PH	s e m	0.50	0.25	replaced
+term	english	1	term	fil-PH	t ɜ ˞ m	0.75	0.25	replaced
+user	english	1	user	fil-PH	p ɔ l ̴ m ɔ l ̴	1.00	1.00	rejected
+suit	english	1	suit	fil-PH	s u t	0.67	0.00	replaced
+golf	english	1	golf	fil-PH	g o l f	0.25	0.25	rejected
+ward	english	1	ward	fil-PH	w ɔ r d	0.25	0.00	replaced
+pole	english	1	pole	fil-PH	p o ʊ l ̴	0.50	0.00	replaced
+nation	english	1	nation	fil-PH	n e ɪ ʃ i o n	0.67	0.33	replaced
+kings	english	1	kings	fil-PH	k ɪ ŋ z	0.25	0.00	replaced
+many	english	1	many	fil-PH	m ɛ n i	0.25	0.00	replaced
+payment	english	1	payment	fil-PH	p e ɪ m ə n t	0.43	0.00	replaced
+re	english	1	re	fil-PH	ɹ i	0.33	0.33	rejected
+due	english	1	due	fil-PH	d u	1.00	0.00	replaced
+donor	english	1	donor	fil-PH	d o ʊ n ɜ ˞	0.50	0.17	replaced
+modern	english	1	modern	fil-PH	m ɑ d ɜ ˞ n	0.33	0.17	replaced
+arum	english	1	arum	fil-PH	ɑ ɹ ɹ ə m	0.50	0.50	rejected
+saw	english	1	saw	fil-PH	s ɑ	0.50	0.50	rejected
+wine	english	1	wine	fil-PH	w a ɪ n	0.75	0.00	replaced
+minor	english	1	minor	fil-PH	m a ɪ n ɜ ˞	0.33	0.17	replaced
+library	english	1	library	fil-PH	l ̴ a ɪ b ɹ ɛ ɹ i	0.38	0.00	replaced
+robot	english	1	robot	fil-PH	ɹ o ʊ b a t	0.33	0.00	replaced
+let	english	1	let	fil-PH	l ̴ ɛ t	0.67	0.00	replaced
+sue	english	1	sue	fil-PH	s u	0.50	0.00	replaced
+random	english	1	random	fil-PH	ɹ æ n d ə m	0.33	0.00	replaced
+gambling	english	1	gambling	fil-PH	g æ m b ə l ̴ ɪ ŋ	0.25	0.00	replaced
+atom	english	1	atom	fil-PH	æ d ə m	0.25	0.25	rejected
+start	english	1	start	fil-PH	s t ɑ ɹ t	1.00	0.00	replaced
+solid	english	1	solid	fil-PH	s ɑ l ̴ ə d	0.40	0.00	replaced
+today	english	1	today	fil-PH	t ə d e ɪ	0.80	0.00	replaced
+pants	english	1	pants	fil-PH	p æ n t s	0.60	0.00	replaced
+mail	english	1	mail	fil-PH	m e ɪ l	0.50	0.00	replaced
+taste	english	1	taste	fil-PH	t e ɪ s t	0.60	0.00	replaced
+er	english	1	er	fil-PH	ɜ ˞	1.00	0.50	rejected
+plate	english	1	plate	fil-PH	p l ̴ e ɪ t	0.60	0.00	replaced
+plane	english	1	plane	fil-PH	p l ̴ e ɪ n	0.40	0.00	replaced
+slot	english	1	slot	fil-PH	s l ̴ ɔ t	0.25	0.25	rejected
+bomb	english	1	bomb	fil-PH	b ɑ m	0.67	0.00	replaced
+op	english	1	op	fil-PH	ɔ p	1.00	0.50	rejected
+lung	english	1	lung	fil-PH	l a ŋ g	0.33	0.33	rejected
+pot	english	1	pot	fil-PH	p ɑ t	0.33	0.00	replaced
+modus	english	1	modus	fil-PH	m ɔ w ɾ ə s	0.33	0.33	rejected
+adult	english	1	adult	fil-PH	æ d ə l t	0.40	0.00	replaced
+range	english	1	range	fil-PH	r a n d ʒ	0.80	0.40	replaced
+rod	english	1	rod	fil-PH	ɹ ɑ d	0.33	0.00	replaced
+rob	english	1	rob	fil-PH	ɹ ɑ b	0.33	0.00	replaced
+promoter	english	1	promoter	fil-PH	p ɹ ə m o ʊ t ɜ ˞	0.33	0.11	replaced
+raid	english	1	raid	fil-PH	r ɛ d	0.75	0.25	replaced
+networking	english	1	networking	fil-PH	n ɛ t w ɜ ˞ k ɪ ŋ	0.33	0.11	replaced
+pulp	english	1	pulp	fil-PH	p o l p	0.25	0.25	rejected
+dom	english	1	dom	fil-PH	d a m	0.67	0.00	replaced
+dirty	english	1	dirty	fil-PH	d ɜ ˞ t i	0.60	0.20	replaced
+node	english	1	node	fil-PH	n o ʊ d	0.50	0.00	replaced
+put	english	1	put	fil-PH	p ʊ t	0.67	0.00	replaced
+ultimatum	english	1	ultimatum	fil-PH	ɔ l ̴ t ə m e ɪ t ə m	0.50	0.10	replaced
+sk	letters	1	es key	fil-PH	e s k i	0.60	0.20	replaced
+proton	english	1	proton	fil-PH	p ɹ o ʊ t ɑ n	0.29	0.00	replaced
+egg	english	1	egg	fil-PH	ɛ g	1.00	0.00	replaced
+wales	english	1	wales	fil-PH	w e ɪ l ̴ z	0.80	0.00	replaced
+lay	english	1	lay	fil-PH	l e j	0.67	0.33	replaced
+depot	english	1	depot	fil-PH	d i p o ʊ	0.40	0.00	replaced
+satay	english	1	satay	fil-PH	s æ t e ɪ	0.40	0.00	replaced
+lion	english	1	lion	fil-PH	l ̴ a ɪ ə n	0.60	0.00	replaced
+sore	english	1	sore	fil-PH	s ɔ ɹ	0.33	0.00	replaced
+walk	english	1	walk	fil-PH	w ɔ k	0.67	0.00	replaced
+isis	english	1	isis	fil-PH	a ɪ s ɛ s	0.40	0.20	replaced
+ion	english	1	ion	fil-PH	a ɪ a n	0.75	0.00	replaced
+lens	english	1	lens	fil-PH	l ɛ n z	0.25	0.00	replaced
+gain	english	1	gain	fil-PH	g ɛ j n e	0.50	0.50	rejected
+brain	english	1	brain	fil-PH	b r a n	0.40	0.40	rejected
+opium	english	1	opium	fil-PH	o p i a m	0.33	0.17	replaced
+planet	english	1	planet	fil-PH	p l ̴ æ n ə t	0.33	0.00	replaced
+karaoke	english	1	karaoke	fil-PH	k ɛ ɹ i o ʊ k i	0.50	0.00	replaced
+absent	english	1	absent	fil-PH	æ b s ə n t	0.33	0.00	replaced
+relay	english	1	relay	fil-PH	ɹ i l ̴ e ɪ	0.40	0.00	replaced
+trail	english	1	trail	fil-PH	t ɹ e ɪ l ̴	0.40	0.00	replaced
+os	english	1	os	fil-PH	ɑ s	0.50	0.00	replaced
+parent	english	1	parent	fil-PH	p ɛ ɹ ə n t	0.33	0.00	replaced
+bangs	english	1	bangs	fil-PH	b ɛ ŋ z	0.25	0.25	rejected
+geyser	english	1	geyser	fil-PH	g a ɪ z e ˞	0.33	0.17	replaced
+mobil	english	1	mobil	fil-PH	m o ʊ b ə l ̴	0.33	0.00	replaced
+rotary	english	1	rotary	fil-PH	ɹ o ʊ t ɜ ˞ i	0.29	0.14	replaced
+unity	english	1	unity	fil-PH	j u n ə t i	0.33	0.00	replaced
+patent	english	1	patent	fil-PH	p æ t ə n t	0.33	0.00	replaced
+hang-over	english	1	hang over	fil-PH	h æ ŋ o ʊ v ɜ ˞	0.25	0.12	replaced
+opus	english	1	opus	fil-PH	o ʊ p ə s	0.40	0.00	replaced
+halt	english	1	halt	fil-PH	h ɔ l t	0.25	0.00	replaced
+plain	english	1	plain	fil-PH	p l ̴ e ɪ n	0.40	0.00	replaced
+toy	english	1	toy	fil-PH	t ɔ ɪ	0.33	0.00	replaced
+sept	english	1	sept	fil-PH	s ɛ p t	1.00	0.00	replaced
+ratio	cut	1	ratio	fil-PH	ɹ e ɪ ʃ i o ʊ	0.57	0.00	replaced
+lotus	english	1	lotus	fil-PH	l ə w ɾ ə s	0.33	0.50	rejected
+basal	english	1	basal	fil-PH	b e z ə l ̴	0.33	0.33	rejected
+pump	english	1	pump	fil-PH	p ə m p	0.25	0.00	replaced
+pub	english	1	pub	fil-PH	p u b	0.33	0.33	rejected
+bail	english	1	bail	fil-PH	b e l ̴	0.50	0.25	replaced
+hades	english	1	hades	fil-PH	h e j r i z	0.50	0.33	replaced
+ref	english	1	ref	fil-PH	r ɛ f	1.00	0.00	replaced
+meson	english	1	meson	fil-PH	m e ɪ s ə n	0.50	0.17	replaced
+plug	english	1	plug	fil-PH	p l ̴ ə b	0.50	0.25	replaced
+plum	english	1	plum	fil-PH	p l ̴ ə m	0.25	0.00	replaced
+sum	english	1	sum	fil-PH	s a m	0.33	0.00	replaced
+basis	english	1	basis	fil-PH	b a s ɛ s	0.50	0.50	rejected
+papal	english	1	papal	fil-PH	p i p ə l ̴	0.83	0.17	replaced
+alumnus	english	1	alumnus	fil-PH	ə l ̴ u m n ə s	0.43	0.14	replaced
+grey	english	1	grey	fil-PH	g r a	0.25	0.50	rejected
+pair	english	1	pair	fil-PH	p ɛ ɹ	0.67	0.00	replaced
+nose	english	1	nose	fil-PH	n o ʊ z	0.50	0.00	replaced
+monument	english	1	monument	fil-PH	m ɑ n j u m ə n t	0.44	0.00	replaced
+sole	english	1	sole	fil-PH	s o l	0.50	0.25	replaced
+garage	english	1	garage	fil-PH	g ɜ r a ʒ	0.60	0.00	replaced
+snake	english	1	snake	fil-PH	s n e k	0.40	0.20	replaced
+wise	english	1	wise	fil-PH	w a ɪ z	0.75	0.00	replaced
+rom	english	1	rom	fil-PH	ɹ a m	0.33	0.00	replaced
+gnu	english	1	gnu	fil-PH	ʒ e ɛ n t j u	1.00	1.00	rejected
+warm	english	1	warm	fil-PH	w ɔ ɹ m	0.25	0.00	replaced
+pg	letters	1	pi dyi	fil-PH	p i a ɪ d i w a ɪ	0.50	1.00	rejected
+iris	english	1	iris	fil-PH	a ɪ ɹ ə s	0.40	0.00	replaced
+smoke	english	1	smoke	fil-PH	s m o ʊ k	0.40	0.00	replaced
+lump	english	1	lump	fil-PH	l ̴ ɑ m p	0.75	0.00	replaced
+nile	english	1	nile	fil-PH	n a ɪ l ̴	0.50	0.00	replaced
+bug	english	1	bug	fil-PH	b a g	0.33	0.00	replaced
+wig	english	1	wig	fil-PH	w i g	0.67	0.00	replaced
+write	english	1	write	fil-PH	r a ɪ t	0.75	0.00	replaced
+herb	english	1	herb	fil-PH	h ɛ r b	0.67	0.33	replaced
+pod	english	1	pod	fil-PH	p ɑ d	0.33	0.00	replaced
+bog	english	1	bog	fil-PH	b ɔ g	0.33	0.33	rejected
+sb	letters	1	es bi	fil-PH	e s b i	0.50	0.00	replaced
+pupil	english	1	pupil	fil-PH	p j u p ə l ̴	0.33	0.00	replaced
+enemy	english	1	enemy	fil-PH	ɛ n ə m i	0.60	0.00	replaced
+tale	english	1	tale	fil-PH	t e ɪ l ̴	0.75	0.00	replaced
+duel	english	1	duel	fil-PH	d i w o l	0.75	0.75	rejected
+add	letters	1	ey di di	fil-PH	e d i d i	1.00	0.17	replaced
+emu	english	1	emu	fil-PH	i m ʲ ɛ j u	0.75	0.25	replaced
+nasal	english	1	nasal	fil-PH	n e ɪ z ə l ̴	0.50	0.00	replaced
+hose	english	1	hose	fil-PH	h o ʊ z	0.50	0.00	replaced
+us	english	2	us	en-US	a s	1.00	0.00	replaced
+boy	english	2	boy	en-US	b ɔ j	0.33	0.33	rejected
+male	english	2	male	en-US	m e ɪ l ̴	1.00	0.00	replaced
+dilg	letters	2	D I L G	fil-PH	d i a ɪ ɛ l ̴ d ʒ i	0.75	0.00	replaced
+work	english	2	work	en-US	w ɔ r k	0.25	0.25	rejected
+mike	english	2	mike	en-US	m i j k e	0.75	0.75	rejected
+bank	english	2	bank	en-US	b ɛ ŋ k	0.25	0.25	rejected
+grade	english	2	grade	en-US	g ɹ r a d	0.40	0.40	rejected
+bust	english	2	bust	en-US	b ɑ s t	0.25	0.00	replaced
+bonus	english	2	bonus	en-US	b o w n ə s	0.33	0.17	replaced
+wage	english	2	wage	en-US	w a d ʒ	0.75	0.50	rejected
+age	english	2	age	en-US	ɛ i d ʒ	1.00	0.00	replaced
+bob	english	2	bob	en-US	b ɑ b	0.33	0.00	replaced
+user	english	2	user	en-US	ð ə w ɜ ˞ d ɪ z i v ɜ ˞	1.00	1.00	rejected
+golf	english	2	golf	en-US	g o l f	0.25	0.25	rejected
+re	english	2	re	en-US	ɹ i	0.33	0.33	rejected
+arum	english	2	arum	en-US	a ɾ ə m	0.50	0.25	replaced
+saw	english	2	saw	en-US	s ɔ	0.50	0.00	replaced
+atom	english	2	atom	en-US	æ t ə m	0.25	0.00	replaced
+er	english	2	er	en-US	ɛ	1.00	0.50	rejected
+slot	english	2	slot	en-US	s l ̴ ɔ t	0.25	0.25	rejected
+op	english	2	op	en-US	a p	1.00	0.00	replaced
+lung	english	2	lung	en-US	l ̴ a ŋ	0.33	0.00	replaced
+modus	english	2	modus	en-US	m ə w ɾ e s	0.33	0.67	rejected
+pulp	english	2	pulp	en-US	p o l p	0.25	0.25	rejected
+gain	english	2	gain	en-US	g ɛ n	0.50	0.25	replaced
+brain	english	2	brain	en-US	b r e n	0.40	0.20	replaced
+bangs	english	2	bangs	en-US	b æ ŋ z	0.25	0.00	replaced
+lotus	english	2	lotus	en-US	l ̴ o ʊ d ə s	0.33	0.17	replaced
+basal	english	2	basal	en-US	b e s o l	0.33	0.33	rejected
+pub	english	2	pub	en-US	p u b	0.33	0.33	rejected
+basis	english	2	basis	en-US	b e ɪ s ɛ s	0.50	0.17	replaced
+grey	english	2	grey	en-US	g ɾ a j	0.25	0.50	rejected
+gnu	english	2	gnu	en-US	n i u	1.00	0.50	rejected
+pg	letters	2	P G	fil-PH	p i d ʒ i	0.50	0.00	replaced
+bog	english	2	bog	en-US	b ɔ g	0.33	0.33	rejected
+duel	english	2	duel	en-US	d i w ə	0.75	0.75	rejected
+boy	english	3	boy	en-US	b ɔ j	0.33	0.33	rejected
+work	english	3	work	en-US	w ɔ r k	0.25	0.25	rejected
+mike	english	3	mike	en-US	m a j k	0.75	0.25	replaced
+bank	english	3	bank	en-US	b ɛ n k	0.25	0.50	rejected
+grade	english	3	grade	en-US	g ɹ e ɪ d	0.40	0.00	replaced
+wage	english	3	wage	en-US	w e d ʒ	0.75	0.25	replaced
+user	english	3	user	en-US	ð ə w ɜ ˞ d	1.00	0.80	rejected
+golf	english	3	golf	en-US	g o l f	0.25	0.25	rejected
+re	english	3	re	en-US	r i	0.33	0.33	rejected
+er	english	3	er	en-US	ɜ ˞	1.00	0.50	rejected
+slot	english	3	slot	en-US	s l ̴ a t	0.25	0.00	replaced
+modus	english	3	modus	en-US	m ə w ɾ e s	0.33	0.67	rejected
+pulp	english	3	pulp	en-US	p o l p	0.25	0.25	rejected
+basal	english	3	basal	en-US	b a z o l	0.33	0.67	rejected
+pub	english	3	pub	en-US	p a b	0.33	0.00	replaced
+grey	english	3	grey	en-US	g r a	0.25	0.50	rejected
+gnu	english	3	gnu	en-US	n u	1.00	0.00	replaced
+bog	english	3	bog	en-US	b ɔ g	0.33	0.33	rejected
+duel	english	3	duel	en-US	d j u ə l ̴	0.75	0.25	replaced
+boy	english	-	boy	fil-PH	b o j	0.33	0.33	kept
+work	english	-	work	fil-PH	w ɔ r k	0.25	0.25	kept
+bank	english	-	bank	en-US	b ɛ ŋ k	0.25	0.25	kept
+user	english	-	user	en-US	ð ə w ɜ ˞ d	1.00	0.80	kept
+golf	english	-	golf	fil-PH	g o l f	0.25	0.25	kept
+re	english	-	re	fil-PH	ɹ i	0.33	0.33	kept
+er	english	-	er	fil-PH	ɜ ˞	1.00	0.50	kept
+modus	english	-	modus	fil-PH	m ɔ w ɾ ə s	0.33	0.33	kept
+pulp	english	-	pulp	fil-PH	p o l p	0.25	0.25	kept
+basal	english	-	basal	fil-PH	b e z ə l ̴	0.33	0.33	kept
+grey	english	-	grey	fil-PH	g r a	0.25	0.50	kept
+bog	english	-	bog	fil-PH	b ɔ g	0.33	0.33	kept
