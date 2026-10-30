@@ -6,29 +6,27 @@ The clips were made with Google Cloud Text-to-Speech, model **Gemini 3.1 Flash T
 **[Listen and search online](https://pawgchamps.github.io/tagalog-tts-audio/)**
 
 <!-- counts -->
-151,262 clips for 151,262 forms of 141,604 spellings.
+147,533 clips for 147,533 forms of 141,604 spellings.
 
 | Stress from (`stress_source`) | Forms |
 |---|---:|
-| the dictionary's stress class (malumay, malumi, mabilis, maragsa) (`class`) | 31,810 |
-| the dictionary's IPA (earlier list) (`ipa`) | 85,316 |
-| the accented headword (earlier list) (`headword`) | 8,152 |
-| no source marks the stress: the voice's own reading (`none`) | 25,984 |
+| KWF (Diksiyonaryo ng Wikang Filipino and its Filipino-English dictionary) (`kwf`) | 44,171 |
+| UP Diksiyonaryong Filipino (diksiyonaryo.ph, else the 2001 print) (`up`) | 40,921 |
+| Wiktionary's IPA (`wiktionary`) | 11,981 |
+| other dictionaries (Vicassan, Leo English, Leo James, Tuttle, Ramos...) (`book`) | 25,853 |
+| older word lists (Calderón 1915, Nigg 1904, Freelang) (`legacy`) | 2,596 |
+| the dictionary's stress class (malumay, malumi, mabilis, maragsa) (`class`) | 99 |
+| English loanword, read the English way (`english`) | 353 |
+| a word the dictionary respells (names, foreign words), left as spelt (`respelled`) | 9 |
+| no source marks the stress: the voice's own reading (`none`) | 21,550 |
 
 | IPA from (`ipa_source`) | Forms |
 |---|---:|
-| the dictionary's own reading, cleaned (`dictionary`) | 89,519 |
-| generated from the accented form (`rule`) | 51,174 |
-| English reading from CMUdict, for English loanwords (`english`) | 10,377 |
-| abbreviation read letter by letter (`spelled`) | 192 |
+| the dictionary's own reading, cleaned (`dictionary`) | 28,058 |
+| generated from the accented form (`rule`) | 107,626 |
+| English reading from CMUdict, for English loanwords (`english`) | 11,639 |
+| abbreviation read letter by letter (`spelled`) | 210 |
 <!-- /counts -->
-
-<!-- rebuild -->
-> **Rebuild in progress.** `next/wordlist.tsv` is a new list that takes its accent marks from the sources in the order
-> described below (KWF > UP > Wiktionary > books). `checks/forms_fix/changes.tsv` lists what changes for each spelling.
-> Until the switch is merged, the files at the top of the repository and the counts above are the earlier list, which
-> took its marks from the dictionary's IPA, headwords and stress classes. Steps: [`next/RUNBOOK.md`](next/RUNBOOK.md).
-<!-- /rebuild -->
 
 ## Files
 
