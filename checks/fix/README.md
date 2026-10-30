@@ -47,6 +47,31 @@ The phone check of the 147,533 clips of the rebuilt list gave `redo_rebuild.tsv`
 439 of the other 471 replaced, 32 kept. Most were kept clips of words the rebuilt list now reads the English way
 (`system` was "kababayan", `under` was "ang").
 
+## The kept clips (30/10/2026)
+
+The 144 clips kept above (112 + 32) were looked at again. Many had a good try that the check had turned down:
+
+- **The check was wrong.** It read an r-coloured vowel written as two symbols (`ɜ ˞`) as no r at all, and `ɔɪ` /
+  `ɔ j` or `oʊ` / `o w` as different sounds. `scripts/score_phones.py` now reads them as the same. An English word is
+  now scored against every CMUdict reading of it, so *moderate* and *separate* may be the adjective or the verb.
+- **The IPA was wrong.** CMUdict's first reading of *skier*, *atheism*, *bronchial*, *chalcedony*, *lobotomy*,
+  *triage*, *turbot* and *anemone* is wrong, a few Tagalog words had English readings (*karol*, *holen*, *ag-agan*),
+  and some clips said a French or Italian word correctly (*touché*, *bolognese*). These 25 readings are corrected by
+  hand in `ipa_fixes.tsv` (`ipa_source` = `checked`, written by `scripts/fix_ipa.py`).
+- **The voice cannot read the spelling.** It reads *quay* as "kway", *ave* as "avenue", *k-dye* as "k". A fix list
+  can now spell out its tries in an `ask` column (`text|prompt|language;…`): *quay* is sent as "key", *ow* (the name of
+  the letter O) as the capital letter O, *k-dye* as "K J", *cation* as "cat ion".
+
+Two passes, `again.tsv` (92 clips) and `again2.tsv` (29), **replaced 87 of the kept clips** (63 + 24), each confirmed
+by ZIPA as before. Of the rest, 40 are still in the word list, as they are:
+
+- 27 are heard right, or nearly right (under 25 % of the phones off), with the fixed check.
+- *junk*, *jump*, *pulp*, *wart*, *bank*, *velociraptor*, *teleprompter*: one vowel off. Three to nine tries each,
+  with the English and the Filipino settings and respelled, gave no better clip (*junk* was heard as "jenk" every time,
+  which may be how ZIPA hears this voice's /ʌ/).
+- *oeuvre*, *reseaux*, *touche*: the French words, said right; *fe* and *re* (iron, the note re): said the Spanish
+  way; *ligaw-insfk*: not a word.
+
 ## Run it
 
 GitHub: Actions → **Synthesize audio** → *Run workflow*, branch of your choice, `fix` = `checks/fix/redo.tsv`

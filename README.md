@@ -119,7 +119,8 @@ them with the IPA (`checks/phones/README.md`).
 The first check found 1,013 hyphenated clips cut at the hyphen, 2,992 English loanwords spoken the Tagalog way (some
 translated: *blood* → "dugo") and 5 clips with extra speech. `scripts/fix_clips.py` re-synthesized the clips the check
 found wrong, up to three tries each, and replaced a clip only when ZIPA confirmed the new one: 3,414 of 3,526 on the old
-list, then 439 of 471 on the rebuilt one, mostly words the rebuilt list reads the English way (`checks/fix/`). The
+list, then 439 of 471 on the rebuilt one, mostly words the rebuilt list reads the English way, then 87 of the 144
+clips no try had improved, asked in new ways or re-checked with the scoring and IPA corrected (`checks/fix/`). The
 30,083 new clips of the rebuild were asked the way those runs proved (the hyphen as a space with prompt `parts`,
 English words with prompt `english`, `respell.tsv`): none of the 197 hyphenated clips of its pilot was cut short.
 
